@@ -4,9 +4,8 @@ movies:
   - id: presidents
     title: "All the President’s Men"
     imdb: "tt0074119"
-    release_date: 1976-01-01
-    director: "Alan J. Pakula"
-    director_imdb: "nm0001587"
+    year: 1976
+    directed: [ "Alan J. Pakula" ]
     cast: [ "Martin Balsam", "Ned Beatty", "Dustin Hoffman", "Robert Redford", "Jason Robards", "Jack Warden" ]
     alt_titles:
       fr: "Les Hommes du président"
@@ -15,23 +14,21 @@ movies:
   - id: eighty_days
     title: "Around the World in Eighty Days"
     imdb: "tt0048960"
-    release_date: 1956-01-01
+    year: 1956
     samples: [ "0:40:51" ]
 
   - id: arrangement
     title: "The Arrangement"
     imdb: "tt0064041"
-    release_date: 1969-01-01
-    director: "Elia Kazan"
-    director_imdb: "nm0001415"
+    year: 1969
+    directed: [ "Elia Kazan" ]
     samples: [ "0:03:26", "0:03:44" ]
 
   - id: angels
     title: "Band of Angels"
     imdb: "tt0050166"
-    release_date: 1957-01-01
-    director: "Raoul Walsh"
-    director_imdb: "nm0909825"
+    year: 1957
+    directed: [ "Raoul Walsh" ]
     cast: [ "Yvonne De Carlo", "Clark Gable" ]
     alt_titles:
       fr: "L’Esclave libre"
@@ -40,9 +37,8 @@ movies:
   - id: bulge
     title: "Battle of the Bulge"
     imdb: "tt0058947"
-    release_date: 1965-01-01
-    director: "Ken Annakin"
-    director_imdb: "nm0002175"
+    year: 1965
+    directed: [ "Ken Annakin" ]
     cast: [ "Henri Fonda" ]
     unused_cast: [ "Charles Bronson" ]
     alt_titles:
@@ -52,9 +48,8 @@ movies:
   - id: poseidon
     title: "Beyond the Poseidon Adventure"
     imdb: "tt0078856"
-    release_date: 1979-01-01
-    director: "Irwin Allen"
-    director_imdb: "nm0000740"
+    year: 1979
+    directed: [ "Irwin Allen" ]
     cast: [ "Slim Pickens" ]
     alt_titles:
       fr: "Le Dernier Secret du Poséidon"
@@ -65,9 +60,8 @@ movies:
   - id: alley
     title: "Blood Alley"
     imdb: "tt0047889"
-    release_date: 1955-01-01
-    director: "William A. Wellman"
-    director_imdb: "nm0920074"
+    year: 1955
+    directed: [ "William A. Wellman" ]
     cast: [ "Lauren Bacall", "John Wayne" ]
     alt_titles:
       fr: "L’Allée sanglante"
@@ -76,18 +70,16 @@ movies:
   - id: bullitt
     title: "Bullitt"
     imdb: "tt0062765"
-    release_date: 1968-01-01
-    director: "Peter Yates"
-    director_imdb: "nm0946811"
+    year: 1968
+    directed: [ "Peter Yates" ]
     unused_cast: [ "Jacqueline Bisset" ]
     samples: [ "0:04:28", "1:10:11" ]
 
   - id: cahill
     title: "Cahill U.S. Marshal"
     imdb: "tt0069834"
-    release_date: 1973-01-01
-    director: "Andrew V. McLaglen"
-    director_imdb: "nm0572132"
+    year: 1973
+    directed: [ "Andrew V. McLaglen" ]
     cast: [ "John Wayne" ]
     alt_titles:
       fr: "Les Cordes de la potence"
@@ -96,9 +88,8 @@ movies:
   - id: candidate
     title: "The Candidate"
     imdb: "tt0068334"
-    release_date: 1972-01-01
-    director: "Michael Ritchie"
-    director_imdb: "nm0006916"
+    year: 1972
+    directed: [ "Michael Ritchie" ]
     cast: [ "Robert Redford" ]
     alt_titles:
       fr: "Votez McKay"
@@ -107,9 +98,8 @@ movies:
   - id: carson
     title: "Carson City"
     imdb: "tt0044488"
-    release_date: 1952-01-01
-    director: "André De Toth"
-    director_imdb: "nm0211964"
+    year: 1952
+    directed: [ "André De Toth" ]
     cast: [ "Randolph Scott" ]
     alt_titles:
       fr: "Les Conquérants de Carson City"
@@ -119,18 +109,16 @@ movies:
   - id: charro
     title: "Charro!"
     imdb: "tt0064155"
-    release_date: 1969-01-01
-    director: "Charles Marquis Warren"
-    director_imdb: "nm0912766"
+    year: 1969
+    directed: [ "Charles Marquis Warren" ]
     cast: [ "Elvis Presley" ]
     samples: [ "0:29:28" ]
 
   - id: cheyenne
     title: "The Cheyenne Social Club"
     imdb: "tt0065542"
-    release_date: 1970-01-01
-    director: "Gene Kelly"
-    director_imdb: "nm0000037"
+    year: 1970
+    directed: [ "Gene Kelly" ]
     cast: [ "Henry Fonda", "James Stewart" ]
     alt_titles:
       fr: "Attaque au Cheyenne Club"
@@ -140,18 +128,16 @@ movies:
   - id: chisum
     title: "Chisum"
     imdb: "tt0065547"
-    release_date: 1970-01-01
-    director: "Andrew V. McLaglen"
-    director_imdb: "nm0572132"
+    year: 1970
+    directed: [ "Andrew V. McLaglen" ]
     cast: [ "John Wayne" ]
     samples: [ "0:18:25", "0:28:41", "0:41:13" ]
 
   - id: city_sea
     title: "City Beneath the Sea"
     imdb: "tt0065556"
-    release_date: 1971-01-01
-    director: "Irwin Allen"
-    director_imdb: "nm0000740"
+    year: 1971
+    directed: [ "Irwin Allen" ]
     cast: [ "Stuart Whitman" ]
     alt_titles:
       en: "One Hour to Doomsday"
@@ -165,9 +151,8 @@ movies:
   - id: cleopatra
     title: "Cleopatra Jones"
     imdb: "tt0069890"
-    release_date: 1973-01-01
-    director: "Jack Starrett"
-    director_imdb: "nm0823630"
+    year: 1973
+    directed: [ "Jack Starrett" ]
     cast: [ "Antonio Fargas" ]
     alt_titles:
       fr: "Dynamite Jones"
@@ -176,9 +161,8 @@ movies:
   - id: cowboys
     title: "The Cowboys"
     imdb: "tt0068421"
-    release_date: 1972-01-01
-    director: "Mark Rydell"
-    director_imdb: "nm0753073"
+    year: 1972
+    directed: [ "Mark Rydell" ]
     cast: [ "John Wayne" ]
     unused_cast: [ "Slim Pickens" ]
     alt_titles:
@@ -188,9 +172,8 @@ movies:
   - id: crimson
     title: "The Crimson Pirate"
     imdb: "tt0044517"
-    release_date: 1952-01-01
-    director: "Robert Siodmak"
-    director_imdb: "nm0802563"
+    year: 1952
+    directed: [ "Robert Siodmak" ]
     cast: [ "Burt Lancaster" ]
     alt_titles:
       fr: "Le Pirate rouge"
@@ -199,9 +182,8 @@ movies:
   - id: deliverance
     title: "Deliverance"
     imdb: "tt0068473"
-    release_date: 1972-01-01
-    director: "John Boorman"
-    director_imdb: "nm0000958"
+    year: 1972
+    directed: [ "John Boorman" ]
     cast: [ "Ned Beatty" ]
     alt_titles:
       fr: "Délivrance"
@@ -210,9 +192,8 @@ movies:
   - id: drum_beat
     title: "Drum Beat"
     imdb: "tt0046936"
-    release_date: 1954-01-01
-    director: "Delmer Daves"
-    director_imdb: "nm0202681"
+    year: 1954
+    directed: [ "Delmer Daves" ]
     cast: [ "Charles Bronson" ]
     alt_titles:
       fr: "L’Aigle solitaire"
@@ -225,9 +206,8 @@ movies:
   - id: executive
     title: "Executive Action"
     imdb: "tt0070046"
-    release_date: 1973-01-01
-    director: "David Miller"
-    director_imdb: "nm0588183"
+    year: 1973
+    directed: [ "David Miller" ]
     cast: [ "Burt Lancaster" ]
     alt_titles:
       it: "Accion Ejecutiva"
@@ -237,9 +217,8 @@ movies:
   - id: fbi
     title: "The FBI Story"
     imdb: "tt0052792"
-    release_date: 1959-01-01
-    director: "Mervyn LeRoy"
-    director_imdb: "nm0503777"
+    year: 1959
+    directed: [ "Mervyn LeRoy" ]
     cast: [ "James Stewart" ]
     alt_titles:
       fr: "La Police fédérale enquête"
@@ -248,9 +227,8 @@ movies:
   - id: firecreek
     title: "Firecreek"
     imdb: "tt0062975"
-    release_date: 1968-01-01
-    director: "Vincent McEveety"
-    director_imdb: "nm0568546"
+    year: 1968
+    directed: [ "Vincent McEveety" ]
     cast: [ "Henry Fonda", "James Stewart" ]
     alt_titles:
       fr: "Les Cinq Hors-la-loi"
@@ -260,9 +238,8 @@ movies:
   - id: texas
     title: "4 for Texas"
     imdb: "tt0057071"
-    release_date: 1963-01-01
-    director: "Robert Aldrich"
-    director_imdb: "nm0000736"
+    year: 1963
+    directed: [ "Robert Aldrich" ]
     cast: [ "Dean Martin", "Frank Sinatra" ]
     unused_cast: [ "Charles Bronson" ]
     alt_titles:
@@ -272,9 +249,8 @@ movies:
   - id: freebie
     title: "Freebie and the Bean"
     imdb: "tt0071521"
-    release_date: 1974-01-01
-    director: "Richard Rush"
-    director_imdb: "nm0750701"
+    year: 1974
+    directed: [ "Richard Rush" ]
     cast: []
     alt_titles:
       fr: "Les Anges gardiens"
@@ -286,9 +262,8 @@ movies:
   - id: good_guys
     title: "The Good Guys and the Bad Guys"
     imdb: "tt0064379"
-    release_date: 1969-01-01
-    director: "Burt Kennedy"
-    director_imdb: "nm0447944"
+    year: 1969
+    directed: [ "Burt Kennedy" ]
     cast: [ "Robert Mitchum" ]
     alt_titles:
       fr: "Un homme fait la loi"
@@ -298,9 +273,8 @@ movies:
   - id: harper
     title: "Harper"
     imdb: "tt0060490"
-    release_date: 1966-01-01
-    director: "Jack Smight"
-    director_imdb: "nm0806915"
+    year: 1966
+    directed: [ "Jack Smight" ]
     cast: [ "Lauren Bacall", "Paul Newman" ]
     alt_titles:
       en: "The Moving Target"
@@ -311,9 +285,8 @@ movies:
   - id: hooper
     title: "Hooper"
     imdb: "tt0077696"
-    release_date: 1978-01-01
-    director: "Hal Needham"
-    director_imdb: "nm0624102"
+    year: 1978
+    directed: [ "Hal Needham" ]
     cast: [ "Jan-Michael Vincent" ]
     alt_titles:
       fr: "La Fureur du danger"
@@ -322,18 +295,16 @@ movies:
   - id: jeremiah
     title: "Jeremiah Johnson"
     imdb: "tt0068762"
-    release_date: 1972-01-01
-    director: "Sydney Pollack"
-    director_imdb: "nm0001628"
+    year: 1972
+    directed: [ "Sydney Pollack" ]
     cast: [ "Robert Redford" ]
     samples: [ "0:38:44", "0:40:29", "0:41:36", "0:44:06" ]
 
   - id: roy_bean
     title: "The Life and Times of Judge Roy Bean"
     imdb: "tt0068853"
-    release_date: 1972-01-01
-    director: "John Huston"
-    director_imdb: "nm0001379"
+    year: 1972
+    directed: [ "John Huston" ]
     cast: [ "Paul Newman" ]
     unused_cast: [ "Ned Beatty", "Jacqueline Bisset" ]
     alt_titles:
@@ -343,26 +314,24 @@ movies:
   - id: mad_max
     title: "Mad Max"
     imdb: "tt0079501"
-    release_date: 1979-01-01
-    director: "George Miller"
-    director_imdb: "nm0004306"
+    year: 1979
+    directed: [ "George Miller" ]
     cast: []
     samples: [ "0:04:18", "0:37:21", "1:08:56", "1:10:02", "1:10:04" ]
 
   - id: maigret
     title: "Maigret et les plaisirs de la nuit"
     imdb: "tt0102379"
-    release_date: 1992-01-01
-    director: "José Pinheiro"
+    year: 1992
+    directed: [ "José Pinheiro" ]
     cast: []
     samples: [ "0:53:26" ]
 
   - id: mcq
     title: "McQ"
     imdb: "tt0071824"
-    release_date: 1974-01-01
-    director: "John Sturges"
-    director_imdb: "nm0836328"
+    year: 1974
+    directed: [ "John Sturges" ]
     cast: [ "John Wayne" ]
     alt_titles:
       fr: "Un silencieux au bout du canon"
@@ -371,9 +340,8 @@ movies:
   - id: fatima
     title: "The Miracle of Our Lady of Fatima"
     imdb: "tt0044905"
-    release_date: 1952-01-01
-    director: "John Brahm"
-    director_imdb: "nm0103975"
+    year: 1952
+    directed: [ "John Brahm" ]
     cast: []
     alt_titles:
       en: "Miracle of Fatima"
@@ -382,9 +350,8 @@ movies:
   - id: oceans
     title: "Ocean’s Eleven"
     imdb: "tt0054135"
-    release_date: 1960-01-01
-    director: "Lewis Milestone"
-    director_imdb: "nm0587277"
+    year: 1960
+    directed: [ "Lewis Milestone" ]
     cast: [ "Angie Dickinson", "Dean Martin", "Frank Sinatra", "Akim Tamiroff" ]
     alt_titles:
       fr: "L’Inconnu de Las Vegas"
@@ -393,9 +360,8 @@ movies:
   - id: old_man
     title: "The Old Man and the Sea"
     imdb: "tt0052027"
-    release_date: 1958-01-01
-    director: "John Sturges"
-    director_imdb: "nm0836328"
+    year: 1958
+    directed: [ "John Sturges" ]
     cast: [ "Spencer Tracy" ]
     alt_titles:
       fr: "Le Vieil Homme et la mer"
@@ -404,9 +370,8 @@ movies:
   - id: rampage
     title: "Rampage"
     imdb: "tt0057447"
-    release_date: 1963-01-01
-    director: "Phil Karlson"
-    director_imdb: "nm0439597"
+    year: 1963
+    directed: [ "Phil Karlson" ]
     cast: [ "Robert Mitchum" ]
     alt_titles:
       fr: "Massacre pour un fauve"
@@ -419,9 +384,8 @@ movies:
   - id: riding
     title: "Riding Shotgun"
     imdb: "tt0047413"
-    release_date: 1954-01-01
-    director: "André De Toth"
-    director_imdb: "nm0211964"
+    year: 1954
+    directed: [ "André De Toth" ]
     cast: [ "Randolph Scott" ]
     unused_cast: [ "Charles Bronson" ]
     alt_titles:
@@ -434,18 +398,16 @@ movies:
   - id: rio_bravo
     title: "Rio Bravo"
     imdb: "tt0053221"
-    release_date: 1959-01-01
-    director: "Howard Hawks"
-    director_imdb: "nm0001328"
+    year: 1959
+    directed: [ "Howard Hawks" ]
     cast: [ "Walter Brennan", "Angie Dickinson", "Dean Martin", "Ricky Nelson", "John Wayne" ]
     samples: [ "0:16:46", "0:17:11", "0:17:39", "0:20:55", "0:29:11", "0:29:31", "0:42:19", "0:42:21" ]
 
   - id: sea_chase
     title: "The Sea Chase"
     imdb: "tt0048593"
-    release_date: 1955-01-01
-    director: "John Farrow"
-    director_imdb: "nm0268513"
+    year: 1955
+    directed: [ "John Farrow" ]
     cast: [ "Lana Turner", "John Wayne" ]
     alt_titles:
       fr: "Le Renard des océans"
@@ -454,9 +416,8 @@ movies:
   - id: searchers
     title: "The Searchers"
     imdb: "tt0049730"
-    release_date: 1956-01-01
-    director: "John Ford"
-    director_imdb: "nm0000406"
+    year: 1956
+    directed: [ "John Ford" ]
     cast: [ "John Wayne" ]
     alt_titles:
       fr: "La Prisonnière du désert"
@@ -465,9 +426,8 @@ movies:
   - id: revolution
     title: "Start the Revolution Without Me"
     imdb: "tt0066402"
-    release_date: 1970-01-01
-    director: "Bud Yorkin"
-    director_imdb: "nm0005570"
+    year: 1970
+    directed: [ "Bud Yorkin" ]
     cast: [ "Orson Welles" ]
     alt_titles:
       fr: "Commencez la révolution sans nous"
@@ -476,9 +436,8 @@ movies:
   - id: straight
     title: "Straight Time"
     imdb: "tt0078326"
-    release_date: 1978-01-01
-    director: "Ulu Grosbard"
-    director_imdb: "nm0343260"
+    year: 1978
+    directed: [ "Ulu Grosbard" ]
     cast: [ "Dustin Hoffman" ]
     alt_titles:
       fr: "Le Récidiviste"
@@ -489,9 +448,8 @@ movies:
   - id: crooked
     title: "There Was a Crooked Man…"
     imdb: "tt0066448"
-    release_date: 1970-01-01
-    director: "Joseph L. Mankiewicz"
-    director_imdb: "nm0000581"
+    year: 1970
+    directed: [ "Joseph L. Mankiewicz" ]
     cast: [ "Henry Fonda" ]
     unused_cast: [ "Burgess Meredith" ]
     alt_titles:
@@ -502,9 +460,8 @@ movies:
   - id: inferno
     title: "The Towering Inferno"
     imdb: "tt0072308"
-    release_date: 1970-01-01
-    director: [ "John Guillermin", "Irwin Allen" ]
-    director_imdb: [ "nm0347086", "nm0000740" ]
+    year: 1970
+    directed: [ "John Guillermin", "Irwin Allen" ]
     unused_cast: [ "Jacqueline Bisset", "Paul Newman" ]
     alt_titles:
       fr: "La Tour infernale"
@@ -513,9 +470,8 @@ movies:
   - id: train_robbers
     title: "The Train Robbers"
     imdb: "tt0070825"
-    release_date: 1973-01-01
-    director: "Burt Kennedy"
-    director_imdb: "nm0447944"
+    year: 1973
+    directed: [ "Burt Kennedy" ]
     cast: [ "John Wayne" ]
     alt_titles:
       fr: "Les Voleurs de trains"
@@ -524,9 +480,8 @@ movies:
   - id: gwangi
     title: "The Valley of Gwangi"
     imdb: "tt0065163"
-    release_date: 1969-01-01
-    director: "Jim O’Connolly"
-    director_imdb: "nm0640226"
+    year: 1969
+    directed: [ "Jim O’Connolly" ]
     cast: [ "James Franciscus" ]
     alt_titles:
       fr: "La Vallée de Gwangi"
@@ -535,9 +490,8 @@ movies:
   - id: westbound
     title: "Westbound"
     imdb: "tt0053441"
-    release_date: 1959-01-01
-    director: "Budd Boetticher"
-    director_imdb: "nm0091430"
+    year: 1959
+    directed: [ "Budd Boetticher" ]
     cast: [ "Randolph Scott" ]
     alt_titles:
       fr: "Le Courrier de l’or"
@@ -547,9 +501,8 @@ movies:
   - id: time_out
     title: "When Time Ran Out…"
     imdb: "tt0081747"
-    release_date: 1980-01-01
-    director: "James Goldstone"
-    director_imdb: "nm0326360"
+    year: 1980
+    directed: [ "James Goldstone" ]
     cast: [ "Jacqueline Bisset", "Ernest Borgnine", "James Franciscus", "Burgess Meredith", "Paul Newman" ]
     alt_titles:
       en: "Earth’s Final Fury"
@@ -557,3 +510,47 @@ movies:
       fr: "Le Jour de la fin du monde"
     samples: [ "0:40:21", "0:46:11", "0:47:22", "0:47:24", "0:47:25", "0:53:04", "0:53:44" ]
 
+directors:
+  - { name: "Alan J. Pakula", imdb: "nm0001587" }
+  - { name: "Andrew V. McLaglen", imdb: "nm0572132" }
+  - { name: "André De Toth", imdb: "nm0211964" }
+  - { name: "Bud Yorkin", imdb: "nm0005570" }
+  - { name: "Budd Boetticher", imdb: "nm0091430" }
+  - { name: "Burt Kennedy", imdb: "nm0447944" }
+  - { name: "Charles Marquis Warren", imdb: "nm0912766" }
+  - { name: "David Miller", imdb: "nm0588183" }
+  - { name: "Delmer Daves", imdb: "nm0202681" }
+  - { name: "Elia Kazan", imdb: "nm0001415" }
+  - { name: "Gene Kelly", imdb: "nm0000037" }
+  - { name: "George Miller", imdb: "nm0004306" }
+  - { name: "Hal Needham", imdb: "nm0624102" }
+  - { name: "Howard Hawks", imdb: "nm0001328" }
+  - { name: "Irwin Allen", imdb: "nm0000740" }
+  - { name: "Jack Smight", imdb: "nm0806915" }
+  - { name: "Jack Starrett", imdb: "nm0823630" }
+  - { name: "James Goldstone", imdb: "nm0326360" }
+  - { name: "Jim O’Connolly", imdb: "nm0640226" }
+  - { name: "John Boorman", imdb: "nm0000958" }
+  - { name: "John Brahm", imdb: "nm0103975" }
+  - { name: "John Farrow", imdb: "nm0268513" }
+  - { name: "John Ford", imdb: "nm0000406" }
+  - { name: "John Guillermin", imdb: "nm0347086" }
+  - { name: "John Huston", imdb: "nm0001379" }
+  - { name: "John Sturges", imdb: "nm0836328" }
+  - { name: "Joseph L. Mankiewicz", imdb: "nm0000581" }
+  - { name: "José Pinheiro" }
+  - { name: "Ken Annakin", imdb: "nm0002175" }
+  - { name: "Lewis Milestone", imdb: "nm0587277" }
+  - { name: "Mark Rydell", imdb: "nm0753073" }
+  - { name: "Mervyn LeRoy", imdb: "nm0503777" }
+  - { name: "Michael Ritchie", imdb: "nm0006916" }
+  - { name: "Peter Yates", imdb: "nm0946811" }
+  - { name: "Phil Karlson", imdb: "nm0439597" }
+  - { name: "Raoul Walsh", imdb: "nm0909825" }
+  - { name: "Richard Rush", imdb: "nm0750701" }
+  - { name: "Robert Aldrich", imdb: "nm0000736" }
+  - { name: "Robert Siodmak", imdb: "nm0802563" }
+  - { name: "Sydney Pollack", imdb: "nm0001628" }
+  - { name: "Ulu Grosbard", imdb: "nm0343260" }
+  - { name: "Vincent McEveety", imdb: "nm0568546" }
+  - { name: "William A. Wellman", imdb: "nm0920074" }
