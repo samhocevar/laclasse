@@ -1,7 +1,4649 @@
 ---
-movies:
 
-  - id: presidents
+#
+# segments
+#
+# Ordered list of all the segments that compose the final movie.
+# Segments are usually simple clips from a reference movie, sometimes with simple
+# transforms applied (reverse playback, colour filter, fade to black) and a few
+# segments require more complex effects such as cross-fading or picture-in-picture.
+#
+
+segments:
+  - count: 125
+    scenes: [ "0:00:01" ]
+    clips:
+    - movie: "Warner Bros. Logo"
+
+  - count: 177
+    scenes: [ "0:00:03" ]
+    clips:
+    - movie: "Attention"
+
+  - count: 283
+    scenes: [ "0:00:13", "0:00:19" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:48:20)"
+
+  - count: 106
+    scenes: [ "0:00:24" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:17:27) ou (0:33:57) ou (0:37:37) ou (1:25:00) ou (1:39:26)"
+
+  - count: 214
+    scenes: [ "0:00:28" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:21:02)"
+
+  - count: 56
+    scenes: [ "0:00:35" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:21:13)"
+
+  - count: 54
+    scenes: [ "0:00:37" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:45:10)"
+
+  - count: 78
+    scenes: [ "0:00:39" ]
+    clips:
+    - movie: the_crimson_pirate
+      timestamp: "(0:12:05)"
+
+  - count: 170
+    scenes: [ "0:00:41" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:46:36)"
+
+  - count: 158
+    scenes: [ "0:00:48" ]
+    clips:
+    - movie: the_crimson_pirate
+
+  - count: 159
+    scenes: [ "0:00:55" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:51:24)"
+
+  - count: 180
+    scenes: [ "0:01:03" ]
+    clips:
+    - movie: the_crimson_pirate
+      timestamp: "(0:09:36)"
+
+  - count: 53
+    scenes: [ "0:01:09" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:44:50) ou (0:44:55)"
+
+  - count: 94
+    scenes: [ "0:01:11" ]
+    clips:
+    - movie: the_crimson_pirate
+
+  - count: 89
+    scenes: [ "0:01:14" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:51:06)"
+
+  - count: 184
+    scenes: [ "0:01:18" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:51:14) ou (0:51:31)"
+
+  - count: 50
+    scenes: [ "0:01:26" ]
+    clips:
+    - movie: the_crimson_pirate
+      transform: "(reversed)"
+
+  - count: 83
+    scenes: [ "0:01:28" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:51:24)"
+
+  - count: 68
+    scenes: [ "0:01:30" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:51:14) ou (0:51:31)"
+
+  - count: 35
+    scenes: [ "0:01:33" ]
+    clips:
+    - movie: the_crimson_pirate
+      timestamp: "(0:10:41)"
+
+  - count: 96
+    scenes: [ "0:01:35" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:46:47)"
+
+  - count: 93
+    scenes: [ "0:01:39" ]
+    clips:
+    - movie: the_crimson_pirate
+      transform: "(reversed)"
+
+  - count: 81
+    scenes: [ "0:01:41" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:51:24)"
+
+  - count: 126
+    scenes: [ "0:01:46" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:51:14) ou (0:51:31)"
+
+  - count: 78
+    scenes: [ "0:01:50" ]
+    clips:
+    - movie: the_crimson_pirate
+
+  - count: 206
+    scenes: [ "0:01:53", "0:01:57" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:17:27) ou (0:33:57) ou (0:37:37) ou (1:25:00) ou (1:39:26)"
+    - movie: the_sea_chase
+      timestamp: "(1:47:14)"
+
+  - count: 86
+    scenes: [ "0:02:02" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:43:17)"
+
+  - count: 441
+    scenes: [ "0:02:11" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:43:23)"
+
+  - count: 38
+    scenes: [ "0:02:22" ]
+    clips:
+    - movie: blood_alley
+      notes: "(introuvable, pas sûr)"
+
+  - count: 73
+    scenes: [ "0:02:25" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:43:33)"
+
+  - count: 85
+    scenes: [ "0:02:28" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:43:37)"
+
+  - count: 27
+    scenes: [ "0:02:31" ]
+    clips:
+    - movie: blood_alley
+      notes: "(introuvable, pas sûr)"
+
+  - count: 174
+    scenes: [ "0:02:32" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:45:59)"
+
+  - count: 64
+    scenes: [ "0:02:39" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:46:13)"
+
+  - count: 72
+    scenes: [ "0:02:41" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:46:15)"
+
+  - count: 261
+    scenes: [ "0:02:49" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:47:58)"
+
+  - count: 73
+    scenes: [ "0:02:55" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:42:23)"
+
+  - count: 85
+    scenes: [ "0:02:59" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:47:40)"
+
+  - count: 23
+    scenes: [ "0:03:01" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:47:44)"
+
+  - count: 85
+    scenes: [ "0:03:02" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:50:25)"
+
+  - count: 23
+    scenes: [ "0:03:05" ]
+    clips:
+    - movie: blood_alley
+      notes: "(introuvable, pas sûr)"
+
+  - count: 58
+    scenes: [ "0:03:07" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:50:06)"
+
+  - count: 219
+    scenes: [ "0:03:15" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:50:34)"
+
+  - count: 62
+    scenes: [ "0:03:18" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:50:43)"
+
+  - count: 153
+    scenes: [ "0:03:20" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(1:50:45)"
+
+  - count: 171
+    scenes: [ "0:03:26", "0:03:27" ]
+    clips:
+    - movie: the_arrangement
+
+  - count: 110
+    scenes: [ "0:03:32" ]
+    clips:
+    - movie: the_arrangement
+
+  - count: 128
+    scenes: [ "0:03:37" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:07:52)"
+
+  - count: 43
+    scenes: [ "0:03:41" ]
+    clips:
+    - movie: harper
+
+  - count: 26
+    scenes: [ "0:03:44" ]
+    clips:
+    - movie: the_arrangement
+
+  - count: 66
+    scenes: [ "0:03:45" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:35:44)"
+
+  - count: 70
+    scenes: [ "0:03:48" ]
+    clips:
+    - movie: freebie_and_the_bean
+
+  - count: 167
+    scenes: [ "0:03:50", "0:03:54" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(1:33:31)"
+
+  - count: 47
+    scenes: [ "0:03:57" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:49:36)"
+
+  - count: 73
+    scenes: [ "0:03:59" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(1:33:42)"
+
+  - count: 17
+    scenes: [ "0:04:01" ]
+    clips:
+    - movie: harper
+
+  - count: 85
+    scenes: [ "0:04:02" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:34:25)"
+
+  - count: 56
+    scenes: [ "0:04:06" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:34:18)"
+
+  - count: 57
+    scenes: [ "0:04:08" ]
+    clips:
+    - movie: harper
+
+  - count: 32
+    scenes: [ "0:04:10" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(1:10:19)"
+
+  - count: 30
+    scenes: [ "0:04:12" ]
+    clips:
+    - movie: harper
+
+  - count: 113
+    scenes: [ "0:04:14" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:37:06)"
+
+  - count: 43
+    scenes: [ "0:04:17" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:35:13)"
+
+  - count: 17
+    scenes: [ "0:04:18" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:03:54) 50 @233"
+
+  - count: 42
+    scenes: [ "0:04:19" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:09:41)"
+
+  - count: 28
+    scenes: [ "0:04:21" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:09:46)"
+
+  - count: 45
+    scenes: [ "0:04:23" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:38:34)"
+
+  - count: 66
+    scenes: [ "0:04:25" ]
+    clips:
+    - movie: bullitt
+      timestamp: "(1:06:03)"
+
+  - count: 23
+    scenes: [ "0:04:27" ]
+    clips:
+    - movie: harper
+
+  - count: 43
+    scenes: [ "0:04:28" ]
+    clips:
+    - movie: bullitt
+      timestamp: "(1:06:04)"
+
+  - count: 25
+    scenes: [ "0:04:30" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:36:44)"
+
+  - count: 17
+    scenes: [ "0:04:31" ]
+    clips:
+    - movie: harper
+
+  - count: 27
+    scenes: [ "0:04:32" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:09:12)"
+
+  - count: 29
+    scenes: [ "0:04:33" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:37:13)"
+
+  - count: 17
+    scenes: [ "0:04:34" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:37:10)"
+
+  - count: 20
+    scenes: [ "0:04:35" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:37:15)"
+
+  - count: 23
+    scenes: [ "0:04:36" ]
+    clips:
+    - movie: harper
+
+  - count: 34
+    scenes: [ "0:04:37" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:10:35)"
+
+  - count: 40
+    scenes: [ "0:04:38" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(1:11:13)"
+
+  - count: 104
+    scenes: [ "0:04:39", "0:04:41" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:10:38)"
+
+  - count: 152
+    scenes: [ "0:04:44" ]
+    clips:
+    - movie: the_towering_inferno
+      timestamp: "(0:10:12) 400 @600"
+
+  - count: 107
+    scenes: [ "0:04:50" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 117
+    scenes: [ "0:04:54" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:21:26)"
+      transform: "(mirrored)"
+
+  - count: 69
+    scenes: [ "0:04:58" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 82
+    scenes: [ "0:05:01" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:21:26)"
+      transform: "(mirrored)"
+
+  - count: 73
+    scenes: [ "0:05:04" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 53
+    scenes: [ "0:05:07" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:21:26)"
+      transform: "(mirrored)"
+
+  - count: 103
+    scenes: [ "0:05:09" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 132
+    scenes: [ "0:05:13" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 169
+    scenes: [ "0:05:18" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 127
+    scenes: [ "0:05:26" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:59:09)"
+
+  - count: 87
+    scenes: [ "0:05:32" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 48
+    scenes: [ "0:05:34" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 44
+    scenes: [ "0:05:36" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 162
+    scenes: [ "0:05:38" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 72
+    scenes: [ "0:05:44" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 199
+    scenes: [ "0:05:46" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 87
+    scenes: [ "0:05:55" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 117
+    scenes: [ "0:06:00" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 131
+    scenes: [ "0:06:04" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 71
+    scenes: [ "0:06:08" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 504
+    scenes: [ "0:06:11" ]
+    clips:
+    - movie: start_the_revolution_without_me
+      timestamp: "(0:00:21)"
+
+  - count: 261
+    scenes: [ "0:06:31" ]
+    clips:
+    - movie: start_the_revolution_without_me
+      timestamp: "(0:00:51)"
+
+  - count: 217
+    scenes: [ "0:06:42" ]
+    clips:
+    - movie: start_the_revolution_without_me
+      timestamp: "(1:28:00)"
+
+  - count: 8
+    scenes: [ "0:06:50" ]
+    clips:
+    - movie: start_the_revolution_without_me
+      timestamp: "(1:28:08)"
+
+  - count: 43
+    scenes: [ "0:06:51" ]
+    clips:
+    - movie: start_the_revolution_without_me
+      timestamp: "(1:28:09)"
+
+  - count: 60
+    scenes: [ "0:06:52" ]
+    clips:
+    - movie: start_the_revolution_without_me
+      timestamp: "(1:28:11)"
+
+  - count: 208
+    scenes: [ "0:06:56" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 127
+    scenes: [ "0:07:03" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 172
+    scenes: [ "0:07:09" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 146
+    scenes: [ "0:07:15" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 95
+    scenes: [ "0:07:22" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:30:14)"
+
+  - count: 50
+    scenes: [ "0:07:24" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 77
+    scenes: [ "0:07:27" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 399
+    scenes: [ "0:07:32" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:55:03)"
+
+  - count: 158
+    scenes: [ "0:07:46", "0:07:49" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:54:48)"
+
+  - count: 40
+    scenes: [ "0:07:52" ]
+    clips:
+    - movie: battle_of_the_bulge
+      timestamp: "(0:19:13)"
+      transform: "(mirrored)"
+
+  - count: 73
+    scenes: [ "0:07:54" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:54:56)"
+
+  - count: 145
+    scenes: [ "0:07:57" ]
+    clips:
+    - movie: battle_of_the_bulge
+      timestamp: "(0:18:41)"
+      transform: "(mirrored)"
+
+  - count: 43
+    scenes: [ "0:08:03" ]
+    clips:
+    - movie: harper
+
+  - count: 104
+    scenes: [ "0:08:04" ]
+    clips:
+    - movie: battle_of_the_bulge
+      timestamp: "(0:18:11)"
+      transform: "(mirrored)"
+
+  - count: 83
+    scenes: [ "0:08:09" ]
+    clips:
+    - movie: harper
+
+  - count: 605
+    scenes: [ "0:08:12", "0:08:32" ]
+    clips:
+    - movie: battle_of_the_bulge
+      timestamp: "(0:18:41)"
+      transform: "(mirrored)"
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:38:02)"
+      transform: "(mirrored)"
+
+  - count: 57
+    scenes: [ "0:08:36" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:38:12)"
+
+  - count: 105
+    scenes: [ "0:08:39" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:38:14)"
+
+  - count: 447
+    scenes: [ "0:08:42" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:38:32)"
+
+  - count: 358
+    scenes: [ "0:09:10" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(0:06:44)"
+
+  - count: 133
+    scenes: [ "0:09:16" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(0:07:07)"
+
+  - count: 551
+    scenes: [ "0:09:20", "0:09:27" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(0:07:27)"
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:26:16)"
+
+  - count: 259
+    scenes: [ "0:09:44" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:26:28)"
+
+  - count: 67
+    scenes: [ "0:09:53" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 379
+    scenes: [ "0:09:55" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 188
+    scenes: [ "0:10:10" ]
+    clips:
+    - movie: the_train_robbers
+      timestamp: "(0:08:07)"
+      transform: "(mirrored)"
+
+  - count: 166
+    scenes: [ "0:10:18" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 242
+    scenes: [ "0:10:25" ]
+    clips:
+    - movie: the_train_robbers
+      timestamp: "(0:08:51)"
+
+  - count: 183
+    scenes: [ "0:10:34" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:27:29)"
+
+  - count: 27
+    scenes: [ "0:10:41" ]
+    clips:
+    - movie: the_train_robbers
+      timestamp: "(0:09:11)"
+
+  - count: 126
+    scenes: [ "0:10:45" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 223
+    scenes: [ "0:10:48" ]
+    clips:
+    - movie: the_train_robbers
+      timestamp: "(0:09:12)"
+
+  - count: 359
+    scenes: [ "0:10:56" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:28:01)"
+
+  - count: 131
+    scenes: [ "0:11:11" ]
+    clips:
+    - movie: the_train_robbers
+      timestamp: "(0:09:36)"
+      transform: "(mirrored)"
+
+  - count: 81
+    scenes: [ "0:11:17" ]
+    clips:
+    - movie: harper
+
+  - count: 234
+    scenes: [ "0:11:20" ]
+    clips:
+    - movie: battle_of_the_bulge
+      timestamp: "(0:18:41)"
+      transform: "(mirrored)"
+
+  - count: 65
+    scenes: [ "0:11:29" ]
+    clips:
+    - movie: harper
+
+  - count: 376
+    scenes: [ "0:11:33", "0:11:43" ]
+    clips:
+    - movie: battle_of_the_bulge
+      timestamp: "(0:18:51)"
+      transform: "(mirrored)"
+    - movie: there_was_a_crooked_man
+      timestamp: "(1:49:25)"
+
+  - count: 84
+    scenes: [ "0:11:47" ]
+    clips:
+    - movie: the_searchers
+      timestamp: "(1:19:33)"
+
+  - count: 65
+    scenes: [ "0:11:50" ]
+    clips:
+    - movie: there_was_a_crooked_man
+
+  - count: 45
+    scenes: [ "0:11:52" ]
+    clips:
+    - movie: drum_beat
+
+  - count: 24
+    scenes: [ "0:11:54" ]
+    clips:
+    - movie: there_was_a_crooked_man
+
+  - count: 136
+    scenes: [ "0:11:55" ]
+    clips:
+    - movie: drum_beat
+
+  - count: 61
+    scenes: [ "0:12:01" ]
+    clips:
+    - movie: there_was_a_crooked_man
+      timestamp: "(0:49:02)"
+
+  - count: 133
+    scenes: [ "0:12:03" ]
+    clips:
+    - movie: drum_beat
+
+  - count: 64
+    scenes: [ "0:12:08" ]
+    clips:
+    - movie: there_was_a_crooked_man
+
+  - count: 103
+    scenes: [ "0:12:11" ]
+    clips:
+    - movie: drum_beat
+      timestamp: "(0:40:13)"
+
+  - count: 106
+    scenes: [ "0:12:15" ]
+    clips:
+    - movie: there_was_a_crooked_man
+
+  - count: 154
+    scenes: [ "0:12:19" ]
+    clips:
+    - movie: drum_beat
+
+  - count: 33
+    scenes: [ "0:12:25" ]
+    clips:
+    - movie: there_was_a_crooked_man
+
+  - count: 139
+    scenes: [ "0:12:27" ]
+    clips:
+    - movie: drum_beat
+
+  - count: 90
+    scenes: [ "0:12:33" ]
+    clips:
+    - movie: there_was_a_crooked_man
+
+  - count: 103
+    scenes: [ "0:12:36" ]
+    clips:
+    - movie: drum_beat
+
+  - count: 176
+    scenes: [ "0:12:40" ]
+    clips:
+    - movie: there_was_a_crooked_man
+
+  - count: 53
+    scenes: [ "0:12:47" ]
+    clips:
+    - movie: harper
+
+  - count: 185
+    scenes: [ "0:12:49" ]
+    clips:
+    - movie: battle_of_the_bulge
+      timestamp: "(0:18:26)"
+      transform: "(mirrored)"
+
+  - count: 272
+    scenes: [ "0:12:57" ]
+    clips:
+    - movie: harper
+
+  - count: 656
+    scenes: [ "0:13:07", "0:13:09" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:25:00)"
+    - movie: harper
+      timestamp: "(0:55:29)"
+
+  - count: 709
+    scenes: [ "0:13:34", "0:13:40", "0:13:42" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:26:20)"
+
+  - count: 102
+    scenes: [ "0:14:02", "0:14:05" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:27:25)"
+
+  - count: 311
+    scenes: [ "0:14:06" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:28:20)"
+
+  - count: 43
+    scenes: [ "0:14:18" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 120
+    scenes: [ "0:14:21" ]
+    clips:
+    - movie: the_fbi_story
+      timestamp: "(2:11:44)"
+
+  - count: 131
+    scenes: [ "0:14:26" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 146
+    scenes: [ "0:14:31" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 201
+    scenes: [ "0:14:36" ]
+    clips:
+    - movie: the_fbi_story
+
+  - count: 236
+    scenes: [ "0:14:44" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:27:16)"
+
+  - count: 138
+    scenes: [ "0:14:54" ]
+    clips:
+    - movie: the_fbi_story
+
+  - count: 24
+    scenes: [ "0:14:59" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 129
+    scenes: [ "0:15:01" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 290
+    scenes: [ "0:15:05" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 270
+    scenes: [ "0:15:24" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 128
+    scenes: [ "0:15:28" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 119
+    scenes: [ "0:15:33" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 151
+    scenes: [ "0:15:38" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:26:16)"
+
+  - count: 254
+    scenes: [ "0:15:44" ]
+    clips:
+    - movie: all_the_presidents_men
+      transform: "(ping-pong)"
+
+  - count: 157
+    scenes: [ "0:15:54" ]
+    clips:
+    - movie: the_fbi_story
+
+  - count: 92
+    scenes: [ "0:16:00" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:00:43)"
+
+  - count: 175
+    scenes: [ "0:16:04" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:38:54)"
+      transform: "(mirrored)"
+
+  - count: 196
+    scenes: [ "0:16:11" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:00:49)"
+
+  - count: 407
+    scenes: [ "0:16:18" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:39:06)"
+      transform: "(mirrored)"
+
+  - count: 41
+    scenes: [ "0:16:35" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:01:23)"
+
+  - count: 185
+    scenes: [ "0:16:37" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:39:21)"
+      transform: "(mirrored)"
+
+  - count: 64
+    scenes: [ "0:16:44" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 130
+    scenes: [ "0:16:46" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:37:49)"
+      transform: "(mirrored)"
+
+  - count: 165
+    scenes: [ "0:16:52" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 59
+    scenes: [ "0:16:58" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:38:47)"
+      transform: "(ping-pong)"
+
+  - count: 113
+    scenes: [ "0:17:01" ]
+    clips:
+    - movie: firecreek
+      timestamp: "(0:55:16)"
+
+  - count: 148
+    scenes: [ "0:17:05" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 53
+    scenes: [ "0:17:11" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:38:44)"
+      transform: "(mirrored)"
+
+  - count: 194
+    scenes: [ "0:17:13" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:39:21)"
+      transform: "(mirrored)"
+
+  - count: 83
+    scenes: [ "0:17:21" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 178
+    scenes: [ "0:17:24" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:38:03)"
+      transform: "(mirrored)"
+
+  - count: 43
+    scenes: [ "0:17:31" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:01:23)"
+
+  - count: 155
+    scenes: [ "0:17:33" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:38:18)"
+      transform: "(mirrored)"
+
+  - count: 124
+    scenes: [ "0:17:39", "0:17:43" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(0:50:47)"
+      transform: "(mirrored)"
+    - movie: the_cheyenne_social_club
+      timestamp: "(0:55:25)"
+      transform: "(mirrored)"
+
+  - count: 64
+    scenes: [ "0:17:45" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(0:22:47)"
+
+  - count: 226
+    scenes: [ "0:17:47" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(0:55:30)"
+      transform: "(mirrored)"
+
+  - count: 459
+    scenes: [ "0:17:56" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(0:41:56)"
+
+  - count: 193
+    scenes: [ "0:18:14", "0:18:21" ]
+    clips:
+    - movie: chisum
+      timestamp: "(1:29:10)"
+
+  - count: 49
+    scenes: [ "0:18:23" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 132
+    scenes: [ "0:18:25" ]
+    clips:
+    - movie: chisum
+      timestamp: "(0:49:42)"
+
+  - count: 42
+    scenes: [ "0:18:29" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(0:52:01)"
+
+  - count: 100
+    scenes: [ "0:18:31" ]
+    clips:
+    - movie: chisum
+      timestamp: "(0:49:47)"
+
+  - count: 47
+    scenes: [ "0:18:35" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 140
+    scenes: [ "0:18:37" ]
+    clips:
+    - movie: chisum
+      timestamp: "(0:49:31)"
+      transform: "(ping-pong)"
+
+  - count: 42
+    scenes: [ "0:18:42" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 202
+    scenes: [ "0:18:44" ]
+    clips:
+    - movie: chisum
+      timestamp: "(0:49:47)"
+      transform: "(ping-pong)"
+
+  - count: 51
+    scenes: [ "0:18:52" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 81
+    scenes: [ "0:18:54" ]
+    clips:
+    - movie: chisum
+      timestamp: "(0:49:59)"
+
+  - count: 72
+    scenes: [ "0:18:57" ]
+    clips:
+    - movie: the_good_guys_and_the_bad_guys
+      timestamp: "(1:13:28)"
+
+  - count: 95
+    scenes: [ "0:19:00" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:23:15)"
+
+  - count: 130
+    scenes: [ "0:19:04" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 46
+    scenes: [ "0:19:09" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 97
+    scenes: [ "0:19:11" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:58:39)"
+
+  - count: 69
+    scenes: [ "0:19:15" ]
+    clips:
+    - movie: the_good_guys_and_the_bad_guys
+      timestamp: "(1:14:12)"
+
+  - count: 38
+    scenes: [ "0:19:18" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 62
+    scenes: [ "0:19:19" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 70
+    scenes: [ "0:19:22" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      transform: "(mirrored)"
+
+  - count: 34
+    scenes: [ "0:19:24" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 144
+    scenes: [ "0:19:27" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:59:28)"
+
+  - count: 195
+    scenes: [ "0:19:32" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:59:37)"
+
+  - count: 115
+    scenes: [ "0:19:40" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:59:55)"
+
+  - count: 72
+    scenes: [ "0:19:44" ]
+    clips:
+    - movie: the_good_guys_and_the_bad_guys
+      timestamp: "(1:14:55)"
+
+  - count: 50
+    scenes: [ "0:19:47" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 27
+    scenes: [ "0:19:48" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:03:10)"
+
+  - count: 53
+    scenes: [ "0:19:50" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:23:55)"
+
+  - count: 84
+    scenes: [ "0:19:52" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:23:57)"
+
+  - count: 30
+    scenes: [ "0:19:55" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:02:12)"
+
+  - count: 29
+    scenes: [ "0:19:57" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:02:11)"
+
+  - count: 34
+    scenes: [ "0:19:58" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:03:09)"
+
+  - count: 44
+    scenes: [ "0:19:59" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 29
+    scenes: [ "0:20:01" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:02:02)"
+
+  - count: 16
+    scenes: [ "0:20:02" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 29
+    scenes: [ "0:20:03" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 43
+    scenes: [ "0:20:04" ]
+    clips:
+    - movie: firecreek
+      timestamp: "(0:41:10)"
+      transform: "(mirrored)"
+
+  - count: 80
+    scenes: [ "0:20:05" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:24:53)"
+
+  - count: 14
+    scenes: [ "0:20:08" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:02:04)"
+
+  - count: 48
+    scenes: [ "0:20:10" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 42
+    scenes: [ "0:20:11" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 110
+    scenes: [ "0:20:13" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:03:09)"
+
+  - count: 50
+    scenes: [ "0:20:17" ]
+    clips:
+    - movie: firecreek
+      timestamp: "(0:43:07)"
+      transform: "(mirrored)"
+
+  - count: 91
+    scenes: [ "0:20:19" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 100
+    scenes: [ "0:20:23" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:04:51)"
+
+  - count: 65
+    scenes: [ "0:20:27" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:05:11)"
+
+  - count: 32
+    scenes: [ "0:20:29" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 95
+    scenes: [ "0:20:31" ]
+    clips:
+    - movie: firecreek
+      timestamp: "(0:42:57)"
+      transform: "(mirrored)"
+
+  - count: 105
+    scenes: [ "0:20:35" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:06:04)"
+
+  - count: 130
+    scenes: [ "0:20:39" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 104
+    scenes: [ "0:20:44" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:06:24)"
+
+  - count: 51
+    scenes: [ "0:20:48" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 72
+    scenes: [ "0:20:50" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:06:34)"
+
+  - count: 38
+    scenes: [ "0:20:53" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:07:45)"
+
+  - count: 85
+    scenes: [ "0:20:55" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:07:48)"
+
+  - count: 101
+    scenes: [ "0:20:58" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 219
+    scenes: [ "0:21:02" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 301
+    scenes: [ "0:21:11" ]
+    clips:
+    - movie: the_fbi_story
+
+  - count: 75
+    scenes: [ "0:21:23" ]
+    clips:
+    - movie: firecreek
+      timestamp: "(0:30:39)"
+
+  - count: 95
+    scenes: [ "0:21:26" ]
+    clips:
+    - movie: cahill_us_marshal
+      timestamp: "(0:54:15)"
+
+  - count: 111
+    scenes: [ "0:21:30" ]
+    clips:
+    - movie: firecreek
+      timestamp: "(0:30:51)"
+
+  - count: 230
+    scenes: [ "0:21:34" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 88
+    scenes: [ "0:21:43" ]
+    clips:
+    - movie: firecreek
+      timestamp: "(0:30:59)"
+
+  - count: 208
+    scenes: [ "0:21:47" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 111
+    scenes: [ "0:21:55" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 361
+    scenes: [ "0:22:00" ]
+    clips:
+    - movie: the_fbi_story
+      timestamp: "(2:11:50)"
+
+  - count: 317
+    scenes: [ "0:22:14" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:54:17)"
+
+  - count: 445
+    scenes: [ "0:22:27" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 523
+    scenes: [ "0:22:45" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:04:37)"
+
+  - count: 170
+    scenes: [ "0:23:06" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:52:56)"
+
+  - count: 45
+    scenes: [ "0:23:12" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 60
+    scenes: [ "0:23:14" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:27:49)"
+
+  - count: 83
+    scenes: [ "0:23:16" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:53:42)"
+
+  - count: 233
+    scenes: [ "0:23:20" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 261
+    scenes: [ "0:23:29" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:57:05)"
+
+  - count: 116
+    scenes: [ "0:23:40" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 146
+    scenes: [ "0:23:44" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:53:06)"
+
+  - count: 218
+    scenes: [ "0:23:50" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 189
+    scenes: [ "0:23:59" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:53:42)"
+
+  - count: 235
+    scenes: [ "0:24:06", "0:24:15" ]
+    clips:
+    - movie: all_the_presidents_men
+    - movie: four_for_texas
+      timestamp: "(0:16:42) ou (0:17:00)"
+
+  - count: 261
+    scenes: [ "0:24:16" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:15:58)"
+
+  - count: 49
+    scenes: [ "0:24:26" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:17:05)"
+
+  - count: 80
+    scenes: [ "0:24:28" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:16:25)"
+
+  - count: 67
+    scenes: [ "0:24:31" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:17:41)"
+
+  - count: 104
+    scenes: [ "0:24:34" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:17:52)"
+
+  - count: 51
+    scenes: [ "0:24:38" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:19:11)"
+
+  - count: 69
+    scenes: [ "0:24:40" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:17:52)"
+      transform: "(ping-pong)"
+
+  - count: 64
+    scenes: [ "0:24:43" ]
+    clips:
+    - movie: four_for_texas
+      transform: "(ping-pong)"
+
+  - count: 47
+    scenes: [ "0:24:45" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:10:47) ou (0:10:57) plutôt"
+
+  - count: 228
+    scenes: [ "0:24:47" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:18:00)&nbsp;?"
+
+  - count: 103
+    scenes: [ "0:24:57" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:19:21)&nbsp;?"
+
+  - count: 99
+    scenes: [ "0:25:01" ]
+    clips:
+    - movie: four_for_texas
+
+  - count: 85
+    scenes: [ "0:25:05" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:12:54)"
+
+  - count: 368
+    scenes: [ "0:25:08", "0:25:12", "0:25:15", "0:25:18", "0:25:21" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:19:37)"
+    - movie: the_fbi_story
+      timestamp: "(1:24:59)"
+
+  - count: 49
+    scenes: [ "0:25:23" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:49:35)"
+
+  - count: 654
+    scenes: [ "0:25:25" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:54:23)"
+
+  - count: 310
+    scenes: [ "0:25:51" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:56:00)"
+
+  - count: 151
+    scenes: [ "0:26:03" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:56:10)"
+
+  - count: 364
+    scenes: [ "0:26:09" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:56:42)"
+
+  - count: 401
+    scenes: [ "0:26:24" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:56:24)"
+
+  - count: 119
+    scenes: [ "0:26:40" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:56:20)"
+
+  - count: 233
+    scenes: [ "0:26:45", "0:26:50" ]
+    clips:
+    - movie: four_for_texas
+    - movie: four_for_texas
+      transform: "(avec filtre bleu)"
+
+  - count: 101
+    scenes: [ "0:26:54" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:06:49)"
+
+  - count: 126
+    scenes: [ "0:26:58" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:06:52)"
+
+  - count: 163
+    scenes: [ "0:27:03" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:43:26)"
+
+  - count: 160
+    scenes: [ "0:27:09" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 147
+    scenes: [ "0:27:16" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:44:34)"
+
+  - count: 124
+    scenes: [ "0:27:22" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:07:08)"
+
+  - count: 47
+    scenes: [ "0:27:27" ]
+    clips:
+    - movie: the_cheyenne_social_club
+
+  - count: 60
+    scenes: [ "0:27:29" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:43:36)"
+
+  - count: 37
+    scenes: [ "0:27:31" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:07:37)"
+
+  - count: 22
+    scenes: [ "0:27:32" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:41:42)"
+
+  - count: 21
+    scenes: [ "0:27:33" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:07:45)"
+
+  - count: 32
+    scenes: [ "0:27:34" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:41:46)"
+
+  - count: 86
+    scenes: [ "0:27:35" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:08:06)"
+
+  - count: 126
+    scenes: [ "0:27:39" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(0:44:34)"
+      transform: "(ping-pong)"
+
+  - count: 243
+    scenes: [ "0:27:44" ]
+    clips:
+    - movie: the_cheyenne_social_club
+      timestamp: "(1:08:09)"
+
+  - count: 177
+    scenes: [ "0:27:54" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:52:56)"
+
+  - count: 240
+    scenes: [ "0:28:01" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 189
+    scenes: [ "0:28:11" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:53:42)"
+
+  - count: 302
+    scenes: [ "0:28:20", "0:28:24" ]
+    clips:
+    - movie: all_the_presidents_men
+    - movie: four_for_texas
+      timestamp: "(1:17:14)"
+
+  - count: 281
+    scenes: [ "0:28:31", "0:28:38" ]
+    clips:
+    - movie: four_for_texas
+      notes: "(introuvable)"
+    - movie: carson_city
+      timestamp: "(0:25:42)"
+
+  - count: 232
+    scenes: [ "0:28:41", "0:28:47" ]
+    clips:
+    - movie: chisum
+      timestamp: "(1:18:02)"
+    - movie: chisum
+      timestamp: "(1:18:05)"
+
+  - count: 118
+    scenes: [ "0:28:51" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(1:17:14)"
+
+  - count: 295
+    scenes: [ "0:28:56", "0:29:04" ]
+    clips:
+    - movie: four_for_texas
+      notes: "(introuvable)"
+    - movie: the_searchers
+      timestamp: "(0:49:43)"
+
+  - count: 39
+    scenes: [ "0:29:06" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:41:45)"
+
+  - count: 61
+    scenes: [ "0:29:09" ]
+    clips:
+    - movie: the_searchers
+      timestamp: "(0:50:00)"
+
+  - count: 59
+    scenes: [ "0:29:11" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:43:47)"
+
+  - count: 264
+    scenes: [ "0:29:13", "0:29:22" ]
+    clips:
+    - movie: the_searchers
+      timestamp: "(0:49:43)"
+    - movie: rio_bravo
+      timestamp: "(2:11:45)"
+
+  - count: 44
+    scenes: [ "0:29:24" ]
+    clips:
+    - movie: charro
+      timestamp: "(0:36:57)"
+      transform: "(mirrored)"
+
+  - count: 55
+    scenes: [ "0:29:26" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:11:53)"
+
+  - count: 94
+    scenes: [ "0:29:28" ]
+    clips:
+    - movie: charro
+      timestamp: "(0:38:22)"
+
+  - count: 38
+    scenes: [ "0:29:31" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:13:10)"
+
+  - count: 93
+    scenes: [ "0:29:33" ]
+    clips:
+    - movie: charro
+      timestamp: "(0:35:52)"
+
+  - count: 70
+    scenes: [ "0:29:37" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:13:18)"
+
+  - count: 41
+    scenes: [ "0:29:39" ]
+    clips:
+    - movie: charro
+      timestamp: "(0:36:04)"
+
+  - count: 64
+    scenes: [ "0:29:41" ]
+    clips:
+    - movie: charro
+      timestamp: "(0:36:24)"
+
+  - count: 97
+    scenes: [ "0:29:43" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(2:13:57)"
+      transform: "(mirrored)"
+
+  - count: 572
+    scenes: [ "0:29:47", "0:29:58", "0:30:05" ]
+    clips:
+    - movie: charro
+      timestamp: "(0:38:22)"
+    - movie: the_searchers
+      timestamp: "(0:49:43)"
+    - movie: four_for_texas
+      notes: "(introuvable)"
+
+  - count: 286
+    scenes: [ "0:30:11", "0:30:14", "0:30:20" ]
+    clips:
+    - movie: four_for_texas
+      timestamp: "(1:17:14)"
+      transform: "(ping-pong)"
+    - movie: oceans_eleven
+      timestamp: "(0:52:56)"
+    - movie: city_beneath_the_sea
+
+  - count: 516
+    scenes: [ "0:30:22" ]
+    clips:
+    - movie: city_beneath_the_sea
+
+  - count: 194
+    scenes: [ "0:30:46" ]
+    clips:
+    - movie: city_beneath_the_sea
+
+  - count: 78
+    scenes: [ "0:30:51" ]
+    clips:
+    - movie: city_beneath_the_sea
+
+  - count: 64
+    scenes: [ "0:30:55" ]
+    clips:
+    - movie: city_beneath_the_sea
+
+  - count: 54
+    scenes: [ "0:30:57" ]
+    clips:
+    - movie: city_beneath_the_sea
+      transform: "(mirrored)"
+
+  - count: 31
+    scenes: [ "0:30:58" ]
+    clips:
+    - movie: city_beneath_the_sea
+      transform: "(mirrored)"
+
+  - count: 40
+    scenes: [ "0:31:00" ]
+    clips:
+    - movie: city_beneath_the_sea
+
+  - count: 482
+    scenes: [ "0:31:01" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:58:27)"
+      transform: "(mirrored)"
+
+  - count: 35
+    scenes: [ "0:31:20" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(0:59:40)"
+      transform: "(mirrored)"
+
+  - count: 103
+    scenes: [ "0:31:22" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:17:05)"
+
+  - count: 91
+    scenes: [ "0:31:26" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(1:00:01)"
+      transform: "(mirrored)"
+
+  - count: 113
+    scenes: [ "0:31:30" ]
+    clips:
+    - movie: harper
+
+  - count: 41
+    scenes: [ "0:31:34" ]
+    clips:
+    - movie: the_candidate
+      transform: "(mirrored)"
+
+  - count: 74
+    scenes: [ "0:31:36" ]
+    clips:
+    - movie: harper
+
+  - count: 52
+    scenes: [ "0:31:39" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 70
+    scenes: [ "0:31:41" ]
+    clips:
+    - movie: harper
+
+  - count: 115
+    scenes: [ "0:31:43" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 74
+    scenes: [ "0:31:48" ]
+    clips:
+    - movie: harper
+
+  - count: 52
+    scenes: [ "0:31:51" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 101
+    scenes: [ "0:31:53" ]
+    clips:
+    - movie: harper
+
+  - count: 130
+    scenes: [ "0:31:57" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 56
+    scenes: [ "0:32:02" ]
+    clips:
+    - movie: harper
+
+  - count: 12
+    scenes: [ "0:32:05" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 104
+    scenes: [ "0:32:06" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 40
+    scenes: [ "0:32:09" ]
+    clips:
+    - movie: harper
+
+  - count: 91
+    scenes: [ "0:32:11" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 55
+    scenes: [ "0:32:15" ]
+    clips:
+    - movie: harper
+
+  - count: 53
+    scenes: [ "0:32:17" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 50
+    scenes: [ "0:32:19" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 796
+    scenes: [ "0:32:21" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(2:00:13)"
+
+  - count: 99
+    scenes: [ "0:32:52" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 148
+    scenes: [ "0:32:56" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 965
+    scenes: [ "0:33:03" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:50:48)"
+
+  - count: 344
+    scenes: [ "0:33:41" ]
+    clips:
+    - movie: straight_time
+      timestamp: "(0:10:56)"
+
+  - count: 120
+    scenes: [ "0:33:56" ]
+    clips:
+    - movie: executive_action
+      timestamp: "(0:19:31)"
+
+  - count: 93
+    scenes: [ "0:34:00" ]
+    clips:
+    - movie: straight_time
+      timestamp: "(0:14:16)"
+
+  - count: 228
+    scenes: [ "0:34:04" ]
+    clips:
+    - movie: executive_action
+
+  - count: 88
+    scenes: [ "0:34:12" ]
+    clips:
+    - movie: straight_time
+
+  - count: 93
+    scenes: [ "0:34:15" ]
+    clips:
+    - movie: executive_action
+
+  - count: 469
+    scenes: [ "0:34:20" ]
+    clips:
+    - movie: straight_time
+
+  - count: 438
+    scenes: [ "0:34:42" ]
+    clips:
+    - movie: executive_action
+
+  - count: 74
+    scenes: [ "0:34:56" ]
+    clips:
+    - movie: straight_time
+
+  - count: 306
+    scenes: [ "0:34:59" ]
+    clips:
+    - movie: executive_action
+
+  - count: 90
+    scenes: [ "0:35:11" ]
+    clips:
+    - movie: straight_time
+
+  - count: 373
+    scenes: [ "0:35:14" ]
+    clips:
+    - movie: executive_action
+
+  - count: 93
+    scenes: [ "0:35:30" ]
+    clips:
+    - movie: straight_time
+
+  - count: 58
+    scenes: [ "0:35:34" ]
+    clips:
+    - movie: executive_action
+      transform: "(ping-pong)"
+
+  - count: 136
+    scenes: [ "0:35:36" ]
+    clips:
+    - movie: straight_time
+
+  - count: 144
+    scenes: [ "0:35:42" ]
+    clips:
+    - movie: straight_time
+      timestamp: "(0:44:18)"
+
+  - count: 111
+    scenes: [ "0:35:47" ]
+    clips:
+    - movie: straight_time
+
+  - count: 83
+    scenes: [ "0:35:52" ]
+    clips:
+    - movie: harper
+
+  - count: 692
+    scenes: [ "0:35:54" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(1:29:32)"
+
+  - count: 202
+    scenes: [ "0:36:23" ]
+    clips:
+    - movie: straight_time
+
+  - count: 254
+    scenes: [ "0:36:31" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 228
+    scenes: [ "0:36:41" ]
+    clips:
+    - movie: harper
+
+  - count: 82
+    scenes: [ "0:36:50" ]
+    clips:
+    - movie: straight_time
+
+  - count: 58
+    scenes: [ "0:36:54" ]
+    clips:
+    - movie: straight_time
+
+  - count: 44
+    scenes: [ "0:36:55" ]
+    clips:
+    - movie: straight_time
+
+  - count: 56
+    scenes: [ "0:36:57" ]
+    clips:
+    - movie: harper
+      transform: "(rotated)"
+
+  - count: 69
+    scenes: [ "0:36:59" ]
+    clips:
+    - movie: straight_time
+      timestamp: "(0:44:20)"
+
+  - count: 253
+    scenes: [ "0:37:02" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 77
+    scenes: [ "0:37:12" ]
+    clips:
+    - movie: harper
+
+  - count: 86
+    scenes: [ "0:37:16" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 25
+    scenes: [ "0:37:19" ]
+    clips:
+    - movie: straight_time
+
+  - count: 9
+    scenes: [ "0:37:20" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:07:24) 250 @440"
+
+  - count: 17
+    scenes: [ "0:37:21" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:07:26) 250 @440"
+
+  - count: 30
+    scenes: [ "0:37:22" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:07:27) 250 @440"
+
+  - count: 32
+    scenes: [ "0:37:23" ]
+    clips:
+    - movie: straight_time
+
+  - count: 39
+    scenes: [ "0:37:24" ]
+    clips:
+    - movie: straight_time
+
+  - count: 69
+    scenes: [ "0:37:25" ]
+    clips:
+    - movie: the_towering_inferno
+      timestamp: "(0:10:30)"
+
+  - count: 236
+    scenes: [ "0:37:27" ]
+    clips:
+    - movie: straight_time
+      timestamp: "(0:54:34)"
+
+  - count: 147
+    scenes: [ "0:37:37" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:29:40)"
+      transform: "(mirrored)"
+
+  - count: 231
+    scenes: [ "0:37:44" ]
+    clips:
+    - movie: straight_time
+
+  - count: 483
+    scenes: [ "0:37:54" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:29:40 + 1:30:04)"
+      transform: "(mirrored, combined)"
+
+  - count: 237
+    scenes: [ "0:38:12" ]
+    clips:
+    - movie: straight_time
+
+  - count: 299
+    scenes: [ "0:38:21" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:30:34)"
+      transform: "(mirrored)"
+
+  - count: 236
+    scenes: [ "0:38:33" ]
+    clips:
+    - movie: straight_time
+
+  - count: 155
+    scenes: [ "0:38:44" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:03:48)"
+
+  - count: 127
+    scenes: [ "0:38:49" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:03:55)"
+
+  - count: 133
+    scenes: [ "0:38:54" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:04:06)"
+
+  - count: 113
+    scenes: [ "0:39:00" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:44:30)"
+      transform: "(mirrored)"
+
+  - count: 54
+    scenes: [ "0:39:04" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:45)"
+      transform: "(mirrored)"
+
+  - count: 109
+    scenes: [ "0:39:06" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:44:44)"
+      transform: "(mirrored)"
+
+  - count: 138
+    scenes: [ "0:39:10" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:03)"
+
+  - count: 68
+    scenes: [ "0:39:16" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:53)"
+      transform: "(mirrored)"
+
+  - count: 225
+    scenes: [ "0:39:18", "0:39:24" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:03)"
+    - movie: deliverance
+      timestamp: "(0:40:23)"
+
+  - count: 266
+    scenes: [ "0:39:28", "0:39:35" ]
+    clips:
+    - movie: deliverance
+      timestamp: "(0:40:32)"
+    - movie: deliverance
+      timestamp: "(0:40:39)"
+
+  - count: 286
+    scenes: [ "0:39:38", "0:39:42" ]
+    clips:
+    - movie: deliverance
+      timestamp: "(0:40:45)"
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:45)"
+
+  - count: 237
+    scenes: [ "0:39:49", "0:39:52" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:53)"
+    - movie: jeremiah_johnson
+      timestamp: "(0:12:55)"
+
+  - count: 116
+    scenes: [ "0:39:59" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:13:20)"
+
+  - count: 73
+    scenes: [ "0:40:03" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:43:04)"
+
+  - count: 71
+    scenes: [ "0:40:06" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:17:18) ou (0:18:42)"
+
+  - count: 158
+    scenes: [ "0:40:09" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 92
+    scenes: [ "0:40:16" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:19:00)"
+      transform: "(ping-pong)"
+
+  - count: 41
+    scenes: [ "0:40:19" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 86
+    scenes: [ "0:40:21" ]
+    clips:
+    - movie: when_time_ran_out
+      transform: "(ping-pong)"
+
+  - count: 183
+    scenes: [ "0:40:25", "0:40:27", "0:40:29" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:10:28)"
+    - movie: jeremiah_johnson
+      timestamp: "(0:10:35)"
+    - movie: jeremiah_johnson
+      timestamp: "(0:10:42)"
+
+  - count: 101
+    scenes: [ "0:40:32" ]
+    clips:
+    - movie: the_life_and_times_of_judge_roy_bean
+      timestamp: "(0:16:56)"
+
+  - count: 396
+    scenes: [ "0:40:36" ]
+    clips:
+    - movie: the_life_and_times_of_judge_roy_bean
+      timestamp: "(0:15:44)"
+
+  - count: 98
+    scenes: [ "0:40:51" ]
+    clips:
+    - movie: around_the_world_in_eighty_days
+
+  - count: 137
+    scenes: [ "0:40:56" ]
+    clips:
+    - movie: the_life_and_times_of_judge_roy_bean
+      timestamp: "(0:16:09)"
+
+  - count: 155
+    scenes: [ "0:41:01", "0:41:06" ]
+    clips:
+    - movie: around_the_world_in_eighty_days
+    - movie: chisum
+      timestamp: "(1:39:36)"
+
+  - count: 33
+    scenes: [ "0:41:07" ]
+    clips:
+    - movie: chisum
+      timestamp: "(1:39:39)"
+
+  - count: 51
+    scenes: [ "0:41:09" ]
+    clips:
+    - movie: chisum
+      timestamp: "(1:40:21)"
+
+  - count: 47
+    scenes: [ "0:41:11" ]
+    clips:
+    - movie: chisum
+      timestamp: "(1:39:55)"
+
+  - count: 182
+    scenes: [ "0:41:13", "0:41:17" ]
+    clips:
+    - movie: chisum
+      timestamp: "(1:40:50)"
+    - movie: around_the_world_in_eighty_days
+
+  - count: 286
+    scenes: [ "0:41:21" ]
+    clips:
+    - movie: the_life_and_times_of_judge_roy_bean
+      timestamp: "(0:19:34)"
+
+  - count: 91
+    scenes: [ "0:41:31" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:35:29)"
+
+  - count: 117
+    scenes: [ "0:41:36" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:35:30)"
+
+  - count: 52
+    scenes: [ "0:41:39" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(0:35:34)"
+
+  - count: 62
+    scenes: [ "0:41:41" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:00)"
+
+  - count: 145
+    scenes: [ "0:41:44" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:29:51)"
+
+  - count: 66
+    scenes: [ "0:41:49" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:21)"
+
+  - count: 118
+    scenes: [ "0:41:53" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:29:58)"
+
+  - count: 159
+    scenes: [ "0:41:58" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:33)"
+
+  - count: 449
+    scenes: [ "0:42:04", "0:42:19" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:30:13)"
+    - movie: rio_bravo
+      timestamp: "(1:19:15)"
+
+  - count: 843
+    scenes: [ "0:42:21" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:19:29)"
+
+  - count: 108
+    scenes: [ "0:42:56" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:20:03)"
+
+  - count: 98
+    scenes: [ "0:42:59" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:20:06)"
+
+  - count: 224
+    scenes: [ "0:43:04" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:20:11)"
+
+  - count: 36
+    scenes: [ "0:43:12" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:20:17)"
+
+  - count: 43
+    scenes: [ "0:43:14" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:20:22)"
+
+  - count: 116
+    scenes: [ "0:43:16" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:20:24)"
+
+  - count: 346
+    scenes: [ "0:43:20", "0:43:25" ]
+    clips:
+    - movie: rio_bravo
+      timestamp: "(1:20:30)"
+    - movie: oceans_eleven
+      timestamp: "(0:30:18)"
+
+  - count: 80
+    scenes: [ "0:43:34" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:45:10)"
+
+  - count: 114
+    scenes: [ "0:43:38" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:46:58)"
+
+  - count: 94
+    scenes: [ "0:43:41" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:46:44)"
+
+  - count: 81
+    scenes: [ "0:43:46" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:46:48)"
+
+  - count: 101
+    scenes: [ "0:43:49" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:48:15)"
+      transform: "(mirrored)"
+
+  - count: 25
+    scenes: [ "0:43:53" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:48:18)"
+      transform: "(mirrored)"
+
+  - count: 153
+    scenes: [ "0:43:54" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:08:08)"
+
+  - count: 80
+    scenes: [ "0:44:00" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:48:30)"
+      transform: "(mirrored)"
+
+  - count: 77
+    scenes: [ "0:44:03" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:08:19)"
+
+  - count: 64
+    scenes: [ "0:44:06" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:47:25)"
+
+  - count: 101
+    scenes: [ "0:44:08" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:07:48)"
+
+  - count: 67
+    scenes: [ "0:44:12" ]
+    clips:
+    - movie: jeremiah_johnson
+      timestamp: "(1:47:20)"
+      transform: "(ping-pong subtil)"
+
+  - count: 270
+    scenes: [ "0:44:16", "0:44:23" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:08:28)"
+    - movie: the_train_robbers
+      timestamp: "(0:26:46)"
+
+  - count: 84
+    scenes: [ "0:44:26" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:33:36)"
+      transform: "(reversed)"
+
+  - count: 52
+    scenes: [ "0:44:30" ]
+    clips:
+    - movie: the_train_robbers
+      timestamp: "(0:26:47)"
+
+  - count: 39
+    scenes: [ "0:44:32" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:34:49&nbsp;?)"
+
+  - count: 41
+    scenes: [ "0:44:33" ]
+    clips:
+    - movie: the_cowboys
+      timestamp: "(0:36:09)"
+      transform: "(ping-pong)"
+
+  - count: 43
+    scenes: [ "0:44:35" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:34:45)"
+
+  - count: 68
+    scenes: [ "0:44:37" ]
+    clips:
+    - movie: the_cowboys
+      timestamp: "(0:36:09)"
+      transform: "(ping-pong)"
+
+  - count: 379
+    scenes: [ "0:44:40", "0:44:46" ]
+    clips:
+    - movie: the_old_man_and_the_sea
+      timestamp: "(0:34:45)"
+    - movie: jeremiah_johnson
+      timestamp: "(1:48:39)"
+      notes: "(effet spéciau du bout de bois peut-être piqué dans 1:47:25)"
+
+  - count: 106
+    scenes: [ "0:44:55" ]
+    clips:
+    - movie: the_towering_inferno
+      timestamp: "(0:10:30)"
+
+  - count: 447
+    scenes: [ "0:44:58" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 100
+    scenes: [ "0:45:17" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 148
+    scenes: [ "0:45:21" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 241
+    scenes: [ "0:45:27" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:12:08)"
+
+  - count: 649
+    scenes: [ "0:45:36", "0:45:40", "0:45:43", "0:45:45", "0:45:58" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:12:46)"
+    - movie: harper
+      timestamp: "(0:12:49)"
+    - movie: harper
+      timestamp: "(0:12:52)"
+    - movie: harper
+      timestamp: "(0:12:56)"
+    - movie: harper
+
+  - count: 48
+    scenes: [ "0:46:02" ]
+    clips:
+    - movie: when_time_ran_out
+
+  - count: 71
+    scenes: [ "0:46:04" ]
+    clips:
+    - movie: harper
+
+  - count: 75
+    scenes: [ "0:46:07" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:24:01)"
+
+  - count: 35
+    scenes: [ "0:46:10" ]
+    clips:
+    - movie: harper
+
+  - count: 205
+    scenes: [ "0:46:11" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:24:22)"
+
+  - count: 85
+    scenes: [ "0:46:19" ]
+    clips:
+    - movie: harper
+
+  - count: 60
+    scenes: [ "0:46:23" ]
+    clips:
+    - movie: harper
+
+  - count: 181
+    scenes: [ "0:46:25" ]
+    clips:
+    - movie: when_time_ran_out
+
+  - count: 117
+    scenes: [ "0:46:32" ]
+    clips:
+    - movie: harper
+
+  - count: 168
+    scenes: [ "0:46:37" ]
+    clips:
+    - movie: harper
+
+  - count: 151
+    scenes: [ "0:46:44" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:43:43)"
+
+  - count: 51
+    scenes: [ "0:46:50" ]
+    clips:
+    - movie: hooper
+      timestamp: "(0:49:25)"
+
+  - count: 110
+    scenes: [ "0:46:52" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:44:23)"
+
+  - count: 171
+    scenes: [ "0:46:56" ]
+    clips:
+    - movie: hooper
+      timestamp: "(0:49:30)"
+
+  - count: 110
+    scenes: [ "0:47:03" ]
+    clips:
+    - movie: when_time_ran_out
+
+  - count: 49
+    scenes: [ "0:47:07" ]
+    clips:
+    - movie: hooper
+      timestamp: "(0:49:39)"
+
+  - count: 122
+    scenes: [ "0:47:10" ]
+    clips:
+    - movie: when_time_ran_out
+
+  - count: 59
+    scenes: [ "0:47:16" ]
+    clips:
+    - movie: hooper
+      timestamp: "(0:49:44)"
+
+  - count: 131
+    scenes: [ "0:47:17" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(1:04:15)"
+
+  - count: 48
+    scenes: [ "0:47:22" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(1:04:22)"
+
+  - count: 10
+    scenes: [ "0:47:24" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(1:04:23)"
+
+  - count: 15
+    scenes: [ "0:47:25" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(1:04:24)"
+
+  - count: 22
+    scenes: [ "0:47:26" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(1:04:25)"
+
+  - count: 127
+    scenes: [ "0:47:28" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:24:26)"
+
+  - count: 181
+    scenes: [ "0:47:31" ]
+    clips:
+    - movie: band_of_angels
+      timestamp: "(0:47:37)"
+
+  - count: 62
+    scenes: [ "0:47:39" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 150
+    scenes: [ "0:47:41" ]
+    clips:
+    - movie: band_of_angels
+      timestamp: "(0:48:42)"
+
+  - count: 240
+    scenes: [ "0:47:47" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 78
+    scenes: [ "0:47:57" ]
+    clips:
+    - movie: band_of_angels
+      timestamp: "(0:49:37)"
+
+  - count: 378
+    scenes: [ "0:48:00", "0:48:02" ]
+    clips:
+    - movie: all_the_presidents_men
+    - movie: band_of_angels
+      timestamp: "(1:32:40)"
+
+  - count: 102
+    scenes: [ "0:48:14" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 52
+    scenes: [ "0:48:18" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 95
+    scenes: [ "0:48:21" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 77
+    scenes: [ "0:48:25" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 230
+    scenes: [ "0:48:27" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 67
+    scenes: [ "0:48:37" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 62
+    scenes: [ "0:48:40" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 98
+    scenes: [ "0:48:42" ]
+    clips:
+    - movie: band_of_angels
+      timestamp: "(2:00:20)"
+
+  - count: 80
+    scenes: [ "0:48:46" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 73
+    scenes: [ "0:48:49" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 44
+    scenes: [ "0:48:52" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:58:13)"
+
+  - count: 361
+    scenes: [ "0:48:54" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 256
+    scenes: [ "0:49:08" ]
+    clips:
+    - movie: the_sea_chase
+      timestamp: "(0:58:19)"
+
+  - count: 359
+    scenes: [ "0:49:18", "0:49:28" ]
+    clips:
+    - movie: band_of_angels
+    - movie: band_of_angels
+
+  - count: 223
+    scenes: [ "0:49:33" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 37
+    scenes: [ "0:49:42" ]
+    clips:
+    - movie: band_of_angels
+
+  - count: 59
+    scenes: [ "0:49:43" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 325
+    scenes: [ "0:49:46" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:26:35)"
+
+  - count: 73
+    scenes: [ "0:49:59" ]
+    clips:
+    - movie: rampage
+
+  - count: 23
+    scenes: [ "0:50:01" ]
+    clips:
+    - movie: harper
+
+  - count: 73
+    scenes: [ "0:50:03" ]
+    clips:
+    - movie: rampage
+
+  - count: 128
+    scenes: [ "0:50:05" ]
+    clips:
+    - movie: harper
+
+  - count: 948
+    scenes: [ "0:50:11", "0:50:17", "0:50:28", "0:50:44" ]
+    clips:
+    - movie: rampage
+    - movie: the_good_guys_and_the_bad_guys
+      timestamp: "(0:22:40)"
+    - movie: the_good_guys_and_the_bad_guys
+      timestamp: "(0:23:01)"
+    - movie: harper
+
+  - count: 45
+    scenes: [ "0:50:49" ]
+    clips:
+    - movie: rampage
+
+  - count: 64
+    scenes: [ "0:50:50" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:29:40)"
+
+  - count: 233
+    scenes: [ "0:50:53", "0:50:59" ]
+    clips:
+    - movie: rampage
+    - movie: westbound
+      timestamp: "(0:36:44)"
+
+  - count: 49
+    scenes: [ "0:51:02" ]
+    clips:
+    - movie: cahill_us_marshal
+      timestamp: "(0:32:35)"
+
+  - count: 69
+    scenes: [ "0:51:04" ]
+    clips:
+    - movie: westbound
+      timestamp: "(0:37:01)"
+
+  - count: 46
+    scenes: [ "0:51:07" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 330
+    scenes: [ "0:51:09" ]
+    clips:
+    - movie: westbound
+
+  - count: 30
+    scenes: [ "0:51:22" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 63
+    scenes: [ "0:51:23" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 138
+    scenes: [ "0:51:26" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 43
+    scenes: [ "0:51:31" ]
+    clips:
+    - movie: westbound
+      timestamp: "(0:36:50)"
+
+  - count: 141
+    scenes: [ "0:51:33" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 102
+    scenes: [ "0:51:39" ]
+    clips:
+    - movie: cahill_us_marshal
+
+  - count: 559
+    scenes: [ "0:51:43", "0:52:02" ]
+    clips:
+    - movie: westbound
+      timestamp: "(0:37:48)"
+    - movie: rampage
+
+  - count: 21
+    scenes: [ "0:52:04" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:38:38)"
+
+  - count: 38
+    scenes: [ "0:52:05" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:38:40)"
+
+  - count: 99
+    scenes: [ "0:52:07" ]
+    clips:
+    - movie: rampage
+
+  - count: 414
+    scenes: [ "0:52:11", "0:52:21", "0:52:25", "0:52:26" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:39:11)"
+    - movie: harper
+      timestamp: "(0:39:16)"
+    - movie: harper
+      timestamp: "(0:39:18)"
+    - movie: harper
+      timestamp: "(0:39:20)"
+
+  - count: 349
+    scenes: [ "0:52:28" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:05:16)"
+
+  - count: 381
+    scenes: [ "0:52:42" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:05:52)"
+
+  - count: 167
+    scenes: [ "0:52:57" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 348
+    scenes: [ "0:53:04" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:06:10)"
+
+  - count: 162
+    scenes: [ "0:53:18" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:50:48)"
+
+  - count: 51
+    scenes: [ "0:53:24" ]
+    clips:
+    - movie: when_time_ran_out
+
+  - count: 63
+    scenes: [ "0:53:26" ]
+    clips:
+    - movie: maigret_et_les_plaisirs_de_la_nuit
+
+  - count: 56
+    scenes: [ "0:53:29" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(0:08:46)"
+
+  - count: 222
+    scenes: [ "0:53:31" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:17:11)"
+
+  - count: 102
+    scenes: [ "0:53:41" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(0:08:50)"
+
+  - count: 76
+    scenes: [ "0:53:44" ]
+    clips:
+    - movie: when_time_ran_out
+
+  - count: 91
+    scenes: [ "0:53:47" ]
+    clips:
+    - movie: the_candidate
+
+  - count: 40
+    scenes: [ "0:53:51" ]
+    clips:
+    - movie: when_time_ran_out
+      timestamp: "(0:19:04)"
+      transform: "(ping-pong)"
+
+  - count: 171
+    scenes: [ "0:53:52" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(0:10:51)"
+
+  - count: 237
+    scenes: [ "0:53:59", "0:54:01" ]
+    clips:
+    - movie: when_time_ran_out
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:57:27)"
+
+  - count: 185
+    scenes: [ "0:54:08" ]
+    clips:
+    - movie: carson_city
+      timestamp: "(0:21:45)"
+
+  - count: 122
+    scenes: [ "0:54:16" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:57:42)"
+
+  - count: 107
+    scenes: [ "0:54:21", "0:54:23" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:00)"
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:02)"
+
+  - count: 70
+    scenes: [ "0:54:25" ]
+    clips:
+    - movie: carson_city
+      timestamp: "(0:22:00)"
+
+  - count: 27
+    scenes: [ "0:54:28" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:01:32)"
+
+  - count: 130
+    scenes: [ "0:54:29" ]
+    clips:
+    - movie: carson_city
+      timestamp: "(0:22:06)"
+
+  - count: 28
+    scenes: [ "0:54:34" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:15)"
+
+  - count: 197
+    scenes: [ "0:54:36", "0:54:38" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:16)"
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:19)"
+
+  - count: 70
+    scenes: [ "0:54:43" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:23)"
+
+  - count: 35
+    scenes: [ "0:54:46" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:41)"
+
+  - count: 60
+    scenes: [ "0:54:47" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:45)"
+
+  - count: 40
+    scenes: [ "0:54:50" ]
+    clips:
+    - movie: the_searchers
+      timestamp: "(1:28:02)"
+
+  - count: 43
+    scenes: [ "0:54:51" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:58:47)"
+
+  - count: 35
+    scenes: [ "0:54:53" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      notes: "(introuvable) (1:00:55) ou (1:02:17)"
+
+  - count: 41
+    scenes: [ "0:54:54" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:59:16)"
+
+  - count: 117
+    scenes: [ "0:54:56", "0:54:57" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:59:57)"
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:59:59)"
+
+  - count: 92
+    scenes: [ "0:55:01", "0:55:02" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:00:59)"
+      transform: "(mirrored)"
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:00:02) ou (1:00:17) ou (1:00:26)"
+
+  - count: 38
+    scenes: [ "0:55:04" ]
+    clips:
+    - movie: the_searchers
+      timestamp: "(1:28:12)"
+
+  - count: 64
+    scenes: [ "0:55:06" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:01:00)"
+      transform: "(mirrored)"
+
+  - count: 82
+    scenes: [ "0:55:09" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:08:47)"
+
+  - count: 38
+    scenes: [ "0:55:12" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:08:46)"
+
+  - count: 185
+    scenes: [ "0:55:13", "0:55:18" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:09:12)"
+    - movie: the_searchers
+      timestamp: "(1:29:39)"
+
+  - count: 215
+    scenes: [ "0:55:21" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(0:55:28)"
+
+  - count: 134
+    scenes: [ "0:55:29", "0:55:32" ]
+    clips:
+    - movie: the_searchers
+      timestamp: "(1:29:39)"
+    - movie: when_time_ran_out
+      transform: "(ping-pong)"
+
+  - count: 50
+    scenes: [ "0:55:35" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(0:10:47)"
+
+  - count: 65
+    scenes: [ "0:55:37" ]
+    clips:
+    - movie: when_time_ran_out
+      transform: "(reverse)"
+
+  - count: 183
+    scenes: [ "0:55:39" ]
+    clips:
+    - movie: the_candidate
+      timestamp: "(0:10:51)"
+
+  - count: 281
+    scenes: [ "0:55:47", "0:55:54" ]
+    clips:
+    - movie: when_time_ran_out
+      transform: "(ping-pong)"
+    - movie: riding_shotgun
+      timestamp: "(0:08:24)"
+
+  - count: 65
+    scenes: [ "0:55:58" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:02:53)"
+      transform: "(mirrored)"
+
+  - count: 57
+    scenes: [ "0:56:00" ]
+    clips:
+    - movie: the_valley_of_gwangi
+      timestamp: "(1:02:57)"
+      transform: "(mirrored)"
+
+  - count: 68
+    scenes: [ "0:56:03" ]
+    clips:
+    - movie: riding_shotgun
+      timestamp: "(0:18:42)"
+
+  - count: 114
+    scenes: [ "0:56:05" ]
+    clips:
+    - movie: riding_shotgun
+      timestamp: "(0:16:54)"
+
+  - count: 84
+    scenes: [ "0:56:10" ]
+    clips:
+    - movie: riding_shotgun
+      timestamp: "(0:12:24)"
+
+  - count: 39
+    scenes: [ "0:56:13" ]
+    clips:
+    - movie: riding_shotgun
+      timestamp: "(0:17:44)"
+
+  - count: 53
+    scenes: [ "0:56:15" ]
+    clips:
+    - movie: riding_shotgun
+
+  - count: 104
+    scenes: [ "0:56:17" ]
+    clips:
+    - movie: riding_shotgun
+      timestamp: "(0:12:30)"
+
+  - count: 99
+    scenes: [ "0:56:21" ]
+    clips:
+    - movie: riding_shotgun
+      timestamp: "(0:18:06)"
+
+  - count: 118
+    scenes: [ "0:56:25" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:14:19)"
+
+  - count: 105
+    scenes: [ "0:56:30" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:15:00)"
+
+  - count: 146
+    scenes: [ "0:56:34" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:08:14)"
+
+  - count: 86
+    scenes: [ "0:56:40" ]
+    clips:
+    - movie: all_the_presidents_men
+      transform: "(mirrored)"
+
+  - count: 72
+    scenes: [ "0:56:43" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:08:19)"
+
+  - count: 146
+    scenes: [ "0:56:46" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 218
+    scenes: [ "0:56:52" ]
+    clips:
+    - movie: harper
+
+  - count: 507
+    scenes: [ "0:57:01" ]
+    clips:
+    - movie: blood_alley
+      timestamp: "(0:17:53)"
+
+  - count: 126
+    scenes: [ "0:57:21" ]
+    clips:
+    - movie: rampage
+
+  - count: 441
+    scenes: [ "0:57:26" ]
+    clips:
+    - movie: blood_alley
+      timestamp: "(0:18:59)"
+
+  - count: 162
+    scenes: [ "0:57:44" ]
+    clips:
+    - movie: rampage
+
+  - count: 76
+    scenes: [ "0:57:50" ]
+    clips:
+    - movie: blood_alley
+      timestamp: "(0:19:58)"
+      transform: "(mirrored)"
+
+  - count: 94
+    scenes: [ "0:57:53" ]
+    clips:
+    - movie: blood_alley
+      timestamp: "(0:20:01)"
+
+  - count: 91
+    scenes: [ "0:57:57" ]
+    clips:
+    - movie: rampage
+
+  - count: 326
+    scenes: [ "0:58:01" ]
+    clips:
+    - movie: blood_alley
+      timestamp: "(0:19:46)"
+
+  - count: 137
+    scenes: [ "0:58:14" ]
+    clips:
+    - movie: harper
+
+  - count: 246
+    scenes: [ "0:58:19" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 114
+    scenes: [ "0:58:29" ]
+    clips:
+    - movie: harper
+      timestamp: "(0:09:32)"
+
+  - count: 241
+    scenes: [ "0:58:34" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 405
+    scenes: [ "0:58:43" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:03:16)"
+
+  - count: 68
+    scenes: [ "0:58:59" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:03:39)"
+
+  - count: 50
+    scenes: [ "0:59:02" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 89
+    scenes: [ "0:59:04" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:58:49)"
+
+  - count: 294
+    scenes: [ "0:59:08" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:04:03)"
+
+  - count: 143
+    scenes: [ "0:59:20" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 64
+    scenes: [ "0:59:25" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 267
+    scenes: [ "0:59:28" ]
+    clips:
+    - movie: harper
+
+  - count: 47
+    scenes: [ "0:59:38" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 483
+    scenes: [ "0:59:40" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 64
+    scenes: [ "1:00:00" ]
+    clips:
+    - movie: all_the_presidents_men
+      transform: "(attention ping pong!)"
+
+  - count: 99
+    scenes: [ "1:00:02" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:06:07)"
+
+  - count: 190
+    scenes: [ "1:00:06" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:37:41)"
+
+  - count: 129
+    scenes: [ "1:00:14" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:38:06)"
+
+  - count: 43
+    scenes: [ "1:00:19" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:38:10)"
+
+  - count: 231
+    scenes: [ "1:00:21" ]
+    clips:
+    - movie: beyond_the_poseidon_adventure
+      timestamp: "(0:36:13)"
+
+  - count: 129
+    scenes: [ "1:00:30" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:38:30)"
+
+  - count: 160
+    scenes: [ "1:00:35" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:28:18)"
+
+  - count: 299
+    scenes: [ "1:00:42" ]
+    clips:
+    - movie: beyond_the_poseidon_adventure
+      timestamp: "(0:36:27)"
+
+  - count: 112
+    scenes: [ "1:00:53" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:29:14)"
+
+  - count: 134
+    scenes: [ "1:00:58" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:29:18)"
+
+  - count: 131
+    scenes: [ "1:01:03" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:39:10)"
+
+  - count: 37
+    scenes: [ "1:01:09" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:31:00)"
+
+  - count: 65
+    scenes: [ "1:01:10" ]
+    clips:
+    - movie: freebie_and_the_bean
+      timestamp: "(0:34:29)"
+
+  - count: 25
+    scenes: [ "1:01:12" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:55:57)"
+
+  - count: 18
+    scenes: [ "1:01:13" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:56:06)"
+
+  - count: 120
+    scenes: [ "1:01:14" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:56:07)"
+
+  - count: 69
+    scenes: [ "1:01:19" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:56:15)"
+
+  - count: 51
+    scenes: [ "1:01:22" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:50:11)"
+
+  - count: 59
+    scenes: [ "1:01:24" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:50:23)"
+
+  - count: 92
+    scenes: [ "1:01:26" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:50:25)"
+
+  - count: 128
+    scenes: [ "1:01:30" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:23:51)"
+
+  - count: 288
+    scenes: [ "1:01:35" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:24:48)"
+
+  - count: 262
+    scenes: [ "1:01:46" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:25:00)"
+
+  - count: 18
+    scenes: [ "1:01:56" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:25:26)"
+
+  - count: 37
+    scenes: [ "1:01:57" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:25:27)"
+
+  - count: 78
+    scenes: [ "1:01:59" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:25:29)"
+
+  - count: 111
+    scenes: [ "1:02:02" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:25:41)"
+
+  - count: 124
+    scenes: [ "1:02:07" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:25:47)"
+
+  - count: 65
+    scenes: [ "1:02:12" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:17:41)"
+
+  - count: 286
+    scenes: [ "1:02:14" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:17:43)"
+
+  - count: 93
+    scenes: [ "1:02:26" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:17:53)"
+
+  - count: 79
+    scenes: [ "1:02:30" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:17:57)"
+
+  - count: 54
+    scenes: [ "1:02:33" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:18:00)"
+
+  - count: 52
+    scenes: [ "1:02:35" ]
+    clips:
+    - movie: all_the_presidents_men
+      notes: "(around 0:54:39 ?)"
+
+  - count: 90
+    scenes: [ "1:02:38" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:26:16)"
+
+  - count: 87
+    scenes: [ "1:02:40" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(0:56:57)"
+
+  - count: 39
+    scenes: [ "1:02:44" ]
+    clips:
+    - movie: the_miracle_of_our_lady_of_fatima
+      timestamp: "(1:37:12)"
+
+  - count: 58
+    scenes: [ "1:02:45" ]
+    clips:
+    - movie: the_miracle_of_our_lady_of_fatima
+      timestamp: "(1:37:15)"
+
+  - count: 134
+    scenes: [ "1:02:48" ]
+    clips:
+    - movie: the_miracle_of_our_lady_of_fatima
+      timestamp: "(1:37:18)"
+
+  - count: 250
+    scenes: [ "1:02:53" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:26:41)"
+
+  - count: 117
+    scenes: [ "1:03:03" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 59
+    scenes: [ "1:03:08" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 116
+    scenes: [ "1:03:10" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:26:26) ou (0:26:41)"
+
+  - count: 93
+    scenes: [ "1:03:15" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 102
+    scenes: [ "1:03:19" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:27:06)"
+
+  - count: 53
+    scenes: [ "1:03:23" ]
+    clips:
+    - movie: all_the_presidents_men
+      transform: "(mirrored)"
+
+  - count: 118
+    scenes: [ "1:03:25" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:27:12)"
+
+  - count: 87
+    scenes: [ "1:03:30" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 180
+    scenes: [ "1:03:33" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:27:18)"
+
+  - count: 58
+    scenes: [ "1:03:40" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:55:26)"
+
+  - count: 55
+    scenes: [ "1:03:43" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:55:12)"
+      transform: "(reversed)"
+
+  - count: 36
+    scenes: [ "1:03:45" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:55:17)"
+      transform: "(reversed)"
+
+  - count: 165
+    scenes: [ "1:03:46" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:55:27)"
+
+  - count: 44
+    scenes: [ "1:03:53" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:55:16)"
+
+  - count: 51
+    scenes: [ "1:03:55" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:55:11)"
+
+  - count: 163
+    scenes: [ "1:03:57" ]
+    clips:
+    - movie: cleopatra_jones
+      timestamp: "(0:25:12)"
+      transform: "(mirrored)"
+
+  - count: 151
+    scenes: [ "1:04:03" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:44:40)"
+
+  - count: 76
+    scenes: [ "1:04:09" ]
+    clips:
+    - movie: cleopatra_jones
+      timestamp: "(0:25:33)"
+
+  - count: 63
+    scenes: [ "1:04:12" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:44:49)"
+
+  - count: 99
+    scenes: [ "1:04:15" ]
+    clips:
+    - movie: cleopatra_jones
+      timestamp: "(0:25:36)"
+
+  - count: 51
+    scenes: [ "1:04:19" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:44:54)"
+
+  - count: 126
+    scenes: [ "1:04:21" ]
+    clips:
+    - movie: cleopatra_jones
+      timestamp: "(0:25:45)"
+
+  - count: 210
+    scenes: [ "1:04:26" ]
+    clips:
+    - movie: cleopatra_jones
+      timestamp: "(0:25:51)"
+
+  - count: 162
+    scenes: [ "1:04:34" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:45:36)"
+
+  - count: 78
+    scenes: [ "1:04:41" ]
+    clips:
+    - movie: cleopatra_jones
+      timestamp: "(0:26:06)"
+
+  - count: 68
+    scenes: [ "1:04:44" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:45:53)"
+
+  - count: 102
+    scenes: [ "1:04:47" ]
+    clips:
+    - movie: cleopatra_jones
+      timestamp: "(0:26:13)"
+
+  - count: 66
+    scenes: [ "1:04:51" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:45:53)"
+
+  - count: 376
+    scenes: [ "1:04:53" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 99
+    scenes: [ "1:05:08" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 141
+    scenes: [ "1:05:12" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 65
+    scenes: [ "1:05:18" ]
+    clips:
+    - movie: oceans_eleven
+      timestamp: "(0:59:45)"
+      transform: "(avec un filtre bleu)"
+
+  - count: 54
+    scenes: [ "1:05:20" ]
+    clips:
+    - movie: rampage
+
+  - count: 104
+    scenes: [ "1:05:23" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:42:07)"
+
+  - count: 101
+    scenes: [ "1:05:27" ]
+    clips:
+    - movie: rampage
+
+  - count: 242
+    scenes: [ "1:05:31" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:42:27)"
+
+  - count: 47
+    scenes: [ "1:05:40" ]
+    clips:
+    - movie: rampage
+
+  - count: 46
+    scenes: [ "1:05:42" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:42:32)"
+
+  - count: 63
+    scenes: [ "1:05:44" ]
+    clips:
+    - movie: rampage
+
+  - count: 66
+    scenes: [ "1:05:47" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:46:53)"
+
+  - count: 72
+    scenes: [ "1:05:49" ]
+    clips:
+    - movie: rampage
+
+  - count: 59
+    scenes: [ "1:05:52" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:47:08)"
+
+  - count: 50
+    scenes: [ "1:05:55" ]
+    clips:
+    - movie: rampage
+
+  - count: 109
+    scenes: [ "1:05:57" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:47:08)"
+
+  - count: 76
+    scenes: [ "1:06:01" ]
+    clips:
+    - movie: rampage
+
+  - count: 80
+    scenes: [ "1:06:04" ]
+    clips:
+    - movie: mcq
+      timestamp: "(0:46:59)"
+
+  - count: 85
+    scenes: [ "1:06:07" ]
+    clips:
+    - movie: rampage
+
+  - count: 195
+    scenes: [ "1:06:11" ]
+    clips:
+    - movie: deliverance
+      timestamp: "(0:26:30)"
+
+  - count: 217
+    scenes: [ "1:06:19", "1:06:25" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(2:12:49)"
+
+  - count: 367
+    scenes: [ "1:06:26" ]
+    clips:
+    - movie: all_the_presidents_men
+      timestamp: "(1:48:46)"
+
+  - count: 69
+    scenes: [ "1:06:42" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 1257
+    scenes: [ "1:06:45" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 101
+    scenes: [ "1:07:35" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 78
+    scenes: [ "1:07:39" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 67
+    scenes: [ "1:07:42" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 54
+    scenes: [ "1:07:45" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 46
+    scenes: [ "1:07:47" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 47
+    scenes: [ "1:07:49" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 46
+    scenes: [ "1:07:51" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 79
+    scenes: [ "1:07:52" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 126
+    scenes: [ "1:07:55" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 342
+    scenes: [ "1:08:01" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 98
+    scenes: [ "1:08:14" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 44
+    scenes: [ "1:08:18" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 83
+    scenes: [ "1:08:20" ]
+    clips:
+    - movie: all_the_presidents_men
+      transform: "(reversed)"
+
+  - count: 139
+    scenes: [ "1:08:23" ]
+    clips:
+    - movie: all_the_presidents_men
+      transform: "(ping-pong)"
+
+  - count: 82
+    scenes: [ "1:08:29" ]
+    clips:
+    - movie: all_the_presidents_men
+
+  - count: 80
+    scenes: [ "1:08:32" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(1:19:41) 150 @4780"
+
+  - count: 158
+    scenes: [ "1:08:35" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:39:48)"
+
+  - count: 225
+    scenes: [ "1:08:42" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:33:05)"
+
+  - count: 47
+    scenes: [ "1:08:51" ]
+    clips:
+    - movie: harper
+      timestamp: "(1:40:15)"
+
+  - count: 47
+    scenes: [ "1:08:53" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(1:19:55) 100 @4793"
+
+  - count: 83
+    scenes: [ "1:08:56" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:03:11) 120 @187"
+
+  - count: 188
+    scenes: [ "1:08:58" ]
+    clips:
+    - movie: harper
+
+  - count: 206
+    scenes: [ "1:09:05" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:32:45)"
+
+  - count: 49
+    scenes: [ "1:09:13" ]
+    clips:
+    - movie: harper
+
+  - count: 189
+    scenes: [ "1:09:15" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:32:55)"
+
+  - count: 46
+    scenes: [ "1:09:23" ]
+    clips:
+    - movie: harper
+
+  - count: 198
+    scenes: [ "1:09:25" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:33:40)"
+
+  - count: 24
+    scenes: [ "1:09:33" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:08:42) 100 @519"
+
+  - count: 36
+    scenes: [ "1:09:34" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:11:15) 100 @674"
+
+  - count: 69
+    scenes: [ "1:09:36" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:33:59)"
+
+  - count: 101
+    scenes: [ "1:09:38" ]
+    clips:
+    - movie: harper
+
+  - count: 217
+    scenes: [ "1:09:42" ]
+    clips:
+    - movie: mcq
+      timestamp: "(1:33:05)"
+
+  - count: 169
+    scenes: [ "1:09:51" ]
+    clips:
+    - movie: harper
+
+  - count: 25
+    scenes: [ "1:09:57" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(1:19:55) 100 @4793"
+
+  - count: 16
+    scenes: [ "1:09:58" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:01) 300 @721"
+
+  - count: 54
+    scenes: [ "1:09:59" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:03) 300 @721"
+
+  - count: 14
+    scenes: [ "1:10:00" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:05) 300 @721"
+
+  - count: 3
+    scenes: [ "1:10:01" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:05) 300 @721"
+
+  - count: 3
+    scenes: [ "1:10:02" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(1:25:56) et pas (0:12:06) 50 @5155"
+
+  - count: 7
+    scenes: [ "1:10:03" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:06) 300 @721"
+
+  - count: 35
+    scenes: [ "1:10:04" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:06) 300 @721"
+
+  - count: 39
+    scenes: [ "1:10:05" ]
+    clips:
+    - movie: hooper
+      timestamp: "(1:29:18)"
+
+  - count: 52
+    scenes: [ "1:10:06" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:07) 300 @721"
+
+  - count: 41
+    scenes: [ "1:10:07" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:17) 300 @721"
+
+  - count: 62
+    scenes: [ "1:10:09" ]
+    clips:
+    - movie: mad_max
+      timestamp: "(0:12:13) 300 @721"
+
+  - count: 13
+    scenes: [ "1:10:10" ]
+    clips:
+    - movie: bullitt
+      timestamp: "(1:12:52)"
+
+  - count: 141
+    scenes: [ "1:10:11" ]
+    clips:
+    - movie: bullitt
+      timestamp: "(1:13:09)"
+
+  - count: 1961
+    scenes: [ "1:10:21", "1:10:24", "1:10:28", "1:10:32", "1:10:36", "1:10:39", "1:10:43", "1:10:47", "1:10:51", "1:10:54", "1:10:58", "1:11:02", "1:11:06", "1:11:09", "1:11:13", "1:11:17", "1:11:21", "1:11:24", "1:11:27" ]
+    clips:
+    - movie: "Credits"
+
+#
+# movies
+#
+# Ordered list of all the movies used in the final movie. Not useful technically,
+# but it can be a good starting point when looking for DVD or Blu-Ray releases or
+# other such material.
+#
+
+movies:
+  all_the_presidents_men:
     title: "All the President’s Men"
     imdb: "tt0074119"
     year: 1976
@@ -11,20 +4653,20 @@ movies:
       fr: "Les Hommes du président"
     samples: [ "0:05:26", "0:06:56", "0:22:14", "1:08:23" ]
 
-  - id: eighty_days
+  around_the_world_in_eighty_days:
     title: "Around the World in Eighty Days"
     imdb: "tt0048960"
     year: 1956
     samples: [ "0:40:51" ]
 
-  - id: arrangement
+  the_arrangement:
     title: "The Arrangement"
     imdb: "tt0064041"
     year: 1969
     directed: [ "Elia Kazan" ]
     samples: [ "0:03:26", "0:03:44" ]
 
-  - id: angels
+  band_of_angels:
     title: "Band of Angels"
     imdb: "tt0050166"
     year: 1957
@@ -34,7 +4676,7 @@ movies:
       fr: "L’Esclave libre"
     samples: [ "0:47:57", "0:48:37", "0:48:54" ]
 
-  - id: bulge
+  battle_of_the_bulge:
     title: "Battle of the Bulge"
     imdb: "tt0058947"
     year: 1965
@@ -45,7 +4687,7 @@ movies:
       fr: "La Bataille des Ardennes"
     samples: [ "0:08:04" ]
 
-  - id: poseidon
+  beyond_the_poseidon_adventure:
     title: "Beyond the Poseidon Adventure"
     imdb: "tt0078856"
     year: 1979
@@ -57,7 +4699,7 @@ movies:
       de: "Jagd auf die Poseidon"
     samples: [ "1:00:42" ]
 
-  - id: alley
+  blood_alley:
     title: "Blood Alley"
     imdb: "tt0047889"
     year: 1955
@@ -67,7 +4709,7 @@ movies:
       fr: "L’Allée sanglante"
     samples: [ "0:57:26" ]
 
-  - id: bullitt
+  bullitt:
     title: "Bullitt"
     imdb: "tt0062765"
     year: 1968
@@ -75,7 +4717,7 @@ movies:
     unused_cast: [ "Jacqueline Bisset" ]
     samples: [ "0:04:28", "1:10:11" ]
 
-  - id: cahill
+  cahill_us_marshal:
     title: "Cahill U.S. Marshal"
     imdb: "tt0069834"
     year: 1973
@@ -85,7 +4727,7 @@ movies:
       fr: "Les Cordes de la potence"
     samples: [ "0:21:34", "0:51:07" ]
 
-  - id: candidate
+  the_candidate:
     title: "The Candidate"
     imdb: "tt0068334"
     year: 1972
@@ -95,7 +4737,7 @@ movies:
       fr: "Votez McKay"
     samples: [ "0:32:17", "0:35:54", "0:53:41" ]
 
-  - id: carson
+  carson_city:
     title: "Carson City"
     imdb: "tt0044488"
     year: 1952
@@ -106,7 +4748,7 @@ movies:
       it: "Nevada Express"
     samples: [ "0:28:38", "0:54:25" ]
 
-  - id: charro
+  charro:
     title: "Charro!"
     imdb: "tt0064155"
     year: 1969
@@ -114,7 +4756,7 @@ movies:
     cast: [ "Elvis Presley" ]
     samples: [ "0:29:28" ]
 
-  - id: cheyenne
+  the_cheyenne_social_club:
     title: "The Cheyenne Social Club"
     imdb: "tt0065542"
     year: 1970
@@ -125,7 +4767,7 @@ movies:
       es: "El Club Social de Cheyenne"
     samples: [ "0:09:20", "0:09:27", "0:16:44", "0:17:47", "0:18:29", "0:19:18", "0:20:48", "0:27:09" ]
 
-  - id: chisum
+  chisum:
     title: "Chisum"
     imdb: "tt0065547"
     year: 1970
@@ -133,7 +4775,7 @@ movies:
     cast: [ "John Wayne" ]
     samples: [ "0:18:25", "0:28:41", "0:41:13" ]
 
-  - id: city_sea
+  city_beneath_the_sea:
     title: "City Beneath the Sea"
     imdb: "tt0065556"
     year: 1971
@@ -145,10 +4787,10 @@ movies:
       de: "Um 9 Uhr geht die Erde unter"
       it: "La città degli acquanauti"
       es: "Ciudad bajo el mar"
-      es: "La Ciudad bajo el agua"
+      es<!---->: "La Ciudad bajo el agua"
     samples: [ "0:30:22", "0:30:58" ]
 
-  - id: cleopatra
+  cleopatra_jones:
     title: "Cleopatra Jones"
     imdb: "tt0069890"
     year: 1973
@@ -158,7 +4800,7 @@ movies:
       fr: "Dynamite Jones"
     samples: [ "1:04:41" ]
 
-  - id: cowboys
+  the_cowboys:
     title: "The Cowboys"
     imdb: "tt0068421"
     year: 1972
@@ -169,7 +4811,7 @@ movies:
       fr: "Les Cowboys"
     samples: [ "0:44:33" ]
 
-  - id: crimson
+  the_crimson_pirate:
     title: "The Crimson Pirate"
     imdb: "tt0044517"
     year: 1952
@@ -179,7 +4821,7 @@ movies:
       fr: "Le Pirate rouge"
     samples: [ "0:00:39" ]
 
-  - id: deliverance
+  deliverance:
     title: "Deliverance"
     imdb: "tt0068473"
     year: 1972
@@ -189,7 +4831,7 @@ movies:
       fr: "Délivrance"
     samples: [ "0:39:38", "1:06:11" ]
 
-  - id: drum_beat
+  drum_beat:
     title: "Drum Beat"
     imdb: "tt0046936"
     year: 1954
@@ -203,7 +4845,7 @@ movies:
       it: "Rullo di Tamburi"
     samples: [ "0:12:11" ]
 
-  - id: executive
+  executive_action:
     title: "Executive Action"
     imdb: "tt0070046"
     year: 1973
@@ -214,7 +4856,7 @@ movies:
       de: "Unternehmen Staatsgewalt"
     samples: [ "0:33:56", "0:34:15" ]
 
-  - id: fbi
+  the_fbi_story:
     title: "The FBI Story"
     imdb: "tt0052792"
     year: 1959
@@ -224,7 +4866,7 @@ movies:
       fr: "La Police fédérale enquête"
     samples: [ "0:14:54", "0:25:12" ]
 
-  - id: firecreek
+  firecreek:
     title: "Firecreek"
     imdb: "tt0062975"
     year: 1968
@@ -235,7 +4877,7 @@ movies:
       es: "Los malvados de Firecreek"
     samples: [ "0:17:01", "0:20:04", "0:21:30" ]
 
-  - id: texas
+  four_for_texas:
     title: "4 for Texas"
     imdb: "tt0057071"
     year: 1963
@@ -246,7 +4888,7 @@ movies:
       fr: "Quatre du Texas"
     samples: [ "0:24:26", "0:24:34", "0:25:23", "0:25:25", "0:27:29", "0:28:51" ]
 
-  - id: freebie
+  freebie_and_the_bean:
     title: "Freebie and the Bean"
     imdb: "tt0071521"
     year: 1974
@@ -259,7 +4901,7 @@ movies:
       pt: "Duas Ovelhas Negras"
     samples: [ "0:04:02", "0:04:23", "0:04:39" ]
 
-  - id: good_guys
+  the_good_guys_and_the_bad_guys:
     title: "The Good Guys and the Bad Guys"
     imdb: "tt0064379"
     year: 1969
@@ -270,7 +4912,7 @@ movies:
       es: "Un hombre impone la ley"
     samples: [ "0:18:57", "0:50:17" ]
 
-  - id: harper
+  harper:
     title: "Harper"
     imdb: "tt0060490"
     year: 1966
@@ -279,10 +4921,10 @@ movies:
     alt_titles:
       en: "The Moving Target"
       fr: "Détective privé"
-      fr: "Le Privé"
+      fr<!---->: "Le Privé"
     samples: [ "0:07:32", "0:08:03", "0:31:22", "0:35:52", "0:38:21", "0:45:36", "0:50:50", "0:58:29", "0:58:59" ]
 
-  - id: hooper
+  hooper:
     title: "Hooper"
     imdb: "tt0077696"
     year: 1978
@@ -292,7 +4934,7 @@ movies:
       fr: "La Fureur du danger"
     samples: [ "0:47:16", "1:10:05" ]
 
-  - id: jeremiah
+  jeremiah_johnson:
     title: "Jeremiah Johnson"
     imdb: "tt0068762"
     year: 1972
@@ -300,7 +4942,7 @@ movies:
     cast: [ "Robert Redford" ]
     samples: [ "0:38:44", "0:40:29", "0:41:36", "0:44:06" ]
 
-  - id: roy_bean
+  the_life_and_times_of_judge_roy_bean:
     title: "The Life and Times of Judge Roy Bean"
     imdb: "tt0068853"
     year: 1972
@@ -311,7 +4953,7 @@ movies:
       fr: "Juge et hors-la-loi"
     samples: [ "0:40:56" ]
 
-  - id: mad_max
+  mad_max:
     title: "Mad Max"
     imdb: "tt0079501"
     year: 1979
@@ -319,7 +4961,7 @@ movies:
     cast: []
     samples: [ "0:04:18", "0:37:21", "1:08:56", "1:10:02", "1:10:04" ]
 
-  - id: maigret
+  maigret_et_les_plaisirs_de_la_nuit:
     title: "Maigret et les plaisirs de la nuit"
     imdb: "tt0102379"
     year: 1992
@@ -327,7 +4969,7 @@ movies:
     cast: []
     samples: [ "0:53:26" ]
 
-  - id: mcq
+  mcq:
     title: "McQ"
     imdb: "tt0071824"
     year: 1974
@@ -337,7 +4979,7 @@ movies:
       fr: "Un silencieux au bout du canon"
     samples: [ "1:00:58", "1:01:19", "1:01:56", "1:02:12", "1:04:12", "1:05:47", "1:09:15" ]
 
-  - id: fatima
+  the_miracle_of_our_lady_of_fatima:
     title: "The Miracle of Our Lady of Fatima"
     imdb: "tt0044905"
     year: 1952
@@ -347,7 +4989,7 @@ movies:
       en: "Miracle of Fatima"
     samples: [ "1:02:48" ]
 
-  - id: oceans
+  oceans_eleven:
     title: "Ocean’s Eleven"
     imdb: "tt0054135"
     year: 1960
@@ -357,7 +4999,7 @@ movies:
       fr: "L’Inconnu de Las Vegas"
     samples: [ "0:23:16", "0:41:53", "1:05:18" ]
 
-  - id: old_man
+  the_old_man_and_the_sea:
     title: "The Old Man and the Sea"
     imdb: "tt0052027"
     year: 1958
@@ -367,7 +5009,7 @@ movies:
       fr: "Le Vieil Homme et la mer"
     samples: [ "0:44:16", "0:44:26" ]
 
-  - id: rampage
+  rampage:
     title: "Rampage"
     imdb: "tt0057447"
     year: 1963
@@ -381,7 +5023,7 @@ movies:
       it: "Il grande Safari"
     samples: [ "0:50:53", "0:57:44", "1:05:20" ]
 
-  - id: riding
+  riding_shotgun:
     title: "Riding Shotgun"
     imdb: "tt0047413"
     year: 1954
@@ -395,7 +5037,7 @@ movies:
       it: "L’assedio di fuoco"
     samples: [ "0:56:05" ]
 
-  - id: rio_bravo
+  rio_bravo:
     title: "Rio Bravo"
     imdb: "tt0053221"
     year: 1959
@@ -403,7 +5045,7 @@ movies:
     cast: [ "Walter Brennan", "Angie Dickinson", "Dean Martin", "Ricky Nelson", "John Wayne" ]
     samples: [ "0:16:46", "0:17:11", "0:17:39", "0:20:55", "0:29:11", "0:29:31", "0:42:19", "0:42:21" ]
 
-  - id: sea_chase
+  the_sea_chase:
     title: "The Sea Chase"
     imdb: "tt0048593"
     year: 1955
@@ -413,7 +5055,7 @@ movies:
       fr: "Le Renard des océans"
     samples: [ "0:00:13", "0:00:24", "0:01:18", "0:02:11", "0:49:08" ]
 
-  - id: searchers
+  the_searchers:
     title: "The Searchers"
     imdb: "tt0049730"
     year: 1956
@@ -423,7 +5065,7 @@ movies:
       fr: "La Prisonnière du désert"
     samples: [ "0:11:47", "0:29:09", "0:55:04" ]
 
-  - id: revolution
+  start_the_revolution_without_me:
     title: "Start the Revolution Without Me"
     imdb: "tt0066402"
     year: 1970
@@ -433,7 +5075,7 @@ movies:
       fr: "Commencez la révolution sans nous"
     samples: [ "0:06:42", "0:06:50" ]
 
-  - id: straight
+  straight_time:
     title: "Straight Time"
     imdb: "tt0078326"
     year: 1978
@@ -445,7 +5087,7 @@ movies:
       it: "Vigilato speciale"
     samples: [ "0:34:12", "0:36:55", "0:37:44" ]
 
-  - id: crooked
+  there_was_a_crooked_man:
     title: "There Was a Crooked Man…"
     imdb: "tt0066448"
     year: 1970
@@ -457,7 +5099,7 @@ movies:
       es: "El día de los tramposos"
     samples: [ "0:11:50", "0:12:25" ]
 
-  - id: inferno
+  the_towering_inferno:
     title: "The Towering Inferno"
     imdb: "tt0072308"
     year: 1970
@@ -467,7 +5109,7 @@ movies:
       fr: "La Tour infernale"
     samples: [ "0:37:25" ]
 
-  - id: train_robbers
+  the_train_robbers:
     title: "The Train Robbers"
     imdb: "tt0070825"
     year: 1973
@@ -477,7 +5119,7 @@ movies:
       fr: "Les Voleurs de trains"
     samples: [ "0:10:41", "0:44:30" ]
 
-  - id: gwangi
+  the_valley_of_gwangi:
     title: "The Valley of Gwangi"
     imdb: "tt0065163"
     year: 1969
@@ -487,7 +5129,7 @@ movies:
       fr: "La Vallée de Gwangi"
     samples: [ "0:54:23", "0:54:28", "0:55:12" ]
 
-  - id: westbound
+  westbound:
     title: "Westbound"
     imdb: "tt0053441"
     year: 1959
@@ -498,7 +5140,7 @@ movies:
       de: "Messer an der Kehle"
     samples: [ "0:51:09" ]
 
-  - id: time_out
+  when_time_ran_out:
     title: "When Time Ran Out…"
     imdb: "tt0081747"
     year: 1980
@@ -506,9 +5148,13 @@ movies:
     cast: [ "Jacqueline Bisset", "Ernest Borgnine", "James Franciscus", "Burgess Meredith", "Paul Newman" ]
     alt_titles:
       en: "Earth’s Final Fury"
-      en: "The Day the World Ended"
+      en<!---->: "The Day the World Ended"
       fr: "Le Jour de la fin du monde"
     samples: [ "0:40:21", "0:46:11", "0:47:22", "0:47:24", "0:47:25", "0:53:04", "0:53:44" ]
+
+#
+# directors
+#
 
 directors:
   - { name: "Alan J. Pakula", imdb: "nm0001587" }
@@ -554,3 +5200,4 @@ directors:
   - { name: "Ulu Grosbard", imdb: "nm0343260" }
   - { name: "Vincent McEveety", imdb: "nm0568546" }
   - { name: "William A. Wellman", imdb: "nm0920074" }
+
