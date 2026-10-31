@@ -1661,42 +1661,49 @@ segments:
     - movie: all_the_presidents_men
     - movie: four_for_texas
       segment: "023495"
+      offset: -178
 
   - count: 261
     scenes: [ "0:24:16" ]
     clips:
     - movie: four_for_texas
       segment: "022029"
+      offset: 45
 
   - count: 49
     scenes: [ "0:24:26" ]
     clips:
     - movie: four_for_texas
       segment: "023603"
+      offset: 0
 
   - count: 80
     scenes: [ "0:24:28" ]
     clips:
     - movie: four_for_texas
       segment: "022456"
+      offset: 227
 
   - count: 67
     scenes: [ "0:24:31" ]
     clips:
     - movie: four_for_texas
       segment: "024341"
+      offset: 95
 
   - count: 104
     scenes: [ "0:24:34" ]
     clips:
     - movie: four_for_texas
       segment: "024626"
+      offset: 0
 
   - count: 51
     scenes: [ "0:24:38" ]
     clips:
     - movie: four_for_texas
       segment: "026313"
+      offset: 46
 
   - count: 69
     scenes: [ "0:24:40" ]
@@ -1717,36 +1724,42 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "014745"
+      offset: 31
 
   - count: 228
     scenes: [ "0:24:47" ]
     clips:
     - movie: four_for_texas
       segment: "024341"
+      offset: 56
 
   - count: 103
     scenes: [ "0:24:57" ]
     clips:
     - movie: four_for_texas
       segment: "026412"
+      offset: 137
 
   - count: 99
     scenes: [ "0:25:01" ]
     clips:
     - movie: four_for_texas
       segment: "024341"
+      offset: 65
 
   - count: 85
     scenes: [ "0:25:05" ]
     clips:
     - movie: four_for_texas
       segment: "017741"
+      offset: 0
 
   - count: 368
     scenes: [ "0:25:08", "0:25:12", "0:25:15", "0:25:18", "0:25:21" ]
     clips:
     - movie: four_for_texas
       segment: "026949"
+      offset: 17
     - movie: the_fbi_story
       timestamp: "(1:24:59)"
 
@@ -1755,51 +1768,59 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "071942"
+      offset: 0
 
   - count: 654
     scenes: [ "0:25:25" ]
     clips:
     - movie: four_for_texas
       segment: "078957"
+      offset: 31
 
   - count: 310
     scenes: [ "0:25:51" ]
     clips:
     - movie: four_for_texas
       segment: "081273"
+      offset: 7
 
   - count: 151
     scenes: [ "0:26:03" ]
     clips:
     - movie: four_for_texas
       segment: "081960"
+      offset: 314
 
   - count: 364
     scenes: [ "0:26:09" ]
     clips:
     - movie: four_for_texas
       segment: "082425"
+      offset: 0
 
   - count: 401
     scenes: [ "0:26:24" ]
     clips:
     - movie: four_for_texas
       segment: "081960"
+      offset: 0
 
   - count: 119
     scenes: [ "0:26:40" ]
     clips:
     - movie: four_for_texas
       segment: "081838"
+      offset: 2
 
   - count: 233
     scenes: [ "0:26:45", "0:26:50" ]
     clips:
     - movie: four_for_texas
       segment: "081273"
+      offset: 24
     - movie: four_for_texas
       segment: "071942"
-      transform: "(avec filtre bleu)"
+      transform: "(avec filtre bleu) (avec ping-pong pour prolonger ?)"
 
   - count: 101
     scenes: [ "0:26:54" ]
@@ -1818,6 +1839,7 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "062490"
+      offset: 0
 
   - count: 160
     scenes: [ "0:27:09" ]
@@ -1829,6 +1851,7 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "064345"
+      offset: 21
 
   - count: 124
     scenes: [ "0:27:22" ]
@@ -1846,6 +1869,7 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "062750"
+      offset: 127
 
   - count: 37
     scenes: [ "0:27:31" ]
@@ -1858,6 +1882,7 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "059920"
+      offset: 12
 
   - count: 21
     scenes: [ "0:27:33" ]
@@ -1870,6 +1895,7 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "060023"
+      offset: 0
 
   - count: 86
     scenes: [ "0:27:35" ]
@@ -1913,6 +1939,7 @@ segments:
     - movie: all_the_presidents_men
     - movie: four_for_texas
       segment: "111785"
+      offset: -101
 
   - count: 281
     scenes: [ "0:28:31", "0:28:38" ]
@@ -1936,6 +1963,7 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "111785"
+      offset: 120
 
   - count: 295
     scenes: [ "0:28:56", "0:29:04" ]
