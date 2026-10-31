@@ -1660,91 +1660,93 @@ segments:
     clips:
     - movie: all_the_presidents_men
     - movie: four_for_texas
-      timestamp: "(0:16:42) ou (0:17:00)"
+      segment: "023495"
 
   - count: 261
     scenes: [ "0:24:16" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:15:58)"
+      segment: "022029"
 
   - count: 49
     scenes: [ "0:24:26" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:17:05)"
+      segment: "023603"
 
   - count: 80
     scenes: [ "0:24:28" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:16:25)"
+      segment: "022456"
 
   - count: 67
     scenes: [ "0:24:31" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:17:41)"
+      segment: "024341"
 
   - count: 104
     scenes: [ "0:24:34" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:17:52)"
+      segment: "024626"
 
   - count: 51
     scenes: [ "0:24:38" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:19:11)"
+      segment: "026313"
 
   - count: 69
     scenes: [ "0:24:40" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:17:52)"
+      segment: "024626"
       transform: "(ping-pong)"
 
   - count: 64
     scenes: [ "0:24:43" ]
     clips:
     - movie: four_for_texas
+      segment: "026313"
       transform: "(ping-pong)"
 
   - count: 47
     scenes: [ "0:24:45" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:10:47) ou (0:10:57) plutôt"
+      segment: "014745"
 
   - count: 228
     scenes: [ "0:24:47" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:18:00)&nbsp;?"
+      segment: "024341"
 
   - count: 103
     scenes: [ "0:24:57" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:19:21)&nbsp;?"
+      segment: "026412"
 
   - count: 99
     scenes: [ "0:25:01" ]
     clips:
     - movie: four_for_texas
+      segment: "024341"
 
   - count: 85
     scenes: [ "0:25:05" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:12:54)"
+      segment: "017741"
 
   - count: 368
     scenes: [ "0:25:08", "0:25:12", "0:25:15", "0:25:18", "0:25:21" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:19:37)"
+      segment: "026949"
     - movie: the_fbi_story
       timestamp: "(1:24:59)"
 
@@ -1752,49 +1754,51 @@ segments:
     scenes: [ "0:25:23" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:49:35)"
+      segment: "071942"
 
   - count: 654
     scenes: [ "0:25:25" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:54:23)"
+      segment: "078957"
 
   - count: 310
     scenes: [ "0:25:51" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:56:00)"
+      segment: "081273"
 
   - count: 151
     scenes: [ "0:26:03" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:56:10)"
+      segment: "081960"
 
   - count: 364
     scenes: [ "0:26:09" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:56:42)"
+      segment: "082425"
 
   - count: 401
     scenes: [ "0:26:24" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:56:24)"
+      segment: "081960"
 
   - count: 119
     scenes: [ "0:26:40" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:56:20)"
+      segment: "081838"
 
   - count: 233
     scenes: [ "0:26:45", "0:26:50" ]
     clips:
     - movie: four_for_texas
+      segment: "081273"
     - movie: four_for_texas
+      segment: "071942"
       transform: "(avec filtre bleu)"
 
   - count: 101
@@ -1813,7 +1817,7 @@ segments:
     scenes: [ "0:27:03" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:43:26)"
+      segment: "062490"
 
   - count: 160
     scenes: [ "0:27:09" ]
@@ -1824,7 +1828,7 @@ segments:
     scenes: [ "0:27:16" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:44:34)"
+      segment: "064345"
 
   - count: 124
     scenes: [ "0:27:22" ]
@@ -1841,7 +1845,7 @@ segments:
     scenes: [ "0:27:29" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:43:36)"
+      segment: "062750"
 
   - count: 37
     scenes: [ "0:27:31" ]
@@ -1853,7 +1857,7 @@ segments:
     scenes: [ "0:27:32" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:41:42)"
+      segment: "059920"
 
   - count: 21
     scenes: [ "0:27:33" ]
@@ -1865,7 +1869,7 @@ segments:
     scenes: [ "0:27:34" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:41:46)"
+      segment: "060023"
 
   - count: 86
     scenes: [ "0:27:35" ]
@@ -1877,7 +1881,7 @@ segments:
     scenes: [ "0:27:39" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(0:44:34)"
+      segment: "064345"
       transform: "(ping-pong)"
 
   - count: 243
@@ -1908,13 +1912,14 @@ segments:
     clips:
     - movie: all_the_presidents_men
     - movie: four_for_texas
-      timestamp: "(1:17:14)"
+      segment: "111785"
 
   - count: 281
     scenes: [ "0:28:31", "0:28:38" ]
     clips:
     - movie: four_for_texas
-      notes: "(introuvable)"
+      segment: "118622"
+      notes: "Scène introuvable, ce timestamp fera peut-être l'affaire"
     - movie: carson_city
       timestamp: "(0:25:42)"
 
@@ -1930,13 +1935,14 @@ segments:
     scenes: [ "0:28:51" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(1:17:14)"
+      segment: "111785"
 
   - count: 295
     scenes: [ "0:28:56", "0:29:04" ]
     clips:
     - movie: four_for_texas
-      notes: "(introuvable)"
+      segment: "118622"
+      notes: "Scène introuvable, ce timestamp fera peut-être l'affaire"
     - movie: the_searchers
       timestamp: "(0:49:43)"
 
@@ -2030,13 +2036,14 @@ segments:
     - movie: the_searchers
       timestamp: "(0:49:43)"
     - movie: four_for_texas
-      notes: "(introuvable)"
+      segment: "118622"
+      notes: "Scène introuvable, ce timestamp fera peut-être l'affaire"
 
   - count: 286
     scenes: [ "0:30:11", "0:30:14", "0:30:20" ]
     clips:
     - movie: four_for_texas
-      timestamp: "(1:17:14)"
+      segment: "111785"
       transform: "(ping-pong)"
     - movie: oceans_eleven
       timestamp: "(0:52:56)"
@@ -2861,7 +2868,7 @@ segments:
     scenes: [ "0:44:32" ]
     clips:
     - movie: the_old_man_and_the_sea
-      timestamp: "(0:34:49&nbsp;?)"
+      timestamp: "(0:34:49) ?"
 
   - count: 41
     scenes: [ "0:44:33" ]
