@@ -2301,7 +2301,8 @@ segments:
     scenes: [ "0:31:20" ]
     clips:
     - movie: the_candidate
-      todo: "(0:59:40)"
+      segment: "089403"
+      offset: 0
       transform: "hflip"
 
   - count: 103
@@ -2315,7 +2316,8 @@ segments:
     scenes: [ "0:31:26" ]
     clips:
     - movie: the_candidate
-      todo: "(1:00:01)"
+      segment: "089850"
+      offset: 0
       transform: "hflip"
 
   - count: 113
@@ -2329,6 +2331,8 @@ segments:
     scenes: [ "0:31:34" ]
     clips:
     - movie: the_candidate
+      segment: "090470"
+      offset: 0
       transform: "hflip"
 
   - count: 74
@@ -2342,6 +2346,8 @@ segments:
     scenes: [ "0:31:39" ]
     clips:
     - movie: the_candidate
+      segment: "090999"
+      offset: 0
 
   - count: 70
     scenes: [ "0:31:41" ]
@@ -2354,6 +2360,8 @@ segments:
     scenes: [ "0:31:43" ]
     clips:
     - movie: the_candidate
+      segment: "090731"
+      offset: 52
 
   - count: 74
     scenes: [ "0:31:48" ]
@@ -2366,6 +2374,8 @@ segments:
     scenes: [ "0:31:51" ]
     clips:
     - movie: the_candidate
+      segment: "090999"
+      offset: 0
 
   - count: 101
     scenes: [ "0:31:53" ]
@@ -2378,6 +2388,8 @@ segments:
     scenes: [ "0:31:57" ]
     clips:
     - movie: the_candidate
+      segment: "090731"
+      offset: 20
 
   - count: 56
     scenes: [ "0:32:02" ]
@@ -2390,11 +2402,15 @@ segments:
     scenes: [ "0:32:05" ]
     clips:
     - movie: the_candidate
+      segment: "091130"
+      offset: 0
 
   - count: 104
     scenes: [ "0:32:06" ]
     clips:
     - movie: the_candidate
+      segment: "091161"
+      offset: 0
 
   - count: 40
     scenes: [ "0:32:09" ]
@@ -2407,6 +2423,8 @@ segments:
     scenes: [ "0:32:11" ]
     clips:
     - movie: the_candidate
+      segment: "089850"
+      offset: 0
 
   - count: 55
     scenes: [ "0:32:15" ]
@@ -2419,11 +2437,15 @@ segments:
     scenes: [ "0:32:17" ]
     clips:
     - movie: the_candidate
+      segment: "089976"
+      offset: 1
 
   - count: 50
     scenes: [ "0:32:19" ]
     clips:
     - movie: the_candidate
+      segment: "090170"
+      offset: 0
 
   - count: 796
     scenes: [ "0:32:21" ]
@@ -2457,7 +2479,8 @@ segments:
     scenes: [ "0:33:41" ]
     clips:
     - movie: straight_time
-      todo: "(0:10:56)"
+      segment: "015326"
+      offset: 2
 
   - count: 120
     scenes: [ "0:33:56" ]
@@ -2469,7 +2492,8 @@ segments:
     scenes: [ "0:34:00" ]
     clips:
     - movie: straight_time
-      todo: "(0:14:16)"
+      segment: "021901"
+      offset: 0
 
   - count: 228
     scenes: [ "0:34:04" ]
@@ -2480,6 +2504,8 @@ segments:
     scenes: [ "0:34:12" ]
     clips:
     - movie: straight_time
+      segment: "021708"
+      offset: 0
 
   - count: 93
     scenes: [ "0:34:15" ]
@@ -2490,6 +2516,8 @@ segments:
     scenes: [ "0:34:20" ]
     clips:
     - movie: straight_time
+      segment: "022059"
+      offset: 0
 
   - count: 438
     scenes: [ "0:34:42" ]
@@ -2500,6 +2528,8 @@ segments:
     scenes: [ "0:34:56" ]
     clips:
     - movie: straight_time
+      segment: "021901"
+      offset: 0
 
   - count: 306
     scenes: [ "0:34:59" ]
@@ -2510,6 +2540,8 @@ segments:
     scenes: [ "0:35:11" ]
     clips:
     - movie: straight_time
+      segment: "021708"
+      offset: 0
 
   - count: 373
     scenes: [ "0:35:14" ]
@@ -2520,6 +2552,8 @@ segments:
     scenes: [ "0:35:30" ]
     clips:
     - movie: straight_time
+      segment: "021901"
+      offset: 0
 
   - count: 58
     scenes: [ "0:35:34" ]
@@ -2531,17 +2565,22 @@ segments:
     scenes: [ "0:35:36" ]
     clips:
     - movie: straight_time
+      segment: "024407"
+      offset: 41
 
   - count: 144
     scenes: [ "0:35:42" ]
     clips:
     - movie: straight_time
-      todo: "(0:44:18)"
+      segment: "064841"
+      offset: 14
 
   - count: 111
     scenes: [ "0:35:47" ]
     clips:
     - movie: straight_time
+      segment: "066197"
+      offset: 0
 
   - count: 83
     scenes: [ "0:35:52" ]
@@ -2554,17 +2593,22 @@ segments:
     scenes: [ "0:35:54" ]
     clips:
     - movie: the_candidate
-      todo: "(1:29:32)"
+      segment: "129292"
+      offset: 146
 
   - count: 202
     scenes: [ "0:36:23" ]
     clips:
     - movie: straight_time
+      segment: "067288"
+      offset: 0
 
   - count: 254
     scenes: [ "0:36:31" ]
     clips:
     - movie: the_candidate
+      segment: "130879"
+      offset: 153
 
   - count: 228
     scenes: [ "0:36:41" ]
@@ -2577,16 +2621,22 @@ segments:
     scenes: [ "0:36:50" ]
     clips:
     - movie: straight_time
+      segment: "066197"
+      offset: 0
 
   - count: 58
     scenes: [ "0:36:54" ]
     clips:
     - movie: straight_time
+      segment: "066813"
+      offset: 0
 
   - count: 44
     scenes: [ "0:36:55" ]
     clips:
     - movie: straight_time
+      segment: "066871"
+      offset: 0
 
   - count: 56
     scenes: [ "0:36:57" ]
@@ -2600,12 +2650,15 @@ segments:
     scenes: [ "0:36:59" ]
     clips:
     - movie: straight_time
-      todo: "(0:44:20)"
+      segment: "066940"
+      offset: 0
 
   - count: 253
     scenes: [ "0:37:02" ]
     clips:
     - movie: the_candidate
+      segment: "129292"
+      offset: 743
 
   - count: 77
     scenes: [ "0:37:12" ]
@@ -2618,11 +2671,15 @@ segments:
     scenes: [ "0:37:16" ]
     clips:
     - movie: the_candidate
+      segment: "131340"
+      offset: 1
 
   - count: 25
     scenes: [ "0:37:19" ]
     clips:
     - movie: straight_time
+      segment: "067288"
+      offset: 153
 
   - count: 9
     scenes: [ "0:37:20" ]
@@ -2646,11 +2703,15 @@ segments:
     scenes: [ "0:37:23" ]
     clips:
     - movie: straight_time
+      segment: "067141"
+      offset: 6
 
   - count: 39
     scenes: [ "0:37:24" ]
     clips:
     - movie: straight_time
+      segment: "067179"
+      offset: 0
 
   - count: 69
     scenes: [ "0:37:25" ]
@@ -2662,7 +2723,8 @@ segments:
     scenes: [ "0:37:27" ]
     clips:
     - movie: straight_time
-      todo: "(0:54:34)"
+      segment: "079773"
+      offset: 1
 
   - count: 147
     scenes: [ "0:37:37" ]
@@ -2676,6 +2738,8 @@ segments:
     scenes: [ "0:37:44" ]
     clips:
     - movie: straight_time
+      segment: "078903"
+      offset: 28
 
   - count: 483
     scenes: [ "0:37:54" ]
@@ -2689,6 +2753,8 @@ segments:
     scenes: [ "0:38:12" ]
     clips:
     - movie: straight_time
+      segment: "079773"
+      offset: 0
 
   - count: 299
     scenes: [ "0:38:21" ]
@@ -2702,6 +2768,8 @@ segments:
     scenes: [ "0:38:33" ]
     clips:
     - movie: straight_time
+      segment: "079773"
+      offset: 1
 
   - count: 155
     scenes: [ "0:38:44" ]
@@ -3718,7 +3786,8 @@ segments:
     scenes: [ "0:53:29" ]
     clips:
     - movie: the_candidate
-      todo: "(0:08:46)"
+      segment: "013124"
+      offset: 2
 
   - count: 222
     scenes: [ "0:53:31" ]
@@ -3730,7 +3799,9 @@ segments:
     scenes: [ "0:53:41" ]
     clips:
     - movie: the_candidate
-      todo: "(0:08:50)"
+      segment: "013249"
+      offset: 1
+      transform: "hflip"
 
   - count: 76
     scenes: [ "0:53:44" ]
@@ -3741,6 +3812,9 @@ segments:
     scenes: [ "0:53:47" ]
     clips:
     - movie: the_candidate
+      segment: "013418"
+      offset: 0
+      transform: "hflip"
 
   - count: 40
     scenes: [ "0:53:51" ]
@@ -3752,7 +3826,9 @@ segments:
     scenes: [ "0:53:52" ]
     clips:
     - movie: the_candidate
-      todo: "(0:10:51)"
+      segment: "016265"
+      offset: 53
+      transform: "hflip"
 
   - count: 237
     scenes: [ "0:53:59", "0:54:01" ]
@@ -3925,7 +4001,8 @@ segments:
     scenes: [ "0:55:35" ]
     clips:
     - movie: the_candidate
-      todo: "(0:10:47)"
+      segment: "016176"
+      offset: 0
 
   - count: 65
     scenes: [ "0:55:37" ]
@@ -3937,7 +4014,8 @@ segments:
     scenes: [ "0:55:39" ]
     clips:
     - movie: the_candidate
-      todo: "(0:10:51)"
+      segment: "016265"
+      offset: 0
 
   - count: 281
     scenes: [ "0:55:47", "0:55:54" ]
@@ -5100,6 +5178,8 @@ movies:
       fr: "Les Hommes du président"
     samples: [ "0:05:26", "0:06:56", "0:22:14", "1:08:23" ]
     source: "1920x1080"
+    status:
+      segments: true
 
   around_the_world_in_eighty_days:
     title: "Around the World in Eighty Days"
@@ -5123,6 +5203,7 @@ movies:
     alt_titles:
       fr: "L’Esclave libre"
     samples: [ "0:47:57", "0:48:37", "0:48:54" ]
+    source: "1920x1080"
 
   battle_of_the_bulge:
     title: "Battle of the Bulge"
@@ -5184,6 +5265,9 @@ movies:
     alt_titles:
       fr: "Votez McKay"
     samples: [ "0:32:17", "0:35:54", "0:53:41" ]
+    source: "1920x1080"
+    status:
+      segments: true
 
   carson_city:
     title: "Carson City"
@@ -5338,6 +5422,8 @@ movies:
       fr: "Quatre du Texas"
     samples: [ "0:24:26", "0:24:34", "0:25:23", "0:25:25", "0:27:29", "0:28:51" ]
     source: "1280x700"
+    status:
+      segments: true
 
   freebie_and_the_bean:
     title: "Freebie and the Bean"
@@ -5375,6 +5461,8 @@ movies:
       fr<!---->: "Le Privé"
     samples: [ "0:07:32", "0:08:03", "0:31:22", "0:35:52", "0:38:21", "0:45:36", "0:50:50", "0:58:29", "0:58:59" ]
     source: "1920x1080"
+    status:
+      segments: true
 
   hooper:
     title: "Hooper"
@@ -5393,6 +5481,7 @@ movies:
     directed: [ "Sydney Pollack" ]
     cast: [ "Robert Redford" ]
     samples: [ "0:38:44", "0:40:29", "0:41:36", "0:44:06" ]
+    source: "3840x2160"
 
   the_life_and_times_of_judge_roy_bean:
     title: "The Life and Times of Judge Roy Bean"
@@ -5476,6 +5565,7 @@ movies:
       de: "Im Banne der roten Tigerin"
       it: "Il grande Safari"
     samples: [ "0:50:53", "0:57:44", "1:05:20" ]
+    source: "848x480"
 
   riding_shotgun:
     title: "Riding Shotgun"
@@ -5499,6 +5589,8 @@ movies:
     cast: [ "Walter Brennan", "Angie Dickinson", "Dean Martin", "Ricky Nelson", "John Wayne" ]
     samples: [ "0:16:46", "0:17:11", "0:17:39", "0:20:55", "0:29:11", "0:29:31", "0:42:19", "0:42:21" ]
     source: "1920x1080"
+    status:
+      segments: true
 
   the_sea_chase:
     title: "The Sea Chase"
@@ -5543,6 +5635,8 @@ movies:
       it: "Vigilato speciale"
     samples: [ "0:34:12", "0:36:55", "0:37:44" ]
     source: "1920x1040"
+    status:
+      segments: true
 
   there_was_a_crooked_man:
     title: "There Was a Crooked Man…"
@@ -5585,6 +5679,7 @@ movies:
     alt_titles:
       fr: "La Vallée de Gwangi"
     samples: [ "0:54:23", "0:54:28", "0:55:12" ]
+    source: "1920x1080"
 
   westbound:
     title: "Westbound"
