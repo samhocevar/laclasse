@@ -27,31 +27,38 @@ segments:
     scenes: [ "0:00:13", "0:00:19" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:48:20) (fade from black)"
+      segment: "072663"
+      offset: 146
+      todo: "(fade from black)"
 
   - count: 106
     scenes: [ "0:00:24" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:17:27) ou (0:33:57) ou (0:37:37) ou (1:25:00) ou (1:39:26)"
+      segment: "026546"
+      offset: 337
+    notes: "The foam at the base of the ship makes it a definite match"
 
   - count: 214
     scenes: [ "0:00:28" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:21:02)"
+      segment: "032690"
+      offset: 1
 
   - count: 56
     scenes: [ "0:00:35" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:21:13)"
+      segment: "032982"
+      offset: 1
 
   - count: 54
     scenes: [ "0:00:37" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:45:10)"
+      segment: "068406"
+      offset: 0
 
   - count: 78
     scenes: [ "0:00:39" ]
@@ -63,7 +70,8 @@ segments:
     scenes: [ "0:00:41" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:46:36)"
+      segment: "070375"
+      offset: 107
 
   - count: 158
     scenes: [ "0:00:48" ]
@@ -74,7 +82,8 @@ segments:
     scenes: [ "0:00:55" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:51:24)"
+      segment: "077076"
+      offset: 1
 
   - count: 180
     scenes: [ "0:01:03" ]
@@ -86,7 +95,8 @@ segments:
     scenes: [ "0:01:09" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:44:50) ou (0:44:55)"
+      segment: "068051"
+      offset: 1
 
   - count: 94
     scenes: [ "0:01:11" ]
@@ -97,13 +107,15 @@ segments:
     scenes: [ "0:01:14" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:51:06)"
+      segment: "076603"
+      offset: 1
 
   - count: 184
     scenes: [ "0:01:18" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:51:14) ou (0:51:31)"
+      segment: "076817"
+      offset: 0
 
   - count: 50
     scenes: [ "0:01:26" ]
@@ -115,13 +127,15 @@ segments:
     scenes: [ "0:01:28" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:51:24)"
+      segment: "077076"
+      offset: 0
 
   - count: 68
     scenes: [ "0:01:30" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:51:14) ou (0:51:31)"
+      segment: "076817"
+      offset: 10
 
   - count: 35
     scenes: [ "0:01:33" ]
@@ -133,7 +147,8 @@ segments:
     scenes: [ "0:01:35" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:46:47)"
+      segment: "070663"
+      offset: 9
 
   - count: 93
     scenes: [ "0:01:39" ]
@@ -145,13 +160,15 @@ segments:
     scenes: [ "0:01:41" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:51:24)"
+      segment: "077076"
+      offset: 1
 
   - count: 126
     scenes: [ "0:01:46" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:51:14) ou (0:51:31)"
+      segment: "077236"
+      offset: 4
 
   - count: 78
     scenes: [ "0:01:50" ]
@@ -162,21 +179,27 @@ segments:
     scenes: [ "0:01:53", "0:01:57" ]
     clips:
     - movie: the_sea_chase
-      todo: "(cross-fade) (0:17:27) ou (0:33:57) ou (0:37:37) ou (1:25:00) ou (1:39:26)"
+      segment: "026546"
+      offset: 388
+      todo: "(cross-fade)"
     - movie: the_sea_chase
-      todo: "(cross-fade) (1:47:14)"
+      segment: "160288"
+      offset: 13
+      todo: "(cross-fade)"
 
   - count: 86
     scenes: [ "0:02:02" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:43:17)"
+      segment: "154119"
+      offset: 89
 
   - count: 441
     scenes: [ "0:02:11" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:43:23)"
+      segment: "154294"
+      offset: 0
 
   - count: 38
     scenes: [ "0:02:22" ]
@@ -188,13 +211,15 @@ segments:
     scenes: [ "0:02:25" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:43:33)"
+      segment: "154294"
+      offset: 469
 
   - count: 85
     scenes: [ "0:02:28" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:43:37)"
+      segment: "154836"
+      offset: 0
 
   - count: 27
     scenes: [ "0:02:31" ]
@@ -206,49 +231,57 @@ segments:
     scenes: [ "0:02:32" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:45:59)"
+      segment: "158468"
+      offset: 1
 
   - count: 64
     scenes: [ "0:02:39" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:46:13)"
+      segment: "158742"
+      offset: 23
 
   - count: 72
     scenes: [ "0:02:41" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:46:15)"
+      segment: "158829"
+      offset: 0
 
   - count: 261
     scenes: [ "0:02:49" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:47:58)"
+      segment: "161440"
+      offset: 50
 
   - count: 73
     scenes: [ "0:02:55" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:42:23)"
+      segment: "152611"
+      offset: 224
 
   - count: 85
     scenes: [ "0:02:59" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:47:40)"
+      segment: "161004"
+      offset: 46
 
   - count: 23
     scenes: [ "0:03:01" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:47:44)"
+      segment: "161135"
+      offset: 0
 
   - count: 85
     scenes: [ "0:03:02" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:50:25)"
+      segment: "165419"
+      offset: 1
 
   - count: 23
     scenes: [ "0:03:05" ]
@@ -260,25 +293,29 @@ segments:
     scenes: [ "0:03:07" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:50:06)"
+      segment: "164863"
+      offset: 22
 
   - count: 219
     scenes: [ "0:03:15" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:50:34)"
+      segment: "165626"
+      offset: 20
 
   - count: 62
     scenes: [ "0:03:18" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:50:43)"
+      segment: "165865"
+      offset: 0
 
   - count: 153
     scenes: [ "0:03:20" ]
     clips:
     - movie: the_sea_chase
-      todo: "(1:50:45)"
+      segment: "165927"
+      offset: 0
 
   - count: 171
     scenes: [ "0:03:26", "0:03:27" ]
@@ -294,7 +331,8 @@ segments:
     scenes: [ "0:03:37" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:07:52)"
+      segment: "011889"
+      offset: 92
 
   - count: 43
     scenes: [ "0:03:41" ]
@@ -319,12 +357,15 @@ segments:
     scenes: [ "0:03:48" ]
     clips:
     - movie: freebie_and_the_bean
+      segment: "140549"
+      offset: 1
 
   - count: 167
     scenes: [ "0:03:50", "0:03:54" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(1:33:31)"
+      segment: "140620"
+      offset: 0
 
   - count: 47
     scenes: [ "0:03:57" ]
@@ -337,7 +378,8 @@ segments:
     scenes: [ "0:03:59" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(1:33:42)"
+      segment: "140620"
+      offset: 288
 
   - count: 17
     scenes: [ "0:04:01" ]
@@ -351,13 +393,15 @@ segments:
     scenes: [ "0:04:02" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:34:25)"
+      segment: "051864"
+      offset: 87
 
   - count: 56
     scenes: [ "0:04:06" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:34:18)"
+      segment: "051768"
+      offset: 40
 
   - count: 57
     scenes: [ "0:04:08" ]
@@ -370,7 +414,8 @@ segments:
     scenes: [ "0:04:10" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(1:10:19)"
+      segment: "105789"
+      offset: 33
 
   - count: 30
     scenes: [ "0:04:12" ]
@@ -383,13 +428,15 @@ segments:
     scenes: [ "0:04:14" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:37:06)"
+      segment: "057384"
+      offset: 101
 
   - count: 43
     scenes: [ "0:04:17" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:35:13)"
+      segment: "053061"
+      offset: 149
 
   - count: 17
     scenes: [ "0:04:18" ]
@@ -401,19 +448,22 @@ segments:
     scenes: [ "0:04:19" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:09:41)"
+      segment: "014695"
+      offset: 12
 
   - count: 28
     scenes: [ "0:04:21" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:09:46)"
+      segment: "014750"
+      offset: 51
 
   - count: 45
     scenes: [ "0:04:23" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:38:34)"
+      segment: "058168"
+      offset: 0
 
   - count: 66
     scenes: [ "0:04:25" ]
@@ -438,7 +488,8 @@ segments:
     scenes: [ "0:04:30" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:36:44)"
+      segment: "055432"
+      offset: 18
 
   - count: 17
     scenes: [ "0:04:31" ]
@@ -451,25 +502,29 @@ segments:
     scenes: [ "0:04:32" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:09:12)"
+      segment: "013970"
+      offset: 0
 
   - count: 29
     scenes: [ "0:04:33" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:37:13)"
+      segment: "056139"
+      offset: 0
 
   - count: 17
     scenes: [ "0:04:34" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:37:10)"
+      segment: "056122"
+      offset: 0
 
   - count: 20
     scenes: [ "0:04:35" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:37:15)"
+      segment: "056229"
+      offset: 0
 
   - count: 23
     scenes: [ "0:04:36" ]
@@ -482,19 +537,22 @@ segments:
     scenes: [ "0:04:37" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:10:35)"
+      segment: "016049"
+      offset: 2
 
   - count: 40
     scenes: [ "0:04:38" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(1:11:13)"
+      segment: "107116"
+      offset: 61
 
   - count: 104
     scenes: [ "0:04:39", "0:04:41" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:10:38)"
+      segment: "016049"
+      offset: 55
 
   - count: 152
     scenes: [ "0:04:44" ]
@@ -3533,7 +3591,8 @@ segments:
     scenes: [ "0:48:52" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:58:13)"
+      segment: "086663"
+      offset: 2
 
   - count: 361
     scenes: [ "0:48:54" ]
@@ -3544,7 +3603,8 @@ segments:
     scenes: [ "0:49:08" ]
     clips:
     - movie: the_sea_chase
-      todo: "(0:58:19)"
+      segment: "086784"
+      offset: 0
 
   - count: 359
     scenes: [ "0:49:18", "0:49:28" ]
@@ -4366,7 +4426,8 @@ segments:
     scenes: [ "1:01:10" ]
     clips:
     - movie: freebie_and_the_bean
-      todo: "(0:34:29)"
+      segment: "052053"
+      offset: 0
 
   - count: 25
     scenes: [ "1:01:12" ]
@@ -5437,6 +5498,9 @@ movies:
       it: "Una Strana Coppia di Sbirri"
       pt: "Duas Ovelhas Negras"
     samples: [ "0:04:02", "0:04:23", "0:04:39" ]
+    source: "720x300"
+    status:
+      segments: true
 
   the_good_guys_and_the_bad_guys:
     title: "The Good Guys and the Bad Guys"
@@ -5602,6 +5666,8 @@ movies:
       fr: "Le Renard des océans"
     samples: [ "0:00:13", "0:00:24", "0:01:18", "0:02:11", "0:49:08" ]
     source: "1910x780"
+    status:
+      segments: true
 
   the_searchers:
     title: "The Searchers"
