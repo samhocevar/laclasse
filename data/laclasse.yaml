@@ -300,6 +300,8 @@ segments:
     scenes: [ "0:03:41" ]
     clips:
     - movie: harper
+      segment: "146529"
+      offset: 0
 
   - count: 26
     scenes: [ "0:03:44" ]
@@ -310,7 +312,8 @@ segments:
     scenes: [ "0:03:45" ]
     clips:
     - movie: harper
-      todo: "(1:35:44)"
+      segment: "139349"
+      offset: 59
 
   - count: 70
     scenes: [ "0:03:48" ]
@@ -327,7 +330,8 @@ segments:
     scenes: [ "0:03:57" ]
     clips:
     - movie: harper
-      todo: "(1:49:36)"
+      segment: "159533"
+      offset: 1
 
   - count: 73
     scenes: [ "0:03:59" ]
@@ -339,6 +343,9 @@ segments:
     scenes: [ "0:04:01" ]
     clips:
     - movie: harper
+      segment: "159034"
+      offset: 28
+      todo: "Zoom pour cacher le personnage"
 
   - count: 85
     scenes: [ "0:04:02" ]
@@ -356,6 +363,8 @@ segments:
     scenes: [ "0:04:08" ]
     clips:
     - movie: harper
+      segment: "150137"
+      offset: 17
 
   - count: 32
     scenes: [ "0:04:10" ]
@@ -367,6 +376,8 @@ segments:
     scenes: [ "0:04:12" ]
     clips:
     - movie: harper
+      segment: "159533"
+      offset: 53
 
   - count: 113
     scenes: [ "0:04:14" ]
@@ -414,6 +425,8 @@ segments:
     scenes: [ "0:04:27" ]
     clips:
     - movie: harper
+      segment: "141410"
+      offset: 50
 
   - count: 43
     scenes: [ "0:04:28" ]
@@ -431,6 +444,8 @@ segments:
     scenes: [ "0:04:31" ]
     clips:
     - movie: harper
+      segment: "150400"
+      offset: 15
 
   - count: 27
     scenes: [ "0:04:32" ]
@@ -460,6 +475,8 @@ segments:
     scenes: [ "0:04:36" ]
     clips:
     - movie: harper
+      segment: "146275"
+      offset: 103
 
   - count: 34
     scenes: [ "0:04:37" ]
@@ -496,7 +513,8 @@ segments:
     scenes: [ "0:04:54" ]
     clips:
     - movie: harper
-      todo: "(0:21:26)"
+      segment: "030886"
+      offset: 0
       transform: "hflip"
 
   - count: 69
@@ -510,7 +528,8 @@ segments:
     scenes: [ "0:05:01" ]
     clips:
     - movie: harper
-      todo: "(0:21:26)"
+      segment: "030886"
+      offset: 23
       transform: "hflip"
 
   - count: 73
@@ -524,7 +543,8 @@ segments:
     scenes: [ "0:05:07" ]
     clips:
     - movie: harper
-      todo: "(0:21:26)"
+      segment: "031347"
+      offset: 0
       transform: "hflip"
 
   - count: 103
@@ -714,13 +734,20 @@ segments:
     scenes: [ "0:07:32" ]
     clips:
     - movie: harper
-      todo: "(0:55:03)"
+      segment: "079135"
+      offset: 19
 
   - count: 158
     scenes: [ "0:07:46", "0:07:49" ]
     clips:
     - movie: harper
-      todo: "(0:54:48)"
+      segment: "079894"
+      offset: 2
+      todo: "only pick 92 images"
+    - movie: harper
+      segment: "079988"
+      offset: 0
+      todo: "for the next 66 images; offset is not really 0, it's 92"
 
   - count: 40
     scenes: [ "0:07:52" ]
@@ -733,7 +760,8 @@ segments:
     scenes: [ "0:07:54" ]
     clips:
     - movie: harper
-      todo: "(0:54:56)"
+      segment: "079707"
+      offset: 114
 
   - count: 145
     scenes: [ "0:07:57" ]
@@ -746,6 +774,8 @@ segments:
     scenes: [ "0:08:03" ]
     clips:
     - movie: harper
+      segment: "079707"
+      offset: 143
 
   - count: 104
     scenes: [ "0:08:04" ]
@@ -758,6 +788,8 @@ segments:
     scenes: [ "0:08:09" ]
     clips:
     - movie: harper
+      segment: "079707"
+      offset: 0
 
   - count: 605
     scenes: [ "0:08:12", "0:08:32" ]
@@ -881,6 +913,8 @@ segments:
     scenes: [ "0:11:17" ]
     clips:
     - movie: harper
+      segment: "079707"
+      offset: 0
 
   - count: 234
     scenes: [ "0:11:20" ]
@@ -893,6 +927,8 @@ segments:
     scenes: [ "0:11:29" ]
     clips:
     - movie: harper
+      segment: "079707"
+      offset: 4
 
   - count: 376
     scenes: [ "0:11:33", "0:11:43" ]
@@ -990,6 +1026,8 @@ segments:
     scenes: [ "0:12:47" ]
     clips:
     - movie: harper
+      segment: "079707"
+      offset: 133
 
   - count: 185
     scenes: [ "0:12:49" ]
@@ -1002,6 +1040,8 @@ segments:
     scenes: [ "0:12:57" ]
     clips:
     - movie: harper
+      segment: "079988"
+      offset: 0
 
   - count: 656
     scenes: [ "0:13:07", "0:13:09" ]
@@ -1009,7 +1049,9 @@ segments:
     - movie: all_the_presidents_men
       segment: "035813"
       offset: 1062
+      todo: "speed change? check more frames"
     - movie: harper
+      segment: "080502"
       todo: "(picture-in-picture) (0:55:29)"
 
   - count: 709
@@ -2226,7 +2268,8 @@ segments:
     scenes: [ "0:31:22" ]
     clips:
     - movie: harper
-      todo: "(0:17:05)"
+      segment: "024617"
+      offset: 2
 
   - count: 91
     scenes: [ "0:31:26" ]
@@ -2239,6 +2282,8 @@ segments:
     scenes: [ "0:31:30" ]
     clips:
     - movie: harper
+      segment: "024785"
+      offset: 1
 
   - count: 41
     scenes: [ "0:31:34" ]
@@ -2250,6 +2295,8 @@ segments:
     scenes: [ "0:31:36" ]
     clips:
     - movie: harper
+      segment: "026472"
+      offset: 8
 
   - count: 52
     scenes: [ "0:31:39" ]
@@ -2260,6 +2307,8 @@ segments:
     scenes: [ "0:31:41" ]
     clips:
     - movie: harper
+      segment: "024785"
+      offset: 42
 
   - count: 115
     scenes: [ "0:31:43" ]
@@ -2270,6 +2319,8 @@ segments:
     scenes: [ "0:31:48" ]
     clips:
     - movie: harper
+      segment: "025024"
+      offset: 0
 
   - count: 52
     scenes: [ "0:31:51" ]
@@ -2280,6 +2331,8 @@ segments:
     scenes: [ "0:31:53" ]
     clips:
     - movie: harper
+      segment: "024785"
+      offset: 4
 
   - count: 130
     scenes: [ "0:31:57" ]
@@ -2290,6 +2343,8 @@ segments:
     scenes: [ "0:32:02" ]
     clips:
     - movie: harper
+      segment: "025226"
+      offset: 1
 
   - count: 12
     scenes: [ "0:32:05" ]
@@ -2305,6 +2360,8 @@ segments:
     scenes: [ "0:32:09" ]
     clips:
     - movie: harper
+      segment: "025226"
+      offset: 89
 
   - count: 91
     scenes: [ "0:32:11" ]
@@ -2315,6 +2372,8 @@ segments:
     scenes: [ "0:32:15" ]
     clips:
     - movie: harper
+      segment: "025596"
+      offset: 0
 
   - count: 53
     scenes: [ "0:32:17" ]
@@ -2448,6 +2507,8 @@ segments:
     scenes: [ "0:35:52" ]
     clips:
     - movie: harper
+      segment: "150137"
+      offset: 20
 
   - count: 692
     scenes: [ "0:35:54" ]
@@ -2469,6 +2530,8 @@ segments:
     scenes: [ "0:36:41" ]
     clips:
     - movie: harper
+      segment: "150400"
+      offset: 0
 
   - count: 82
     scenes: [ "0:36:50" ]
@@ -2489,6 +2552,8 @@ segments:
     scenes: [ "0:36:57" ]
     clips:
     - movie: harper
+      segment: "151690"
+      offset: 76
       todo: "(rotated)"
 
   - count: 69
@@ -2506,6 +2571,8 @@ segments:
     scenes: [ "0:37:12" ]
     clips:
     - movie: harper
+      segment: "151690"
+      offset: 44
 
   - count: 86
     scenes: [ "0:37:16" ]
@@ -2561,7 +2628,8 @@ segments:
     scenes: [ "0:37:37" ]
     clips:
     - movie: harper
-      todo: "(1:29:40)"
+      segment: "126025"
+      offset: 45
       transform: "hflip"
 
   - count: 231
@@ -2573,7 +2641,8 @@ segments:
     scenes: [ "0:37:54" ]
     clips:
     - movie: harper
-      todo: "(1:29:40 + 1:30:04) (combined effect)"
+      segment: "128747"
+      offset: 0
       transform: "hflip"
 
   - count: 237
@@ -2585,7 +2654,8 @@ segments:
     scenes: [ "0:38:21" ]
     clips:
     - movie: harper
-      todo: "(1:30:34)"
+      segment: "130075"
+      offset: 0
       transform: "hflip"
 
   - count: 236
@@ -3074,20 +3144,31 @@ segments:
     scenes: [ "0:45:27" ]
     clips:
     - movie: harper
-      todo: "(0:12:08)"
+      segment: "017358"
+      offset: 0
 
   - count: 649
     scenes: [ "0:45:36", "0:45:40", "0:45:43", "0:45:45", "0:45:58" ]
     clips:
     - movie: harper
-      todo: "(0:12:46)"
+      segment: "018313"
+      offset: 0
     - movie: harper
-      todo: "(0:12:49)"
+      segment: "018396"
+      offset: 0
+      todo: "offset actually -83 to start after prev seq"
     - movie: harper
-      todo: "(0:12:52)"
+      segment: "018476"
+      offset: 0
+      todo: "offset actually -83-80 to start after prev seq"
     - movie: harper
-      todo: "(0:12:56)"
+      segment: "018543"
+      offset: 0
+      todo: "offset actually -83-80-67 to start after prev seq"
     - movie: harper
+      segment: "018842"
+      offset: 0
+      todo: "offset actually -83-80-67-299 to start after prev seq"
 
   - count: 48
     scenes: [ "0:46:02" ]
@@ -3098,6 +3179,8 @@ segments:
     scenes: [ "0:46:04" ]
     clips:
     - movie: harper
+      segment: "019390"
+      offset: 0
 
   - count: 75
     scenes: [ "0:46:07" ]
@@ -3109,6 +3192,8 @@ segments:
     scenes: [ "0:46:10" ]
     clips:
     - movie: harper
+      segment: "020798"
+      offset: 20
 
   - count: 205
     scenes: [ "0:46:11" ]
@@ -3120,11 +3205,15 @@ segments:
     scenes: [ "0:46:19" ]
     clips:
     - movie: harper
+      segment: "019512"
+      offset: 2
 
   - count: 60
     scenes: [ "0:46:23" ]
     clips:
     - movie: harper
+      segment: "017873"
+      offset: 0
 
   - count: 181
     scenes: [ "0:46:25" ]
@@ -3135,11 +3224,15 @@ segments:
     scenes: [ "0:46:32" ]
     clips:
     - movie: harper
+      segment: "020901"
+      offset: 26
 
   - count: 168
     scenes: [ "0:46:37" ]
     clips:
     - movie: harper
+      segment: "017873"
+      offset: 73
 
   - count: 151
     scenes: [ "0:46:44" ]
@@ -3377,6 +3470,9 @@ segments:
     scenes: [ "0:50:01" ]
     clips:
     - movie: harper
+      segment: "044012"
+      offset: 0
+      transform: "hflip"
 
   - count: 73
     scenes: [ "0:50:03" ]
@@ -3387,6 +3483,9 @@ segments:
     scenes: [ "0:50:05" ]
     clips:
     - movie: harper
+      segment: "043127"
+      offset: 18
+      transform: "hflip"
 
   - count: 948
     scenes: [ "0:50:11", "0:50:17", "0:50:28", "0:50:44" ]
@@ -3398,6 +3497,8 @@ segments:
     - movie: the_good_guys_and_the_bad_guys
       todo: "(cross-fade) (0:23:01) (flashback fade)"
     - movie: harper
+      segment: "042898"
+      offset: -826
       todo: "(flashback fade)"
 
   - count: 45
@@ -3409,7 +3510,8 @@ segments:
     scenes: [ "0:50:50" ]
     clips:
     - movie: harper
-      todo: "(0:29:40)"
+      segment: "042898"
+      offset: 59
 
   - count: 233
     scenes: [ "0:50:53", "0:50:59" ]
@@ -3484,13 +3586,15 @@ segments:
     scenes: [ "0:52:04" ]
     clips:
     - movie: harper
-      todo: "(0:38:38)"
+      segment: "056022"
+      offset: 1
 
   - count: 38
     scenes: [ "0:52:05" ]
     clips:
     - movie: harper
-      todo: "(0:38:40)"
+      segment: "056044"
+      offset: 0
 
   - count: 99
     scenes: [ "0:52:07" ]
@@ -3501,13 +3605,21 @@ segments:
     scenes: [ "0:52:11", "0:52:21", "0:52:25", "0:52:26" ]
     clips:
     - movie: harper
-      todo: "(0:39:11)"
+      segment: "056588"
+      offset: 55
+      todo: "only 254 frames"
     - movie: harper
-      todo: "(0:39:16)"
+      segment: "056896"
+      offset: 0
+      todo: "offset = -254 for these 91 frames"
     - movie: harper
-      todo: "(0:39:18)"
+      segment: "056987"
+      offset: 0
+      todo: "offset = -254-91 for these 31 frames"
     - movie: harper
-      todo: "(0:39:20)"
+      segment: "057018"
+      offset: 0
+      todo: "offset = -254-91-31 for these 38 frames"
 
   - count: 349
     scenes: [ "0:52:28" ]
@@ -3858,7 +3970,8 @@ segments:
     scenes: [ "0:56:34" ]
     clips:
     - movie: harper
-      todo: "(0:08:14)"
+      segment: "011589"
+      offset: 1
 
   - count: 86
     scenes: [ "0:56:40" ]
@@ -3872,7 +3985,8 @@ segments:
     scenes: [ "0:56:43" ]
     clips:
     - movie: harper
-      todo: "(0:08:19)"
+      segment: "011589"
+      offset: 148
 
   - count: 146
     scenes: [ "0:56:46" ]
@@ -3885,6 +3999,8 @@ segments:
     scenes: [ "0:56:52" ]
     clips:
     - movie: harper
+      segment: "011860"
+      offset: 0
 
   - count: 507
     scenes: [ "0:57:01" ]
@@ -3936,6 +4052,8 @@ segments:
     scenes: [ "0:58:14" ]
     clips:
     - movie: harper
+      segment: "013318"
+      offset: 0
 
   - count: 246
     scenes: [ "0:58:19" ]
@@ -3949,7 +4067,8 @@ segments:
     scenes: [ "0:58:29" ]
     clips:
     - movie: harper
-      todo: "(0:09:32)"
+      segment: "013559"
+      offset: 0
 
   - count: 241
     scenes: [ "0:58:34" ]
@@ -3963,13 +4082,15 @@ segments:
     scenes: [ "0:58:43" ]
     clips:
     - movie: harper
-      todo: "(1:03:16)"
+      segment: "091912"
+      offset: 134
 
   - count: 68
     scenes: [ "0:58:59" ]
     clips:
     - movie: harper
-      todo: "(1:03:39)"
+      segment: "092528"
+      offset: 322
 
   - count: 50
     scenes: [ "0:59:02" ]
@@ -3989,7 +4110,8 @@ segments:
     scenes: [ "0:59:08" ]
     clips:
     - movie: harper
-      todo: "(1:04:03)"
+      segment: "093234"
+      offset: 1
 
   - count: 143
     scenes: [ "0:59:20" ]
@@ -4009,6 +4131,8 @@ segments:
     scenes: [ "0:59:28" ]
     clips:
     - movie: harper
+      segment: "093561"
+      offset: 0
 
   - count: 47
     scenes: [ "0:59:38" ]
@@ -4035,7 +4159,8 @@ segments:
     scenes: [ "1:00:02" ]
     clips:
     - movie: harper
-      todo: "(1:06:07)"
+      segment: "096049"
+      offset: 183
 
   - count: 190
     scenes: [ "1:00:06" ]
@@ -4711,7 +4836,8 @@ segments:
     scenes: [ "1:08:35" ]
     clips:
     - movie: harper
-      todo: "(1:39:48)"
+      segment: "145862"
+      offset: 0
 
   - count: 225
     scenes: [ "1:08:42" ]
@@ -4723,7 +4849,8 @@ segments:
     scenes: [ "1:08:51" ]
     clips:
     - movie: harper
-      todo: "(1:40:15)"
+      segment: "146758"
+      offset: 0
 
   - count: 47
     scenes: [ "1:08:53" ]
@@ -4741,6 +4868,8 @@ segments:
     scenes: [ "1:08:58" ]
     clips:
     - movie: harper
+      segment: "146275"
+      offset: 0
 
   - count: 206
     scenes: [ "1:09:05" ]
@@ -4752,6 +4881,8 @@ segments:
     scenes: [ "1:09:13" ]
     clips:
     - movie: harper
+      segment: "146078"
+      offset: 2
 
   - count: 189
     scenes: [ "1:09:15" ]
@@ -4763,6 +4894,8 @@ segments:
     scenes: [ "1:09:23" ]
     clips:
     - movie: harper
+      segment: "146758"
+      offset: 2
 
   - count: 198
     scenes: [ "1:09:25" ]
@@ -4792,6 +4925,8 @@ segments:
     scenes: [ "1:09:38" ]
     clips:
     - movie: harper
+      segment: "150137"
+      offset: 1
 
   - count: 217
     scenes: [ "1:09:42" ]
@@ -4803,6 +4938,8 @@ segments:
     scenes: [ "1:09:51" ]
     clips:
     - movie: harper
+      segment: "151690"
+      offset: 0
 
   - count: 25
     scenes: [ "1:09:57" ]
