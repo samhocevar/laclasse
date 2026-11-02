@@ -1180,7 +1180,8 @@ segments:
     scenes: [ "0:16:04" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:38:54)"
+      segment: "147685"
+      offset: 88
       transform: "hflip"
 
   - count: 196
@@ -1193,7 +1194,8 @@ segments:
     scenes: [ "0:16:18" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:39:06)"
+      segment: "148074"
+      offset: 0
       transform: "hflip"
 
   - count: 41
@@ -1206,7 +1208,8 @@ segments:
     scenes: [ "0:16:37" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:39:21)"
+      segment: "148074"
+      offset: 416
       transform: "hflip"
 
   - count: 64
@@ -1218,7 +1221,8 @@ segments:
     scenes: [ "0:16:46" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:37:49)"
+      segment: "145951"
+      offset: 0
       transform: "hflip"
 
   - count: 165
@@ -1230,7 +1234,9 @@ segments:
     scenes: [ "0:16:58" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:38:47) (ping-pong)"
+      segment: "147515"
+      offset: 0
+      todo: "ping-pong autour de la frame +34"
 
   - count: 113
     scenes: [ "0:17:01" ]
@@ -1247,14 +1253,16 @@ segments:
     scenes: [ "0:17:11" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:38:44)"
+      segment: "147458"
+      offset: 0
       transform: "hflip"
 
   - count: 194
     scenes: [ "0:17:13" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:39:21)"
+      segment: "148074"
+      offset: 404
       transform: "hflip"
 
   - count: 83
@@ -1266,7 +1274,8 @@ segments:
     scenes: [ "0:17:24" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:38:03)"
+      segment: "146359"
+      offset: 0
       transform: "hflip"
 
   - count: 43
@@ -1279,14 +1288,17 @@ segments:
     scenes: [ "0:17:33" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:38:18)"
+      segment: "146700"
+      offset: 49
       transform: "hflip"
 
   - count: 124
     scenes: [ "0:17:39", "0:17:43" ]
     clips:
     - movie: rio_bravo
-      todo: "(cross-fade) (0:50:47)"
+      segment: "075614"
+      offset: 532
+      todo: "(cross-fade)"
       transform: "hflip"
     - movie: the_cheyenne_social_club
       todo: "(cross-fade) (0:55:25)"
@@ -1296,7 +1308,8 @@ segments:
     scenes: [ "0:17:45" ]
     clips:
     - movie: rio_bravo
-      todo: "(0:22:47)"
+      segment: "032490"
+      offset: 0
 
   - count: 226
     scenes: [ "0:17:47" ]
@@ -1399,7 +1412,8 @@ segments:
     scenes: [ "0:19:11" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:58:39)"
+      segment: "178572"
+      offset: 397
 
   - count: 69
     scenes: [ "0:19:15" ]
@@ -1432,19 +1446,22 @@ segments:
     scenes: [ "0:19:27" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:59:28)"
+      segment: "179587"
+      offset: 479
 
   - count: 195
     scenes: [ "0:19:32" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:59:37)"
+      segment: "180302"
+      offset: 228
 
   - count: 115
     scenes: [ "0:19:40" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:59:55)"
+      segment: "180729"
+      offset: 18
 
   - count: 72
     scenes: [ "0:19:44" ]
@@ -1461,7 +1478,8 @@ segments:
     scenes: [ "0:19:48" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:03:10)"
+      segment: "184744"
+      offset: 160
 
   - count: 53
     scenes: [ "0:19:50" ]
@@ -1479,19 +1497,22 @@ segments:
     scenes: [ "0:19:55" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:02:12)"
+      segment: "183609"
+      offset: 0
 
   - count: 29
     scenes: [ "0:19:57" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:02:11)"
+      segment: "183580"
+      offset: 0
 
   - count: 34
     scenes: [ "0:19:58" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:03:09)"
+      segment: "184744"
+      offset: 167
 
   - count: 44
     scenes: [ "0:19:59" ]
@@ -1502,7 +1523,8 @@ segments:
     scenes: [ "0:20:01" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:02:02)"
+      segment: "183408"
+      offset: 0
 
   - count: 16
     scenes: [ "0:20:02" ]
@@ -1531,7 +1553,8 @@ segments:
     scenes: [ "0:20:08" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:02:04)"
+      segment: "183467"
+      offset: 0
 
   - count: 48
     scenes: [ "0:20:10" ]
@@ -1547,7 +1570,8 @@ segments:
     scenes: [ "0:20:13" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:03:09)"
+      segment: "184744"
+      offset: 88
 
   - count: 50
     scenes: [ "0:20:17" ]
@@ -1565,13 +1589,15 @@ segments:
     scenes: [ "0:20:23" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:04:51)"
+      segment: "187043"
+      offset: 82
 
   - count: 65
     scenes: [ "0:20:27" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:05:11)"
+      segment: "187602"
+      offset: 0
 
   - count: 32
     scenes: [ "0:20:29" ]
@@ -1589,7 +1615,8 @@ segments:
     scenes: [ "0:20:35" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:06:04)"
+      segment: "188500"
+      offset: 158
 
   - count: 130
     scenes: [ "0:20:39" ]
@@ -1600,7 +1627,8 @@ segments:
     scenes: [ "0:20:44" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:06:24)"
+      segment: "188889"
+      offset: 217
 
   - count: 51
     scenes: [ "0:20:48" ]
@@ -1611,19 +1639,22 @@ segments:
     scenes: [ "0:20:50" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:06:34)"
+      segment: "189293"
+      offset: 1
 
   - count: 38
     scenes: [ "0:20:53" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:07:45)"
+      segment: "190602"
+      offset: 215
 
   - count: 85
     scenes: [ "0:20:55" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:07:48)"
+      segment: "190855"
+      offset: 0
 
   - count: 101
     scenes: [ "0:20:58" ]
@@ -2112,7 +2143,8 @@ segments:
     scenes: [ "0:29:06" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:41:45)"
+      segment: "151450"
+      todo: "time dilation: frame 4 offset is +340, frame 34 offset is +389"
 
   - count: 61
     scenes: [ "0:29:09" ]
@@ -2124,7 +2156,9 @@ segments:
     scenes: [ "0:29:11" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:43:47)"
+      segment: "155609"
+      offset: 0
+      todo: "time dilation: frame 0 offset is +0, frame 55 offset is +83"
 
   - count: 264
     scenes: [ "0:29:13", "0:29:22" ]
@@ -2132,7 +2166,9 @@ segments:
     - movie: the_searchers
       todo: "(flashback fade) (0:49:43)"
     - movie: rio_bravo
-      todo: "(flashback fade) (2:11:45)"
+      segment: "197131"
+      offset: -164
+      todo: "(flashback fade)"
 
   - count: 44
     scenes: [ "0:29:24" ]
@@ -2145,7 +2181,8 @@ segments:
     scenes: [ "0:29:26" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:11:53)"
+      segment: "197377"
+      offset: 0
 
   - count: 94
     scenes: [ "0:29:28" ]
@@ -2157,7 +2194,8 @@ segments:
     scenes: [ "0:29:31" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:13:10)"
+      segment: "199438"
+      offset: 0
 
   - count: 93
     scenes: [ "0:29:33" ]
@@ -2169,7 +2207,8 @@ segments:
     scenes: [ "0:29:37" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:13:18)"
+      segment: "199638"
+      offset: 0
 
   - count: 41
     scenes: [ "0:29:39" ]
@@ -2187,7 +2226,8 @@ segments:
     scenes: [ "0:29:43" ]
     clips:
     - movie: rio_bravo
-      todo: "(2:13:57)"
+      segment: "200671"
+      offset: 1
       transform: "hflip"
 
   - count: 572
@@ -2933,55 +2973,66 @@ segments:
     - movie: oceans_eleven
       todo: "(flashback fade) (0:30:13)"
     - movie: rio_bravo
-      todo: "(flashback fade) (1:19:15)"
+      segment: "118278"
+      offset: 692
+      todo: "(flashback fade)"
 
   - count: 843
     scenes: [ "0:42:21" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:19:29)"
+      segment: "119420"
+      offset: 275
 
   - count: 108
     scenes: [ "0:42:56" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:20:03)"
+      segment: "120538"
+      offset: 0
 
   - count: 98
     scenes: [ "0:42:59" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:20:06)"
+      segment: "120646"
+      offset: 0
 
   - count: 224
     scenes: [ "0:43:04" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:20:11)"
+      segment: "120744"
+      offset: 0
 
   - count: 36
     scenes: [ "0:43:12" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:20:17)"
+      segment: "120968"
+      offset: 0
 
   - count: 43
     scenes: [ "0:43:14" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:20:22)"
+      segment: "121004"
+      offset: 0
 
   - count: 116
     scenes: [ "0:43:16" ]
     clips:
     - movie: rio_bravo
-      todo: "(1:20:24)"
+      segment: "121095"
+      offset: 1
 
   - count: 346
     scenes: [ "0:43:20", "0:43:25" ]
     clips:
     - movie: rio_bravo
-      todo: "(flashback fade) (1:20:30)"
+      segment: "121212"
+      offset: 0
+      todo: "(flashback fade)"
     - movie: oceans_eleven
       todo: "(flashback fade) (0:30:18)"
 
@@ -5163,6 +5214,7 @@ movies:
       fr: "Attaque au Cheyenne Club"
       es: "El Club Social de Cheyenne"
     samples: [ "0:09:20", "0:09:27", "0:16:44", "0:17:47", "0:18:29", "0:19:18", "0:20:48", "0:27:09" ]
+    source: "1280x532"
 
   chisum:
     title: "Chisum"
