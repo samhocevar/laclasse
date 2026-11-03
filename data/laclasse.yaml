@@ -5261,7 +5261,9 @@ movies:
     alt_titles:
       fr: "Les Hommes du président"
     samples: [ "0:05:26", "0:06:56", "0:22:14", "1:08:23" ]
-    source: "1920x1080"
+    sources:
+    - name: "All the Presidents Men 1976 1080p MAX WEB-DL H264-GPRS.mkv"
+      resolution: "1920x1080"
     status:
       segments: true
 
@@ -5287,7 +5289,9 @@ movies:
     alt_titles:
       fr: "L’Esclave libre"
     samples: [ "0:47:57", "0:48:37", "0:48:54" ]
-    source: "1920x1080"
+    sources:
+    - name: "Band.of.Angels.1957.(Raoul.Walsh-Drama).1080p.x264-Classics.mkv"
+      resolution: "1920x1080"
 
   battle_of_the_bulge:
     title: "Battle of the Bulge"
@@ -5299,7 +5303,9 @@ movies:
     alt_titles:
       fr: "La Bataille des Ardennes"
     samples: [ "0:08:04" ]
-    source: "1904x688"
+    sources:
+    - name: "Battle.Of.The.Bulge.1965.1080p.BluRay.x264-[YTS.LT].mp4"
+      resolution: "1904x688"
     status:
       segments: true
 
@@ -5324,6 +5330,9 @@ movies:
     alt_titles:
       fr: "L’Allée sanglante"
     samples: [ "0:57:26" ]
+    sources:
+    - name: "Blood Alley 1955 1080p BluRay x264-OFT.mkv"
+      resolution: "1920x1080"
 
   bullitt:
     title: "Bullitt"
@@ -5332,6 +5341,9 @@ movies:
     directed: [ "Peter Yates" ]
     unused_cast: [ "Jacqueline Bisset" ]
     samples: [ "0:04:28", "1:10:11" ]
+    sources:
+    - name: "Bullitt 1968 BluRay 1080p DD 2 0 VC-1 REMUX-FraMeSToR.mkv"
+      resolution: "1920x1080"
 
   cahill_us_marshal:
     title: "Cahill U.S. Marshal"
@@ -5342,6 +5354,9 @@ movies:
     alt_titles:
       fr: "Les Cordes de la potence"
     samples: [ "0:21:34", "0:51:07" ]
+    sources:
+    - name: "Cahill U.S. Marshal (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
+      resolution: "1920x800"
 
   the_candidate:
     title: "The Candidate"
@@ -5352,7 +5367,9 @@ movies:
     alt_titles:
       fr: "Votez McKay"
     samples: [ "0:32:17", "0:35:54", "0:53:41" ]
-    source: "1920x1080"
+    sources:
+    - name: "Deliverance 1972 1080p MAX WEB-DL DDP5 1 H 264-GPRS.mkv"
+      resolution: "1920x1080"
     status:
       segments: true
 
@@ -5385,7 +5402,9 @@ movies:
       fr: "Attaque au Cheyenne Club"
       es: "El Club Social de Cheyenne"
     samples: [ "0:09:20", "0:09:27", "0:16:44", "0:17:47", "0:18:29", "0:19:18", "0:20:48", "0:27:09" ]
-    source: "1280x532"
+    sources:
+    - name: "The Cheyenne Social Club (West. Comedy 1970) James Stewart, Henry Fonda & Shirley Jones.mp4"
+      resolution: "1280x532"
 
   chisum:
     title: "Chisum"
@@ -5394,6 +5413,9 @@ movies:
     directed: [ "Andrew V. McLaglen" ]
     cast: [ "John Wayne" ]
     samples: [ "0:18:25", "0:28:41", "0:41:13" ]
+    sources:
+    - name: "Chisum (1970) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
+      resolution: "1920x800"
 
   city_beneath_the_sea:
     title: "City Beneath the Sea"
@@ -5419,6 +5441,9 @@ movies:
     alt_titles:
       fr: "Dynamite Jones"
     samples: [ "1:04:41" ]
+    sources:
+    - name: "Cleopatra Jones 1973 1080p BluRay x264-OFT.mkv"
+      resolution: "1920x1080"
 
   the_cowboys:
     title: "The Cowboys"
@@ -5430,6 +5455,9 @@ movies:
     alt_titles:
       fr: "Les Cowboys"
     samples: [ "0:44:33" ]
+    sources:
+    - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
+      resolution: "1920x1080"
 
   the_crimson_pirate:
     title: "The Crimson Pirate"
@@ -5440,6 +5468,9 @@ movies:
     alt_titles:
       fr: "Le Pirate rouge"
     samples: [ "0:00:39" ]
+    sources:
+    - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265.HEVC.FLAC.DUAL-SARTRE.mkv"
+      resolution: "1440x1080"
 
   deliverance:
     title: "Deliverance"
@@ -5450,6 +5481,9 @@ movies:
     alt_titles:
       fr: "Délivrance"
     samples: [ "0:39:38", "1:06:11" ]
+    sources:
+    - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265.HEVC.FLAC.DUAL-SARTRE.mkv"
+      resolution: "1920x800"
 
   drum_beat:
     title: "Drum Beat"
@@ -5464,7 +5498,9 @@ movies:
       pt: "Rajadas de Ódio"
       it: "Rullo di Tamburi"
     samples: [ "0:12:11" ]
-    source: "1920x752"
+    sources:
+    - name: "Drum Beat (1954) BluRay H264 DolbyD 5.1 + nickarad.mp4"
+      resolution: "1920x752"
 
   executive_action:
     title: "Executive Action"
@@ -5476,6 +5512,9 @@ movies:
       it: "Accion Ejecutiva"
       de: "Unternehmen Staatsgewalt"
     samples: [ "0:33:56", "0:34:15" ]
+    sources:
+    - name: "Executive.Action.1973.720p.WEBRip.x264.AAC-LAMA.mp4"
+      resolution: "1280x722"
 
   the_fbi_story:
     title: "The FBI Story"
@@ -5486,6 +5525,9 @@ movies:
     alt_titles:
       fr: "La Police fédérale enquête"
     samples: [ "0:14:54", "0:25:12" ]
+    sources:
+    - name: "The FBI Story  (Drama 1959)  James Stewart, Vera Miles & Murray Hamilton.mp4"
+      resolution: "1280x692"
 
   firecreek:
     title: "Firecreek"
@@ -5497,6 +5539,9 @@ movies:
       fr: "Les Cinq Hors-la-loi"
       es: "Los malvados de Firecreek"
     samples: [ "0:17:01", "0:20:04", "0:21:30" ]
+    sources:
+    - name: "Firecreek (1968) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
+      resolution: "1916x816"
 
   four_for_texas:
     title: "4 for Texas"
@@ -5508,7 +5553,9 @@ movies:
     alt_titles:
       fr: "Quatre du Texas"
     samples: [ "0:24:26", "0:24:34", "0:25:23", "0:25:25", "0:27:29", "0:28:51" ]
-    source: "1280x700"
+    sources:
+    - name: "4 for Texas (1963).mp4"
+      resolution: "1280x700"
     status:
       segments: true
 
@@ -5524,7 +5571,9 @@ movies:
       it: "Una Strana Coppia di Sbirri"
       pt: "Duas Ovelhas Negras"
     samples: [ "0:04:02", "0:04:23", "0:04:39" ]
-    source: "720x300"
+    sources:
+    - name: "Freebie.And.The.Bean.1974.INTERNAL.BDRip.x264-RedBlade.mkv"
+      resolution: "720x300"
     status:
       segments: true
 
@@ -5550,7 +5599,9 @@ movies:
       fr: "Détective privé"
       fr<!---->: "Le Privé"
     samples: [ "0:07:32", "0:08:03", "0:31:22", "0:35:52", "0:38:21", "0:45:36", "0:50:50", "0:58:29", "0:58:59" ]
-    source: "1920x1080"
+    sources:
+    - name: "Harper 1966 1080p BluRay x264-OFT.mkv"
+      resolution: "1920x1080"
     status:
       segments: true
 
@@ -5563,6 +5614,9 @@ movies:
     alt_titles:
       fr: "La Fureur du danger"
     samples: [ "0:47:16", "1:10:05" ]
+    sources:
+    - name: "Hooper.1978.1080p.BluRay.x264.YIFY.mp4"
+      resolution: "1920x1080"
 
   jeremiah_johnson:
     title: "Jeremiah Johnson"
@@ -5571,7 +5625,9 @@ movies:
     directed: [ "Sydney Pollack" ]
     cast: [ "Robert Redford" ]
     samples: [ "0:38:44", "0:40:29", "0:41:36", "0:44:06" ]
-    source: "3840x2160"
+    sources:
+    - name: "Jeremiah Johnson 1972 2160p.mkv"
+      resolution: "3840x2160"
 
   the_life_and_times_of_judge_roy_bean:
     title: "The Life and Times of Judge Roy Bean"
@@ -5591,6 +5647,9 @@ movies:
     directed: [ "George Miller" ]
     cast: []
     samples: [ "0:04:18", "0:37:21", "1:08:56", "1:10:02", "1:10:04" ]
+    sources:
+    - name: "Mad Max 1979 BluRay 1080p DDP 5 1 x264-hallowed.mkv"
+      resolution: "1920x820"
 
   maigret_et_les_plaisirs_de_la_nuit:
     title: "Maigret et les plaisirs de la nuit"
@@ -5609,7 +5668,9 @@ movies:
     alt_titles:
       fr: "Un silencieux au bout du canon"
     samples: [ "1:00:58", "1:01:19", "1:01:56", "1:02:12", "1:04:12", "1:05:47", "1:09:15" ]
-    source: "1280x534"
+    sources:
+    - name: "McQ.1974.720p.BluRay.H264.AAC-RARBG.mp4"
+      resolution: "1280x534"
 
   the_miracle_of_our_lady_of_fatima:
     title: "The Miracle of Our Lady of Fatima"
@@ -5630,7 +5691,9 @@ movies:
     alt_titles:
       fr: "L’Inconnu de Las Vegas"
     samples: [ "0:23:16", "0:41:53", "1:05:18" ]
-    source: "1920x800"
+    sources:
+    - name: "Oceans Eleven 1960 1080p HMAX WEB-DL AAC 2 0 H 264-PiRaTeS.mkv"
+      resolution: "1920x800"
 
   the_old_man_and_the_sea:
     title: "The Old Man and the Sea"
@@ -5641,6 +5704,9 @@ movies:
     alt_titles:
       fr: "Le Vieil Homme et la mer"
     samples: [ "0:44:16", "0:44:26" ]
+    sources:
+    - name: "The Old Man and the Sea 1958 1080p BluRay x264 DuaL-TURKO.mkv"
+      resolution: "1920x1080"
 
   rampage:
     title: "Rampage"
@@ -5655,7 +5721,9 @@ movies:
       de: "Im Banne der roten Tigerin"
       it: "Il grande Safari"
     samples: [ "0:50:53", "0:57:44", "1:05:20" ]
-    source: "848x480"
+    sources:
+    - name: "Rampage (Phil Karlson, 1963).mkv"
+      resolution: "848x480"
 
   riding_shotgun:
     title: "Riding Shotgun"
@@ -5678,7 +5746,9 @@ movies:
     directed: [ "Howard Hawks" ]
     cast: [ "Walter Brennan", "Angie Dickinson", "Dean Martin", "Ricky Nelson", "John Wayne" ]
     samples: [ "0:16:46", "0:17:11", "0:17:39", "0:20:55", "0:29:11", "0:29:31", "0:42:19", "0:42:21" ]
-    source: "1920x1080"
+    sources:
+    - name: "Rio Bravo 1959 1080p BluRay x264-OFT.mkv"
+      resolution: "1920x1080"
     status:
       segments: true
 
@@ -5691,7 +5761,9 @@ movies:
     alt_titles:
       fr: "Le Renard des océans"
     samples: [ "0:00:13", "0:00:24", "0:01:18", "0:02:11", "0:49:08" ]
-    source: "1910x780"
+    sources:
+    - name: "The Sea Chase  (War Drama 1955)  John Wayne, David Farrar & Lana Turner  1080p.mp4"
+      resolution: "1910x780"
     status:
       segments: true
 
@@ -5704,7 +5776,9 @@ movies:
     alt_titles:
       fr: "La Prisonnière du désert"
     samples: [ "0:11:47", "0:29:09", "0:55:04" ]
-    source: "1920x1080"
+    sources:
+    - name: "The.Searchers.1956.1080p.BluRay.x265.HEVC.AC3-SARTRE.mkv"
+      resolution: "1920x1080"
     status:
       segments: true
 
@@ -5729,7 +5803,9 @@ movies:
       de: "Stunde der Bewährung"
       it: "Vigilato speciale"
     samples: [ "0:34:12", "0:36:55", "0:37:44" ]
-    source: "1920x1040"
+    sources:
+    - name: "Straight.Time.1978.WAC.1080p.BluRay.x265.HEVC.FLAC-SARTRE.mkv"
+      resolution: "1920x1040"
     status:
       segments: true
 
@@ -5754,6 +5830,9 @@ movies:
     alt_titles:
       fr: "La Tour infernale"
     samples: [ "0:37:25" ]
+    sources:
+    - name: "L'inferno di cristallo - The Towering Inferno (1974) 1080p h264 Ac3 Ita Storico Ita Eng Sub Ita Eng-MIRCrew.mkv"
+      resolution: "1904x816"
 
   the_train_robbers:
     title: "The Train Robbers"
@@ -5764,6 +5843,9 @@ movies:
     alt_titles:
       fr: "Les Voleurs de trains"
     samples: [ "0:10:41", "0:44:30" ]
+    sources:
+    - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
+      resolution: "1920x800"
 
   the_valley_of_gwangi:
     title: "The Valley of Gwangi"
@@ -5774,7 +5856,9 @@ movies:
     alt_titles:
       fr: "La Vallée de Gwangi"
     samples: [ "0:54:23", "0:54:28", "0:55:12" ]
-    source: "1920x1080"
+    sources:
+    - name: "The.Valley.of.Gwangi.1969.1080p.BluRay.x264-SADPANDA.mkv"
+      resolution: "1920x1080"
 
   westbound:
     title: "Westbound"
