@@ -811,7 +811,8 @@ segments:
     scenes: [ "0:07:52" ]
     clips:
     - movie: battle_of_the_bulge
-      todo: "(0:19:13)"
+      segment: "035586"
+      offset: 45
       transform: "hflip"
 
   - count: 73
@@ -825,7 +826,8 @@ segments:
     scenes: [ "0:07:57" ]
     clips:
     - movie: battle_of_the_bulge
-      todo: "(0:18:41)"
+      segment: "034719"
+      offset: 0
       transform: "hflip"
 
   - count: 43
@@ -839,7 +841,8 @@ segments:
     scenes: [ "0:08:04" ]
     clips:
     - movie: battle_of_the_bulge
-      todo: "(0:18:11)"
+      segment: "033898"
+      offset: 0
       transform: "hflip"
 
   - count: 83
@@ -853,7 +856,9 @@ segments:
     scenes: [ "0:08:12", "0:08:32" ]
     clips:
     - movie: battle_of_the_bulge
-      todo: "(flashback fade) (0:18:41)"
+      segment: "034719"
+      offset: 0
+      todo: "(flashback fade)"
       transform: "hflip"
     - movie: the_cheyenne_social_club
       todo: "(flashback fade) (1:38:02)"
@@ -978,7 +983,8 @@ segments:
     scenes: [ "0:11:20" ]
     clips:
     - movie: battle_of_the_bulge
-      todo: "(0:18:41)"
+      segment: "034719"
+      offset: 0
       transform: "hflip"
 
   - count: 65
@@ -992,7 +998,9 @@ segments:
     scenes: [ "0:11:33", "0:11:43" ]
     clips:
     - movie: battle_of_the_bulge
-      todo: "(flashback fade) (0:18:51)"
+      segment: "034719"
+      offset: 234
+      todo: "(flashback fade)"
       transform: "hflip"
     - movie: there_was_a_crooked_man
       todo: "(flashback fade) (1:49:25)"
@@ -1001,7 +1009,8 @@ segments:
     scenes: [ "0:11:47" ]
     clips:
     - movie: the_searchers
-      todo: "(1:19:33)"
+      segment: "117342"
+      offset: 1
 
   - count: 65
     scenes: [ "0:11:50" ]
@@ -1091,7 +1100,8 @@ segments:
     scenes: [ "0:12:49" ]
     clips:
     - movie: battle_of_the_bulge
-      todo: "(0:18:26)"
+      segment: "034321"
+      offset: 0
       transform: "hflip"
 
   - count: 272
@@ -2195,7 +2205,9 @@ segments:
       segment: "118622"
       todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
     - movie: the_searchers
-      todo: "(flashback fade) (0:49:43)"
+      segment: "070845"
+      offset: 734
+      todo: "(flashback fade)"
 
   - count: 39
     scenes: [ "0:29:06" ]
@@ -2208,7 +2220,8 @@ segments:
     scenes: [ "0:29:09" ]
     clips:
     - movie: the_searchers
-      todo: "(0:50:00)"
+      segment: "072606"
+      offset: 0
 
   - count: 59
     scenes: [ "0:29:11" ]
@@ -2222,7 +2235,9 @@ segments:
     scenes: [ "0:29:13", "0:29:22" ]
     clips:
     - movie: the_searchers
-      todo: "(flashback fade) (0:49:43)"
+      segment: "071988"
+      offset: 1
+      todo: "(flashback fade)"
     - movie: rio_bravo
       segment: "197131"
       offset: -164
@@ -2294,7 +2309,9 @@ segments:
     - movie: charro
       todo: "(flashback fade) (0:38:22)"
     - movie: the_searchers
-      todo: "(flashback fade) (0:49:43)"
+      segment: "071988"
+      offset: -242
+      todo: "(flashback fade)"
     - movie: four_for_texas
       segment: "118622"
       todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
@@ -3972,7 +3989,8 @@ segments:
     scenes: [ "0:54:50" ]
     clips:
     - movie: the_searchers
-      todo: "(1:28:02)"
+      segment: "128529"
+      offset: 0
 
   - count: 43
     scenes: [ "0:54:51" ]
@@ -4013,7 +4031,8 @@ segments:
     scenes: [ "0:55:04" ]
     clips:
     - movie: the_searchers
-      todo: "(1:28:12)"
+      segment: "128747"
+      offset: 0
 
   - count: 64
     scenes: [ "0:55:06" ]
@@ -4040,7 +4059,9 @@ segments:
     - movie: the_valley_of_gwangi
       todo: "(cross-fade) (1:09:12)"
     - movie: the_searchers
-      todo: "(cross-fade) (1:29:39)"
+      segment: "131180"
+      offset: -104
+      todo: "(cross-fade)"
 
   - count: 215
     scenes: [ "0:55:21" ]
@@ -4052,7 +4073,9 @@ segments:
     scenes: [ "0:55:29", "0:55:32" ]
     clips:
     - movie: the_searchers
-      todo: "(cross-fade) (1:29:39)"
+      segment: "131180"
+      offset: 0
+      todo: "(cross-fade)"
     - movie: when_time_ran_out
       todo: "(cross-fade) (ping-pong)"
     notes: "La transition aurait dû être la version flashback"
@@ -5276,6 +5299,9 @@ movies:
     alt_titles:
       fr: "La Bataille des Ardennes"
     samples: [ "0:08:04" ]
+    source: "1904x688"
+    status:
+      segments: true
 
   beyond_the_poseidon_adventure:
     title: "Beyond the Poseidon Adventure"
@@ -5678,6 +5704,9 @@ movies:
     alt_titles:
       fr: "La Prisonnière du désert"
     samples: [ "0:11:47", "0:29:09", "0:55:04" ]
+    source: "1920x1080"
+    status:
+      segments: true
 
   start_the_revolution_without_me:
     title: "Start the Revolution Without Me"
