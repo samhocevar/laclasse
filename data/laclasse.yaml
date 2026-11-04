@@ -5437,8 +5437,14 @@ movies:
       es: "El Club Social de Cheyenne"
     samples: [ "0:09:20", "0:09:27", "0:16:44", "0:17:47", "0:18:29", "0:19:18", "0:20:48", "0:27:09" ]
     sources:
+    - name: "Attaque.au.Cheyenne.Club.1970.DVDRip.FR.MULTi.h264.mkv"
+      resolution: "1136x480"
     - name: "The Cheyenne Social Club (West. Comedy 1970) James Stewart, Henry Fonda & Shirley Jones.mp4"
       resolution: "1280x532"
+    - name: "Cheyenne Social Club, The (Henry Fonda, James Stewart) [1970]@.avi"
+      resolution: "608x256"
+    comment: |
+        The Apple TV versions is clearly better visually, though I don’t know by how much
 
   chisum:
     title: "Chisum"
@@ -5592,10 +5598,14 @@ movies:
       fr: "Quatre du Texas"
     samples: [ "0:24:26", "0:24:34", "0:25:23", "0:25:25", "0:27:29", "0:28:51" ]
     sources:
+    - name: "4 for Texas (1963) DVDRip Oldies.mkv"
+      resolution: "720x480"
     - name: "4 for Texas (1963).mp4"
       resolution: "1280x700"
-    status:
-      segments: true
+      bad: "très mauvais encodage : frames inventées (002093), frames manquantes (entre 002184 et 002185), chroma de la frame suivante qui déborde (002436)…"
+    - name: "4.DU.TEXAS.1963.MULTI.VFF.480p.DVDRip.AC3.1.0.MPEG2-NOTAG.mkv"
+      resolution: "720x480"
+      bad: 30fps
 
   freebie_and_the_bean:
     title: "Freebie and the Bean"
@@ -5640,6 +5650,8 @@ movies:
     sources:
     - name: "Harper 1966 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
+    - name: "Harper.1966.1080p.BluRay.x264-[YTS.LT].mp4"
+      resolution: "1920x800"
     status:
       segments: true
 
