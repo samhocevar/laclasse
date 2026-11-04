@@ -558,7 +558,9 @@ segments:
     scenes: [ "0:04:44" ]
     clips:
     - movie: the_towering_inferno
-      todo: "(0:10:12) 400 @600"
+      segment: "014565"
+      offset: 7
+    note: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
 
   - count: 107
     scenes: [ "0:04:50" ]
@@ -922,7 +924,8 @@ segments:
     scenes: [ "0:10:10" ]
     clips:
     - movie: the_train_robbers
-      todo: "(0:08:07)"
+      segment: "012646"
+      offset: 6
       transform: "hflip"
 
   - count: 166
@@ -934,7 +937,8 @@ segments:
     scenes: [ "0:10:25" ]
     clips:
     - movie: the_train_robbers
-      todo: "(0:08:51)"
+      segment: "013875"
+      offset: 2
 
   - count: 183
     scenes: [ "0:10:34" ]
@@ -946,7 +950,8 @@ segments:
     scenes: [ "0:10:41" ]
     clips:
     - movie: the_train_robbers
-      todo: "(0:09:11)"
+      segment: "014427"
+      offset: 0
 
   - count: 126
     scenes: [ "0:10:45" ]
@@ -957,7 +962,8 @@ segments:
     scenes: [ "0:10:48" ]
     clips:
     - movie: the_train_robbers
-      todo: "(0:09:12)"
+      segment: "014427"
+      offset: 1
 
   - count: 359
     scenes: [ "0:10:56" ]
@@ -969,7 +975,8 @@ segments:
     scenes: [ "0:11:11" ]
     clips:
     - movie: the_train_robbers
-      todo: "(0:09:36)"
+      segment: "015073"
+      offset: 1
       transform: "hflip"
 
   - count: 81
@@ -2792,7 +2799,9 @@ segments:
     scenes: [ "0:37:25" ]
     clips:
     - movie: the_towering_inferno
-      todo: "(0:10:30)"
+      segment: "014565"
+      offset: 90
+    note: "Segment matching is hard but will be trivial once we fix the longer similar sequence"
 
   - count: 236
     scenes: [ "0:37:27" ]
@@ -3261,7 +3270,10 @@ segments:
     - movie: the_old_man_and_the_sea
       todo: "(cross-fade) (0:08:28)"
     - movie: the_train_robbers
-      todo: "(cross-fade) (0:26:46)"
+      segment: "039875"
+      offset: 749
+      transform: "hflip"
+      todo: "(cross-fade)"
 
   - count: 84
     scenes: [ "0:44:26" ]
@@ -3273,7 +3285,8 @@ segments:
     scenes: [ "0:44:30" ]
     clips:
     - movie: the_train_robbers
-      todo: "(0:26:47)"
+      segment: "039875"
+      offset: 967
 
   - count: 39
     scenes: [ "0:44:32" ]
@@ -3285,7 +3298,8 @@ segments:
     scenes: [ "0:44:33" ]
     clips:
     - movie: the_cowboys
-      todo: "(0:36:09) (ping-pong)"
+      segment: "050899"
+      todo: "ping-pong: offsets #14 to #0, #0 to #6, #5 to #0, #0 to #6, #5 to #0"
 
   - count: 43
     scenes: [ "0:44:35" ]
@@ -3297,7 +3311,8 @@ segments:
     scenes: [ "0:44:37" ]
     clips:
     - movie: the_cowboys
-      todo: "(0:36:09) (ping-pong)"
+      segment: "050899"
+      todo: "ping-pong: offsets #11 to #20, #19 to #0, #0 to #6, #5 to #0, #1 to #6, #5 to #0, #0 to #6, #5 to #0"
 
   - count: 379
     scenes: [ "0:44:40", "0:44:46" ]
@@ -3311,7 +3326,9 @@ segments:
     scenes: [ "0:44:55" ]
     clips:
     - movie: the_towering_inferno
-      todo: "(0:10:30)"
+      segment: "014565"
+      offset: 53
+    note: "Segment matching is hard but will be trivial once we fix the longer similar sequence"
 
   - count: 447
     scenes: [ "0:44:58" ]
@@ -3438,7 +3455,8 @@ segments:
     scenes: [ "0:46:50" ]
     clips:
     - movie: hooper
-      todo: "(0:49:25)"
+      segment: "069710"
+      offset: 4
 
   - count: 110
     scenes: [ "0:46:52" ]
@@ -3450,7 +3468,8 @@ segments:
     scenes: [ "0:46:56" ]
     clips:
     - movie: hooper
-      todo: "(0:49:30)"
+      segment: "069842"
+      offset: 1
 
   - count: 110
     scenes: [ "0:47:03" ]
@@ -3461,7 +3480,8 @@ segments:
     scenes: [ "0:47:07" ]
     clips:
     - movie: hooper
-      todo: "(0:49:39)"
+      segment: "070060"
+      offset: 2
 
   - count: 122
     scenes: [ "0:47:10" ]
@@ -3472,7 +3492,9 @@ segments:
     scenes: [ "0:47:16" ]
     clips:
     - movie: hooper
-      todo: "(0:49:44)"
+      segment: "070180"
+      offset: 1
+      transform: "hflip"
 
   - count: 131
     scenes: [ "0:47:17" ]
@@ -4596,19 +4618,22 @@ segments:
     scenes: [ "1:02:44" ]
     clips:
     - movie: the_miracle_of_our_lady_of_fatima
-      todo: "(1:37:12)"
+      segment: "140223"
+      offset: 1
 
   - count: 58
     scenes: [ "1:02:45" ]
     clips:
     - movie: the_miracle_of_our_lady_of_fatima
-      todo: "(1:37:15)"
+      segment: "140263"
+      offset: 67
 
   - count: 134
     scenes: [ "1:02:48" ]
     clips:
     - movie: the_miracle_of_our_lady_of_fatima
-      todo: "(1:37:18)"
+      segment: "140388"
+      offset: 0
 
   - count: 250
     scenes: [ "1:02:53" ]
@@ -4716,7 +4741,8 @@ segments:
     scenes: [ "1:03:57" ]
     clips:
     - movie: cleopatra_jones
-      todo: "(0:25:12)"
+      segment: "039875"
+      offset: 6
       transform: "hflip"
 
   - count: 151
@@ -4729,7 +4755,8 @@ segments:
     scenes: [ "1:04:09" ]
     clips:
     - movie: cleopatra_jones
-      todo: "(0:25:33)"
+      segment: "040313"
+      offset: 5
 
   - count: 63
     scenes: [ "1:04:12" ]
@@ -4741,7 +4768,8 @@ segments:
     scenes: [ "1:04:15" ]
     clips:
     - movie: cleopatra_jones
-      todo: "(0:25:36)"
+      segment: "040413"
+      offset: 0
 
   - count: 51
     scenes: [ "1:04:19" ]
@@ -4753,13 +4781,15 @@ segments:
     scenes: [ "1:04:21" ]
     clips:
     - movie: cleopatra_jones
-      todo: "(0:25:45)"
+      segment: "040413"
+      offset: 312
 
   - count: 210
     scenes: [ "1:04:26" ]
     clips:
     - movie: cleopatra_jones
-      todo: "(0:25:51)"
+      segment: "040751"
+      offset: 0
 
   - count: 162
     scenes: [ "1:04:34" ]
@@ -4771,7 +4801,8 @@ segments:
     scenes: [ "1:04:41" ]
     clips:
     - movie: cleopatra_jones
-      todo: "(0:26:06)"
+      segment: "041111"
+      offset: 1
 
   - count: 68
     scenes: [ "1:04:44" ]
@@ -4783,7 +4814,8 @@ segments:
     scenes: [ "1:04:47" ]
     clips:
     - movie: cleopatra_jones
-      todo: "(0:26:13)"
+      segment: "041285"
+      offset: 0
 
   - count: 66
     scenes: [ "1:04:51" ]
@@ -5206,7 +5238,9 @@ segments:
     scenes: [ "1:10:05" ]
     clips:
     - movie: hooper
-      todo: "(1:29:18)"
+      segment: "128104"
+      offset: "0"
+      todo: "source material is missing 4 frames before, 1 frame after; try to dilate time maybe?"
 
   - count: 52
     scenes: [ "1:10:06" ]
@@ -5444,6 +5478,8 @@ movies:
     sources:
     - name: "Cleopatra Jones 1973 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
+    status:
+      segments: true
 
   the_cowboys:
     title: "The Cowboys"
@@ -5458,6 +5494,8 @@ movies:
     sources:
     - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
+    status:
+      segments: true
 
   the_crimson_pirate:
     title: "The Crimson Pirate"
@@ -5617,6 +5655,8 @@ movies:
     sources:
     - name: "Hooper.1978.1080p.BluRay.x264.YIFY.mp4"
       resolution: "1920x1080"
+    status:
+      segments: true
 
   jeremiah_johnson:
     title: "Jeremiah Johnson"
@@ -5681,6 +5721,11 @@ movies:
     alt_titles:
       en: "Miracle of Fatima"
     samples: [ "1:02:48" ]
+    sources:
+    - name: "The Miracle of Our Lady of Fatima (1952) [720p] [Drama].mkv"
+      resolution: "1470x1080"
+    status:
+      segments: true
 
   oceans_eleven:
     title: "Ocean’s Eleven"
@@ -5833,6 +5878,8 @@ movies:
     sources:
     - name: "L'inferno di cristallo - The Towering Inferno (1974) 1080p h264 Ac3 Ita Storico Ita Eng Sub Ita Eng-MIRCrew.mkv"
       resolution: "1904x816"
+    status:
+      segments: true
 
   the_train_robbers:
     title: "The Train Robbers"
@@ -5846,6 +5893,8 @@ movies:
     sources:
     - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
+    status:
+      segments: true
 
   the_valley_of_gwangi:
     title: "The Valley of Gwangi"
