@@ -5295,9 +5295,19 @@ movies:
     alt_titles:
       fr: "Les Hommes du président"
     samples: [ "0:05:26", "0:06:56", "0:22:14", "1:08:23" ]
+    media:
+    - type: bluray-4k
+      year: 2026
+      bitrate: 72.60
+      link: https://www.blu-ray.com/movies/All-the-Presidents-Men-4K-Blu-ray/403756/
+    - type: bluray
+      year: 2013
+      bitrate: 23.44
+      link: https://www.blu-ray.com/movies/All-the-Presidents-Men-Blu-ray/33492/
     sources:
     - name: "All the Presidents Men 1976 1080p MAX WEB-DL H264-GPRS.mkv"
       resolution: "1920x1080"
+    - name: "All the Presidents Men (1976) MULTi VFI 2160p 10bit DV HDR10 BluRay x265 DTS-HD MA 2.0-MHD.mkv"
     status:
       segments: true
 
@@ -5306,6 +5316,19 @@ movies:
     imdb: "tt0048960"
     year: 1956
     samples: [ "0:40:51" ]
+    media:
+    - type: dvd-ntsc
+      year: 2004
+      link: https://www.blu-ray.com/dvd/Around-the-World-in-80-Days-DVD/19546/
+    - type: bluray
+      year: TBA
+      link: https://www.blu-ray.com/movies/Around-the-World-in-80-Days-Blu-ray/43677/
+    sources:
+    - name: "Le Tour du Monde en 80 Jours 1956 HDTV MULTI.mkv"
+    - name: "Le.Tour.Du.Monde.En.Quatre.Vingts.Jours.1956.MULTI.VFF.1080p.BluRay.HDLight.AAC.2.0.x264-mHDgz.mkv"
+  comment: |
+    Interesting discussion about the restoration of the movie on
+    https://www.hometheaterforum.com/community/threads/381256
 
   the_arrangement:
     title: "The Arrangement"
@@ -5313,6 +5336,13 @@ movies:
     year: 1969
     directed: [ "Elia Kazan" ]
     samples: [ "0:03:26", "0:03:44" ]
+    media:
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/The-Arrangement-DVD/18971/
+    source:
+    - name: "The.Arrangement.1969.720p.WEB-DL.AAC2.0.H264-FGT.mkv"
+    - name: "The Arrangement [Kirk Douglas] (1969) DVDRip Oldies.avi"
 
   band_of_angels:
     title: "Band of Angels"
@@ -5323,6 +5353,10 @@ movies:
     alt_titles:
       fr: "L’Esclave libre"
     samples: [ "0:47:57", "0:48:37", "0:48:54" ]
+    media:
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/Band-of-Angels-DVD/7586/
     sources:
     - name: "Band.of.Angels.1957.(Raoul.Walsh-Drama).1080p.x264-Classics.mkv"
       resolution: "1920x1080"
@@ -5337,6 +5371,11 @@ movies:
     alt_titles:
       fr: "La Bataille des Ardennes"
     samples: [ "0:08:04" ]
+    media:
+    - type: bluray
+      year: 2007
+      bitrate: 16.93
+      link: https://www.blu-ray.com/movies/Battle-of-the-Bulge-Blu-ray/414/
     sources:
     - name: "Battle.Of.The.Bulge.1965.1080p.BluRay.x264-[YTS.LT].mp4"
       resolution: "1904x688"
@@ -5354,6 +5393,17 @@ movies:
       it: "L’Inferno sommerso"
       de: "Jagd auf die Poseidon"
     samples: [ "1:00:42" ]
+    media:
+    - type: bluray
+      year: 2023
+      bitrate: 34.00
+      link: https://www.blu-ray.com/movies/Beyond-the-Poseidon-Adventure-Blu-ray/341264/
+    sources:
+    - name: "Beyond the Poseidon Adventure (1979).mkv"
+    - name: "Beyond.The.Poseidon.Adventure.1979.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
+    - name: "Beyond.The.Poseidon.Adventure.1979.720p.BluRay.x264.AAC-[YTS.MX].mp4"
+    - name: "L'inferno sommerso - Beyond the Poseidon Adventure (1979) 1080p H264 Ac3 Ita Ac3 5.1 Eng Sub Ita Eng-MIRCrew.mkv"
+
 
   blood_alley:
     title: "Blood Alley"
@@ -5364,6 +5414,11 @@ movies:
     alt_titles:
       fr: "L’Allée sanglante"
     samples: [ "0:57:26" ]
+    media:
+    - type: bluray
+      year: 2017
+      bitrate: 34.99
+      link: https://www.blu-ray.com/movies/Blood-Alley-Blu-ray/182128/
     sources:
     - name: "Blood Alley 1955 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
@@ -5375,6 +5430,17 @@ movies:
     directed: [ "Peter Yates" ]
     unused_cast: [ "Jacqueline Bisset" ]
     samples: [ "0:04:28", "1:10:11" ]
+    media:
+    - type: bluray-4k
+      year: 2026
+      link: https://www.blu-ray.com/movies/Bullitt-4K-Blu-ray/421755/
+    - type: bluray
+      year: 2026
+      link: https://www.blu-ray.com/movies/Bullitt-Blu-ray/421787/
+    - type: bluray
+      year: 2007
+      bitrate: 19.03
+      link: https://www.blu-ray.com/movies/Bullitt-Blu-ray/355/
     sources:
     - name: "Bullitt 1968 BluRay 1080p DD 2 0 VC-1 REMUX-FraMeSToR.mkv"
       resolution: "1920x1080"
@@ -5388,6 +5454,11 @@ movies:
     alt_titles:
       fr: "Les Cordes de la potence"
     samples: [ "0:21:34", "0:51:07" ]
+    media:
+    - type: bluray
+      year: 2015
+      bitrate: 18.96
+      link: https://www.blu-ray.com/movies/Cahill-US-Marshal-Blu-ray/124841/
     sources:
     - name: "Cahill U.S. Marshal (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
@@ -5401,8 +5472,12 @@ movies:
     alt_titles:
       fr: "Votez McKay"
     samples: [ "0:32:17", "0:35:54", "0:53:41" ]
+    media:
+    - type: bluray
+      year: TBA
+      link: https://www.blu-ray.com/movies/The-Candidate-Blu-ray/43484/
     sources:
-    - name: "Deliverance 1972 1080p MAX WEB-DL DDP5 1 H 264-GPRS.mkv"
+    - name: "The.Candidate.1972.1080p.WEBRip.DD2.0.x264-NTb.mkv"
       resolution: "1920x1080"
     status:
       segments: true
@@ -5417,6 +5492,12 @@ movies:
       fr: "Les Conquérants de Carson City"
       it: "Nevada Express"
     samples: [ "0:28:38", "0:54:25" ]
+    media:
+    - type: dvd-ntsc
+      year: 2009
+      link: https://www.blu-ray.com/dvd/Carson-City-DVD/68310/
+    sources:
+    - name: "Carson City  (Western 1952)  Randolph Scott, Raymond Massey & Lucille Norman.mp4"
 
   charro:
     title: "Charro!"
@@ -5425,6 +5506,13 @@ movies:
     directed: [ "Charles Marquis Warren" ]
     cast: [ "Elvis Presley" ]
     samples: [ "0:29:28" ]
+    media:
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/Charro-DVD/90199/
+    sources:
+    - name: "Charro.1969.720p.WEB-DL.AAC2.0.H264-RARBG.mkv"
+    - name: "Charro! 1969 Deutsch - Youtube [EJajA31vCQk].mp4"
 
   the_cheyenne_social_club:
     title: "The Cheyenne Social Club"
@@ -5436,6 +5524,10 @@ movies:
       fr: "Attaque au Cheyenne Club"
       es: "El Club Social de Cheyenne"
     samples: [ "0:09:20", "0:09:27", "0:16:44", "0:17:47", "0:18:29", "0:19:18", "0:20:48", "0:27:09" ]
+    media:
+    - type: dvd-ntsc
+      year: TBA
+      link: https://www.blu-ray.com/dvd/The-Cheyenne-Social-Club-DVD/101943/
     sources:
     - name: "Attaque.au.Cheyenne.Club.1970.DVDRip.FR.MULTi.h264.mkv"
       resolution: "1136x480"
@@ -5453,6 +5545,11 @@ movies:
     directed: [ "Andrew V. McLaglen" ]
     cast: [ "John Wayne" ]
     samples: [ "0:18:25", "0:28:41", "0:41:13" ]
+    media:
+    - type: bluray
+      year: 2016
+      bitrate: 34.90
+      link: https://www.blu-ray.com/movies/Chisum-Blu-ray/103214/
     sources:
     - name: "Chisum (1970) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
@@ -5471,6 +5568,13 @@ movies:
       es: "Ciudad bajo el mar"
       es<!---->: "La Ciudad bajo el agua"
     samples: [ "0:30:22", "0:30:58" ]
+    media:
+    - type: dvd-ntsc
+      year: 2010
+      link: https://www.blu-ray.com/dvd/City-Beneath-the-Sea-DVD/17545/
+    sources:
+    - name: "City Beneath the Sea (Irwin Allen, 1971).mkv"
+    - name: "La città degli Acquanauti - City Beneath the Sea (1971) SD h264 Ac3 Ita Eng Sub Ita-MIRCrew.mkv"
 
   cleopatra_jones:
     title: "Cleopatra Jones"
@@ -5481,6 +5585,11 @@ movies:
     alt_titles:
       fr: "Dynamite Jones"
     samples: [ "1:04:41" ]
+    media:
+    - type: bluray
+      year: 2019
+      bitrate: 31.98
+      link: https://www.blu-ray.com/movies/Cleopatra-Jones-Blu-ray/234589/
     sources:
     - name: "Cleopatra Jones 1973 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
@@ -5497,6 +5606,10 @@ movies:
     alt_titles:
       fr: "Les Cowboys"
     samples: [ "0:44:33" ]
+    media:
+    - type: bluray
+      year: 2016
+      link: https://www.blu-ray.com/movies/The-Cowboys-Blu-ray/436/
     sources:
     - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
@@ -5512,9 +5625,24 @@ movies:
     alt_titles:
       fr: "Le Pirate rouge"
     samples: [ "0:00:39" ]
+    media:
+    - type: bluray
+      year: 2023
+      link: https://www.blu-ray.com/movies/The-Crimson-Pirate-Blu-ray/339466/
+    - type: bluray
+      year: 2026
+      resolution: 1080i
+      link: https://www.blu-ray.com/movies/The-Crimson-Pirate-Blu-ray/399762/
+    - type: dvd-ntsc
+      year: 2018
+      link: https://www.blu-ray.com/dvd/The-Crimson-Pirate-DVD/152284/
+    - type: dvd-ntsc
+      year: 2003
+      link: https://www.blu-ray.com/dvd/The-Crimson-Pirate-DVD/19564/
     sources:
     - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265.HEVC.FLAC.DUAL-SARTRE.mkv"
       resolution: "1440x1080"
+    - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265-RARBG.mp4"
 
   deliverance:
     title: "Deliverance"
@@ -5525,8 +5653,23 @@ movies:
     alt_titles:
       fr: "Délivrance"
     samples: [ "0:39:38", "1:06:11" ]
+    media:
+    - type: bluray-4k
+      year: 2027
+      link: https://www.blu-ray.com/movies/Deliverance-4K-Blu-ray/423298/
+    - type: bluray
+      year: 2027
+      link: https://www.blu-ray.com/movies/Deliverance-Blu-ray/423300/
+    - type: bluray
+      year: 2012
+      bitrate: 24.38
+      link: https://www.blu-ray.com/movies/Deliverance-Blu-ray/40238/
+    - type: bluray
+      year: 2007
+      bitrate: 21.12
+      link: https://www.blu-ray.com/movies/Deliverance-Blu-ray/472/
     sources:
-    - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265.HEVC.FLAC.DUAL-SARTRE.mkv"
+    - name: "Deliverance 1972 1080p MAX WEB-DL DDP5 1 H 264-GPRS.mkv"
       resolution: "1920x800"
 
   drum_beat:
@@ -5542,6 +5685,10 @@ movies:
       pt: "Rajadas de Ódio"
       it: "Rullo di Tamburi"
     samples: [ "0:12:11" ]
+    media:
+    - type: dvd
+      year: 2014
+      link: https://www.blu-ray.com/dvd/Drum-Beat-DVD/87417/
     sources:
     - name: "Drum Beat (1954) BluRay H264 DolbyD 5.1 + nickarad.mp4"
       resolution: "1920x752"
@@ -5556,9 +5703,14 @@ movies:
       it: "Accion Ejecutiva"
       de: "Unternehmen Staatsgewalt"
     samples: [ "0:33:56", "0:34:15" ]
+    media:
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/Executive-Action-DVD/7594/
     sources:
     - name: "Executive.Action.1973.720p.WEBRip.x264.AAC-LAMA.mp4"
       resolution: "1280x722"
+    - name: "Executive.Action.1973.CUSTOM.MULTI.1080p.AMZN.WEB-DL.H.264-BRDN.mkv"
 
   the_fbi_story:
     title: "The FBI Story"
@@ -5569,6 +5721,13 @@ movies:
     alt_titles:
       fr: "La Police fédérale enquête"
     samples: [ "0:14:54", "0:25:12" ]
+    media:
+    - type: dvd-ntsc
+      year: 2006
+      link: https://www.blu-ray.com/dvd/The-FBI-Story-DVD/36627/
+    - type: dvd
+      year: 2018
+      link: https://www.blu-ray.com/dvd/The-FBI-Story-DVD/213539/
     sources:
     - name: "The FBI Story  (Drama 1959)  James Stewart, Vera Miles & Murray Hamilton.mp4"
       resolution: "1280x692"
@@ -5583,6 +5742,13 @@ movies:
       fr: "Les Cinq Hors-la-loi"
       es: "Los malvados de Firecreek"
     samples: [ "0:17:01", "0:20:04", "0:21:30" ]
+    media:
+    - type: bluray
+      year: 2023
+      link: https://www.blu-ray.com/movies/Firecreek-Blu-ray/339896/
+    - type: dvd-ntsc
+      year: TBA
+      link: https://www.blu-ray.com/dvd/Firecreek-DVD/101944/
     sources:
     - name: "Firecreek (1968) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1916x816"
@@ -5597,6 +5763,10 @@ movies:
     alt_titles:
       fr: "Quatre du Texas"
     samples: [ "0:24:26", "0:24:34", "0:25:23", "0:25:25", "0:27:29", "0:28:51" ]
+    media:
+    - type: dvd-ntsc
+      year: 2002
+      link: https://www.blu-ray.com/dvd/4-for-Texas-DVD/18563/
     sources:
     - name: "4 for Texas (1963) DVDRip Oldies.mkv"
       resolution: "720x480"
@@ -5605,7 +5775,7 @@ movies:
       bad: "très mauvais encodage : frames inventées (002093), frames manquantes (entre 002184 et 002185), chroma de la frame suivante qui déborde (002436)…"
     - name: "4.DU.TEXAS.1963.MULTI.VFF.480p.DVDRip.AC3.1.0.MPEG2-NOTAG.mkv"
       resolution: "720x480"
-      bad: 30fps
+      bad: "encodé en 30fps, espérons trouver mieux"
 
   freebie_and_the_bean:
     title: "Freebie and the Bean"
@@ -5619,9 +5789,18 @@ movies:
       it: "Una Strana Coppia di Sbirri"
       pt: "Duas Ovelhas Negras"
     samples: [ "0:04:02", "0:04:23", "0:04:39" ]
+    media:
+    - type: bluray
+      year: 2017
+      bitrate: 34.99
+      link: https://www.blu-ray.com/movies/Freebie-and-the-Bean-Blu-ray/184182/
+    - type: dvd-ntsc
+      year: 2009
+      link: https://www.blu-ray.com/dvd/Freebie-and-the-Bean-DVD/87726/
     sources:
     - name: "Freebie.And.The.Bean.1974.INTERNAL.BDRip.x264-RedBlade.mkv"
       resolution: "720x300"
+    - name: "Freebie.And.The.Bean.1974.1080p.BluRay.x264-[YTS.LT].mp4"
     status:
       segments: true
 
@@ -5635,6 +5814,13 @@ movies:
       fr: "Un homme fait la loi"
       es: "Un hombre impone la ley"
     samples: [ "0:18:57", "0:50:17" ]
+    media:
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/36419/
+    - type: dvd-ntsc
+      year: 2016
+      link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/250764/
 
   harper:
     title: "Harper"
@@ -5647,6 +5833,14 @@ movies:
       fr: "Détective privé"
       fr<!---->: "Le Privé"
     samples: [ "0:07:32", "0:08:03", "0:31:22", "0:35:52", "0:38:21", "0:45:36", "0:50:50", "0:58:29", "0:58:59" ]
+    media:
+    - type: bluray
+      year: 2018
+      bitrate: 34.99
+      link: https://www.blu-ray.com/movies/Harper-Blu-ray/49049/
+    - type: dvd-ntsc
+      year: 2006
+      link: https://www.blu-ray.com/dvd/Harper-DVD/15267/
     sources:
     - name: "Harper 1966 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
@@ -5664,6 +5858,17 @@ movies:
     alt_titles:
       fr: "La Fureur du danger"
     samples: [ "0:47:16", "1:10:05" ]
+    media:
+    - type: bluray
+      year: 2015
+      bitrate: 23.25
+      link: https://www.blu-ray.com/movies/Hooper-Blu-ray/120560/
+    - type: dvd-ntsc
+      year: 1998
+      link: https://www.blu-ray.com/dvd/Hooper-DVD/1996/
+    - type: dvd-ntsc
+      year: 2018
+      link: https://www.blu-ray.com/dvd/Hooper-DVD/159748/
     sources:
     - name: "Hooper.1978.1080p.BluRay.x264.YIFY.mp4"
       resolution: "1920x1080"
@@ -5677,6 +5882,20 @@ movies:
     directed: [ "Sydney Pollack" ]
     cast: [ "Robert Redford" ]
     samples: [ "0:38:44", "0:40:29", "0:41:36", "0:44:06" ]
+    media:
+    - type: bluray
+      year: 2020
+      link: https://www.blu-ray.com/movies/Jeremiah-Johnson-Blu-ray/275393/
+    - type: bluray
+      year: 2012
+      bitrate: 29.89
+      link: https://www.blu-ray.com/movies/Jeremiah-Johnson-Blu-ray/36349/
+    - type: dvd-ntsc
+      year: 1997
+      link: https://www.blu-ray.com/dvd/Jeremiah-Johnson-DVD/2554/
+    - type: dvd
+      year: 2007
+      link: https://www.blu-ray.com/dvd/Jeremiah-Johnson-DVD/15204/
     sources:
     - name: "Jeremiah Johnson 1972 2160p.mkv"
       resolution: "3840x2160"
@@ -5691,6 +5910,21 @@ movies:
     alt_titles:
       fr: "Juge et hors-la-loi"
     samples: [ "0:40:56" ]
+    media:
+    - type: bluray
+      year: 2018
+      bitrate: 35.00
+      link: https://www.blu-ray.com/movies/The-Life-and-Times-of-Judge-Roy-Bean-Blu-ray/208027/
+    - type: dvd-ntsc
+      year: 2003
+      link: https://www.blu-ray.com/dvd/The-Life-and-Times-of-Judge-Roy-Bean-DVD/36703/
+    - type: dvd-ntsc
+      year: 2012
+      link: https://www.blu-ray.com/dvd/The-Life-and-Times-of-Judge-Roy-Bean-DVD/82524/
+    sourcess:
+    - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.1080p.BluRay.x264-[YTS.AM].mp4"
+    - name: "The Life and Times of Judge Roy Bean  (Western 1972)  Paul Newman, Ava Gardner & Roy Jenson  (BR).mp4"
+    - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.720p.BluRay.x264-[YTS.AM].mp4"
 
   mad_max:
     title: "Mad Max"
@@ -5699,6 +5933,30 @@ movies:
     directed: [ "George Miller" ]
     cast: []
     samples: [ "0:04:18", "0:37:21", "1:08:56", "1:10:02", "1:10:04" ]
+    media:
+    - type: bluray-4k
+      year: 2020
+      bitrate: 79.50
+      link: https://www.blu-ray.com/movies/Mad-Max-4K-Blu-ray/274995/
+    - type: bluray-4k
+      year: 2021
+      link: https://www.blu-ray.com/movies/Mad-Max-4K-Blu-ray/305653/
+    - type: bluray
+      year: 2015
+      bitrate: 35.00
+      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/109610/
+    - type: bluray
+      year: 2010
+      bitrate: 36.64
+      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/14749/
+    - type: bluray
+      year: 2015
+      bitrate: 36.64
+      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/134334/
+    - type: bluray
+      year: 2020
+      bitrate: 34.92
+      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/134334/
     sources:
     - name: "Mad Max 1979 BluRay 1080p DDP 5 1 x264-hallowed.mkv"
       resolution: "1920x820"
@@ -5720,9 +5978,23 @@ movies:
     alt_titles:
       fr: "Un silencieux au bout du canon"
     samples: [ "1:00:58", "1:01:19", "1:01:56", "1:02:12", "1:04:12", "1:05:47", "1:09:15" ]
+    media:
+    - type: bluray
+      year: 2016
+      bitrate: 35.00
+      link: https://www.blu-ray.com/movies/McQ-Blu-ray/152732/
+    - type: dvd-ntsc
+      year: TBA
+      link: https://www.blu-ray.com/dvd/McQ-DVD/98818/
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/McQ-DVD/7128/
     sources:
     - name: "McQ.1974.720p.BluRay.H264.AAC-RARBG.mp4"
       resolution: "1280x534"
+    - name: "Un.Silencieux.Au.Bout.Du.Canon.1974..Multi.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
+    - name: "McQ.1974.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
+    - name: "McQ.1974.720p.BluRay.x264.AAC-[YTS.MX].mp4"
 
   the_miracle_of_our_lady_of_fatima:
     title: "The Miracle of Our Lady of Fatima"
@@ -5733,6 +6005,13 @@ movies:
     alt_titles:
       en: "Miracle of Fatima"
     samples: [ "1:02:48" ]
+    media:
+    - type: bluray
+      year: TBA
+      link: https://www.blu-ray.com/movies/The-Miracle-of-Our-Lady-of-Fatima-Blu-ray/298084/
+    - type: dvd-ntsc
+      year: 2006
+      link: https://www.blu-ray.com/dvd/The-Miracle-of-Our-Lady-of-Fatima-DVD/17021/
     sources:
     - name: "The Miracle of Our Lady of Fatima (1952) [720p] [Drama].mkv"
       resolution: "1470x1080"
@@ -5748,6 +6027,17 @@ movies:
     alt_titles:
       fr: "L’Inconnu de Las Vegas"
     samples: [ "0:23:16", "0:41:53", "1:05:18" ]
+    media:
+    - type: bluray
+      year: 2010
+      bitrate: 18.00
+      link: https://www.blu-ray.com/movies/Oceans-11-Blu-ray/12284/
+    - type: dvd-ntsc
+      year: 2002
+      link: https://www.blu-ray.com/dvd/Oceans-11-DVD/30228/
+    - type: dvd-ntsc
+      year: 2008
+      link: https://www.blu-ray.com/dvd/Oceans-11-DVD/80520/
     sources:
     - name: "Oceans Eleven 1960 1080p HMAX WEB-DL AAC 2 0 H 264-PiRaTeS.mkv"
       resolution: "1920x800"
@@ -5761,6 +6051,16 @@ movies:
     alt_titles:
       fr: "Le Vieil Homme et la mer"
     samples: [ "0:44:16", "0:44:26" ]
+    media:
+    - type: bluray
+      year: 2023
+      link: https://www.blu-ray.com/The-Old-Man-and-the-Sea/255552/#Releases
+    - type: dvd-ntsc
+      year: 2010
+      link: https://www.blu-ray.com/dvd/The-Old-Man-and-the-Sea-DVD/62963/
+    - type: dvd-ntsc
+      year: 2001
+      link: https://www.blu-ray.com/dvd/The-Old-Man-and-the-Sea-DVD/167891/
     sources:
     - name: "The Old Man and the Sea 1958 1080p BluRay x264 DuaL-TURKO.mkv"
       resolution: "1920x1080"
@@ -5778,6 +6078,10 @@ movies:
       de: "Im Banne der roten Tigerin"
       it: "Il grande Safari"
     samples: [ "0:50:53", "0:57:44", "1:05:20" ]
+    media:
+    - type: dvd-ntsc
+      year: 2010
+      link: https://www.blu-ray.com/dvd/Rampage-DVD/93714/
     sources:
     - name: "Rampage (Phil Karlson, 1963).mkv"
       resolution: "848x480"
@@ -5795,6 +6099,13 @@ movies:
       de: "Dieser Mann weiß zuviel"
       it: "L’assedio di fuoco"
     samples: [ "0:56:05" ]
+    media:
+    - type: dvd-ntsc
+      year: TBA
+      link: https://www.blu-ray.com/dvd/Riding-Shotgun-DVD/87852/
+    sources:
+    - name: "Riding Shotgun  (Western 1954)  Randolph Scott, Joan Weldon & Wayne Morris.mp4"
+    - name: "Riding Shotgun (1954) 75 min.Randolph Scott Westerns.avi"
 
   rio_bravo:
     title: "Rio Bravo"
@@ -5803,6 +6114,19 @@ movies:
     directed: [ "Howard Hawks" ]
     cast: [ "Walter Brennan", "Angie Dickinson", "Dean Martin", "Ricky Nelson", "John Wayne" ]
     samples: [ "0:16:46", "0:17:11", "0:17:39", "0:20:55", "0:29:11", "0:29:31", "0:42:19", "0:42:21" ]
+    media:
+    - type: bluray-4k
+      year: 2023
+      bitrate: 53.39
+      link: https://www.blu-ray.com/movies/Rio-Bravo-4K-Blu-ray/332494/
+    - type: bluray
+      year: 2015
+      bitrate: 19.62
+      link: https://www.blu-ray.com/movies/Rio-Bravo-Blu-ray/124985/
+    - type: bluray
+      year: 2007
+      bitrate: 19.62
+      link: https://www.blu-ray.com/movies/Rio-Bravo-Blu-ray/437/
     sources:
     - name: "Rio Bravo 1959 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
@@ -5818,6 +6142,17 @@ movies:
     alt_titles:
       fr: "Le Renard des océans"
     samples: [ "0:00:13", "0:00:24", "0:01:18", "0:02:11", "0:49:08" ]
+    media:
+    - type: bluray
+      year: 2017
+      bitrate: 34.99
+      link: https://www.blu-ray.com/movies/The-Sea-Chase-Blu-ray/182129/
+    - type: dvd-ntsc
+      year: 2005
+      link: https://www.blu-ray.com/dvd/The-Sea-Chase-DVD/80464/
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/The-Sea-Chase-DVD/6872/
     sources:
     - name: "The Sea Chase  (War Drama 1955)  John Wayne, David Farrar & Lana Turner  1080p.mp4"
       resolution: "1910x780"
@@ -5833,6 +6168,19 @@ movies:
     alt_titles:
       fr: "La Prisonnière du désert"
     samples: [ "0:11:47", "0:29:09", "0:55:04" ]
+    media:
+    - type: bluray-4k
+      year: 2024
+      bitrate: 94.25
+      link: https://www.blu-ray.com/movies/The-Searchers-4K-Blu-ray/375103/
+    - type: bluray
+      year: 2006
+      bitrate: 23.25
+      link: https://www.blu-ray.com/movies/The-Searchers-Blu-ray/231/
+    - type: bluray
+      year: 2024
+      bitrate: 37.49
+      link: https://www.blu-ray.com/movies/The-Searchers-Blu-ray/375104/
     sources:
     - name: "The.Searchers.1956.1080p.BluRay.x265.HEVC.AC3-SARTRE.mkv"
       resolution: "1920x1080"
@@ -5848,6 +6196,15 @@ movies:
     alt_titles:
       fr: "Commencez la révolution sans nous"
     samples: [ "0:06:42", "0:06:50" ]
+    media:
+    - type: bluray
+      year: 2026
+      link: https://www.blu-ray.com/movies/Start-the-Revolution-Without-Me-Blu-ray/191019/
+    - type: dvd
+      year: 2011
+      link: https://www.blu-ray.com/dvd/Start-The-Revolution-Without-Me-DVD/82538/
+    sources:
+    - name: "Start The Revolution Without Me 1970 DVDRip x264[N1C].mkv"
 
   straight_time:
     title: "Straight Time"
@@ -5860,6 +6217,16 @@ movies:
       de: "Stunde der Bewährung"
       it: "Vigilato speciale"
     samples: [ "0:34:12", "0:36:55", "0:37:44" ]
+    media:
+    - type: bluray
+      year: 2021
+      link: https://www.blu-ray.com/movies/Straight-Time-Blu-ray/68788/
+    - type: dvd-ntsc
+      year: 2015
+      link: https://www.blu-ray.com/dvd/Straight-Time-DVD/112504/
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/Straight-Time-DVD/30534/
     sources:
     - name: "Straight.Time.1978.WAC.1080p.BluRay.x265.HEVC.FLAC-SARTRE.mkv"
       resolution: "1920x1040"
@@ -5877,6 +6244,23 @@ movies:
       fr: "Le Reptile"
       es: "El día de los tramposos"
     samples: [ "0:11:50", "0:12:25" ]
+    media:
+    - type: bluray
+      year: 2021
+      link: https://www.blu-ray.com/movies/There-Was-a-Crooked-Man-Blu-ray/290489/
+    - type: dvd-ntsc
+      year: 2021
+      link: https://www.blu-ray.com/dvd/There-Was-a-Crooked-Man-DVD/250593/
+    - type: dvd-ntsc
+      year: 2006
+      link: https://www.blu-ray.com/dvd/There-Was-a-Crooked-Man-DVD/26155/
+    sources:
+    - name: "There.Was.a.Crooked.Man.1970.VOSTFR.1080p.WEB-DL.DD2.0.H.264-AZAZE.mkv"
+    - name: "Le.Reptile.1970.MULTI.VFF.576p.DVDRip.AC3.2.0.MPEG2-TT54.mkv"
+    - name: "Le.Reptile.1970.MULTI.VFF.1080p.WEBRip.AAC.2.0.x265-TITCANAILLOU.mkv"
+    - name: "There.Was.A.Crooked.Man....1970.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
+    - name: "There.Was.A.Crooked.Man....1970.1080p.WEBRip.x264.AAC-[YTS.LT].mp4"
+    - name: "There.Was.a.Crooked.Man.1970.BluRay.600MB.h264.MP4-Zoetrope.mp4"
 
   the_towering_inferno:
     title: "The Towering Inferno"
@@ -5887,6 +6271,14 @@ movies:
     alt_titles:
       fr: "La Tour infernale"
     samples: [ "0:37:25" ]
+    media:
+    - type: bluray
+      year: 2009
+      bitrate: 24.82
+      link: https://www.blu-ray.com/movies/The-Towering-Inferno-Blu-ray/5024/
+    - type: dvd-ntsc
+      year: 1999
+      link: https://www.blu-ray.com/dvd/The-Towering-Inferno-DVD/24169/
     sources:
     - name: "L'inferno di cristallo - The Towering Inferno (1974) 1080p h264 Ac3 Ita Storico Ita Eng Sub Ita Eng-MIRCrew.mkv"
       resolution: "1904x816"
@@ -5902,6 +6294,17 @@ movies:
     alt_titles:
       fr: "Les Voleurs de trains"
     samples: [ "0:10:41", "0:44:30" ]
+    media:
+    - type: bluray
+      year: 2015
+      bitrate: 24.95
+      link: https://www.blu-ray.com/movies/The-Train-Robbers-Blu-ray/124975/
+    - type: dvd-ntsc
+      year: 2007
+      link: https://www.blu-ray.com/dvd/The-Train-Robbers-DVD/18547/
+    - type: dvd-ntsc
+      year: 2005
+      link: https://www.blu-ray.com/dvd/The-Train-Robbers-DVD/99139/
     sources:
     - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
@@ -5917,6 +6320,20 @@ movies:
     alt_titles:
       fr: "La Vallée de Gwangi"
     samples: [ "0:54:23", "0:54:28", "0:55:12" ]
+    media:
+    - type: bluray
+      year: 2017
+      bitrate: 36.80
+      link: https://www.blu-ray.com/movies/The-Valley-of-Gwangi-Blu-ray/123978/
+    - type: dvd-ntsc
+      year: 2012
+      link: https://www.blu-ray.com/dvd/The-Valley-of-Gwangi-DVD/36886/
+    - type: dvd-ntsc
+      year: 2003
+      link: https://www.blu-ray.com/dvd/The-Valley-of-Gwangi-DVD/218641/
+    - type: dvd-ntsc
+      year: 1999
+      link: https://www.blu-ray.com/dvd/The-Valley-of-Gwangi-DVD/3802/
     sources:
     - name: "The.Valley.of.Gwangi.1969.1080p.BluRay.x264-SADPANDA.mkv"
       resolution: "1920x1080"
@@ -5931,6 +6348,13 @@ movies:
       fr: "Le Courrier de l’or"
       de: "Messer an der Kehle"
     samples: [ "0:51:09" ]
+    media:
+    - type: dvd-ntsc
+      year: 2009
+      link: https://www.blu-ray.com/dvd/Westbound-DVD/18738/
+    sources:
+    - name: "Westbound 1959 1080p HMAX WEB-DL DDP2 0 H 264-BLOOM.mkv"
+    - name: "Westbound.1959.Upscale.1080p.DVD.x265.HEVC.AC3-SARTRE.mkv"
 
   when_time_ran_out:
     title: "When Time Ran Out…"
@@ -5943,6 +6367,22 @@ movies:
       en<!---->: "The Day the World Ended"
       fr: "Le Jour de la fin du monde"
     samples: [ "0:40:21", "0:46:11", "0:47:22", "0:47:24", "0:47:25", "0:53:04", "0:53:44" ]
+    media:
+    - type: bluray
+      year: 2023
+      bitrate: 34.00
+      link: https://www.blu-ray.com/movies/When-Time-Ran-Out-Blu-ray/341263/
+    - type: dvd-ntsc
+      year: 2009
+      link: https://www.blu-ray.com/dvd/When-Time-Ran-Out-DVD/6921/
+    - type: dvd-ntsc
+      year: 2017
+      link: https://www.blu-ray.com/dvd/When-Time-Ran-Out-DVD/146237/
+    sources:
+    - name: "When Time Ran Out 1980 DVDRip x264.mkv"
+    - name: "When.Time.Ran.Out....1980.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
+    - name: "When.Time.Ran.Out....1980.720p.BluRay.x264.AAC-[YTS.MX].mp4"
+    - name: "Le.Jour.de.la.fin.du.monde.1980.MULTi.VFF.1080p.BluRay.HDLight.AC3.2.0.x264-LiHDL.mkv"
 
 #
 # directors
