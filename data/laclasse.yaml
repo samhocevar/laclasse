@@ -64,7 +64,8 @@ segments:
     scenes: [ "0:00:39" ]
     clips:
     - movie: the_crimson_pirate
-      todo: "(0:12:05)"
+      segment: "018153"
+      offset: 0
 
   - count: 170
     scenes: [ "0:00:41" ]
@@ -77,6 +78,8 @@ segments:
     scenes: [ "0:00:48" ]
     clips:
     - movie: the_crimson_pirate
+      segment: "017258"
+      offset: 1
 
   - count: 159
     scenes: [ "0:00:55" ]
@@ -89,7 +92,8 @@ segments:
     scenes: [ "0:01:03" ]
     clips:
     - movie: the_crimson_pirate
-      todo: "(0:09:36)"
+      segment: "014427"
+      offset: 0
 
   - count: 53
     scenes: [ "0:01:09" ]
@@ -102,6 +106,8 @@ segments:
     scenes: [ "0:01:11" ]
     clips:
     - movie: the_crimson_pirate
+      segment: "014684"
+      offset: 1
 
   - count: 89
     scenes: [ "0:01:14" ]
@@ -121,7 +127,9 @@ segments:
     scenes: [ "0:01:26" ]
     clips:
     - movie: the_crimson_pirate
-      todo: "(reversed)"
+      segment: "015475"
+      offset: 14
+      todo: "reversed playback"
 
   - count: 83
     scenes: [ "0:01:28" ]
@@ -141,7 +149,8 @@ segments:
     scenes: [ "0:01:33" ]
     clips:
     - movie: the_crimson_pirate
-      todo: "(0:10:41)"
+      segment: "016059"
+      offset: 0
 
   - count: 96
     scenes: [ "0:01:35" ]
@@ -154,7 +163,9 @@ segments:
     scenes: [ "0:01:39" ]
     clips:
     - movie: the_crimson_pirate
-      todo: "(reversed)"
+      segment: "016694"
+      offset: 0
+      todo: "reversed playback"
 
   - count: 81
     scenes: [ "0:01:41" ]
@@ -174,6 +185,8 @@ segments:
     scenes: [ "0:01:50" ]
     clips:
     - movie: the_crimson_pirate
+      segment: "018153"
+      offset: 0
 
   - count: 206
     scenes: [ "0:01:53", "0:01:57" ]
@@ -321,11 +334,17 @@ segments:
     scenes: [ "0:03:26", "0:03:27" ]
     clips:
     - movie: the_arrangement
+      segment: "003613"
+      offset: 1
+      todo: "check offset with a better quality dump"
 
   - count: 110
     scenes: [ "0:03:32" ]
     clips:
     - movie: the_arrangement
+      segment: "004116"
+      offset: 0
+      todo: "check offset with a better quality dump (but original seems interleaved anyway)"
 
   - count: 128
     scenes: [ "0:03:37" ]
@@ -345,6 +364,8 @@ segments:
     scenes: [ "0:03:44" ]
     clips:
     - movie: the_arrangement
+      segment: "003152"
+      offset: 1
 
   - count: 66
     scenes: [ "0:03:45" ]
@@ -442,7 +463,8 @@ segments:
     scenes: [ "0:04:18" ]
     clips:
     - movie: mad_max
-      todo: "(0:03:54) 50 @233"
+      segment: "005582"
+      offset: 0
 
   - count: 42
     scenes: [ "0:04:19" ]
@@ -469,7 +491,8 @@ segments:
     scenes: [ "0:04:25" ]
     clips:
     - movie: bullitt
-      todo: "(1:06:03)"
+      segment: "100481"
+      offset: 239
 
   - count: 23
     scenes: [ "0:04:27" ]
@@ -482,7 +505,8 @@ segments:
     scenes: [ "0:04:28" ]
     clips:
     - movie: bullitt
-      todo: "(1:06:04)"
+      segment: "100481"
+      offset: 327
 
   - count: 25
     scenes: [ "0:04:30" ]
@@ -709,37 +733,43 @@ segments:
     scenes: [ "0:06:11" ]
     clips:
     - movie: start_the_revolution_without_me
-      todo: "(0:00:21)"
+      segment: "000563"
+      offset: 1
 
   - count: 261
     scenes: [ "0:06:31" ]
     clips:
     - movie: start_the_revolution_without_me
-      todo: "(0:00:51)"
+      segment: "001104"
+      offset: 301
 
   - count: 217
     scenes: [ "0:06:42" ]
     clips:
     - movie: start_the_revolution_without_me
-      todo: "(1:28:00)"
+      segment: "127004"
+      offset: 1
 
   - count: 8
     scenes: [ "0:06:50" ]
     clips:
     - movie: start_the_revolution_without_me
-      todo: "(1:28:08)"
+      segment: "127222"
+      offset: 0
 
   - count: 43
     scenes: [ "0:06:51" ]
     clips:
     - movie: start_the_revolution_without_me
-      todo: "(1:28:09)"
+      segment: "127230"
+      offset: 0
 
   - count: 60
     scenes: [ "0:06:52" ]
     clips:
     - movie: start_the_revolution_without_me
-      todo: "(1:28:11)"
+      segment: "127273"
+      offset: 0
 
   - count: 208
     scenes: [ "0:06:56" ]
@@ -863,62 +893,78 @@ segments:
       todo: "(flashback fade)"
       transform: "hflip"
     - movie: the_cheyenne_social_club
-      todo: "(flashback fade) (1:38:02)"
+      segment: "140875"
+      offset: -432
+      todo: "flashback fade"
       transform: "hflip"
 
   - count: 57
     scenes: [ "0:08:36" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:38:12)"
+      segment: "141133"
+      offset: 2
 
   - count: 105
     scenes: [ "0:08:39" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:38:14)"
+      segment: "141192"
+      offset: 0
 
   - count: 447
     scenes: [ "0:08:42" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:38:32)"
+      segment: "141605"
+      offset: 3
 
   - count: 358
     scenes: [ "0:09:10" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(0:06:44)"
+      segment: "009189"
+      offset: 865
 
   - count: 133
     scenes: [ "0:09:16" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(0:07:07)"
+      segment: "011011"
+      offset: 16
 
   - count: 551
     scenes: [ "0:09:20", "0:09:27" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(cross-fade) (0:07:27)"
+      segment: "011227"
+      offset: 4
+      todo: "(cross-fade)"
     - movie: the_cheyenne_social_club
-      todo: "(cross-fade) (1:26:16)"
+      segment: "128442"
+      offset: 776
+      todo: "(cross-fade)"
 
   - count: 259
     scenes: [ "0:09:44" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:26:28)"
+      segment: "129769"
+      offset: 0
 
   - count: 67
     scenes: [ "0:09:53" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "130028"
+      offset: 0
 
   - count: 379
     scenes: [ "0:09:55" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "130204"
+      offset: 110
 
   - count: 188
     scenes: [ "0:10:10" ]
@@ -932,6 +978,8 @@ segments:
     scenes: [ "0:10:18" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "131043"
+      offset: 1
 
   - count: 242
     scenes: [ "0:10:25" ]
@@ -944,7 +992,8 @@ segments:
     scenes: [ "0:10:34" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:27:29)"
+      segment: "131272"
+      offset: 0
 
   - count: 27
     scenes: [ "0:10:41" ]
@@ -957,6 +1006,8 @@ segments:
     scenes: [ "0:10:45" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "131507"
+      offset: 1
 
   - count: 223
     scenes: [ "0:10:48" ]
@@ -969,7 +1020,8 @@ segments:
     scenes: [ "0:10:56" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:28:01)"
+      segment: "132060"
+      offset: 1
 
   - count: 131
     scenes: [ "0:11:11" ]
@@ -1010,7 +1062,9 @@ segments:
       todo: "(flashback fade)"
       transform: "hflip"
     - movie: there_was_a_crooked_man
-      todo: "(flashback fade) (1:49:25)"
+      segment: "166412"
+      offset: -247
+      todo: "(flashback fade)"
 
   - count: 84
     scenes: [ "0:11:47" ]
@@ -1023,78 +1077,107 @@ segments:
     scenes: [ "0:11:50" ]
     clips:
     - movie: there_was_a_crooked_man
+      segment: "166687"
+      offset: 0
 
   - count: 45
     scenes: [ "0:11:52" ]
     clips:
     - movie: drum_beat
+      segment: "063859"
+      offset: 1
 
   - count: 24
     scenes: [ "0:11:54" ]
     clips:
     - movie: there_was_a_crooked_man
+      segment: "077089"
+      offset: 85
 
   - count: 136
     scenes: [ "0:11:55" ]
     clips:
     - movie: drum_beat
+      segment: "061645"
+      offset: 58
+      todo: "pan & crop to hide Alan Ladd"
 
   - count: 61
     scenes: [ "0:12:01" ]
     clips:
     - movie: there_was_a_crooked_man
-      todo: "(0:49:02)"
+      segment: "077686"
+      offset: 0
 
   - count: 133
     scenes: [ "0:12:03" ]
     clips:
     - movie: drum_beat
+      segment: "059965"
+      offset: 9
 
   - count: 64
     scenes: [ "0:12:08" ]
     clips:
     - movie: there_was_a_crooked_man
+      segment: "077903"
+      offset: 0
 
   - count: 103
     scenes: [ "0:12:11" ]
     clips:
     - movie: drum_beat
-      todo: "(0:40:13)"
+      segment: "060242"
+      offset: 0
 
   - count: 106
     scenes: [ "0:12:15" ]
     clips:
     - movie: there_was_a_crooked_man
+      segment: "078747"
+      offset: 0
 
   - count: 154
     scenes: [ "0:12:19" ]
     clips:
     - movie: drum_beat
+      segment: "060647"
+      offset: 0
 
   - count: 33
     scenes: [ "0:12:25" ]
     clips:
     - movie: there_was_a_crooked_man
+      segment: "080592"
+      offset: 0
 
   - count: 139
     scenes: [ "0:12:27" ]
     clips:
     - movie: drum_beat
+      segment: "061504"
+      offset: 2
 
   - count: 90
     scenes: [ "0:12:33" ]
     clips:
     - movie: there_was_a_crooked_man
+      segment: "079259"
+      offset: 80
 
   - count: 103
     scenes: [ "0:12:36" ]
     clips:
     - movie: drum_beat
+      segment: "061504"
+      offset: 141
 
   - count: 176
     scenes: [ "0:12:40" ]
     clips:
     - movie: there_was_a_crooked_man
+      segment: "080592"
+      offset: 0
 
   - count: 53
     scenes: [ "0:12:47" ]
@@ -1127,7 +1210,7 @@ segments:
       todo: "speed change? check more frames"
     - movie: harper
       segment: "080502"
-      todo: "(picture-in-picture) (0:55:29)"
+      todo: "(picture-in-picture)"
 
   - count: 709
     scenes: [ "0:13:34", "0:13:40", "0:13:42" ]
@@ -1164,7 +1247,7 @@ segments:
     scenes: [ "0:14:21" ]
     clips:
     - movie: the_fbi_story
-      todo: "(2:11:44)"
+      todo: "(2:11:44) - around 190600"
 
   - count: 131
     scenes: [ "0:14:26" ]
@@ -1201,37 +1284,50 @@ segments:
     scenes: [ "0:14:59" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "141133"
+      offset: 35
 
   - count: 129
     scenes: [ "0:15:01" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "141192"
+      offset: 0
 
   - count: 290
     scenes: [ "0:15:05" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "141605"
+      offset: 42
 
   - count: 270
     scenes: [ "0:15:24" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "009189"
+      offset: 953
 
   - count: 128
     scenes: [ "0:15:28" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "011011"
+      offset: 21
 
   - count: 119
     scenes: [ "0:15:33" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "011227"
+      offset: 1
 
   - count: 151
     scenes: [ "0:15:38" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:26:16)"
+      segment: "128442"
+      offset: 961
 
   - count: 254
     scenes: [ "0:15:44" ]
@@ -1249,7 +1345,9 @@ segments:
     scenes: [ "0:16:00" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:00:43)"
+      segment: "091124"
+      offset: 0
+      transform: "hflip"
 
   - count: 175
     scenes: [ "0:16:04" ]
@@ -1263,7 +1361,9 @@ segments:
     scenes: [ "0:16:11" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:00:49)"
+      segment: "091271"
+      offset: 0
+      transform: "hflip"
 
   - count: 407
     scenes: [ "0:16:18" ]
@@ -1277,7 +1377,9 @@ segments:
     scenes: [ "0:16:35" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:01:23)"
+      segment: "092162"
+      offset: 0
+      transform: "hflip"
 
   - count: 185
     scenes: [ "0:16:37" ]
@@ -1291,6 +1393,8 @@ segments:
     scenes: [ "0:16:44" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "093824"
+      offset: 0
 
   - count: 130
     scenes: [ "0:16:46" ]
@@ -1304,6 +1408,9 @@ segments:
     scenes: [ "0:16:52" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "091271"
+      offset: 37
+      transform: "hflip"
 
   - count: 59
     scenes: [ "0:16:58" ]
@@ -1317,12 +1424,16 @@ segments:
     scenes: [ "0:17:01" ]
     clips:
     - movie: firecreek
-      todo: "(0:55:16)"
+      todo: "(0:41:10) - 099517"
+    notes: "Proper syncing can be done on frame with darkest reflection (frame 11)"
 
   - count: 148
     scenes: [ "0:17:05" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "091766"
+      offset: 0
+      transform: "hflip"
 
   - count: 53
     scenes: [ "0:17:11" ]
@@ -1344,6 +1455,9 @@ segments:
     scenes: [ "0:17:21" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "092027"
+      offset: 0
+      transform: "hflip"
 
   - count: 178
     scenes: [ "0:17:24" ]
@@ -1357,7 +1471,9 @@ segments:
     scenes: [ "0:17:31" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:01:23)"
+      segment: "092162"
+      offset: 0
+      transform: "hflip"
 
   - count: 155
     scenes: [ "0:17:33" ]
@@ -1376,7 +1492,9 @@ segments:
       todo: "(cross-fade)"
       transform: "hflip"
     - movie: the_cheyenne_social_club
-      todo: "(cross-fade) (0:55:25)"
+      segment: "080247"
+      offset: 32
+      todo: "(cross-fade)"
       transform: "hflip"
 
   - count: 64
@@ -1390,14 +1508,16 @@ segments:
     scenes: [ "0:17:47" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(0:55:30)"
+      segment: "080497"
+      offset: 1
       transform: "hflip"
 
   - count: 459
     scenes: [ "0:17:56" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(0:41:56)"
+      segment: "059512"
+      offset: 355
 
   - count: 193
     scenes: [ "0:18:14", "0:18:21" ]
@@ -1409,6 +1529,8 @@ segments:
     scenes: [ "0:18:23" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "078924"
+      offset: 0
 
   - count: 132
     scenes: [ "0:18:25" ]
@@ -1420,7 +1542,8 @@ segments:
     scenes: [ "0:18:29" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(0:52:01)"
+      segment: "078661"
+      offset: 0
 
   - count: 100
     scenes: [ "0:18:31" ]
@@ -1432,6 +1555,8 @@ segments:
     scenes: [ "0:18:35" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "078104"
+      offset: 8
 
   - count: 140
     scenes: [ "0:18:37" ]
@@ -1443,6 +1568,8 @@ segments:
     scenes: [ "0:18:42" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "078661"
+      offset: 0
 
   - count: 202
     scenes: [ "0:18:44" ]
@@ -1454,6 +1581,9 @@ segments:
     scenes: [ "0:18:52" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "078924"
+      offset: 0
+      transform: "hflip"
 
   - count: 81
     scenes: [ "0:18:54" ]
@@ -1471,17 +1601,22 @@ segments:
     scenes: [ "0:19:00" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:23:15)"
+      segment: "119692"
+      offset: 5
 
   - count: 130
     scenes: [ "0:19:04" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "119812"
+      offset: 3
 
   - count: 46
     scenes: [ "0:19:09" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "119945"
+      offset: 0
 
   - count: 97
     scenes: [ "0:19:11" ]
@@ -1500,22 +1635,30 @@ segments:
     scenes: [ "0:19:18" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "120088"
+      offset: 0
 
   - count: 62
     scenes: [ "0:19:19" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "119991"
+      offset: 0
 
   - count: 70
     scenes: [ "0:19:22" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "119812"
+      offset: 63
       transform: "hflip"
 
   - count: 34
     scenes: [ "0:19:24" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "120053"
+      offset: 0
 
   - count: 144
     scenes: [ "0:19:27" ]
@@ -1548,6 +1691,8 @@ segments:
     scenes: [ "0:19:47" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "119812"
+      offset: 34
 
   - count: 27
     scenes: [ "0:19:48" ]
@@ -1560,13 +1705,15 @@ segments:
     scenes: [ "0:19:50" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:23:55)"
+      segment: "120718"
+      offset: 0
 
   - count: 84
     scenes: [ "0:19:52" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:23:57)"
+      segment: "120771"
+      offset: 0
 
   - count: 30
     scenes: [ "0:19:55" ]
@@ -1593,6 +1740,8 @@ segments:
     scenes: [ "0:19:59" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "121875"
+      offset: 0
 
   - count: 29
     scenes: [ "0:20:01" ]
@@ -1605,24 +1754,29 @@ segments:
     scenes: [ "0:20:02" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "122082"
+      offset: 0
 
   - count: 29
     scenes: [ "0:20:03" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "122153"
+      offset: 0
 
   - count: 43
     scenes: [ "0:20:04" ]
     clips:
     - movie: firecreek
-      todo: "(0:41:10)"
+      todo: "(0:41:10) - 074526"
       transform: "hflip"
 
   - count: 80
     scenes: [ "0:20:05" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:24:53)"
+      segment: "122201"
+      offset: 0
 
   - count: 14
     scenes: [ "0:20:08" ]
@@ -1635,11 +1789,15 @@ segments:
     scenes: [ "0:20:10" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "122153"
+      offset: 0
 
   - count: 42
     scenes: [ "0:20:11" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "126285"
+      offset: 0
 
   - count: 110
     scenes: [ "0:20:13" ]
@@ -1659,6 +1817,8 @@ segments:
     scenes: [ "0:20:19" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "121386"
+      offset: 0
 
   - count: 100
     scenes: [ "0:20:23" ]
@@ -1678,6 +1838,8 @@ segments:
     scenes: [ "0:20:29" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "126221"
+      offset: 0
 
   - count: 95
     scenes: [ "0:20:31" ]
@@ -1697,6 +1859,8 @@ segments:
     scenes: [ "0:20:39" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "121683"
+      offset: 0
 
   - count: 104
     scenes: [ "0:20:44" ]
@@ -1709,6 +1873,8 @@ segments:
     scenes: [ "0:20:48" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "121683"
+      offset: 37
 
   - count: 72
     scenes: [ "0:20:50" ]
@@ -1994,7 +2160,7 @@ segments:
       offset: 17
       todo: "(cross-fade)"
     - movie: the_fbi_story
-      todo: "(cross-fade) (1:24:59)"
+      todo: "(cross-fade) (1:24:59) - around 123000"
 
   - count: 49
     scenes: [ "0:25:23" ]
@@ -2060,13 +2226,15 @@ segments:
     scenes: [ "0:26:54" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:06:49)"
+      segment: "100296"
+      offset: 1
 
   - count: 126
     scenes: [ "0:26:58" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:06:52)"
+      segment: "100398"
+      offset: 0
 
   - count: 163
     scenes: [ "0:27:03" ]
@@ -2079,6 +2247,8 @@ segments:
     scenes: [ "0:27:09" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "100596"
+      offset: 0
 
   - count: 147
     scenes: [ "0:27:16" ]
@@ -2091,12 +2261,15 @@ segments:
     scenes: [ "0:27:22" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:07:08)"
+      segment: "100757"
+      offset: 1
 
   - count: 47
     scenes: [ "0:27:27" ]
     clips:
     - movie: the_cheyenne_social_club
+      segment: "100937"
+      offset: 0
 
   - count: 60
     scenes: [ "0:27:29" ]
@@ -2109,7 +2282,8 @@ segments:
     scenes: [ "0:27:31" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:07:37)"
+      segment: "101482"
+      offset: 30
 
   - count: 22
     scenes: [ "0:27:32" ]
@@ -2122,7 +2296,8 @@ segments:
     scenes: [ "0:27:33" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:07:45)"
+      segment: "101747"
+      offset: 0
 
   - count: 32
     scenes: [ "0:27:34" ]
@@ -2135,7 +2310,8 @@ segments:
     scenes: [ "0:27:35" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:08:06)"
+      segment: "102099"
+      offset: 0
 
   - count: 126
     scenes: [ "0:27:39" ]
@@ -2148,7 +2324,8 @@ segments:
     scenes: [ "0:27:44" ]
     clips:
     - movie: the_cheyenne_social_club
-      todo: "(1:08:09)"
+      segment: "102294"
+      offset: 0
 
   - count: 177
     scenes: [ "0:27:54" ]
@@ -2767,19 +2944,22 @@ segments:
     scenes: [ "0:37:20" ]
     clips:
     - movie: mad_max
-      todo: "(0:07:24) 250 @440"
+      segment: "010605"
+      offset: 22
 
   - count: 17
     scenes: [ "0:37:21" ]
     clips:
     - movie: mad_max
-      todo: "(0:07:26) 250 @440"
+      segment: "010663"
+      offset: 1
 
   - count: 30
     scenes: [ "0:37:22" ]
     clips:
     - movie: mad_max
-      todo: "(0:07:27) 250 @440"
+      segment: "010690"
+      offset: 1
 
   - count: 32
     scenes: [ "0:37:23" ]
@@ -3021,6 +3201,8 @@ segments:
     scenes: [ "0:40:51" ]
     clips:
     - movie: around_the_world_in_eighty_days
+      segment: "078395"
+      offset: 1
 
   - count: 137
     scenes: [ "0:40:56" ]
@@ -3032,6 +3214,8 @@ segments:
     scenes: [ "0:41:01", "0:41:06" ]
     clips:
     - movie: around_the_world_in_eighty_days
+      segment: "077902"
+      offset: 0
       todo: "(flashback fade)"
     - movie: chisum
       todo: "(flashback fade) (1:39:36)"
@@ -3060,6 +3244,8 @@ segments:
     - movie: chisum
       todo: "(flashback fade) (1:40:50)"
     - movie: around_the_world_in_eighty_days
+      segment: "077902"
+      offset: -75
       todo: "(flashback fade)"
 
   - count: 286
@@ -3537,7 +3723,8 @@ segments:
     scenes: [ "0:47:31" ]
     clips:
     - movie: band_of_angels
-      todo: "(0:47:37)"
+      segment: "074201"
+      offset: 0
 
   - count: 62
     scenes: [ "0:47:39" ]
@@ -3550,7 +3737,8 @@ segments:
     scenes: [ "0:47:41" ]
     clips:
     - movie: band_of_angels
-      todo: "(0:48:42)"
+      segment: "073659"
+      offset: 0
 
   - count: 240
     scenes: [ "0:47:47" ]
@@ -3563,7 +3751,8 @@ segments:
     scenes: [ "0:47:57" ]
     clips:
     - movie: band_of_angels
-      todo: "(0:49:37)"
+      segment: "072032"
+      offset: 0
 
   - count: 378
     scenes: [ "0:48:00", "0:48:02" ]
@@ -3573,58 +3762,79 @@ segments:
       offset: 0
       todo: "(flashback fade)"
     - movie: band_of_angels
-      todo: "(flashback fade) (1:32:40)"
+      segment: "139777"
+      offset: -49
+      todo: "(flashback fade)"
 
   - count: 102
     scenes: [ "0:48:14" ]
     clips:
     - movie: band_of_angels
+      segment: "140110"
+      offset: 99
 
   - count: 52
     scenes: [ "0:48:18" ]
     clips:
     - movie: band_of_angels
+      segment: "140551"
+      offset: 49
 
   - count: 95
     scenes: [ "0:48:21" ]
     clips:
     - movie: band_of_angels
+      segment: "140400"
+      todo: "find proper offset; is there some ping-pong?"
 
   - count: 77
     scenes: [ "0:48:25" ]
     clips:
     - movie: band_of_angels
+      segment: "140110"
+      todo: "find proper offset; is there some ping-pong?"
 
   - count: 230
     scenes: [ "0:48:27" ]
     clips:
     - movie: band_of_angels
+      segment: "140551"
+      offset: 26
 
   - count: 67
     scenes: [ "0:48:37" ]
     clips:
     - movie: band_of_angels
+      segment: "140807"
+      offset: 0
 
   - count: 62
     scenes: [ "0:48:40" ]
     clips:
     - movie: band_of_angels
+      segment: "180830"
+      offset: 1
 
   - count: 98
     scenes: [ "0:48:42" ]
     clips:
     - movie: band_of_angels
-      todo: "(2:00:20)"
+      segment: "180893"
+      offset: 0
 
   - count: 80
     scenes: [ "0:48:46" ]
     clips:
     - movie: band_of_angels
+      segment: "181274"
+      offset: 1
 
   - count: 73
     scenes: [ "0:48:49" ]
     clips:
     - movie: band_of_angels
+      segment: "181355"
+      offset: 0
 
   - count: 44
     scenes: [ "0:48:52" ]
@@ -3637,6 +3847,8 @@ segments:
     scenes: [ "0:48:54" ]
     clips:
     - movie: band_of_angels
+      segment: "181542"
+      offset: 0
 
   - count: 256
     scenes: [ "0:49:08" ]
@@ -3649,8 +3861,12 @@ segments:
     scenes: [ "0:49:18", "0:49:28" ]
     clips:
     - movie: band_of_angels
+      segment: "181542"
+      offset: 361
       todo: "(flashback fade)"
     - movie: band_of_angels
+      segment: "073659"
+      offset: -209
       todo: "(flashback fade)"
 
   - count: 223
@@ -3664,6 +3880,8 @@ segments:
     scenes: [ "0:49:42" ]
     clips:
     - movie: band_of_angels
+      segment: "075061"
+      offset: 0
 
   - count: 59
     scenes: [ "0:49:43" ]
@@ -3880,6 +4098,8 @@ segments:
     scenes: [ "0:53:26" ]
     clips:
     - movie: maigret_et_les_plaisirs_de_la_nuit
+      segment: "009294"
+      offset: 2
 
   - count: 56
     scenes: [ "0:53:29" ]
@@ -4434,7 +4654,8 @@ segments:
     scenes: [ "1:00:35" ]
     clips:
     - movie: mcq
-      todo: "(1:28:18)"
+      segment: "134164"
+      offset: 0
 
   - count: 299
     scenes: [ "1:00:42" ]
@@ -4446,13 +4667,15 @@ segments:
     scenes: [ "1:00:53" ]
     clips:
     - movie: mcq
-      todo: "(1:29:14)"
+      segment: "135480"
+      offset: 175
 
   - count: 134
     scenes: [ "1:00:58" ]
     clips:
     - movie: mcq
-      todo: "(1:29:18)"
+      segment: "135767"
+      offset: 0
 
   - count: 131
     scenes: [ "1:01:03" ]
@@ -4465,7 +4688,8 @@ segments:
     scenes: [ "1:01:09" ]
     clips:
     - movie: mcq
-      todo: "(1:31:00)"
+      segment: "138392"
+      offset: 18
 
   - count: 65
     scenes: [ "1:01:10" ]
@@ -4478,121 +4702,141 @@ segments:
     scenes: [ "1:01:12" ]
     clips:
     - movie: mcq
-      todo: "(0:55:57)"
+      segment: "084501"
+      offset: 36
 
   - count: 18
     scenes: [ "1:01:13" ]
     clips:
     - movie: mcq
-      todo: "(0:56:06)"
+      segment: "084679"
+      offset: 23
 
   - count: 120
     scenes: [ "1:01:14" ]
     clips:
     - movie: mcq
-      todo: "(0:56:07)"
+      segment: "084720"
+      offset: 0
 
   - count: 69
     scenes: [ "1:01:19" ]
     clips:
     - movie: mcq
-      todo: "(0:56:15)"
+      segment: "084876"
+      offset: 1
 
   - count: 51
     scenes: [ "1:01:22" ]
     clips:
     - movie: mcq
-      todo: "(0:50:11)"
+      segment: "076240"
+      offset: 81
 
   - count: 59
     scenes: [ "1:01:24" ]
     clips:
     - movie: mcq
-      todo: "(0:50:23)"
+      segment: "076541"
+      offset: 2
 
   - count: 92
     scenes: [ "1:01:26" ]
     clips:
     - movie: mcq
-      todo: "(0:50:25)"
+      segment: "076602"
+      offset: 0
 
   - count: 128
     scenes: [ "1:01:30" ]
     clips:
     - movie: mcq
-      todo: "(0:23:51)"
+      segment: "036503"
+      offset: 2
 
   - count: 288
     scenes: [ "1:01:35" ]
     clips:
     - movie: mcq
-      todo: "(0:24:48)"
+      segment: "037765"
+      offset: 4
 
   - count: 262
     scenes: [ "1:01:46" ]
     clips:
     - movie: mcq
-      todo: "(0:25:00)"
+      segment: "038058"
+      offset: 67
 
   - count: 18
     scenes: [ "1:01:56" ]
     clips:
     - movie: mcq
-      todo: "(0:25:26)"
+      segment: "038558"
+      offset: 182
 
   - count: 37
     scenes: [ "1:01:57" ]
     clips:
     - movie: mcq
-      todo: "(0:25:27)"
+      segment: "038758"
+      offset: 0
 
   - count: 78
     scenes: [ "1:01:59" ]
     clips:
     - movie: mcq
-      todo: "(0:25:29)"
+      segment: "038795"
+      offset: 0
 
   - count: 111
     scenes: [ "1:02:02" ]
     clips:
     - movie: mcq
-      todo: "(0:25:41)"
+      segment: "038874"
+      offset: 200
 
   - count: 124
     scenes: [ "1:02:07" ]
     clips:
     - movie: mcq
-      todo: "(0:25:47)"
+      segment: "039251"
+      offset: 1
 
   - count: 65
     scenes: [ "1:02:12" ]
     clips:
     - movie: mcq
-      todo: "(0:17:41)"
+      segment: "027272"
+      offset: 2
 
   - count: 286
     scenes: [ "1:02:14" ]
     clips:
     - movie: mcq
-      todo: "(0:17:43)"
+      segment: "027339"
+      offset: 0
 
   - count: 93
     scenes: [ "1:02:26" ]
     clips:
     - movie: mcq
-      todo: "(0:17:53)"
+      segment: "027625"
+      offset: 0
 
   - count: 79
     scenes: [ "1:02:30" ]
     clips:
     - movie: mcq
-      todo: "(0:17:57)"
+      segment: "027718"
+      offset: 0
 
   - count: 54
     scenes: [ "1:02:33" ]
     clips:
     - movie: mcq
-      todo: "(0:18:00)"
+      segment: "027797"
+      offset: 0
 
   - count: 52
     scenes: [ "1:02:35" ]
@@ -4605,7 +4849,8 @@ segments:
     scenes: [ "1:02:38" ]
     clips:
     - movie: mcq
-      todo: "(0:26:16)"
+      segment: "039975"
+      offset: 0
 
   - count: 87
     scenes: [ "1:02:40" ]
@@ -4639,7 +4884,8 @@ segments:
     scenes: [ "1:02:53" ]
     clips:
     - movie: mcq
-      todo: "(0:26:41)"
+      segment: "040283"
+      offset: 2
 
   - count: 117
     scenes: [ "1:03:03" ]
@@ -4659,7 +4905,9 @@ segments:
     scenes: [ "1:03:10" ]
     clips:
     - movie: mcq
-      todo: "(0:26:26) ou (0:26:41)"
+      segment: "040655"
+      offset: 0
+    notes: "Synced with the frame where he blinks"
 
   - count: 93
     scenes: [ "1:03:15" ]
@@ -4672,7 +4920,8 @@ segments:
     scenes: [ "1:03:19" ]
     clips:
     - movie: mcq
-      todo: "(0:27:06)"
+      segment: "041320"
+      offset: 1
 
   - count: 53
     scenes: [ "1:03:23" ]
@@ -4686,7 +4935,8 @@ segments:
     scenes: [ "1:03:25" ]
     clips:
     - movie: mcq
-      todo: "(0:27:12)"
+      segment: "041502"
+      offset: 1
 
   - count: 87
     scenes: [ "1:03:30" ]
@@ -4699,43 +4949,52 @@ segments:
     scenes: [ "1:03:33" ]
     clips:
     - movie: mcq
-      todo: "(0:27:18)"
+      segment: "041666"
+      offset: 1
 
   - count: 58
     scenes: [ "1:03:40" ]
     clips:
     - movie: mcq
-      todo: "(0:55:26)"
+      segment: "083786"
+      offset: 1
 
   - count: 55
     scenes: [ "1:03:43" ]
     clips:
     - movie: mcq
-      todo: "(0:55:12) (reversed)"
+      segment: "083482"
+      offset: 0
+      todo: "reversed playback"
 
   - count: 36
     scenes: [ "1:03:45" ]
     clips:
     - movie: mcq
-      todo: "(0:55:17) (reversed)"
+      segment: "083582"
+      offset: 0
+      todo: "reversed playback"
 
   - count: 165
     scenes: [ "1:03:46" ]
     clips:
     - movie: mcq
-      todo: "(0:55:27)"
+      segment: "083846"
+      offset: 37
 
   - count: 44
     scenes: [ "1:03:53" ]
     clips:
     - movie: mcq
-      todo: "(0:55:16)"
+      segment: "083537"
+      offset: 0
 
   - count: 51
     scenes: [ "1:03:55" ]
     clips:
     - movie: mcq
-      todo: "(0:55:11)"
+      segment: "083431"
+      offset: 0
 
   - count: 163
     scenes: [ "1:03:57" ]
@@ -4749,7 +5008,8 @@ segments:
     scenes: [ "1:04:03" ]
     clips:
     - movie: mcq
-      todo: "(0:44:40)"
+      segment: "067874"
+      offset: 1
 
   - count: 76
     scenes: [ "1:04:09" ]
@@ -4762,7 +5022,8 @@ segments:
     scenes: [ "1:04:12" ]
     clips:
     - movie: mcq
-      todo: "(0:44:49)"
+      segment: "068105"
+      offset: 1
 
   - count: 99
     scenes: [ "1:04:15" ]
@@ -4775,7 +5036,8 @@ segments:
     scenes: [ "1:04:19" ]
     clips:
     - movie: mcq
-      todo: "(0:44:54)"
+      segment: "068247"
+      offset: 2
 
   - count: 126
     scenes: [ "1:04:21" ]
@@ -4795,6 +5057,8 @@ segments:
     scenes: [ "1:04:34" ]
     clips:
     - movie: mcq
+      segment: "069369"
+      offset: 1
       todo: "(0:45:36)"
 
   - count: 78
@@ -4808,7 +5072,9 @@ segments:
     scenes: [ "1:04:44" ]
     clips:
     - movie: mcq
-      todo: "(0:45:53)"
+      segment: "069803"
+      offset: 0
+    notes: "Syncing done with subtle lower trajectory of nods"
 
   - count: 102
     scenes: [ "1:04:47" ]
@@ -4821,7 +5087,9 @@ segments:
     scenes: [ "1:04:51" ]
     clips:
     - movie: mcq
-      todo: "(0:45:53)"
+      segment: "069803"
+      offset: 2
+    notes: "Syncing done with previous sequence and tiny speck on frame 29"
 
   - count: 376
     scenes: [ "1:04:53" ]
@@ -4859,7 +5127,8 @@ segments:
     scenes: [ "1:05:23" ]
     clips:
     - movie: mcq
-      todo: "(0:42:07)"
+      segment: "063766"
+      offset: 61
 
   - count: 101
     scenes: [ "1:05:27" ]
@@ -4870,7 +5139,8 @@ segments:
     scenes: [ "1:05:31" ]
     clips:
     - movie: mcq
-      todo: "(0:42:27)"
+      segment: "064388"
+      offset: 1
 
   - count: 47
     scenes: [ "1:05:40" ]
@@ -4881,7 +5151,8 @@ segments:
     scenes: [ "1:05:42" ]
     clips:
     - movie: mcq
-      todo: "(0:42:32)"
+      segment: "064388"
+      offset: 123
 
   - count: 63
     scenes: [ "1:05:44" ]
@@ -4892,7 +5163,8 @@ segments:
     scenes: [ "1:05:47" ]
     clips:
     - movie: mcq
-      todo: "(0:46:53)"
+      segment: "071439"
+      offset: 0
 
   - count: 72
     scenes: [ "1:05:49" ]
@@ -4903,7 +5175,9 @@ segments:
     scenes: [ "1:05:52" ]
     clips:
     - movie: mcq
-      todo: "(0:47:08)"
+      segment: "071824"
+      offset: 0
+      todo: "Maybe a perfect sync can be done with the speck on frame 61 in the original"
 
   - count: 50
     scenes: [ "1:05:55" ]
@@ -4914,7 +5188,10 @@ segments:
     scenes: [ "1:05:57" ]
     clips:
     - movie: mcq
-      todo: "(0:47:08)"
+      segment: "071824"
+      todo: |
+        This is the same as the previous sequence, played at something like 1:2.5 speed.
+        Matching frames: 15 75 85 98 (this sequence) vs. 7 31 34 40 (previous seq from McQ)
 
   - count: 76
     scenes: [ "1:06:01" ]
@@ -4925,7 +5202,8 @@ segments:
     scenes: [ "1:06:04" ]
     clips:
     - movie: mcq
-      todo: "(0:46:59)"
+      segment: "071598"
+      offset: 0
 
   - count: 85
     scenes: [ "1:06:07" ]
@@ -5075,7 +5353,8 @@ segments:
     scenes: [ "1:08:32" ]
     clips:
     - movie: mad_max
-      todo: "(1:19:41) 150 @4780"
+      segment: "114610"
+      offset: 0
 
   - count: 158
     scenes: [ "1:08:35" ]
@@ -5088,7 +5367,8 @@ segments:
     scenes: [ "1:08:42" ]
     clips:
     - movie: mcq
-      todo: "(1:33:05)"
+      segment: "141517"
+      offset: 0
 
   - count: 47
     scenes: [ "1:08:51" ]
@@ -5101,13 +5381,15 @@ segments:
     scenes: [ "1:08:53" ]
     clips:
     - movie: mad_max
-      todo: "(1:19:55) 100 @4793"
+      segment: "114922"
+      offset: 1
 
   - count: 83
     scenes: [ "1:08:56" ]
     clips:
     - movie: mad_max
-      todo: "(0:03:11) 120 @187"
+      segment: "004538"
+      offset: 9
 
   - count: 188
     scenes: [ "1:08:58" ]
@@ -5120,7 +5402,8 @@ segments:
     scenes: [ "1:09:05" ]
     clips:
     - movie: mcq
-      todo: "(1:32:45)"
+      segment: "141005"
+      offset: 0
 
   - count: 49
     scenes: [ "1:09:13" ]
@@ -5133,7 +5416,8 @@ segments:
     scenes: [ "1:09:15" ]
     clips:
     - movie: mcq
-      todo: "(1:32:55)"
+      segment: "141270"
+      offset: 1
 
   - count: 46
     scenes: [ "1:09:23" ]
@@ -5146,25 +5430,29 @@ segments:
     scenes: [ "1:09:25" ]
     clips:
     - movie: mcq
-      todo: "(1:33:40)"
+      segment: "142376"
+      offset: 1
 
   - count: 24
     scenes: [ "1:09:33" ]
     clips:
     - movie: mad_max
-      todo: "(0:08:42) 100 @519"
+      segment: "012500"
+      offset: 0
 
   - count: 36
     scenes: [ "1:09:34" ]
     clips:
     - movie: mad_max
-      todo: "(0:11:15) 100 @674"
+      segment: "016165"
+      offset: 1
 
   - count: 69
     scenes: [ "1:09:36" ]
     clips:
     - movie: mcq
-      todo: "(1:33:59)"
+      segment: "142848"
+      offset: 6
 
   - count: 101
     scenes: [ "1:09:38" ]
@@ -5177,7 +5465,8 @@ segments:
     scenes: [ "1:09:42" ]
     clips:
     - movie: mcq
-      todo: "(1:33:05)"
+      segment: "141517"
+      offset: 8
 
   - count: 169
     scenes: [ "1:09:51" ]
@@ -5190,49 +5479,57 @@ segments:
     scenes: [ "1:09:57" ]
     clips:
     - movie: mad_max
-      todo: "(1:19:55) 100 @4793"
+      segment: "114922"
+      offset: 25
 
   - count: 16
     scenes: [ "1:09:58" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:01) 300 @721"
+      segment: "017286"
+      offset: 1
 
   - count: 54
     scenes: [ "1:09:59" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:03) 300 @721"
+      segment: "017303"
+      offset: 0
 
   - count: 14
     scenes: [ "1:10:00" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:05) 300 @721"
+      segment: "017357"
+      offset: 0
 
   - count: 3
     scenes: [ "1:10:01" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:05) 300 @721"
+      segment: "017371"
+      offset: 1
 
   - count: 3
     scenes: [ "1:10:02" ]
     clips:
     - movie: mad_max
-      todo: "(1:25:56) et pas (0:12:06) 50 @5155"
+      segment: "123612"
+      offset: 0
 
   - count: 7
     scenes: [ "1:10:03" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:06) 300 @721"
+      segment: "017381"
+      offset: 0
 
   - count: 35
     scenes: [ "1:10:04" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:06) 300 @721"
+      segment: "017388"
+      offset: 0
 
   - count: 39
     scenes: [ "1:10:05" ]
@@ -5246,31 +5543,37 @@ segments:
     scenes: [ "1:10:06" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:07) 300 @721"
+      segment: "017388"
+      offset: 35
 
   - count: 41
     scenes: [ "1:10:07" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:17) 300 @721"
+      segment: "017643"
+      offset: 0
 
   - count: 62
     scenes: [ "1:10:09" ]
     clips:
     - movie: mad_max
-      todo: "(0:12:13) 300 @721"
+      segment: "017547"
+      offset: 1
 
   - count: 13
     scenes: [ "1:10:10" ]
     clips:
     - movie: bullitt
-      todo: "(1:12:52)"
+      segment: "108317"
+      offset: 1
 
   - count: 141
     scenes: [ "1:10:11" ]
     clips:
     - movie: bullitt
-      todo: "(fade to black) (1:13:09)"
+      segment: "108624"
+      offset: 0
+      todo: "fade to black"
 
   - count: 1961
     scenes: [ "1:10:21", "1:10:24", "1:10:28", "1:10:32", "1:10:36", "1:10:39", "1:10:43", "1:10:47", "1:10:51", "1:10:54", "1:10:58", "1:11:02", "1:11:06", "1:11:09", "1:11:13", "1:11:17", "1:11:21", "1:11:24", "1:11:27" ]
@@ -5308,6 +5611,7 @@ movies:
     - name: "All the Presidents Men 1976 1080p MAX WEB-DL H264-GPRS.mkv"
       resolution: "1920x1080"
     - name: "All the Presidents Men (1976) MULTi VFI 2160p 10bit DV HDR10 BluRay x265 DTS-HD MA 2.0-MHD.mkv"
+    - name: "All.The.Presidents.Men.1976.Multi.VFi.Bluray.Remux.2160p.HEVC.HDR10.DV.DTS-HDMA.ZatNik07.mkv"
     status:
       segments: true
 
@@ -5326,9 +5630,11 @@ movies:
     sources:
     - name: "Le Tour du Monde en 80 Jours 1956 HDTV MULTI.mkv"
     - name: "Le.Tour.Du.Monde.En.Quatre.Vingts.Jours.1956.MULTI.VFF.1080p.BluRay.HDLight.AAC.2.0.x264-mHDgz.mkv"
-  comment: |
-    Interesting discussion about the restoration of the movie on
-    https://www.hometheaterforum.com/community/threads/381256
+    comment: |
+      Interesting discussion about the restoration of the movie on
+      https://www.hometheaterforum.com/community/threads/381256
+    status:
+      segments: true
 
   the_arrangement:
     title: "The Arrangement"
@@ -5343,6 +5649,10 @@ movies:
     source:
     - name: "The.Arrangement.1969.720p.WEB-DL.AAC2.0.H264-FGT.mkv"
     - name: "The Arrangement [Kirk Douglas] (1969) DVDRip Oldies.avi"
+    comment: |
+      Scenes in La Classe are interleaved, so offsets could be off ±1
+    status:
+      segments: true
 
   band_of_angels:
     title: "Band of Angels"
@@ -5360,6 +5670,9 @@ movies:
     sources:
     - name: "Band.of.Angels.1957.(Raoul.Walsh-Drama).1080p.x264-Classics.mkv"
       resolution: "1920x1080"
+    - name: "L.Esclave.Libre.1957.FRENCH.1080p.WEBRip.HDLight.AAC.1.0.x264-Zacary.mkv"
+    status:
+      segments: true
 
   battle_of_the_bulge:
     title: "Battle of the Bulge"
@@ -5379,6 +5692,8 @@ movies:
     sources:
     - name: "Battle.Of.The.Bulge.1965.1080p.BluRay.x264-[YTS.LT].mp4"
       resolution: "1904x688"
+    - name: "La.Bataille.Des.Ardennes.1965.MULTI.1080p.BluRay.HDLight.AC3.x264-gismo65.mkv"
+    - name: "La.Bataille.Des.Ardennes.1965.REMASTERED.MULTi.VFF.1080p.BluRay.REMUX.AC3.1.0.VC1-NTG.mkv"
     status:
       segments: true
 
@@ -5422,6 +5737,7 @@ movies:
     sources:
     - name: "Blood Alley 1955 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
+    - name: "Blood.Alley.1955.MULTi.VFi.1080p.HDLight.AC3.2.0.H264-LiHDL.mkv"
 
   bullitt:
     title: "Bullitt"
@@ -5444,6 +5760,10 @@ movies:
     sources:
     - name: "Bullitt 1968 BluRay 1080p DD 2 0 VC-1 REMUX-FraMeSToR.mkv"
       resolution: "1920x1080"
+    - name: "Bullitt.1968.BD.Remux.1080p.MULTi.FR-EN.VC-1.AC3.2.0.AC3.1.0-om.mkv"
+    - name: "Bullitt.1968.MULTI.VFF.1080p.BluRay.AC3.1.0.x264-PURE.mkv"
+    status:
+      segments: true
 
   cahill_us_marshal:
     title: "Cahill U.S. Marshal"
@@ -5479,6 +5799,7 @@ movies:
     sources:
     - name: "The.Candidate.1972.1080p.WEBRip.DD2.0.x264-NTb.mkv"
       resolution: "1920x1080"
+    - name: "1972 - Votez McKay MULTI TRUEFRENCH 1080 HD LIGHT AC3 x264.mkv"
     status:
       segments: true
 
@@ -5513,6 +5834,7 @@ movies:
     sources:
     - name: "Charro.1969.720p.WEB-DL.AAC2.0.H264-RARBG.mkv"
     - name: "Charro! 1969 Deutsch - Youtube [EJajA31vCQk].mp4"
+    - name: "Charro.1969.1080p.WEB-DL.DD.2.0.H.264-SbR.mkv"
 
   the_cheyenne_social_club:
     title: "The Cheyenne Social Club"
@@ -5531,12 +5853,16 @@ movies:
     sources:
     - name: "Attaque.au.Cheyenne.Club.1970.DVDRip.FR.MULTi.h264.mkv"
       resolution: "1136x480"
+      bad: "Encoding problems: 25fps was achieved by duplicating every 25th frame"
     - name: "The Cheyenne Social Club (West. Comedy 1970) James Stewart, Henry Fonda & Shirley Jones.mp4"
       resolution: "1280x532"
+      bad: "Encoding problems: 30fps was created using a 25fps version already converted from 24fps, creating a +5/+2/+8 frame pattern"
     - name: "Cheyenne Social Club, The (Henry Fonda, James Stewart) [1970]@.avi"
       resolution: "608x256"
     comment: |
-        The Apple TV versions is clearly better visually, though I don’t know by how much
+      The Apple TV version is clearly better visually, though I don’t know by how much
+    status:
+      segments: true
 
   chisum:
     title: "Chisum"
@@ -5553,6 +5879,7 @@ movies:
     sources:
     - name: "Chisum (1970) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
+    - name: "Chisum.1970.MULTI.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
 
   city_beneath_the_sea:
     title: "City Beneath the Sea"
@@ -5593,6 +5920,7 @@ movies:
     sources:
     - name: "Cleopatra Jones 1973 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
+    - name: "Dynamite Jones 1973 Multi WEBrip 1080p AVC AC3-Ginonyll.h264.mkv"
     status:
       segments: true
 
@@ -5613,6 +5941,7 @@ movies:
     sources:
     - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
+    - name: "Les.Cowboys.1972.MULTI.VFI.1080p.BluRay.AC3.5.1.x264-gismo65.mkv"
     status:
       segments: true
 
@@ -5643,6 +5972,10 @@ movies:
     - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265.HEVC.FLAC.DUAL-SARTRE.mkv"
       resolution: "1440x1080"
     - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265-RARBG.mp4"
+    comment: |
+      Scenes in La Classe are interleaved, so offsets could be off ±1
+    status:
+      segments: true
 
   deliverance:
     title: "Deliverance"
@@ -5671,6 +6004,7 @@ movies:
     sources:
     - name: "Deliverance 1972 1080p MAX WEB-DL DDP5 1 H 264-GPRS.mkv"
       resolution: "1920x800"
+    - name: "Délivrance (1972) MULTi VFF 1080p x264 AC3-JiHeff.mkv"
 
   drum_beat:
     title: "Drum Beat"
@@ -5690,8 +6024,14 @@ movies:
       year: 2014
       link: https://www.blu-ray.com/dvd/Drum-Beat-DVD/87417/
     sources:
+    - name: "Drum Beat (1954) 1080p-H264-AC 3 (DolbyDigital-5.1) & nickarad.mp4"
     - name: "Drum Beat (1954) BluRay H264 DolbyD 5.1 + nickarad.mp4"
       resolution: "1920x752"
+    - name: "Drum.Beat.1954.1080p.WEBRip.x264.AAC-[YTS.MX].mp4"
+    - name: "L.Aigle Solitaire (1954) VFF ENG 1080p WEBRiP MULTi AAC 2.0.x264-RHT.mkv"
+    status:
+      segments: true
+
 
   executive_action:
     title: "Executive Action"
@@ -5731,6 +6071,7 @@ movies:
     sources:
     - name: "The FBI Story  (Drama 1959)  James Stewart, Vera Miles & Murray Hamilton.mp4"
       resolution: "1280x692"
+      bad: "Encoding issues: frame missing between 190784 and 190785, then frame 190786 is duplicated, then 190789 too"
 
   firecreek:
     title: "Firecreek"
@@ -5752,6 +6093,8 @@ movies:
     sources:
     - name: "Firecreek (1968) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1916x816"
+      bad: "Encoding problems: 25fps was achieved by duplicating every 25th frame"
+    - name: "Firecreek.1968.(Western-Henry.Fonda).1080p.x264-Classics.mkv"
 
   four_for_texas:
     title: "4 for Texas"
@@ -5770,7 +6113,10 @@ movies:
     sources:
     - name: "4 for Texas (1963) DVDRip Oldies.mkv"
       resolution: "720x480"
-    - name: "4 for Texas (1963).mp4"
+    - name: "4 for Texas  (Western Comedy 1963) 720p.mp4"
+      resolution: "1280x700"
+      bad: "très mauvais encodage : frames inventées (002093), frames manquantes (entre 002184 et 002185), chroma de la frame suivante qui déborde (002436)…"
+    - name: "4 for Texas  (Western Comedy 1963)  Frank Sinatra, Dean Martin & Anita Ekberg.mp4"
       resolution: "1280x700"
       bad: "très mauvais encodage : frames inventées (002093), frames manquantes (entre 002184 et 002185), chroma de la frame suivante qui déborde (002436)…"
     - name: "4.DU.TEXAS.1963.MULTI.VFF.480p.DVDRip.AC3.1.0.MPEG2-NOTAG.mkv"
@@ -5801,6 +6147,7 @@ movies:
     - name: "Freebie.And.The.Bean.1974.INTERNAL.BDRip.x264-RedBlade.mkv"
       resolution: "720x300"
     - name: "Freebie.And.The.Bean.1974.1080p.BluRay.x264-[YTS.LT].mp4"
+    - name: "Freebie.And.The.Bean.1974.1080p.BluRay.x264-RedBlade.mkv"
     status:
       segments: true
 
@@ -5821,6 +6168,8 @@ movies:
     - type: dvd-ntsc
       year: 2016
       link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/250764/
+    sources:
+    - name: "the.good.guys.and.the.bad.guys.1969.proper.dvdrip.x264-regret.mkv"
 
   harper:
     title: "Harper"
@@ -5846,6 +6195,8 @@ movies:
       resolution: "1920x1080"
     - name: "Harper.1966.1080p.BluRay.x264-[YTS.LT].mp4"
       resolution: "1920x800"
+    comment: |
+      Scenes in La Classe are interleaved, so offsets could be off ±1
     status:
       segments: true
 
@@ -5899,6 +6250,8 @@ movies:
     sources:
     - name: "Jeremiah Johnson 1972 2160p.mkv"
       resolution: "3840x2160"
+    - name: "Jeremiah.Johnson.1972.EXTENDED.REMASTERED.MULTi.1080p.BluRay.x264.DTS.HD.MA.5.1-RiFiFi.mkv"
+    - name: "Jeremiah.Johnson.1972.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.5.1.AVC-Raf66.mkv"
 
   the_life_and_times_of_judge_roy_bean:
     title: "The Life and Times of Judge Roy Bean"
@@ -5921,7 +6274,8 @@ movies:
     - type: dvd-ntsc
       year: 2012
       link: https://www.blu-ray.com/dvd/The-Life-and-Times-of-Judge-Roy-Bean-DVD/82524/
-    sourcess:
+    sources:
+    - name: "Juge.Et.Hors.La.Loi.1972.MULTI.VFF.1080p.BLURAY.REMUX.DTS.HD.MA.2.0.AVC-Raf66.mkv"
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.1080p.BluRay.x264-[YTS.AM].mp4"
     - name: "The Life and Times of Judge Roy Bean  (Western 1972)  Paul Newman, Ava Gardner & Roy Jenson  (BR).mp4"
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.720p.BluRay.x264-[YTS.AM].mp4"
@@ -5958,8 +6312,13 @@ movies:
       bitrate: 34.92
       link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/134334/
     sources:
+    - name: "Mad Max (1979) MULTi VFI 2160p 10bit 4KLight DOLBY VISION BluRay AC3 5.1 x265-QTZ.mkv"
+    - name: "Mad Max (1979) MULTi VFI 2160p 10bit 4KLight HDR BluRay AC3 5.1 x265-QTZ.mkv"
     - name: "Mad Max 1979 BluRay 1080p DDP 5 1 x264-hallowed.mkv"
       resolution: "1920x820"
+    - name: "Mad.Max.1979.2160p.UHD.BLURAY.REMUX.HDR.HEVC.MULTi.VFi.AC3.1.0.x265-EXTREME.mkv"
+    status:
+      segments: true
 
   maigret_et_les_plaisirs_de_la_nuit:
     title: "Maigret et les plaisirs de la nuit"
@@ -5968,6 +6327,10 @@ movies:
     directed: [ "José Pinheiro" ]
     cast: []
     samples: [ "0:53:26" ]
+    sources:
+    - name: "Maigret.1991.E04.FRENCH.1080p.HDTV.H264-HYBRiS.mkv"
+    status:
+      segments: true
 
   mcq:
     title: "McQ"
@@ -5995,6 +6358,8 @@ movies:
     - name: "Un.Silencieux.Au.Bout.Du.Canon.1974..Multi.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
     - name: "McQ.1974.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "McQ.1974.720p.BluRay.x264.AAC-[YTS.MX].mp4"
+    status:
+      segments: true
 
   the_miracle_of_our_lady_of_fatima:
     title: "The Miracle of Our Lady of Fatima"
@@ -6015,6 +6380,8 @@ movies:
     sources:
     - name: "The Miracle of Our Lady of Fatima (1952) [720p] [Drama].mkv"
       resolution: "1470x1080"
+    - name: "the.miracle.of.our.lady.of.fatima.1952.1080p.hdtv.x264-regret.mkv"
+    - name: "The Miracle of Our Lady of Fatima (1952) HDTV Oldies Dual-Audio.mkv"
     status:
       segments: true
 
@@ -6041,6 +6408,8 @@ movies:
     sources:
     - name: "Oceans Eleven 1960 1080p HMAX WEB-DL AAC 2 0 H 264-PiRaTeS.mkv"
       resolution: "1920x800"
+    - name: "L'Inconnu de Las Vegas (1960) - 1080p x265 multi Dolby Digitl AC-3 1.0-NOTAG.mkv"
+    - name: "L'Inconnu de Las Vegas 1960 Multi WEBrip 1080p AVCx264 AAC-Ginonyll.mkv"
 
   the_old_man_and_the_sea:
     title: "The Old Man and the Sea"
@@ -6064,6 +6433,7 @@ movies:
     sources:
     - name: "The Old Man and the Sea 1958 1080p BluRay x264 DuaL-TURKO.mkv"
       resolution: "1920x1080"
+    - name: "The.Old.Man.And.The.Sea.1958.1080p.WEBRip.x264.AAC-[YTS.MX].mp4"
 
   rampage:
     title: "Rampage"
@@ -6130,6 +6500,8 @@ movies:
     sources:
     - name: "Rio Bravo 1959 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
+    - name: "Rio Bravo (1959) MULTi VFI 2160p 10bit DV HDR BluRay x265 DTS-HDMA 2.0-XANDER.mkv"
+    - name: "Rio.Bravo.1959.MULTi.VFi.2160p.UHD.BluRay.REMUX.HDR.HEVC.DTS-HD.MA.2.0-ONLY.mkv"
     status:
       segments: true
 
@@ -6156,6 +6528,7 @@ movies:
     sources:
     - name: "The Sea Chase  (War Drama 1955)  John Wayne, David Farrar & Lana Turner  1080p.mp4"
       resolution: "1910x780"
+    - name: "Le.Renard.Des.Oceans.1955.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.2.0.AVC-Raf66.mkv"
     status:
       segments: true
 
@@ -6184,6 +6557,8 @@ movies:
     sources:
     - name: "The.Searchers.1956.1080p.BluRay.x265.HEVC.AC3-SARTRE.mkv"
       resolution: "1920x1080"
+    - name: "The Searchers (1956) MULTi VFI 2160p 10bit 4KLight DV HDR BluRay FLAC 1.0 x265-QTZ.mkv"
+    - name: "La.Prisonnière.Du.Désert.1956.MULTI.VFF.UHD.Remux.HDR10.DV.DTS.HD.MA.2.0.HEVC-FgCw.mkv"
     status:
       segments: true
 
@@ -6205,6 +6580,8 @@ movies:
       link: https://www.blu-ray.com/dvd/Start-The-Revolution-Without-Me-DVD/82538/
     sources:
     - name: "Start The Revolution Without Me 1970 DVDRip x264[N1C].mkv"
+    status:
+      segments: true
 
   straight_time:
     title: "Straight Time"
@@ -6230,6 +6607,7 @@ movies:
     sources:
     - name: "Straight.Time.1978.WAC.1080p.BluRay.x265.HEVC.FLAC-SARTRE.mkv"
       resolution: "1920x1040"
+    - name: "Le.Récidiviste.(Straight.Time).1978.BluRay.HDLight.1080p.Multi.x264.AC3-Arcadia.mkv"
     status:
       segments: true
 
@@ -6261,11 +6639,15 @@ movies:
     - name: "There.Was.A.Crooked.Man....1970.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "There.Was.A.Crooked.Man....1970.1080p.WEBRip.x264.AAC-[YTS.LT].mp4"
     - name: "There.Was.a.Crooked.Man.1970.BluRay.600MB.h264.MP4-Zoetrope.mp4"
+    comment: |
+      Scenes in La Classe are interleaved, so offsets could be off ±1
+    status:
+      segments: true
 
   the_towering_inferno:
     title: "The Towering Inferno"
     imdb: "tt0072308"
-    year: 1970
+    year: 1974
     directed: [ "John Guillermin", "Irwin Allen" ]
     unused_cast: [ "Jacqueline Bisset", "Paul Newman" ]
     alt_titles:
@@ -6282,6 +6664,7 @@ movies:
     sources:
     - name: "L'inferno di cristallo - The Towering Inferno (1974) 1080p h264 Ac3 Ita Storico Ita Eng Sub Ita Eng-MIRCrew.mkv"
       resolution: "1904x816"
+    - name: "La.Tour.Infernale.1974.Bluray.1080p.x265.HEVC.10Bits.VFF.VOSTFR.AC3.DTS-HDMA-Goldenyann.mkv"
     status:
       segments: true
 
@@ -6308,6 +6691,7 @@ movies:
     sources:
     - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
+    - name: "Les.Voleurs.De.Trains.1973.MULTI.VFI.1080p.BluRay.DTS.HD.MA.1.0.x264-gismo65.mkv"
     status:
       segments: true
 
