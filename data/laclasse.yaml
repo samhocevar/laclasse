@@ -1424,7 +1424,8 @@ segments:
     scenes: [ "0:17:01" ]
     clips:
     - movie: firecreek
-      todo: "(0:41:10) - 099517"
+      segment: "079547"
+      offset: 1
     notes: "Proper syncing can be done on frame with darkest reflection (frame 11)"
 
   - count: 148
@@ -1523,7 +1524,9 @@ segments:
     scenes: [ "0:18:14", "0:18:21" ]
     clips:
     - movie: chisum
-      todo: "(1:29:10)"
+      segment: "134374"
+      offset: 0
+      todo: "Check exact offset with an old copy that may have the mark on frame 27537"
 
   - count: 49
     scenes: [ "0:18:23" ]
@@ -1536,7 +1539,8 @@ segments:
     scenes: [ "0:18:25" ]
     clips:
     - movie: chisum
-      todo: "(0:49:42)"
+      segment: "075000"
+      offset: 0
 
   - count: 42
     scenes: [ "0:18:29" ]
@@ -1549,7 +1553,8 @@ segments:
     scenes: [ "0:18:31" ]
     clips:
     - movie: chisum
-      todo: "(0:49:47)"
+      segment: "075236"
+      offset: 1
 
   - count: 47
     scenes: [ "0:18:35" ]
@@ -1562,7 +1567,9 @@ segments:
     scenes: [ "0:18:37" ]
     clips:
     - movie: chisum
-      todo: "(0:49:31) (ping-pong)"
+      segment: "075236"
+      offset: 6
+      todo: "(ping-pong) check offsets and params with a better dump"
 
   - count: 42
     scenes: [ "0:18:42" ]
@@ -1575,7 +1582,9 @@ segments:
     scenes: [ "0:18:44" ]
     clips:
     - movie: chisum
-      todo: "(0:49:47) (ping-pong)"
+      segment: "075236"
+      offset: 0
+      todo: "(ping-pong) 101 frames + 101 frames reversed"
 
   - count: 51
     scenes: [ "0:18:52" ]
@@ -1589,7 +1598,8 @@ segments:
     scenes: [ "0:18:54" ]
     clips:
     - movie: chisum
-      todo: "(0:49:59)"
+      segment: "075470"
+      offset: 0
 
   - count: 72
     scenes: [ "0:18:57" ]
@@ -1768,7 +1778,8 @@ segments:
     scenes: [ "0:20:04" ]
     clips:
     - movie: firecreek
-      todo: "(0:41:10) - 074526"
+      segment: "059571"
+      offset: 0
       transform: "hflip"
 
   - count: 80
@@ -1810,7 +1821,8 @@ segments:
     scenes: [ "0:20:17" ]
     clips:
     - movie: firecreek
-      todo: "(0:43:07)"
+      segment: "062154"
+      offset: 0
       transform: "hflip"
 
   - count: 91
@@ -1845,7 +1857,8 @@ segments:
     scenes: [ "0:20:31" ]
     clips:
     - movie: firecreek
-      todo: "(0:42:57)"
+      segment: "061932"
+      offset: 1
       transform: "hflip"
 
   - count: 105
@@ -1920,35 +1933,46 @@ segments:
     scenes: [ "0:21:23" ]
     clips:
     - movie: firecreek
-      todo: "(0:30:39)"
+      segment: "044514"
+      offset: 0
+      transform: "hflip"
 
   - count: 95
     scenes: [ "0:21:26" ]
     clips:
     - movie: cahill_us_marshal
-      todo: "(0:54:15)"
+      segment: "080877"
+      offset: 1
 
   - count: 111
     scenes: [ "0:21:30" ]
     clips:
     - movie: firecreek
-      todo: "(0:30:51)"
+      segment: "044856"
+      offset: 1
+      transform: "hflip"
 
   - count: 230
     scenes: [ "0:21:34" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "081087"
+      offset: 1
 
   - count: 88
     scenes: [ "0:21:43" ]
     clips:
     - movie: firecreek
-      todo: "(0:30:59)"
+      segment: "045115"
+      offset: 2
+      transform: "hflip"
 
   - count: 208
     scenes: [ "0:21:47" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "081816"
+      offset: 3
 
   - count: 111
     scenes: [ "0:21:55" ]
@@ -1988,7 +2012,8 @@ segments:
     scenes: [ "0:23:06" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:52:56)"
+      segment: "078734"
+      offset: 1
 
   - count: 45
     scenes: [ "0:23:12" ]
@@ -2008,7 +2033,8 @@ segments:
     scenes: [ "0:23:16" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:53:42)"
+      segment: "079872"
+      offset: 107
 
   - count: 233
     scenes: [ "0:23:20" ]
@@ -2021,7 +2047,8 @@ segments:
     scenes: [ "0:23:29" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:57:05)"
+      segment: "085328"
+      offset: 2
 
   - count: 116
     scenes: [ "0:23:40" ]
@@ -2034,7 +2061,8 @@ segments:
     scenes: [ "0:23:44" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:53:06)"
+      segment: "078734"
+      offset: 205
 
   - count: 218
     scenes: [ "0:23:50" ]
@@ -2047,7 +2075,8 @@ segments:
     scenes: [ "0:23:59" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:53:42)"
+      segment: "079872"
+      offset: 1
 
   - count: 235
     scenes: [ "0:24:06", "0:24:15" ]
@@ -2331,7 +2360,8 @@ segments:
     scenes: [ "0:27:54" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:52:56)"
+      segment: "078734"
+      offset: 1
 
   - count: 240
     scenes: [ "0:28:01" ]
@@ -2344,7 +2374,8 @@ segments:
     scenes: [ "0:28:11" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:53:42)"
+      segment: "079872"
+      offset: 1
 
   - count: 302
     scenes: [ "0:28:20", "0:28:24" ]
@@ -2371,9 +2402,12 @@ segments:
     scenes: [ "0:28:41", "0:28:47" ]
     clips:
     - movie: chisum
-      todo: "(1:18:02)"
+      segment: "116775"
+      offset: 0
     - movie: chisum
-      todo: "(1:18:05)"
+      segment: "116911"
+      offset: -136
+      todo: "append to sequence"
 
   - count: 118
     scenes: [ "0:28:51" ]
@@ -2507,6 +2541,8 @@ segments:
       segment: "111785"
       todo: "(flashback fade) (ping-pong)"
     - movie: oceans_eleven
+      segment: "078734"
+      offset: -49
       todo: "(flashback fade) (0:52:56)"
     - movie: city_beneath_the_sea
       todo: "(flashback fade)"
@@ -3218,31 +3254,38 @@ segments:
       offset: 0
       todo: "(flashback fade)"
     - movie: chisum
-      todo: "(flashback fade) (1:39:36)"
+      segment: "149736"
+      offset: -94
+      todo: "(flashback fade)"
 
   - count: 33
     scenes: [ "0:41:07" ]
     clips:
     - movie: chisum
-      todo: "(1:39:39)"
+      segment: "149798"
+      offset: 20
 
   - count: 51
     scenes: [ "0:41:09" ]
     clips:
     - movie: chisum
-      todo: "(1:40:21)"
+      segment: "150727"
+      offset: 1
 
   - count: 47
     scenes: [ "0:41:11" ]
     clips:
     - movie: chisum
-      todo: "(1:39:55)"
+      segment: "150136"
+      offset: 3
 
   - count: 182
     scenes: [ "0:41:13", "0:41:17" ]
     clips:
     - movie: chisum
-      todo: "(flashback fade) (1:40:50)"
+      segment: "151410"
+      offset: 24
+      todo: "(flashback fade)"
     - movie: around_the_world_in_eighty_days
       segment: "077902"
       offset: -75
@@ -3283,7 +3326,8 @@ segments:
     scenes: [ "0:41:44" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:29:51)"
+      segment: "044598"
+      offset: 0
 
   - count: 66
     scenes: [ "0:41:49" ]
@@ -3296,7 +3340,8 @@ segments:
     scenes: [ "0:41:53" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:29:58)"
+      segment: "044801"
+      offset: 0
 
   - count: 159
     scenes: [ "0:41:58" ]
@@ -3309,7 +3354,9 @@ segments:
     scenes: [ "0:42:04", "0:42:19" ]
     clips:
     - movie: oceans_eleven
-      todo: "(flashback fade) (0:30:13)"
+      segment: "045181"
+      offset: 0
+      todo: "(flashback fade)"
     - movie: rio_bravo
       segment: "118278"
       offset: 692
@@ -3372,7 +3419,9 @@ segments:
       offset: 0
       todo: "(flashback fade)"
     - movie: oceans_eleven
-      todo: "(flashback fade) (0:30:18)"
+      segment: "045181"
+      offset: -31
+      todo: "(flashback fade)"
 
   - count: 80
     scenes: [ "0:43:34" ]
@@ -3961,7 +4010,8 @@ segments:
     scenes: [ "0:51:02" ]
     clips:
     - movie: cahill_us_marshal
-      todo: "(0:32:35)"
+      segment: "049585"
+      offset: 1
 
   - count: 69
     scenes: [ "0:51:04" ]
@@ -3973,6 +4023,8 @@ segments:
     scenes: [ "0:51:07" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "049776"
+      offset: 0
 
   - count: 330
     scenes: [ "0:51:09" ]
@@ -3983,16 +4035,22 @@ segments:
     scenes: [ "0:51:22" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "050008"
+      offset: 0
 
   - count: 63
     scenes: [ "0:51:23" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "050038"
+      offset: 0
 
   - count: 138
     scenes: [ "0:51:26" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "050101"
+      offset: 0
 
   - count: 43
     scenes: [ "0:51:31" ]
@@ -4004,11 +4062,15 @@ segments:
     scenes: [ "0:51:33" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "050101"
+      offset: 32
 
   - count: 102
     scenes: [ "0:51:39" ]
     clips:
     - movie: cahill_us_marshal
+      segment: "050315"
+      offset: 1
 
   - count: 559
     scenes: [ "0:51:43", "0:52:02" ]
@@ -5116,7 +5178,9 @@ segments:
     scenes: [ "1:05:18" ]
     clips:
     - movie: oceans_eleven
-      todo: "(0:59:45) (avec un filtre bleu)"
+      segment: "088968"
+      offset: 524
+      todo: "filtre bleu"
 
   - count: 54
     scenes: [ "1:05:20" ]
@@ -5782,6 +5846,8 @@ movies:
     sources:
     - name: "Cahill U.S. Marshal (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
+    status:
+      segments: true
 
   the_candidate:
     title: "The Candidate"
@@ -5880,6 +5946,10 @@ movies:
     - name: "Chisum (1970) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
     - name: "Chisum.1970.MULTI.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
+    comment: |
+      Scenes in La Classe are interleaved, so offsets could be off ±1
+    status:
+      segments: true
 
   city_beneath_the_sea:
     title: "City Beneath the Sea"
@@ -6032,7 +6102,6 @@ movies:
     status:
       segments: true
 
-
   executive_action:
     title: "Executive Action"
     imdb: "tt0070046"
@@ -6095,6 +6164,8 @@ movies:
       resolution: "1916x816"
       bad: "Encoding problems: 25fps was achieved by duplicating every 25th frame"
     - name: "Firecreek.1968.(Western-Henry.Fonda).1080p.x264-Classics.mkv"
+    status:
+      segments: true
 
   four_for_texas:
     title: "4 for Texas"
@@ -6170,6 +6241,7 @@ movies:
       link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/250764/
     sources:
     - name: "the.good.guys.and.the.bad.guys.1969.proper.dvdrip.x264-regret.mkv"
+      bad: File is corrupted
 
   harper:
     title: "Harper"
@@ -6410,6 +6482,8 @@ movies:
       resolution: "1920x800"
     - name: "L'Inconnu de Las Vegas (1960) - 1080p x265 multi Dolby Digitl AC-3 1.0-NOTAG.mkv"
     - name: "L'Inconnu de Las Vegas 1960 Multi WEBrip 1080p AVCx264 AAC-Ginonyll.mkv"
+    status:
+      segments: true
 
   the_old_man_and_the_sea:
     title: "The Old Man and the Sea"
