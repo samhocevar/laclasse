@@ -1605,7 +1605,8 @@ segments:
     scenes: [ "0:18:57" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
-      todo: "(1:13:28)"
+      segment: "106593"
+      offset: 2
 
   - count: 95
     scenes: [ "0:19:00" ]
@@ -1639,7 +1640,8 @@ segments:
     scenes: [ "0:19:15" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
-      todo: "(1:14:12)"
+      segment: "107685"
+      offset: 3
 
   - count: 38
     scenes: [ "0:19:18" ]
@@ -1695,7 +1697,8 @@ segments:
     scenes: [ "0:19:44" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
-      todo: "(1:14:55)"
+      segment: "108729"
+      offset: 0
 
   - count: 50
     scenes: [ "0:19:47" ]
@@ -2396,7 +2399,9 @@ segments:
       segment: "118622"
       todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
     - movie: carson_city
-      todo: "(flashback fade) (0:25:42)"
+      segment: "038729"
+      offset: -187
+      todo: "(flashback fade)"
 
   - count: 232
     scenes: [ "0:28:41", "0:28:47" ]
@@ -2465,7 +2470,8 @@ segments:
     scenes: [ "0:29:24" ]
     clips:
     - movie: charro
-      todo: "(0:36:57)"
+      segment: "054047"
+      offset: 1
       transform: "hflip"
 
   - count: 55
@@ -2479,7 +2485,8 @@ segments:
     scenes: [ "0:29:28" ]
     clips:
     - movie: charro
-      todo: "(0:38:22)"
+      segment: "056011"
+      offset: 0
 
   - count: 38
     scenes: [ "0:29:31" ]
@@ -2492,7 +2499,8 @@ segments:
     scenes: [ "0:29:33" ]
     clips:
     - movie: charro
-      todo: "(0:35:52)"
+      segment: "052513"
+      offset: 0
 
   - count: 70
     scenes: [ "0:29:37" ]
@@ -2505,13 +2513,15 @@ segments:
     scenes: [ "0:29:39" ]
     clips:
     - movie: charro
-      todo: "(0:36:04)"
+      segment: "052791"
+      offset: 0
 
   - count: 64
     scenes: [ "0:29:41" ]
     clips:
     - movie: charro
-      todo: "(0:36:24)"
+      segment: "053251"
+      offset: 1
 
   - count: 97
     scenes: [ "0:29:43" ]
@@ -2525,7 +2535,9 @@ segments:
     scenes: [ "0:29:47", "0:29:58", "0:30:05" ]
     clips:
     - movie: charro
-      todo: "(flashback fade) (0:38:22)"
+      segment: "056011"
+      offset: 0
+      todo: "(flashback fade)"
     - movie: the_searchers
       segment: "071988"
       offset: -242
@@ -2545,44 +2557,60 @@ segments:
       offset: -49
       todo: "(flashback fade) (0:52:56)"
     - movie: city_beneath_the_sea
+      segment: "005195"
+      offset: -220
       todo: "(flashback fade)"
 
   - count: 516
     scenes: [ "0:30:22" ]
     clips:
     - movie: city_beneath_the_sea
+      segment: "005376"
+      offset: 10
 
   - count: 194
     scenes: [ "0:30:46" ]
     clips:
     - movie: city_beneath_the_sea
+      segment: "006108"
+      offset: 1
 
   - count: 78
     scenes: [ "0:30:51" ]
     clips:
     - movie: city_beneath_the_sea
+      segment: "006303"
+      offset: 0
 
   - count: 64
     scenes: [ "0:30:55" ]
     clips:
     - movie: city_beneath_the_sea
+      segment: "006381"
+      offset: 0
 
   - count: 54
     scenes: [ "0:30:57" ]
     clips:
     - movie: city_beneath_the_sea
+      segment: "006445"
+      offset: 0
       transform: "hflip"
 
   - count: 31
     scenes: [ "0:30:58" ]
     clips:
     - movie: city_beneath_the_sea
+      segment: "006582"
+      offset: 2
       transform: "hflip"
 
   - count: 40
     scenes: [ "0:31:00" ]
     clips:
     - movie: city_beneath_the_sea
+      segment: "006618"
+      offset: 3
 
   - count: 482
     scenes: [ "0:31:01" ]
@@ -2781,7 +2809,8 @@ segments:
     scenes: [ "0:33:56" ]
     clips:
     - movie: executive_action
-      todo: "(0:19:31)"
+      segment: "027718"
+      offset: 411
 
   - count: 93
     scenes: [ "0:34:00" ]
@@ -2794,6 +2823,8 @@ segments:
     scenes: [ "0:34:04" ]
     clips:
     - movie: executive_action
+      segment: "030631"
+      offset: 1
 
   - count: 88
     scenes: [ "0:34:12" ]
@@ -2806,6 +2837,8 @@ segments:
     scenes: [ "0:34:15" ]
     clips:
     - movie: executive_action
+      segment: "030941"
+      offset: 0
 
   - count: 469
     scenes: [ "0:34:20" ]
@@ -2818,6 +2851,8 @@ segments:
     scenes: [ "0:34:42" ]
     clips:
     - movie: executive_action
+      segment: "031066"
+      offset: 1
 
   - count: 74
     scenes: [ "0:34:56" ]
@@ -2830,6 +2865,8 @@ segments:
     scenes: [ "0:34:59" ]
     clips:
     - movie: executive_action
+      segment: "031066"
+      offset: 76
 
   - count: 90
     scenes: [ "0:35:11" ]
@@ -2842,6 +2879,8 @@ segments:
     scenes: [ "0:35:14" ]
     clips:
     - movie: executive_action
+      segment: "031066"
+      offset: 66
 
   - count: 93
     scenes: [ "0:35:30" ]
@@ -2854,7 +2893,9 @@ segments:
     scenes: [ "0:35:34" ]
     clips:
     - movie: executive_action
-      todo: "(ping-pong)"
+      segment: "030941"
+      offset: 63
+      todo: "(ping-pong: first 30 frames forward, then 28 next ones backwards)"
 
   - count: 136
     scenes: [ "0:35:36" ]
@@ -3136,21 +3177,31 @@ segments:
       offset: 36
       todo: "(flashback fade)"
     - movie: deliverance
-      todo: "(flashback fade) (0:40:23)"
+      segment: "061860"
+      offset: -115
+      todo: "(flashback fade)"
 
-  - count: 266
-    scenes: [ "0:39:28", "0:39:35" ]
+  - count: 137
+    scenes: [ "0:39:28" ]
     clips:
     - movie: deliverance
-      todo: "(0:40:32)"
+      segment: "062106"
+      offset: 1
+
+  - count: 129
+    scenes: [ "0:39:35" ]
+    clips:
     - movie: deliverance
-      todo: "(0:40:39)"
+      segment: "062244"
+      offset: 0
 
   - count: 286
     scenes: [ "0:39:38", "0:39:42" ]
     clips:
     - movie: deliverance
-      todo: "(flashback fade) (0:40:45)"
+      segment: "062423"
+      offset: 1
+      todo: "(flashback fade)"
     - movie: all_the_presidents_men
       segment: "066331"
       offset: -89
@@ -3230,13 +3281,15 @@ segments:
     scenes: [ "0:40:32" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
-      todo: "(0:16:56)"
+      segment: "025328"
+      offset: 1
 
   - count: 396
     scenes: [ "0:40:36" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
-      todo: "(0:15:44)"
+      segment: "022896"
+      offset: 818
 
   - count: 98
     scenes: [ "0:40:51" ]
@@ -3249,7 +3302,8 @@ segments:
     scenes: [ "0:40:56" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
-      todo: "(0:16:09)"
+      segment: "024152"
+      offset: 0
 
   - count: 155
     scenes: [ "0:41:01", "0:41:06" ]
@@ -3300,7 +3354,8 @@ segments:
     scenes: [ "0:41:21" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
-      todo: "(0:19:34)"
+      segment: "029062"
+      offset: 98
 
   - count: 91
     scenes: [ "0:41:31" ]
@@ -3471,7 +3526,8 @@ segments:
     scenes: [ "0:43:54" ]
     clips:
     - movie: the_old_man_and_the_sea
-      todo: "(0:08:08)"
+      segment: "010856"
+      offset: 0
 
   - count: 80
     scenes: [ "0:44:00" ]
@@ -3484,6 +3540,8 @@ segments:
     scenes: [ "0:44:03" ]
     clips:
     - movie: the_old_man_and_the_sea
+      segment: "011118"
+      offset: 0
       todo: "(0:08:19)"
 
   - count: 64
@@ -3496,7 +3554,8 @@ segments:
     scenes: [ "0:44:08" ]
     clips:
     - movie: the_old_man_and_the_sea
-      todo: "(0:07:48)"
+      segment: "010564"
+      offset: 113
 
   - count: 67
     scenes: [ "0:44:12" ]
@@ -3508,7 +3567,9 @@ segments:
     scenes: [ "0:44:16", "0:44:23" ]
     clips:
     - movie: the_old_man_and_the_sea
-      todo: "(cross-fade) (0:08:28)"
+      segment: "011327"
+      offset: 0
+      todo: "(cross-fade)"
     - movie: the_train_robbers
       segment: "039875"
       offset: 749
@@ -3519,7 +3580,8 @@ segments:
     scenes: [ "0:44:26" ]
     clips:
     - movie: the_old_man_and_the_sea
-      todo: "(0:33:36) (reversed)"
+      segment: "047353"
+      offset: 59
 
   - count: 52
     scenes: [ "0:44:30" ]
@@ -3532,7 +3594,8 @@ segments:
     scenes: [ "0:44:32" ]
     clips:
     - movie: the_old_man_and_the_sea
-      todo: "(0:34:49) ?"
+      segment: "048588"
+      offset: 69
 
   - count: 41
     scenes: [ "0:44:33" ]
@@ -3545,7 +3608,8 @@ segments:
     scenes: [ "0:44:35" ]
     clips:
     - movie: the_old_man_and_the_sea
-      todo: "(0:34:45)"
+      segment: "048588"
+      offset: 496
 
   - count: 68
     scenes: [ "0:44:37" ]
@@ -3558,7 +3622,9 @@ segments:
     scenes: [ "0:44:40", "0:44:46" ]
     clips:
     - movie: the_old_man_and_the_sea
-      todo: "(cross-fade) (0:34:45)"
+      segment: "048588"
+      offset: 542
+      todo: "(cross-fade)"
     - movie: jeremiah_johnson
       todo: "(cross-fade) (1:48:39) (effet spéciau du bout de bois peut-être piqué dans 1:47:25)"
 
@@ -4007,9 +4073,13 @@ segments:
       offset: 1
       todo: "(flashback fade)"
     - movie: the_good_guys_and_the_bad_guys
-      todo: "(flashback fade) (0:22:40) (cross-fade)"
+      segment: "032925"
+      offset: 38
+      todo: "(flashback fade with prev) (cross-fade with next)"
     - movie: the_good_guys_and_the_bad_guys
-      todo: "(cross-fade) (0:23:01) (flashback fade)"
+      segment: "032925"
+      offset: 300
+      todo: "(cross-fade with prev) (flashback fade with next)"
     - movie: harper
       segment: "042898"
       offset: -826
@@ -4285,7 +4355,8 @@ segments:
     scenes: [ "0:54:08" ]
     clips:
     - movie: carson_city
-      todo: "(0:21:45)"
+      segment: "032670"
+      offset: 49
 
   - count: 122
     scenes: [ "0:54:16" ]
@@ -4309,7 +4380,8 @@ segments:
     scenes: [ "0:54:25" ]
     clips:
     - movie: carson_city
-      todo: "(0:22:00)"
+      segment: "033031"
+      offset: 48
 
   - count: 27
     scenes: [ "0:54:28" ]
@@ -4322,7 +4394,8 @@ segments:
     scenes: [ "0:54:29" ]
     clips:
     - movie: carson_city
-      todo: "(0:22:06)"
+      segment: "033275"
+      offset: 5
 
   - count: 28
     scenes: [ "0:54:34" ]
@@ -4630,7 +4703,8 @@ segments:
     scenes: [ "0:57:01" ]
     clips:
     - movie: blood_alley
-      todo: "(0:17:53)"
+      segment: "026229"
+      offset: 9
 
   - count: 126
     scenes: [ "0:57:21" ]
@@ -4644,7 +4718,8 @@ segments:
     scenes: [ "0:57:26" ]
     clips:
     - movie: blood_alley
-      todo: "(0:18:59)"
+      segment: "027040"
+      offset: 895
 
   - count: 162
     scenes: [ "0:57:44" ]
@@ -4658,14 +4733,16 @@ segments:
     scenes: [ "0:57:50" ]
     clips:
     - movie: blood_alley
-      todo: "(0:19:58)"
+      segment: "029556"
+      offset: 0
       transform: "hflip"
 
   - count: 94
     scenes: [ "0:57:53" ]
     clips:
     - movie: blood_alley
-      todo: "(0:20:01)"
+      segment: "029632"
+      offset: 0
 
   - count: 91
     scenes: [ "0:57:57" ]
@@ -4678,7 +4755,8 @@ segments:
     scenes: [ "0:58:01" ]
     clips:
     - movie: blood_alley
-      todo: "(0:19:46)"
+      segment: "028642"
+      offset: 572
 
   - count: 137
     scenes: [ "0:58:14" ]
@@ -4819,7 +4897,9 @@ segments:
     scenes: [ "1:00:21" ]
     clips:
     - movie: beyond_the_poseidon_adventure
-      todo: "(0:36:13)"
+      segment: "050350"
+      offset: 5
+      todo: "night filter? otherwise the background is too obvious"
 
   - count: 129
     scenes: [ "1:00:30" ]
@@ -4839,7 +4919,9 @@ segments:
     scenes: [ "1:00:42" ]
     clips:
     - movie: beyond_the_poseidon_adventure
-      todo: "(0:36:27)"
+      segment: "050707"
+      offset: 0
+      todo: "night filter? otherwise the background is too obvious"
 
   - count: 112
     scenes: [ "1:00:53" ]
@@ -5412,7 +5494,8 @@ segments:
     scenes: [ "1:06:11" ]
     clips:
     - movie: deliverance
-      todo: "(0:26:30)"
+      segment: "039884"
+      offset: 1
 
   - count: 217
     scenes: [ "1:06:19", "1:06:25" ]
@@ -5916,7 +5999,8 @@ movies:
     - name: "Beyond.The.Poseidon.Adventure.1979.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "Beyond.The.Poseidon.Adventure.1979.720p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "L'inferno sommerso - Beyond the Poseidon Adventure (1979) 1080p H264 Ac3 Ita Ac3 5.1 Eng Sub Ita Eng-MIRCrew.mkv"
-
+    status:
+      segments: true
 
   blood_alley:
     title: "Blood Alley"
@@ -5936,6 +6020,8 @@ movies:
     - name: "Blood Alley 1955 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
     - name: "Blood.Alley.1955.MULTi.VFi.1080p.HDLight.AC3.2.0.H264-LiHDL.mkv"
+    status:
+      segments: true
 
   bullitt:
     title: "Bullitt"
@@ -6019,6 +6105,8 @@ movies:
       link: https://www.blu-ray.com/dvd/Carson-City-DVD/68310/
     sources:
     - name: "Carson City  (Western 1952)  Randolph Scott, Raymond Massey & Lucille Norman.mp4"
+    status:
+      segments: true
 
   charro:
     title: "Charro!"
@@ -6035,6 +6123,8 @@ movies:
     - name: "Charro.1969.720p.WEB-DL.AAC2.0.H264-RARBG.mkv"
     - name: "Charro! 1969 Deutsch - Youtube [EJajA31vCQk].mp4"
     - name: "Charro.1969.1080p.WEB-DL.DD.2.0.H.264-SbR.mkv"
+    status:
+      segments: true
 
   the_cheyenne_social_club:
     title: "The Cheyenne Social Club"
@@ -6106,6 +6196,8 @@ movies:
     sources:
     - name: "City Beneath the Sea (Irwin Allen, 1971).mkv"
     - name: "La città degli Acquanauti - City Beneath the Sea (1971) SD h264 Ac3 Ita Eng Sub Ita-MIRCrew.mkv"
+    status:
+      segments: true
 
   cleopatra_jones:
     title: "Cleopatra Jones"
@@ -6209,6 +6301,8 @@ movies:
     - name: "Deliverance 1972 1080p MAX WEB-DL DDP5 1 H 264-GPRS.mkv"
       resolution: "1920x800"
     - name: "Délivrance (1972) MULTi VFF 1080p x264 AC3-JiHeff.mkv"
+    status:
+      segments: true
 
   drum_beat:
     title: "Drum Beat"
@@ -6254,6 +6348,8 @@ movies:
     - name: "Executive.Action.1973.720p.WEBRip.x264.AAC-LAMA.mp4"
       resolution: "1280x722"
     - name: "Executive.Action.1973.CUSTOM.MULTI.1080p.AMZN.WEB-DL.H.264-BRDN.mkv"
+    status:
+      segments: true
 
   the_fbi_story:
     title: "The FBI Story"
@@ -6374,8 +6470,11 @@ movies:
       year: 2016
       link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/250764/
     sources:
+    - name: "The Good Guys and the Bad Guys  (Western 1969)  Robert Mitchum, George Kennedy & Martin Balsam.mp4"
     - name: "the.good.guys.and.the.bad.guys.1969.proper.dvdrip.x264-regret.mkv"
       bad: File is corrupted
+    status:
+      segments: true
 
   harper:
     title: "Harper"
@@ -6485,6 +6584,8 @@ movies:
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.1080p.BluRay.x264-[YTS.AM].mp4"
     - name: "The Life and Times of Judge Roy Bean  (Western 1972)  Paul Newman, Ava Gardner & Roy Jenson  (BR).mp4"
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.720p.BluRay.x264-[YTS.AM].mp4"
+    status:
+      segments: true
 
   mad_max:
     title: "Mad Max"
@@ -6642,6 +6743,8 @@ movies:
     - name: "The Old Man and the Sea 1958 1080p BluRay x264 DuaL-TURKO.mkv"
       resolution: "1920x1080"
     - name: "The.Old.Man.And.The.Sea.1958.1080p.WEBRip.x264.AAC-[YTS.MX].mp4"
+    status:
+      segments: true
 
   rampage:
     title: "Rampage"
