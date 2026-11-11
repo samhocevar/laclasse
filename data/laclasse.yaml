@@ -3116,19 +3116,22 @@ segments:
     scenes: [ "0:38:44" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(0:03:48)"
+      segment: "005846"
+      offset: 14
 
   - count: 127
     scenes: [ "0:38:49" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(0:03:55)"
+      segment: "006015"
+      offset: 0
 
   - count: 133
     scenes: [ "0:38:54" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(0:04:06)"
+      segment: "006274"
+      offset: 37
 
   - count: 113
     scenes: [ "0:39:00" ]
@@ -3215,13 +3218,16 @@ segments:
       offset: 0
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      todo: "(cross-fade) (0:12:55)"
+      segment: "019257"
+      offset: -56
+      todo: "(cross-fade)"
 
   - count: 116
     scenes: [ "0:39:59" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(0:13:20)"
+      segment: "019705"
+      offset: 0
 
   - count: 73
     scenes: [ "0:40:03" ]
@@ -3271,11 +3277,18 @@ segments:
     scenes: [ "0:40:25", "0:40:27", "0:40:29" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(cross-fade) (0:10:28)"
+      segment: "015479"
+      offset: 0
+      todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      todo: "(cross-fade) (0:10:35)"
+      segment: "015636"
+      offset: -45
+      todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      todo: "(cross-fade) (0:10:42)"
+      segment: "015816"
+      offset: -105
+      todo: "(cross-fade)"
+    notes: "transitions of length ~ 10 centered at frame #55 and inbetween #109/#110"
 
   - count: 101
     scenes: [ "0:40:32" ]
@@ -3361,19 +3374,22 @@ segments:
     scenes: [ "0:41:31" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(0:35:29)"
+      segment: "051196"
+      offset: 460
 
   - count: 117
     scenes: [ "0:41:36" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(0:35:30)"
+      segment: "051747"
+      offset: 0
 
   - count: 52
     scenes: [ "0:41:39" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(0:35:34)"
+      segment: "051864"
+      offset: 0
 
   - count: 62
     scenes: [ "0:41:41" ]
@@ -3494,32 +3510,37 @@ segments:
     scenes: [ "0:43:38" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:46:58)"
+      segment: "152432"
+      offset: 0
 
   - count: 94
     scenes: [ "0:43:41" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:46:44)"
+      segment: "152109"
+      offset: 1
 
   - count: 81
     scenes: [ "0:43:46" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:46:48)"
+      segment: "152204"
+      offset: 0
 
   - count: 101
     scenes: [ "0:43:49" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:48:15)"
+      segment: "154464"
+      offset: 5
       transform: "hflip"
 
   - count: 25
     scenes: [ "0:43:53" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:48:18)"
+      segment: "154470"
+      offset: 0
       transform: "hflip"
 
   - count: 153
@@ -3533,7 +3554,8 @@ segments:
     scenes: [ "0:44:00" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:48:30)"
+      segment: "154893"
+      offset: 0
       transform: "hflip"
 
   - count: 77
@@ -3548,7 +3570,8 @@ segments:
     scenes: [ "0:44:06" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:47:25)"
+      segment: "153148"
+      offset: 1
 
   - count: 101
     scenes: [ "0:44:08" ]
@@ -3561,7 +3584,9 @@ segments:
     scenes: [ "0:44:12" ]
     clips:
     - movie: jeremiah_johnson
-      todo: "(1:47:20) (ping-pong subtil)"
+      segment: "152999"
+      offset: 43
+      todo: "ping-pong: after frame 13, frame 14 is repeated and playback is backwards (down to offset 5)"
 
   - count: 270
     scenes: [ "0:44:16", "0:44:23" ]
@@ -3626,7 +3651,13 @@ segments:
       offset: 542
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      todo: "(cross-fade) (1:48:39) (effet spéciau du bout de bois peut-être piqué dans 1:47:25)"
+      segment: "155024"
+      offset: -147
+      todo: "(cross-fade)"
+    - movie: jeremiah_johnson
+      segment: "152999"
+      offset: 0
+      todo: "Special effect of wooden panel applied on previous clip, requires at least 232 frames"
 
   - count: 106
     scenes: [ "0:44:55" ]
@@ -6557,6 +6588,8 @@ movies:
       resolution: "3840x2160"
     - name: "Jeremiah.Johnson.1972.EXTENDED.REMASTERED.MULTi.1080p.BluRay.x264.DTS.HD.MA.5.1-RiFiFi.mkv"
     - name: "Jeremiah.Johnson.1972.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.5.1.AVC-Raf66.mkv"
+    status:
+      segments: true
 
   the_life_and_times_of_judge_roy_bean:
     title: "The Life and Times of Judge Roy Bean"
@@ -6665,6 +6698,7 @@ movies:
     - name: "Un.Silencieux.Au.Bout.Du.Canon.1974..Multi.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
     - name: "McQ.1974.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "McQ.1974.720p.BluRay.x264.AAC-[YTS.MX].mp4"
+    - name: "McQ.1974.Multi.VFF.1080p.BluRay.REMUX.HD.MA.2.0.AVC-SamH.mkv"
     status:
       segments: true
 
@@ -7008,6 +7042,7 @@ movies:
     - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
     - name: "Les.Voleurs.De.Trains.1973.MULTI.VFI.1080p.BluRay.DTS.HD.MA.1.0.x264-gismo65.mkv"
+    - name: "The.Train.Robbers.1973.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
     status:
       segments: true
 
