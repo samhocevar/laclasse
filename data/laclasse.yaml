@@ -10,7 +10,8 @@
 #
 
 segments:
-  - count: 125
+  - id: "000000"
+    count: 125
     scenes: [ "0:00:01" ]
     clips:
     - movie: all_the_presidents_men
@@ -18,12 +19,14 @@ segments:
       offset: 7
     notes: "000000 would work better (modern logo) but it changes the length of the movie"
 
-  - count: 177
+  - id: "000125"
+    count: 177
     scenes: [ "0:00:03" ]
     clips:
     - movie: "Attention"
 
-  - count: 283
+  - id: "000302"
+    count: 283
     scenes: [ "0:00:13", "0:00:19" ]
     clips:
     - movie: the_sea_chase
@@ -31,7 +34,8 @@ segments:
       offset: 146
       todo: "(fade from black)"
 
-  - count: 106
+  - id: "000585"
+    count: 106
     scenes: [ "0:00:24" ]
     clips:
     - movie: the_sea_chase
@@ -39,42 +43,48 @@ segments:
       offset: 337
     notes: "The foam at the base of the ship makes it a definite match"
 
-  - count: 214
+  - id: "000691"
+    count: 214
     scenes: [ "0:00:28" ]
     clips:
     - movie: the_sea_chase
       segment: "032690"
       offset: 1
 
-  - count: 56
+  - id: "000905"
+    count: 56
     scenes: [ "0:00:35" ]
     clips:
     - movie: the_sea_chase
       segment: "032982"
       offset: 1
 
-  - count: 54
+  - id: "000961"
+    count: 54
     scenes: [ "0:00:37" ]
     clips:
     - movie: the_sea_chase
       segment: "068406"
       offset: 0
 
-  - count: 78
+  - id: "001015"
+    count: 78
     scenes: [ "0:00:39" ]
     clips:
     - movie: the_crimson_pirate
       segment: "018153"
       offset: 0
 
-  - count: 170
+  - id: "001093"
+    count: 170
     scenes: [ "0:00:41" ]
     clips:
     - movie: the_sea_chase
       segment: "070375"
       offset: 107
 
-  - count: 158
+  - id: "001263"
+    count: 158
     scenes: [ "0:00:48" ]
     clips:
     - movie: the_crimson_pirate
@@ -82,14 +92,16 @@ segments:
       offset: 0
       gravity: top
 
-  - count: 159
+  - id: "001421"
+    count: 159
     scenes: [ "0:00:55" ]
     clips:
     - movie: the_sea_chase
       segment: "077076"
       offset: 1
 
-  - count: 180
+  - id: "001580"
+    count: 180
     scenes: [ "0:01:03" ]
     clips:
     - movie: the_crimson_pirate
@@ -97,14 +109,16 @@ segments:
       offset: 0
       gravity: top
 
-  - count: 53
+  - id: "001760"
+    count: 53
     scenes: [ "0:01:09" ]
     clips:
     - movie: the_sea_chase
       segment: "068051"
       offset: 1
 
-  - count: 94
+  - id: "001813"
+    count: 94
     scenes: [ "0:01:11" ]
     clips:
     - movie: the_crimson_pirate
@@ -112,21 +126,24 @@ segments:
       offset: 1
       gravity: top
 
-  - count: 89
+  - id: "001907"
+    count: 89
     scenes: [ "0:01:14" ]
     clips:
     - movie: the_sea_chase
       segment: "076603"
       offset: 1
 
-  - count: 184
+  - id: "001996"
+    count: 184
     scenes: [ "0:01:18" ]
     clips:
     - movie: the_sea_chase
       segment: "076817"
       offset: 0
 
-  - count: 50
+  - id: "002180"
+    count: 50
     scenes: [ "0:01:26" ]
     clips:
     - movie: the_crimson_pirate
@@ -135,21 +152,24 @@ segments:
       gravity: top
       playback: reverse
 
-  - count: 83
+  - id: "002230"
+    count: 83
     scenes: [ "0:01:28" ]
     clips:
     - movie: the_sea_chase
       segment: "077076"
       offset: 0
 
-  - count: 68
+  - id: "002313"
+    count: 68
     scenes: [ "0:01:30" ]
     clips:
     - movie: the_sea_chase
       segment: "076817"
       offset: 10
 
-  - count: 35
+  - id: "002381"
+    count: 35
     scenes: [ "0:01:33" ]
     clips:
     - movie: the_crimson_pirate
@@ -157,14 +177,16 @@ segments:
       offset: 0
       gravity: top
 
-  - count: 96
+  - id: "002416"
+    count: 96
     scenes: [ "0:01:35" ]
     clips:
     - movie: the_sea_chase
       segment: "070663"
       offset: 9
 
-  - count: 93
+  - id: "002512"
+    count: 93
     scenes: [ "0:01:39" ]
     clips:
     - movie: the_crimson_pirate
@@ -173,28 +195,32 @@ segments:
       gravity: top
       playback: reverse
 
-  - count: 81
+  - id: "002605"
+    count: 81
     scenes: [ "0:01:41" ]
     clips:
     - movie: the_sea_chase
       segment: "077076"
       offset: 1
 
-  - count: 126
+  - id: "002686"
+    count: 126
     scenes: [ "0:01:46" ]
     clips:
     - movie: the_sea_chase
       segment: "077236"
       offset: 4
 
-  - count: 78
+  - id: "002812"
+    count: 78
     scenes: [ "0:01:50" ]
     clips:
     - movie: the_crimson_pirate
       segment: "018153"
       offset: 0
 
-  - count: 206
+  - id: "002890"
+    count: 206
     scenes: [ "0:01:53", "0:01:57" ]
     clips:
     - movie: the_sea_chase
@@ -206,137 +232,157 @@ segments:
       offset: 13
       todo: "(cross-fade)"
 
-  - count: 86
+  - id: "003096"
+    count: 86
     scenes: [ "0:02:02" ]
     clips:
     - movie: the_sea_chase
       segment: "154119"
       offset: 89
 
-  - count: 441
+  - id: "003182"
+    count: 441
     scenes: [ "0:02:11" ]
     clips:
     - movie: the_sea_chase
       segment: "154294"
       offset: 0
 
-  - count: 38
+  - id: "003623"
+    count: 38
     scenes: [ "0:02:22" ]
     clips:
     - movie: blood_alley
       todo: "(introuvable, pas sûr)"
 
-  - count: 73
+  - id: "003661"
+    count: 73
     scenes: [ "0:02:25" ]
     clips:
     - movie: the_sea_chase
       segment: "154294"
       offset: 469
 
-  - count: 85
+  - id: "003734"
+    count: 85
     scenes: [ "0:02:28" ]
     clips:
     - movie: the_sea_chase
       segment: "154836"
       offset: 0
 
-  - count: 27
+  - id: "003819"
+    count: 27
     scenes: [ "0:02:31" ]
     clips:
     - movie: blood_alley
       todo: "(introuvable, pas sûr)"
 
-  - count: 174
+  - id: "003846"
+    count: 174
     scenes: [ "0:02:32" ]
     clips:
     - movie: the_sea_chase
       segment: "158468"
       offset: 1
 
-  - count: 64
+  - id: "004020"
+    count: 64
     scenes: [ "0:02:39" ]
     clips:
     - movie: the_sea_chase
       segment: "158742"
       offset: 23
 
-  - count: 72
+  - id: "004084"
+    count: 72
     scenes: [ "0:02:41" ]
     clips:
     - movie: the_sea_chase
       segment: "158829"
       offset: 0
 
-  - count: 261
+  - id: "004156"
+    count: 261
     scenes: [ "0:02:49" ]
     clips:
     - movie: the_sea_chase
       segment: "161440"
       offset: 50
 
-  - count: 73
+  - id: "004417"
+    count: 73
     scenes: [ "0:02:55" ]
     clips:
     - movie: the_sea_chase
       segment: "152611"
       offset: 224
 
-  - count: 85
+  - id: "004490"
+    count: 85
     scenes: [ "0:02:59" ]
     clips:
     - movie: the_sea_chase
       segment: "161004"
       offset: 46
 
-  - count: 23
+  - id: "004575"
+    count: 23
     scenes: [ "0:03:01" ]
     clips:
     - movie: the_sea_chase
       segment: "161135"
       offset: 0
 
-  - count: 85
+  - id: "004598"
+    count: 85
     scenes: [ "0:03:02" ]
     clips:
     - movie: the_sea_chase
       segment: "165419"
       offset: 1
 
-  - count: 23
+  - id: "004683"
+    count: 23
     scenes: [ "0:03:05" ]
     clips:
     - movie: blood_alley
       todo: "(introuvable, pas sûr)"
 
-  - count: 58
+  - id: "004706"
+    count: 58
     scenes: [ "0:03:07" ]
     clips:
     - movie: the_sea_chase
       segment: "164863"
       offset: 22
 
-  - count: 219
+  - id: "004764"
+    count: 219
     scenes: [ "0:03:15" ]
     clips:
     - movie: the_sea_chase
       segment: "165626"
       offset: 20
 
-  - count: 62
+  - id: "004983"
+    count: 62
     scenes: [ "0:03:18" ]
     clips:
     - movie: the_sea_chase
       segment: "165865"
       offset: 0
 
-  - count: 153
+  - id: "005045"
+    count: 153
     scenes: [ "0:03:20" ]
     clips:
     - movie: the_sea_chase
       segment: "165927"
       offset: 0
 
-  - count: 171
+  - id: "005198"
+    count: 171
     scenes: [ "0:03:26", "0:03:27" ]
     clips:
     - movie: the_arrangement
@@ -344,70 +390,80 @@ segments:
       offset: 1
       todo: "check offset with a better quality dump"
 
-  - count: 110
+  - id: "005369"
+    count: 110
     scenes: [ "0:03:32" ]
     clips:
     - movie: the_arrangement
       segment: "004116"
       offset: 0
 
-  - count: 128
+  - id: "005479"
+    count: 128
     scenes: [ "0:03:37" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "011889"
       offset: 92
 
-  - count: 43
+  - id: "005607"
+    count: 43
     scenes: [ "0:03:41" ]
     clips:
     - movie: harper
       segment: "146529"
       offset: 0
 
-  - count: 26
+  - id: "005650"
+    count: 26
     scenes: [ "0:03:44" ]
     clips:
     - movie: the_arrangement
       segment: "003152"
       offset: 1
 
-  - count: 66
+  - id: "005676"
+    count: 66
     scenes: [ "0:03:45" ]
     clips:
     - movie: harper
       segment: "139349"
       offset: 59
 
-  - count: 70
+  - id: "005742"
+    count: 70
     scenes: [ "0:03:48" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "140549"
       offset: 1
 
-  - count: 167
+  - id: "005812"
+    count: 167
     scenes: [ "0:03:50", "0:03:54" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "140620"
       offset: 0
 
-  - count: 47
+  - id: "005979"
+    count: 47
     scenes: [ "0:03:57" ]
     clips:
     - movie: harper
       segment: "159533"
       offset: 0
 
-  - count: 73
+  - id: "006026"
+    count: 73
     scenes: [ "0:03:59" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "140620"
       offset: 288
 
-  - count: 17
+  - id: "006099"
+    count: 17
     scenes: [ "0:04:01" ]
     clips:
     - movie: harper
@@ -416,21 +472,24 @@ segments:
       gravity: right
       todo: "Zoom (or crop + autozoom) to hide the character on the left"
 
-  - count: 85
+  - id: "006116"
+    count: 85
     scenes: [ "0:04:02" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "051864"
       offset: 87
 
-  - count: 56
+  - id: "006201"
+    count: 56
     scenes: [ "0:04:06" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "051768"
       offset: 40
 
-  - count: 57
+  - id: "006257"
+    count: 57
     scenes: [ "0:04:08" ]
     clips:
     - movie: harper
@@ -438,70 +497,80 @@ segments:
       offset: 16
       gravity: half-right # slightly recenter the character
 
-  - count: 32
+  - id: "006314"
+    count: 32
     scenes: [ "0:04:10" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "105789"
       offset: 33
 
-  - count: 30
+  - id: "006346"
+    count: 30
     scenes: [ "0:04:12" ]
     clips:
     - movie: harper
       segment: "159533"
       offset: 52
 
-  - count: 113
+  - id: "006376"
+    count: 113
     scenes: [ "0:04:14" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "057384"
       offset: 100
 
-  - count: 43
+  - id: "006489"
+    count: 43
     scenes: [ "0:04:17" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "053061"
       offset: 149
 
-  - count: 17
+  - id: "006532"
+    count: 17
     scenes: [ "0:04:18" ]
     clips:
     - movie: mad_max
       segment: "005582"
       offset: 0
 
-  - count: 42
+  - id: "006549"
+    count: 42
     scenes: [ "0:04:19" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "014695"
       offset: 12
 
-  - count: 28
+  - id: "006591"
+    count: 28
     scenes: [ "0:04:21" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "014750"
       offset: 51
 
-  - count: 45
+  - id: "006619"
+    count: 45
     scenes: [ "0:04:23" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "058168"
       offset: 0
 
-  - count: 66
+  - id: "006664"
+    count: 66
     scenes: [ "0:04:25" ]
     clips:
     - movie: bullitt
       segment: "100481"
       offset: 239
 
-  - count: 23
+  - id: "006730"
+    count: 23
     scenes: [ "0:04:27" ]
     clips:
     - movie: harper
@@ -509,21 +578,24 @@ segments:
       offset: 50
       gravity: right # recenter the character
 
-  - count: 43
+  - id: "006753"
+    count: 43
     scenes: [ "0:04:28" ]
     clips:
     - movie: bullitt
       segment: "100481"
       offset: 327
 
-  - count: 25
+  - id: "006796"
+    count: 25
     scenes: [ "0:04:30" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "055432"
       offset: 18
 
-  - count: 17
+  - id: "006821"
+    count: 17
     scenes: [ "0:04:31" ]
     clips:
     - movie: harper
@@ -531,35 +603,40 @@ segments:
       offset: 14
       gravity: right # recenter the character
 
-  - count: 27
+  - id: "006838"
+    count: 27
     scenes: [ "0:04:32" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "013970"
       offset: 0
 
-  - count: 29
+  - id: "006865"
+    count: 29
     scenes: [ "0:04:33" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "056139"
       offset: 0
 
-  - count: 17
+  - id: "006894"
+    count: 17
     scenes: [ "0:04:34" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "056122"
       offset: 0
 
-  - count: 20
+  - id: "006911"
+    count: 20
     scenes: [ "0:04:35" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "056229"
       offset: 0
 
-  - count: 23
+  - id: "006931"
+    count: 23
     scenes: [ "0:04:36" ]
     clips:
     - movie: harper
@@ -567,14 +644,16 @@ segments:
       offset: 102
       gravity: half-right # slightly recenter the character
 
-  - count: 34
+  - id: "006954"
+    count: 34
     scenes: [ "0:04:37" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "016049"
       offset: 2
 
-  - count: 40
+  - id: "006988"
+    count: 40
     scenes: [ "0:04:38" ]
     clips:
     - movie: freebie_and_the_bean
@@ -585,14 +664,16 @@ segments:
       Drop 11 frames: after 2, 5, 9, 12, 15, 19, 22, 25, 29, 32, 35
       So we play 51 frames (50 intervals) in the time for 40 (39 intervals)
 
-  - count: 104
+  - id: "007028"
+    count: 104
     scenes: [ "0:04:39", "0:04:41" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "016049"
       offset: 55
 
-  - count: 152
+  - id: "007132"
+    count: 152
     scenes: [ "0:04:44" ]
     clips:
     - movie: the_towering_inferno
@@ -600,14 +681,16 @@ segments:
       offset: 7
     note: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
 
-  - count: 107
+  - id: "007284"
+    count: 107
     scenes: [ "0:04:50" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086999"
       offset: 0
 
-  - count: 117
+  - id: "007391"
+    count: 117
     scenes: [ "0:04:54" ]
     clips:
     - movie: harper
@@ -615,14 +698,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 69
+  - id: "007508"
+    count: 69
     scenes: [ "0:04:58" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086999"
       offset: 107
 
-  - count: 82
+  - id: "007577"
+    count: 82
     scenes: [ "0:05:01" ]
     clips:
     - movie: harper
@@ -630,14 +715,16 @@ segments:
       offset: 35
       transform: "hflip"
 
-  - count: 73
+  - id: "007659"
+    count: 73
     scenes: [ "0:05:04" ]
     clips:
     - movie: all_the_presidents_men
       segment: "087568"
       offset: 0
 
-  - count: 53
+  - id: "007732"
+    count: 53
     scenes: [ "0:05:07" ]
     clips:
     - movie: harper
@@ -645,217 +732,248 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 103
+  - id: "007785"
+    count: 103
     scenes: [ "0:05:09" ]
     clips:
     - movie: all_the_presidents_men
       segment: "085326"
       offset: 65
 
-  - count: 132
+  - id: "007888"
+    count: 132
     scenes: [ "0:05:13" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086442"
       offset: 1
 
-  - count: 169
+  - id: "008020"
+    count: 169
     scenes: [ "0:05:18" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086575"
       offset: 0
 
-  - count: 127
+  - id: "008189"
+    count: 127
     scenes: [ "0:05:26" ]
     clips:
     - movie: all_the_presidents_men
       segment: "085545"
       offset: 30
 
-  - count: 87
+  - id: "008316"
+    count: 87
     scenes: [ "0:05:32" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086107"
       offset: 0
 
-  - count: 48
+  - id: "008403"
+    count: 48
     scenes: [ "0:05:34" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086194"
       offset: 0
 
-  - count: 44
+  - id: "008451"
+    count: 44
     scenes: [ "0:05:36" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086312"
       offset: 1
 
-  - count: 162
+  - id: "008495"
+    count: 162
     scenes: [ "0:05:38" ]
     clips:
     - movie: all_the_presidents_men
       segment: "085545"
       offset: 129
 
-  - count: 72
+  - id: "008657"
+    count: 72
     scenes: [ "0:05:44" ]
     clips:
     - movie: all_the_presidents_men
       segment: "085836"
       offset: 0
 
-  - count: 199
+  - id: "008729"
+    count: 199
     scenes: [ "0:05:46" ]
     clips:
     - movie: all_the_presidents_men
       segment: "085908"
       offset: 0
 
-  - count: 87
+  - id: "008928"
+    count: 87
     scenes: [ "0:05:55" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086107"
       offset: 0
 
-  - count: 117
+  - id: "009015"
+    count: 117
     scenes: [ "0:06:00" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086194"
       offset: 0
 
-  - count: 131
+  - id: "009132"
+    count: 131
     scenes: [ "0:06:04" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086442"
       offset: 1
 
-  - count: 71
+  - id: "009263"
+    count: 71
     scenes: [ "0:06:08" ]
     clips:
     - movie: all_the_presidents_men
       segment: "087252"
       offset: 1
 
-  - count: 504
+  - id: "009334"
+    count: 504
     scenes: [ "0:06:11" ]
     clips:
     - movie: start_the_revolution_without_me
       segment: "000563"
       offset: 1
 
-  - count: 261
+  - id: "009838"
+    count: 261
     scenes: [ "0:06:31" ]
     clips:
     - movie: start_the_revolution_without_me
       segment: "001104"
       offset: 301
 
-  - count: 217
+  - id: "010099"
+    count: 217
     scenes: [ "0:06:42" ]
     clips:
     - movie: start_the_revolution_without_me
       segment: "127004"
       offset: 1
 
-  - count: 8
+  - id: "010316"
+    count: 8
     scenes: [ "0:06:50" ]
     clips:
     - movie: start_the_revolution_without_me
       segment: "127222"
       offset: 0
 
-  - count: 43
+  - id: "010324"
+    count: 43
     scenes: [ "0:06:51" ]
     clips:
     - movie: start_the_revolution_without_me
       segment: "127230"
       offset: 0
 
-  - count: 60
+  - id: "010367"
+    count: 60
     scenes: [ "0:06:52" ]
     clips:
     - movie: start_the_revolution_without_me
       segment: "127273"
       offset: 0
 
-  - count: 208
+  - id: "010427"
+    count: 208
     scenes: [ "0:06:56" ]
     clips:
     - movie: all_the_presidents_men
       segment: "131623"
       offset: 0
 
-  - count: 127
+  - id: "010635"
+    count: 127
     scenes: [ "0:07:03" ]
     clips:
     - movie: all_the_presidents_men
       segment: "131831"
       offset: 0
 
-  - count: 172
+  - id: "010762"
+    count: 172
     scenes: [ "0:07:09" ]
     clips:
     - movie: all_the_presidents_men
       segment: "132475"
       offset: 1
 
-  - count: 146
+  - id: "010934"
+    count: 146
     scenes: [ "0:07:15" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086575"
       offset: 21
 
-  - count: 95
+  - id: "011080"
+    count: 95
     scenes: [ "0:07:22" ]
     clips:
     - movie: all_the_presidents_men
       segment: "132203"
       offset: 0
 
-  - count: 50
+  - id: "011175"
+    count: 50
     scenes: [ "0:07:24" ]
     clips:
     - movie: all_the_presidents_men
       segment: "086357"
       offset: 35
 
-  - count: 77
+  - id: "011225"
+    count: 77
     scenes: [ "0:07:27" ]
     clips:
     - movie: all_the_presidents_men
       segment: "131623"
       offset: 21
 
-  - count: 399
+  - id: "011302"
+    count: 399
     scenes: [ "0:07:32" ]
     clips:
     - movie: harper
       segment: "079135"
       offset: 18
 
-  - count: 93
+  - id: "011701"
+    count: 93
     scenes: [ "0:07:46" ]
     clips:
     - movie: harper
       segment: "079894"
       offset: 1
 
-  - count: 65
+  - id: "011794"
+    count: 65
     scenes: [ "0:07:49" ]
     clips:
     - movie: harper
       segment: "079988"
       offset: 0
 
-  - count: 40
+  - id: "011859"
+    count: 40
     scenes: [ "0:07:52" ]
     clips:
     - movie: battle_of_the_bulge
@@ -863,14 +981,16 @@ segments:
       offset: 45
       transform: "hflip"
 
-  - count: 73
+  - id: "011899"
+    count: 73
     scenes: [ "0:07:54" ]
     clips:
     - movie: harper
       segment: "079707"
       offset: 113
 
-  - count: 145
+  - id: "011972"
+    count: 145
     scenes: [ "0:07:57" ]
     clips:
     - movie: battle_of_the_bulge
@@ -878,14 +998,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 43
+  - id: "012117"
+    count: 43
     scenes: [ "0:08:03" ]
     clips:
     - movie: harper
       segment: "079707"
       offset: 143
 
-  - count: 104
+  - id: "012160"
+    count: 104
     scenes: [ "0:08:04" ]
     clips:
     - movie: battle_of_the_bulge
@@ -893,14 +1015,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 83
+  - id: "012264"
+    count: 83
     scenes: [ "0:08:09" ]
     clips:
     - movie: harper
       segment: "079707"
       offset: 0
 
-  - count: 605
+  - id: "012347"
+    count: 605
     scenes: [ "0:08:12", "0:08:32" ]
     clips:
     - movie: battle_of_the_bulge
@@ -914,42 +1038,48 @@ segments:
       todo: "flashback fade"
       transform: "hflip"
 
-  - count: 57
+  - id: "012952"
+    count: 57
     scenes: [ "0:08:36" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "141133"
       offset: 2
 
-  - count: 105
+  - id: "013009"
+    count: 105
     scenes: [ "0:08:39" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "141192"
       offset: 0
 
-  - count: 447
+  - id: "013114"
+    count: 447
     scenes: [ "0:08:42" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "141605"
       offset: 3
 
-  - count: 358
+  - id: "013561"
+    count: 358
     scenes: [ "0:09:10" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "009189"
       offset: 865
 
-  - count: 133
+  - id: "013919"
+    count: 133
     scenes: [ "0:09:16" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "011011"
       offset: 16
 
-  - count: 551
+  - id: "014052"
+    count: 551
     scenes: [ "0:09:20", "0:09:27" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -961,28 +1091,32 @@ segments:
       offset: 776
       todo: "(cross-fade)"
 
-  - count: 259
+  - id: "014603"
+    count: 259
     scenes: [ "0:09:44" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "129769"
       offset: 0
 
-  - count: 67
+  - id: "014862"
+    count: 67
     scenes: [ "0:09:53" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "130028"
       offset: 0
 
-  - count: 379
+  - id: "014929"
+    count: 379
     scenes: [ "0:09:55" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "130204"
       offset: 110
 
-  - count: 188
+  - id: "015308"
+    count: 188
     scenes: [ "0:10:10" ]
     clips:
     - movie: the_train_robbers
@@ -990,56 +1124,64 @@ segments:
       offset: 6
       transform: "hflip"
 
-  - count: 166
+  - id: "015496"
+    count: 166
     scenes: [ "0:10:18" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "131043"
       offset: 1
 
-  - count: 242
+  - id: "015662"
+    count: 242
     scenes: [ "0:10:25" ]
     clips:
     - movie: the_train_robbers
       segment: "013875"
       offset: 2
 
-  - count: 183
+  - id: "015904"
+    count: 183
     scenes: [ "0:10:34" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "131272"
       offset: 0
 
-  - count: 27
+  - id: "016087"
+    count: 27
     scenes: [ "0:10:41" ]
     clips:
     - movie: the_train_robbers
       segment: "014427"
       offset: 0
 
-  - count: 126
+  - id: "016114"
+    count: 126
     scenes: [ "0:10:45" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "131507"
       offset: 1
 
-  - count: 223
+  - id: "016240"
+    count: 223
     scenes: [ "0:10:48" ]
     clips:
     - movie: the_train_robbers
       segment: "014427"
       offset: 1
 
-  - count: 359
+  - id: "016463"
+    count: 359
     scenes: [ "0:10:56" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "132060"
       offset: 1
 
-  - count: 131
+  - id: "016822"
+    count: 131
     scenes: [ "0:11:11" ]
     clips:
     - movie: the_train_robbers
@@ -1047,14 +1189,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 81
+  - id: "016953"
+    count: 81
     scenes: [ "0:11:17" ]
     clips:
     - movie: harper
       segment: "079707"
       offset: 0
 
-  - count: 234
+  - id: "017034"
+    count: 234
     scenes: [ "0:11:20" ]
     clips:
     - movie: battle_of_the_bulge
@@ -1062,14 +1206,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 65
+  - id: "017268"
+    count: 65
     scenes: [ "0:11:29" ]
     clips:
     - movie: harper
       segment: "079707"
       offset: 4
 
-  - count: 376
+  - id: "017333"
+    count: 376
     scenes: [ "0:11:33", "0:11:43" ]
     clips:
     - movie: battle_of_the_bulge
@@ -1082,35 +1228,40 @@ segments:
       offset: -247
       todo: "(flashback fade)"
 
-  - count: 84
+  - id: "017709"
+    count: 84
     scenes: [ "0:11:47" ]
     clips:
     - movie: the_searchers
       segment: "117342"
       offset: 1
 
-  - count: 65
+  - id: "017793"
+    count: 65
     scenes: [ "0:11:50" ]
     clips:
     - movie: there_was_a_crooked_man
       segment: "166687"
       offset: 0
 
-  - count: 45
+  - id: "017858"
+    count: 45
     scenes: [ "0:11:52" ]
     clips:
     - movie: drum_beat
       segment: "063859"
       offset: 1
 
-  - count: 24
+  - id: "017903"
+    count: 24
     scenes: [ "0:11:54" ]
     clips:
     - movie: there_was_a_crooked_man
       segment: "077089"
       offset: 84
 
-  - count: 136
+  - id: "017927"
+    count: 136
     scenes: [ "0:11:55" ]
     clips:
     - movie: drum_beat
@@ -1119,35 +1270,40 @@ segments:
       gravity: right
       todo: "pan & crop to hide Alan Ladd"
 
-  - count: 61
+  - id: "018063"
+    count: 61
     scenes: [ "0:12:01" ]
     clips:
     - movie: there_was_a_crooked_man
       segment: "077686"
       offset: 0
 
-  - count: 133
+  - id: "018124"
+    count: 133
     scenes: [ "0:12:03" ]
     clips:
     - movie: drum_beat
       segment: "059965"
       offset: 9
 
-  - count: 64
+  - id: "018257"
+    count: 64
     scenes: [ "0:12:08" ]
     clips:
     - movie: there_was_a_crooked_man
       segment: "077903"
       offset: 0
 
-  - count: 103
+  - id: "018321"
+    count: 103
     scenes: [ "0:12:11" ]
     clips:
     - movie: drum_beat
       segment: "060242"
       offset: 0
 
-  - count: 106
+  - id: "018424"
+    count: 106
     scenes: [ "0:12:15" ]
     clips:
     - movie: there_was_a_crooked_man
@@ -1156,28 +1312,32 @@ segments:
       gravity: left
     notes: Double check gravity once a wider image version is available
 
-  - count: 154
+  - id: "018530"
+    count: 154
     scenes: [ "0:12:19" ]
     clips:
     - movie: drum_beat
       segment: "060647"
       offset: 0
 
-  - count: 33
+  - id: "018684"
+    count: 33
     scenes: [ "0:12:25" ]
     clips:
     - movie: there_was_a_crooked_man
       segment: "080592"
       offset: 0
 
-  - count: 139
+  - id: "018717"
+    count: 139
     scenes: [ "0:12:27" ]
     clips:
     - movie: drum_beat
       segment: "061504"
       offset: 2
 
-  - count: 90
+  - id: "018856"
+    count: 90
     scenes: [ "0:12:33" ]
     clips:
     - movie: there_was_a_crooked_man
@@ -1187,28 +1347,32 @@ segments:
       Syncing done with the lighting on the cheekbones
       My copy of the movie is heavily cropped on the right; check gravity later
 
-  - count: 103
+  - id: "018946"
+    count: 103
     scenes: [ "0:12:36" ]
     clips:
     - movie: drum_beat
       segment: "061504"
       offset: 141
 
-  - count: 176
+  - id: "019049"
+    count: 176
     scenes: [ "0:12:40" ]
     clips:
     - movie: there_was_a_crooked_man
       segment: "080592"
       offset: 0
 
-  - count: 53
+  - id: "019225"
+    count: 53
     scenes: [ "0:12:47" ]
     clips:
     - movie: harper
       segment: "079707"
       offset: 133
 
-  - count: 185
+  - id: "019278"
+    count: 185
     scenes: [ "0:12:49" ]
     clips:
     - movie: battle_of_the_bulge
@@ -1216,14 +1380,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 272
+  - id: "019463"
+    count: 272
     scenes: [ "0:12:57" ]
     clips:
     - movie: harper
       segment: "079988"
       offset: 0
 
-  - count: 656
+  - id: "019735"
+    count: 656
     scenes: [ "0:13:07", "0:13:09" ]
     clips:
     - movie: all_the_presidents_men
@@ -1234,7 +1400,8 @@ segments:
       segment: "080502"
       todo: "(picture-in-picture)"
 
-  - count: 709
+  - id: "020391"
+    count: 709
     scenes: [ "0:13:34", "0:13:40", "0:13:42" ]
     clips:
     - movie: all_the_presidents_men
@@ -1243,7 +1410,8 @@ segments:
       todo: "(fade to black on the right) (red filter) (etc.)"
     notes: "L'offset est bien -1, la première frame est dupliquée dans La Classe"
 
-  - count: 102
+  - id: "021100"
+    count: 102
     scenes: [ "0:14:02", "0:14:05" ]
     clips:
     - movie: all_the_presidents_men
@@ -1251,119 +1419,137 @@ segments:
       offset: 0
       todo: "(yellow filter)"
 
-  - count: 311
+  - id: "021202"
+    count: 311
     scenes: [ "0:14:06" ]
     clips:
     - movie: all_the_presidents_men
       segment: "039552"
       offset: 422
 
-  - count: 43
+  - id: "021513"
+    count: 43
     scenes: [ "0:14:18" ]
     clips:
     - movie: all_the_presidents_men
       segment: "040285"
       offset: 0
 
-  - count: 120
+  - id: "021556"
+    count: 120
     scenes: [ "0:14:21" ]
     clips:
     - movie: the_fbi_story
       todo: "(2:11:44) - around 190600"
 
-  - count: 131
+  - id: "021676"
+    count: 131
     scenes: [ "0:14:26" ]
     clips:
     - movie: all_the_presidents_men
       segment: "040575"
       offset: 0
 
-  - count: 146
+  - id: "021807"
+    count: 146
     scenes: [ "0:14:31" ]
     clips:
     - movie: all_the_presidents_men
       segment: "040706"
       offset: 0
 
-  - count: 201
+  - id: "021953"
+    count: 201
     scenes: [ "0:14:36" ]
     clips:
     - movie: the_fbi_story
 
-  - count: 236
+  - id: "022154"
+    count: 236
     scenes: [ "0:14:44" ]
     clips:
     - movie: all_the_presidents_men
       segment: "039268"
       offset: 0
 
-  - count: 138
+  - id: "022390"
+    count: 138
     scenes: [ "0:14:54" ]
     clips:
     - movie: the_fbi_story
 
-  - count: 24
+  - id: "022528"
+    count: 24
     scenes: [ "0:14:59" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "141133"
       offset: 35
 
-  - count: 129
+  - id: "022552"
+    count: 129
     scenes: [ "0:15:01" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "141192"
       offset: 0
 
-  - count: 290
+  - id: "022681"
+    count: 290
     scenes: [ "0:15:05" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "141605"
       offset: 42
 
-  - count: 270
+  - id: "022971"
+    count: 270
     scenes: [ "0:15:24" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "009189"
       offset: 953
 
-  - count: 128
+  - id: "023241"
+    count: 128
     scenes: [ "0:15:28" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "011011"
       offset: 21
 
-  - count: 119
+  - id: "023369"
+    count: 119
     scenes: [ "0:15:33" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "011227"
       offset: 1
 
-  - count: 151
+  - id: "023488"
+    count: 151
     scenes: [ "0:15:38" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "128442"
       offset: 961
 
-  - count: 254
+  - id: "023639"
+    count: 254
     scenes: [ "0:15:44" ]
     clips:
     - movie: all_the_presidents_men
       segment: "039268"
       todo: "(ping-pong)"
 
-  - count: 157
+  - id: "023893"
+    count: 157
     scenes: [ "0:15:54" ]
     clips:
     - movie: the_fbi_story
 
-  - count: 92
+  - id: "024050"
+    count: 92
     scenes: [ "0:16:00" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1371,7 +1557,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 175
+  - id: "024142"
+    count: 175
     scenes: [ "0:16:04" ]
     clips:
     - movie: rio_bravo
@@ -1379,7 +1566,8 @@ segments:
       offset: 88
       transform: "hflip"
 
-  - count: 196
+  - id: "024317"
+    count: 196
     scenes: [ "0:16:11" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1387,7 +1575,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 407
+  - id: "024513"
+    count: 407
     scenes: [ "0:16:18" ]
     clips:
     - movie: rio_bravo
@@ -1395,7 +1584,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 41
+  - id: "024920"
+    count: 41
     scenes: [ "0:16:35" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1403,7 +1593,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 185
+  - id: "024961"
+    count: 185
     scenes: [ "0:16:37" ]
     clips:
     - movie: rio_bravo
@@ -1411,14 +1602,16 @@ segments:
       offset: 416
       transform: "hflip"
 
-  - count: 64
+  - id: "025146"
+    count: 64
     scenes: [ "0:16:44" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "093824"
       offset: 0
 
-  - count: 130
+  - id: "025210"
+    count: 130
     scenes: [ "0:16:46" ]
     clips:
     - movie: rio_bravo
@@ -1426,7 +1619,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 165
+  - id: "025340"
+    count: 165
     scenes: [ "0:16:52" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1434,7 +1628,8 @@ segments:
       offset: 37
       transform: "hflip"
 
-  - count: 59
+  - id: "025505"
+    count: 59
     scenes: [ "0:16:58" ]
     clips:
     - movie: rio_bravo
@@ -1443,7 +1638,8 @@ segments:
       transform: hflip
       todo: "ping-pong autour de la frame +34"
 
-  - count: 113
+  - id: "025564"
+    count: 113
     scenes: [ "0:17:01" ]
     clips:
     - movie: firecreek
@@ -1451,7 +1647,8 @@ segments:
       offset: 1
     notes: "Proper syncing can be done on frame with darkest reflection (frame 11)"
 
-  - count: 148
+  - id: "025677"
+    count: 148
     scenes: [ "0:17:05" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1459,7 +1656,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 53
+  - id: "025825"
+    count: 53
     scenes: [ "0:17:11" ]
     clips:
     - movie: rio_bravo
@@ -1467,7 +1665,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 194
+  - id: "025878"
+    count: 194
     scenes: [ "0:17:13" ]
     clips:
     - movie: rio_bravo
@@ -1475,7 +1674,8 @@ segments:
       offset: 404
       transform: "hflip"
 
-  - count: 83
+  - id: "026072"
+    count: 83
     scenes: [ "0:17:21" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1483,7 +1683,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 178
+  - id: "026155"
+    count: 178
     scenes: [ "0:17:24" ]
     clips:
     - movie: rio_bravo
@@ -1491,7 +1692,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 43
+  - id: "026333"
+    count: 43
     scenes: [ "0:17:31" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1499,7 +1701,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 155
+  - id: "026376"
+    count: 155
     scenes: [ "0:17:33" ]
     clips:
     - movie: rio_bravo
@@ -1507,7 +1710,8 @@ segments:
       offset: 49
       transform: "hflip"
 
-  - count: 124
+  - id: "026531"
+    count: 124
     scenes: [ "0:17:39", "0:17:43" ]
     clips:
     - movie: rio_bravo
@@ -1521,14 +1725,16 @@ segments:
       todo: "(cross-fade)"
       transform: "hflip"
 
-  - count: 64
+  - id: "026655"
+    count: 64
     scenes: [ "0:17:45" ]
     clips:
     - movie: rio_bravo
       segment: "032490"
       offset: 0
 
-  - count: 226
+  - id: "026719"
+    count: 226
     scenes: [ "0:17:47" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1536,14 +1742,16 @@ segments:
       offset: 1
       transform: "hflip"
 
-  - count: 459
+  - id: "026945"
+    count: 459
     scenes: [ "0:17:56" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "059512"
       offset: 355
 
-  - count: 193
+  - id: "027404"
+    count: 193
     scenes: [ "0:18:14", "0:18:21" ]
     clips:
     - movie: chisum
@@ -1551,42 +1759,48 @@ segments:
       offset: 0
       todo: "Check exact offset with an old copy that may have the mark on frame 27537"
 
-  - count: 49
+  - id: "027597"
+    count: 49
     scenes: [ "0:18:23" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "078924"
       offset: 0
 
-  - count: 132
+  - id: "027646"
+    count: 132
     scenes: [ "0:18:25" ]
     clips:
     - movie: chisum
       segment: "075000"
       offset: 0
 
-  - count: 42
+  - id: "027778"
+    count: 42
     scenes: [ "0:18:29" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "078661"
       offset: 0
 
-  - count: 100
+  - id: "027820"
+    count: 100
     scenes: [ "0:18:31" ]
     clips:
     - movie: chisum
       segment: "075236"
       offset: 0
 
-  - count: 47
+  - id: "027920"
+    count: 47
     scenes: [ "0:18:35" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "078104"
       offset: 8
 
-  - count: 140
+  - id: "027967"
+    count: 140
     scenes: [ "0:18:37" ]
     clips:
     - movie: chisum
@@ -1594,14 +1808,16 @@ segments:
       offset: 6
       todo: "(ping-pong) check offsets and params with a better dump"
 
-  - count: 42
+  - id: "028107"
+    count: 42
     scenes: [ "0:18:42" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "078661"
       offset: 0
 
-  - count: 202
+  - id: "028149"
+    count: 202
     scenes: [ "0:18:44" ]
     clips:
     - movie: chisum
@@ -1609,7 +1825,8 @@ segments:
       offset: 0
       todo: "(ping-pong) 101 frames + 101 frames reversed"
 
-  - count: 51
+  - id: "028351"
+    count: 51
     scenes: [ "0:18:52" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1617,70 +1834,80 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 81
+  - id: "028402"
+    count: 81
     scenes: [ "0:18:54" ]
     clips:
     - movie: chisum
       segment: "075470"
       offset: 0
 
-  - count: 72
+  - id: "028483"
+    count: 72
     scenes: [ "0:18:57" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
       segment: "106593"
       offset: 2
 
-  - count: 95
+  - id: "028555"
+    count: 95
     scenes: [ "0:19:00" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "119692"
       offset: 5
 
-  - count: 130
+  - id: "028650"
+    count: 130
     scenes: [ "0:19:04" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "119812"
       offset: 3
 
-  - count: 46
+  - id: "028780"
+    count: 46
     scenes: [ "0:19:09" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "119945"
       offset: 0
 
-  - count: 97
+  - id: "028826"
+    count: 97
     scenes: [ "0:19:11" ]
     clips:
     - movie: rio_bravo
       segment: "178572"
       offset: 397
 
-  - count: 69
+  - id: "028923"
+    count: 69
     scenes: [ "0:19:15" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
       segment: "107685"
       offset: 3
 
-  - count: 38
+  - id: "028992"
+    count: 38
     scenes: [ "0:19:18" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "120088"
       offset: 0
 
-  - count: 62
+  - id: "029030"
+    count: 62
     scenes: [ "0:19:19" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "119991"
       offset: 0
 
-  - count: 70
+  - id: "029092"
+    count: 70
     scenes: [ "0:19:22" ]
     clips:
     - movie: the_cheyenne_social_club
@@ -1688,119 +1915,136 @@ segments:
       offset: 63
       transform: "hflip"
 
-  - count: 34
+  - id: "029162"
+    count: 34
     scenes: [ "0:19:24" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "120053"
       offset: 0
 
-  - count: 144
+  - id: "029196"
+    count: 144
     scenes: [ "0:19:27" ]
     clips:
     - movie: rio_bravo
       segment: "179587"
       offset: 479
 
-  - count: 195
+  - id: "029340"
+    count: 195
     scenes: [ "0:19:32" ]
     clips:
     - movie: rio_bravo
       segment: "180302"
       offset: 228
 
-  - count: 115
+  - id: "029535"
+    count: 115
     scenes: [ "0:19:40" ]
     clips:
     - movie: rio_bravo
       segment: "180729"
       offset: 18
 
-  - count: 72
+  - id: "029650"
+    count: 72
     scenes: [ "0:19:44" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
       segment: "108729"
       offset: 0
 
-  - count: 50
+  - id: "029722"
+    count: 50
     scenes: [ "0:19:47" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "119812"
       offset: 34
 
-  - count: 27
+  - id: "029772"
+    count: 27
     scenes: [ "0:19:48" ]
     clips:
     - movie: rio_bravo
       segment: "184744"
       offset: 160
 
-  - count: 53
+  - id: "029799"
+    count: 53
     scenes: [ "0:19:50" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "120718"
       offset: 0
 
-  - count: 84
+  - id: "029852"
+    count: 84
     scenes: [ "0:19:52" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "120771"
       offset: 0
 
-  - count: 30
+  - id: "029936"
+    count: 30
     scenes: [ "0:19:55" ]
     clips:
     - movie: rio_bravo
       segment: "183609"
       offset: 0
 
-  - count: 29
+  - id: "029966"
+    count: 29
     scenes: [ "0:19:57" ]
     clips:
     - movie: rio_bravo
       segment: "183580"
       offset: 0
 
-  - count: 34
+  - id: "029995"
+    count: 34
     scenes: [ "0:19:58" ]
     clips:
     - movie: rio_bravo
       segment: "184744"
       offset: 167
 
-  - count: 44
+  - id: "030029"
+    count: 44
     scenes: [ "0:19:59" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "121875"
       offset: 0
 
-  - count: 29
+  - id: "030073"
+    count: 29
     scenes: [ "0:20:01" ]
     clips:
     - movie: rio_bravo
       segment: "183408"
       offset: 0
 
-  - count: 16
+  - id: "030102"
+    count: 16
     scenes: [ "0:20:02" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "122082"
       offset: 0
 
-  - count: 29
+  - id: "030118"
+    count: 29
     scenes: [ "0:20:03" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "122153"
       offset: 0
 
-  - count: 43
+  - id: "030147"
+    count: 43
     scenes: [ "0:20:04" ]
     clips:
     - movie: firecreek
@@ -1808,42 +2052,48 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 80
+  - id: "030190"
+    count: 80
     scenes: [ "0:20:05" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "122201"
       offset: 0
 
-  - count: 14
+  - id: "030270"
+    count: 14
     scenes: [ "0:20:08" ]
     clips:
     - movie: rio_bravo
       segment: "183467"
       offset: 0
 
-  - count: 48
+  - id: "030284"
+    count: 48
     scenes: [ "0:20:10" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "122153"
       offset: 0
 
-  - count: 42
+  - id: "030332"
+    count: 42
     scenes: [ "0:20:11" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "126285"
       offset: 0
 
-  - count: 110
+  - id: "030374"
+    count: 110
     scenes: [ "0:20:13" ]
     clips:
     - movie: rio_bravo
       segment: "184744"
       offset: 88
 
-  - count: 50
+  - id: "030484"
+    count: 50
     scenes: [ "0:20:17" ]
     clips:
     - movie: firecreek
@@ -1851,35 +2101,40 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 91
+  - id: "030534"
+    count: 91
     scenes: [ "0:20:19" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "121386"
       offset: 0
 
-  - count: 100
+  - id: "030625"
+    count: 100
     scenes: [ "0:20:23" ]
     clips:
     - movie: rio_bravo
       segment: "187043"
       offset: 82
 
-  - count: 65
+  - id: "030725"
+    count: 65
     scenes: [ "0:20:27" ]
     clips:
     - movie: rio_bravo
       segment: "187602"
       offset: 0
 
-  - count: 32
+  - id: "030790"
+    count: 32
     scenes: [ "0:20:29" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "126221"
       offset: 0
 
-  - count: 95
+  - id: "030822"
+    count: 95
     scenes: [ "0:20:31" ]
     clips:
     - movie: firecreek
@@ -1887,75 +2142,86 @@ segments:
       offset: 1
       transform: "hflip"
 
-  - count: 105
+  - id: "030917"
+    count: 105
     scenes: [ "0:20:35" ]
     clips:
     - movie: rio_bravo
       segment: "188500"
       offset: 158
 
-  - count: 130
+  - id: "031022"
+    count: 130
     scenes: [ "0:20:39" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "121683"
       offset: 0
 
-  - count: 104
+  - id: "031152"
+    count: 104
     scenes: [ "0:20:44" ]
     clips:
     - movie: rio_bravo
       segment: "188889"
       offset: 217
 
-  - count: 51
+  - id: "031256"
+    count: 51
     scenes: [ "0:20:48" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "121683"
       offset: 37
 
-  - count: 72
+  - id: "031307"
+    count: 72
     scenes: [ "0:20:50" ]
     clips:
     - movie: rio_bravo
       segment: "189293"
       offset: 1
 
-  - count: 38
+  - id: "031379"
+    count: 38
     scenes: [ "0:20:53" ]
     clips:
     - movie: rio_bravo
       segment: "190602"
       offset: 215
 
-  - count: 85
+  - id: "031417"
+    count: 85
     scenes: [ "0:20:55" ]
     clips:
     - movie: rio_bravo
       segment: "190855"
       offset: 0
 
-  - count: 101
+  - id: "031502"
+    count: 101
     scenes: [ "0:20:58" ]
     clips:
     - movie: all_the_presidents_men
       segment: "038923"
       offset: 0
 
-  - count: 219
+  - id: "031603"
+    count: 219
     scenes: [ "0:21:02" ]
     clips:
     - movie: all_the_presidents_men
       segment: "038704"
       offset: 0
 
-  - count: 301
+  - id: "031822"
+    count: 301
     scenes: [ "0:21:11" ]
     clips:
     - movie: the_fbi_story
 
-  - count: 75
+  - id: "032123"
+    count: 75
     scenes: [ "0:21:23" ]
     clips:
     - movie: firecreek
@@ -1963,14 +2229,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 95
+  - id: "032198"
+    count: 95
     scenes: [ "0:21:26" ]
     clips:
     - movie: cahill_us_marshal
       segment: "080877"
       offset: 1
 
-  - count: 111
+  - id: "032293"
+    count: 111
     scenes: [ "0:21:30" ]
     clips:
     - movie: firecreek
@@ -1978,14 +2246,16 @@ segments:
       offset: 1
       transform: "hflip"
 
-  - count: 230
+  - id: "032404"
+    count: 230
     scenes: [ "0:21:34" ]
     clips:
     - movie: cahill_us_marshal
       segment: "081087"
       offset: 1
 
-  - count: 88
+  - id: "032634"
+    count: 88
     scenes: [ "0:21:43" ]
     clips:
     - movie: firecreek
@@ -1993,118 +2263,135 @@ segments:
       offset: 2
       transform: "hflip"
 
-  - count: 208
+  - id: "032722"
+    count: 208
     scenes: [ "0:21:47" ]
     clips:
     - movie: cahill_us_marshal
       segment: "081816"
       offset: 3
 
-  - count: 111
+  - id: "032930"
+    count: 111
     scenes: [ "0:21:55" ]
     clips:
     - movie: all_the_presidents_men
       segment: "039268"
       offset: 24
 
-  - count: 361
+  - id: "033041"
+    count: 361
     scenes: [ "0:22:00" ]
     clips:
     - movie: the_fbi_story
       todo: "(2:11:50)"
 
-  - count: 317
+  - id: "033402"
+    count: 317
     scenes: [ "0:22:14" ]
     clips:
     - movie: all_the_presidents_men
       segment: "163838"
       offset: 662
 
-  - count: 445
+  - id: "033719"
+    count: 445
     scenes: [ "0:22:27" ]
     clips:
     - movie: all_the_presidents_men
       segment: "164817"
       offset: 0
 
-  - count: 523
+  - id: "034164"
+    count: 523
     scenes: [ "0:22:45" ]
     clips:
     - movie: all_the_presidents_men
       segment: "092456"
       offset: 10
 
-  - count: 170
+  - id: "034687"
+    count: 170
     scenes: [ "0:23:06" ]
     clips:
     - movie: oceans_eleven
       segment: "078734"
       offset: 1
 
-  - count: 45
+  - id: "034857"
+    count: 45
     scenes: [ "0:23:12" ]
     clips:
     - movie: all_the_presidents_men
       segment: "127432"
       offset: 0
 
-  - count: 60
+  - id: "034902"
+    count: 60
     scenes: [ "0:23:14" ]
     clips:
     - movie: all_the_presidents_men
       segment: "127658"
       offset: 34
 
-  - count: 83
+  - id: "034962"
+    count: 83
     scenes: [ "0:23:16" ]
     clips:
     - movie: oceans_eleven
       segment: "079872"
       offset: 107
 
-  - count: 233
+  - id: "035045"
+    count: 233
     scenes: [ "0:23:20" ]
     clips:
     - movie: all_the_presidents_men
       segment: "128997"
       offset: 0
 
-  - count: 261
+  - id: "035278"
+    count: 261
     scenes: [ "0:23:29" ]
     clips:
     - movie: oceans_eleven
       segment: "085328"
       offset: 1
 
-  - count: 116
+  - id: "035539"
+    count: 116
     scenes: [ "0:23:40" ]
     clips:
     - movie: all_the_presidents_men
       segment: "127933"
       offset: 24
 
-  - count: 146
+  - id: "035655"
+    count: 146
     scenes: [ "0:23:44" ]
     clips:
     - movie: oceans_eleven
       segment: "078734"
       offset: 204
 
-  - count: 218
+  - id: "035801"
+    count: 218
     scenes: [ "0:23:50" ]
     clips:
     - movie: all_the_presidents_men
       segment: "130764"
       offset: 0
 
-  - count: 189
+  - id: "036019"
+    count: 189
     scenes: [ "0:23:59" ]
     clips:
     - movie: oceans_eleven
       segment: "079872"
       offset: 1
 
-  - count: 235
+  - id: "036208"
+    count: 235
     scenes: [ "0:24:06", "0:24:15" ]
     clips:
     - movie: all_the_presidents_men
@@ -2116,98 +2403,112 @@ segments:
       offset: -178
       todo: "(flashback fade)"
 
-  - count: 261
+  - id: "036443"
+    count: 261
     scenes: [ "0:24:16" ]
     clips:
     - movie: four_for_texas
       segment: "022029"
       offset: 45
 
-  - count: 49
+  - id: "036704"
+    count: 49
     scenes: [ "0:24:26" ]
     clips:
     - movie: four_for_texas
       segment: "023603"
       offset: 0
 
-  - count: 80
+  - id: "036753"
+    count: 80
     scenes: [ "0:24:28" ]
     clips:
     - movie: four_for_texas
       segment: "022456"
       offset: 227
 
-  - count: 67
+  - id: "036833"
+    count: 67
     scenes: [ "0:24:31" ]
     clips:
     - movie: four_for_texas
       segment: "024341"
       offset: 95
 
-  - count: 104
+  - id: "036900"
+    count: 104
     scenes: [ "0:24:34" ]
     clips:
     - movie: four_for_texas
       segment: "024626"
       offset: 0
 
-  - count: 51
+  - id: "037004"
+    count: 51
     scenes: [ "0:24:38" ]
     clips:
     - movie: four_for_texas
       segment: "026313"
       offset: 46
 
-  - count: 69
+  - id: "037055"
+    count: 69
     scenes: [ "0:24:40" ]
     clips:
     - movie: four_for_texas
       segment: "024626"
       todo: "(ping-pong)"
 
-  - count: 64
+  - id: "037124"
+    count: 64
     scenes: [ "0:24:43" ]
     clips:
     - movie: four_for_texas
       segment: "026313"
       todo: "(ping-pong)"
 
-  - count: 47
+  - id: "037188"
+    count: 47
     scenes: [ "0:24:45" ]
     clips:
     - movie: four_for_texas
       segment: "014745"
       offset: 31
 
-  - count: 228
+  - id: "037235"
+    count: 228
     scenes: [ "0:24:47" ]
     clips:
     - movie: four_for_texas
       segment: "024341"
       offset: 56
 
-  - count: 103
+  - id: "037463"
+    count: 103
     scenes: [ "0:24:57" ]
     clips:
     - movie: four_for_texas
       segment: "026412"
       offset: 137
 
-  - count: 99
+  - id: "037566"
+    count: 99
     scenes: [ "0:25:01" ]
     clips:
     - movie: four_for_texas
       segment: "024341"
       offset: 65
 
-  - count: 85
+  - id: "037665"
+    count: 85
     scenes: [ "0:25:05" ]
     clips:
     - movie: four_for_texas
       segment: "017741"
       offset: 0
 
-  - count: 368
+  - id: "037750"
+    count: 368
     scenes: [ "0:25:08", "0:25:12", "0:25:15", "0:25:18", "0:25:21" ]
     clips:
     - movie: four_for_texas
@@ -2217,56 +2518,64 @@ segments:
     - movie: the_fbi_story
       todo: "(cross-fade) (1:24:59) - around 123000"
 
-  - count: 49
+  - id: "038118"
+    count: 49
     scenes: [ "0:25:23" ]
     clips:
     - movie: four_for_texas
       segment: "071942"
       offset: 0
 
-  - count: 654
+  - id: "038167"
+    count: 654
     scenes: [ "0:25:25" ]
     clips:
     - movie: four_for_texas
       segment: "078957"
       offset: 31
 
-  - count: 310
+  - id: "038821"
+    count: 310
     scenes: [ "0:25:51" ]
     clips:
     - movie: four_for_texas
       segment: "081273"
       offset: 7
 
-  - count: 151
+  - id: "039131"
+    count: 151
     scenes: [ "0:26:03" ]
     clips:
     - movie: four_for_texas
       segment: "081960"
       offset: 314
 
-  - count: 364
+  - id: "039282"
+    count: 364
     scenes: [ "0:26:09" ]
     clips:
     - movie: four_for_texas
       segment: "082425"
       offset: 0
 
-  - count: 401
+  - id: "039646"
+    count: 401
     scenes: [ "0:26:24" ]
     clips:
     - movie: four_for_texas
       segment: "081960"
       offset: 0
 
-  - count: 119
+  - id: "040047"
+    count: 119
     scenes: [ "0:26:40" ]
     clips:
     - movie: four_for_texas
       segment: "081838"
       offset: 2
 
-  - count: 233
+  - id: "040166"
+    count: 233
     scenes: [ "0:26:45", "0:26:50" ]
     clips:
     - movie: four_for_texas
@@ -2277,70 +2586,80 @@ segments:
       segment: "071942"
       todo: "(avec filtre bleu) (avec ping-pong pour prolonger ?)"
 
-  - count: 101
+  - id: "040399"
+    count: 101
     scenes: [ "0:26:54" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "100296"
       offset: 1
 
-  - count: 126
+  - id: "040500"
+    count: 126
     scenes: [ "0:26:58" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "100398"
       offset: 0
 
-  - count: 163
+  - id: "040626"
+    count: 163
     scenes: [ "0:27:03" ]
     clips:
     - movie: four_for_texas
       segment: "062490"
       offset: 0
 
-  - count: 160
+  - id: "040789"
+    count: 160
     scenes: [ "0:27:09" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "100596"
       offset: 0
 
-  - count: 147
+  - id: "040949"
+    count: 147
     scenes: [ "0:27:16" ]
     clips:
     - movie: four_for_texas
       segment: "064345"
       offset: 21
 
-  - count: 124
+  - id: "041096"
+    count: 124
     scenes: [ "0:27:22" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "100757"
       offset: 1
 
-  - count: 47
+  - id: "041220"
+    count: 47
     scenes: [ "0:27:27" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "100937"
       offset: 0
 
-  - count: 60
+  - id: "041267"
+    count: 60
     scenes: [ "0:27:29" ]
     clips:
     - movie: four_for_texas
       segment: "062750"
       offset: 127
 
-  - count: 37
+  - id: "041327"
+    count: 37
     scenes: [ "0:27:31" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "101482"
       offset: 30
 
-  - count: 22
+  - id: "041364"
+    count: 22
     scenes: [ "0:27:32" ]
     clips:
     - movie: four_for_texas
@@ -2350,14 +2669,16 @@ segments:
       My dumped movie doesn't have frame 9, and has a deinterleaved
       frame for frame 6... see if another source may have it?
 
-  - count: 21
+  - id: "041386"
+    count: 21
     scenes: [ "0:27:33" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "101747"
       offset: 0
 
-  - count: 32
+  - id: "041407"
+    count: 32
     scenes: [ "0:27:34" ]
     clips:
     - movie: four_for_texas
@@ -2365,49 +2686,56 @@ segments:
       offset: 0
     notes: Sinatra's face in frames 22-23-24 is different on both versions, that's strange
 
-  - count: 86
+  - id: "041439"
+    count: 86
     scenes: [ "0:27:35" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "102099"
       offset: 0
 
-  - count: 126
+  - id: "041525"
+    count: 126
     scenes: [ "0:27:39" ]
     clips:
     - movie: four_for_texas
       segment: "064345"
       todo: "(ping-pong)"
 
-  - count: 243
+  - id: "041651"
+    count: 243
     scenes: [ "0:27:44" ]
     clips:
     - movie: the_cheyenne_social_club
       segment: "102294"
       offset: 0
 
-  - count: 177
+  - id: "041894"
+    count: 177
     scenes: [ "0:27:54" ]
     clips:
     - movie: oceans_eleven
       segment: "078734"
       offset: 1
 
-  - count: 240
+  - id: "042071"
+    count: 240
     scenes: [ "0:28:01" ]
     clips:
     - movie: all_the_presidents_men
       segment: "128378"
       offset: 5
 
-  - count: 189
+  - id: "042311"
+    count: 189
     scenes: [ "0:28:11" ]
     clips:
     - movie: oceans_eleven
       segment: "079872"
       offset: 1
 
-  - count: 302
+  - id: "042500"
+    count: 302
     scenes: [ "0:28:20", "0:28:24" ]
     clips:
     - movie: all_the_presidents_men
@@ -2419,7 +2747,8 @@ segments:
       offset: -101
       todo: "(flashback fade)"
 
-  - count: 281
+  - id: "042802"
+    count: 281
     scenes: [ "0:28:31", "0:28:38" ]
     clips:
     - movie: four_for_texas
@@ -2430,21 +2759,24 @@ segments:
       offset: -187
       todo: "(flashback fade)"
 
-  - count: 136
+  - id: "043083"
+    count: 136
     scenes: [ "0:28:41" ]
     clips:
     - movie: chisum
       segment: "116775"
       offset: 0
 
-  - count: 96
+  - id: "043219"
+    count: 96
     scenes: [ "0:28:47" ]
     clips:
     - movie: chisum
       segment: "116911"
       offset: 0
 
-  - count: 118
+  - id: "043315"
+    count: 118
     scenes: [ "0:28:51" ]
     clips:
     - movie: four_for_texas
@@ -2456,7 +2788,8 @@ segments:
       Frames 113 to 117 are on time
       -> probably caused by deinterlacing when ripping the Betacam DVD? I'll just ignore.
 
-  - count: 295
+  - id: "043433"
+    count: 295
     scenes: [ "0:28:56", "0:29:04" ]
     clips:
     - movie: four_for_texas
@@ -2467,21 +2800,24 @@ segments:
       offset: 734
       todo: "(flashback fade)"
 
-  - count: 39
+  - id: "043728"
+    count: 39
     scenes: [ "0:29:06" ]
     clips:
     - movie: rio_bravo
       segment: "151450"
       todo: "time dilation: frame 4 offset is +340, frame 34 offset is +389"
 
-  - count: 61
+  - id: "043767"
+    count: 61
     scenes: [ "0:29:09" ]
     clips:
     - movie: the_searchers
       segment: "072606"
       offset: 0
 
-  - count: 59
+  - id: "043828"
+    count: 59
     scenes: [ "0:29:11" ]
     clips:
     - movie: rio_bravo
@@ -2489,7 +2825,8 @@ segments:
       offset: 0
       todo: "time dilation: frame 0 offset is +0, frame 55 offset is +83"
 
-  - count: 264
+  - id: "043887"
+    count: 264
     scenes: [ "0:29:13", "0:29:22" ]
     clips:
     - movie: the_searchers
@@ -2501,7 +2838,8 @@ segments:
       offset: -164
       todo: "(flashback fade)"
 
-  - count: 44
+  - id: "044151"
+    count: 44
     scenes: [ "0:29:24" ]
     clips:
     - movie: charro
@@ -2509,56 +2847,64 @@ segments:
       offset: 3
       transform: "hflip"
 
-  - count: 55
+  - id: "044195"
+    count: 55
     scenes: [ "0:29:26" ]
     clips:
     - movie: rio_bravo
       segment: "197377"
       offset: 0
 
-  - count: 94
+  - id: "044250"
+    count: 94
     scenes: [ "0:29:28" ]
     clips:
     - movie: charro
       segment: "056011"
       offset: 0
 
-  - count: 38
+  - id: "044344"
+    count: 38
     scenes: [ "0:29:31" ]
     clips:
     - movie: rio_bravo
       segment: "199438"
       offset: 0
 
-  - count: 93
+  - id: "044382"
+    count: 93
     scenes: [ "0:29:33" ]
     clips:
     - movie: charro
       segment: "052513"
       offset: 0
 
-  - count: 70
+  - id: "044475"
+    count: 70
     scenes: [ "0:29:37" ]
     clips:
     - movie: rio_bravo
       segment: "199638"
       offset: 0
 
-  - count: 41
+  - id: "044545"
+    count: 41
     scenes: [ "0:29:39" ]
     clips:
     - movie: charro
       segment: "052791"
       offset: 0
 
-  - count: 64
+  - id: "044586"
+    count: 64
     scenes: [ "0:29:41" ]
     clips:
     - movie: charro
       segment: "053251"
       offset: 1
 
-  - count: 97
+  - id: "044650"
+    count: 97
     scenes: [ "0:29:43" ]
     clips:
     - movie: rio_bravo
@@ -2566,7 +2912,8 @@ segments:
       offset: 1
       transform: "hflip"
 
-  - count: 572
+  - id: "044747"
+    count: 572
     scenes: [ "0:29:47", "0:29:58", "0:30:05" ]
     clips:
     - movie: charro
@@ -2581,7 +2928,8 @@ segments:
       segment: "118622"
       todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
 
-  - count: 286
+  - id: "045319"
+    count: 286
     scenes: [ "0:30:11", "0:30:14", "0:30:20" ]
     clips:
     - movie: four_for_texas
@@ -2596,35 +2944,40 @@ segments:
       offset: -220
       todo: "(flashback fade)"
 
-  - count: 516
+  - id: "045605"
+    count: 516
     scenes: [ "0:30:22" ]
     clips:
     - movie: city_beneath_the_sea
       segment: "005376"
       offset: 10
 
-  - count: 194
+  - id: "046121"
+    count: 194
     scenes: [ "0:30:46" ]
     clips:
     - movie: city_beneath_the_sea
       segment: "006108"
       offset: 1
 
-  - count: 78
+  - id: "046315"
+    count: 78
     scenes: [ "0:30:51" ]
     clips:
     - movie: city_beneath_the_sea
       segment: "006303"
       offset: 0
 
-  - count: 64
+  - id: "046393"
+    count: 64
     scenes: [ "0:30:55" ]
     clips:
     - movie: city_beneath_the_sea
       segment: "006381"
       offset: 0
 
-  - count: 54
+  - id: "046457"
+    count: 54
     scenes: [ "0:30:57" ]
     clips:
     - movie: city_beneath_the_sea
@@ -2632,7 +2985,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 31
+  - id: "046511"
+    count: 31
     scenes: [ "0:30:58" ]
     clips:
     - movie: city_beneath_the_sea
@@ -2640,7 +2994,8 @@ segments:
       offset: 2
       transform: "hflip"
 
-  - count: 40
+  - id: "046542"
+    count: 40
     scenes: [ "0:31:00" ]
     clips:
     - movie: city_beneath_the_sea
@@ -2648,7 +3003,8 @@ segments:
       offset: 3
       transform: hflip
 
-  - count: 482
+  - id: "046582"
+    count: 482
     scenes: [ "0:31:01" ]
     clips:
     - movie: all_the_presidents_men
@@ -2656,7 +3012,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 35
+  - id: "047064"
+    count: 35
     scenes: [ "0:31:20" ]
     clips:
     - movie: the_candidate
@@ -2664,7 +3021,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 103
+  - id: "047099"
+    count: 103
     scenes: [ "0:31:22" ]
     clips:
     - movie: harper
@@ -2672,7 +3030,8 @@ segments:
       offset: 1
       todo: The sequence was doctored to move the arm higher up in the view!
 
-  - count: 91
+  - id: "047202"
+    count: 91
     scenes: [ "0:31:26" ]
     clips:
     - movie: the_candidate
@@ -2680,14 +3039,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 113
+  - id: "047293"
+    count: 113
     scenes: [ "0:31:30" ]
     clips:
     - movie: harper
       segment: "024785"
       offset: 0
 
-  - count: 41
+  - id: "047406"
+    count: 41
     scenes: [ "0:31:34" ]
     clips:
     - movie: the_candidate
@@ -2695,14 +3056,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 74
+  - id: "047447"
+    count: 74
     scenes: [ "0:31:36" ]
     clips:
     - movie: harper
       segment: "026472"
       offset: 7
 
-  - count: 52
+  - id: "047521"
+    count: 52
     scenes: [ "0:31:39" ]
     clips:
     - movie: the_candidate
@@ -2710,14 +3073,16 @@ segments:
       offset: 0
       transform: hflip
 
-  - count: 70
+  - id: "047573"
+    count: 70
     scenes: [ "0:31:41" ]
     clips:
     - movie: harper
       segment: "024785"
       offset: 41
 
-  - count: 115
+  - id: "047643"
+    count: 115
     scenes: [ "0:31:43" ]
     clips:
     - movie: the_candidate
@@ -2725,14 +3090,16 @@ segments:
       offset: 52
       transform: hflip
 
-  - count: 74
+  - id: "047758"
+    count: 74
     scenes: [ "0:31:48" ]
     clips:
     - movie: harper
       segment: "025024"
       offset: 0
 
-  - count: 52
+  - id: "047832"
+    count: 52
     scenes: [ "0:31:51" ]
     clips:
     - movie: the_candidate
@@ -2740,14 +3107,16 @@ segments:
       offset: 0
       transform: hflip
 
-  - count: 101
+  - id: "047884"
+    count: 101
     scenes: [ "0:31:53" ]
     clips:
     - movie: harper
       segment: "024785"
       offset: 3
 
-  - count: 130
+  - id: "047985"
+    count: 130
     scenes: [ "0:31:57" ]
     clips:
     - movie: the_candidate
@@ -2755,14 +3124,16 @@ segments:
       offset: 20
       transform: hflip
 
-  - count: 56
+  - id: "048115"
+    count: 56
     scenes: [ "0:32:02" ]
     clips:
     - movie: harper
       segment: "025226"
       offset: 1
 
-  - count: 12
+  - id: "048171"
+    count: 12
     scenes: [ "0:32:05" ]
     clips:
     - movie: the_candidate
@@ -2770,7 +3141,8 @@ segments:
       offset: 1
       transform: hflip
 
-  - count: 104
+  - id: "048183"
+    count: 104
     scenes: [ "0:32:06" ]
     clips:
     - movie: the_candidate
@@ -2778,14 +3150,16 @@ segments:
       offset: 0
       transform: hflip
 
-  - count: 40
+  - id: "048287"
+    count: 40
     scenes: [ "0:32:09" ]
     clips:
     - movie: harper
       segment: "025226"
       offset: 88
 
-  - count: 91
+  - id: "048327"
+    count: 91
     scenes: [ "0:32:11" ]
     clips:
     - movie: the_candidate
@@ -2793,14 +3167,16 @@ segments:
       offset: 0
       transform: hflip
 
-  - count: 55
+  - id: "048418"
+    count: 55
     scenes: [ "0:32:15" ]
     clips:
     - movie: harper
       segment: "025596"
       offset: 0
 
-  - count: 53
+  - id: "048473"
+    count: 53
     scenes: [ "0:32:17" ]
     clips:
     - movie: the_candidate
@@ -2808,7 +3184,8 @@ segments:
       offset: 1
       transform: hflip
 
-  - count: 50
+  - id: "048526"
+    count: 50
     scenes: [ "0:32:19" ]
     clips:
     - movie: the_candidate
@@ -2816,126 +3193,144 @@ segments:
       offset: 0
       transform: hflip
 
-  - count: 796
+  - id: "048576"
+    count: 796
     scenes: [ "0:32:21" ]
     clips:
     - movie: all_the_presidents_men
       segment: "172819"
       offset: 0
 
-  - count: 99
+  - id: "049372"
+    count: 99
     scenes: [ "0:32:52" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173615"
       offset: 1
 
-  - count: 148
+  - id: "049471"
+    count: 148
     scenes: [ "0:32:56" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173715"
       offset: 0
 
-  - count: 965
+  - id: "049619"
+    count: 965
     scenes: [ "0:33:03" ]
     clips:
     - movie: all_the_presidents_men
       segment: "159544"
       offset: 0
 
-  - count: 344
+  - id: "050584"
+    count: 344
     scenes: [ "0:33:41" ]
     clips:
     - movie: straight_time
       segment: "015326"
       offset: 2
 
-  - count: 120
+  - id: "050928"
+    count: 120
     scenes: [ "0:33:56" ]
     clips:
     - movie: executive_action
       segment: "027718"
       offset: 411
 
-  - count: 93
+  - id: "051048"
+    count: 93
     scenes: [ "0:34:00" ]
     clips:
     - movie: straight_time
       segment: "021901"
       offset: 0
 
-  - count: 228
+  - id: "051141"
+    count: 228
     scenes: [ "0:34:04" ]
     clips:
     - movie: executive_action
       segment: "030631"
       offset: 1
 
-  - count: 88
+  - id: "051369"
+    count: 88
     scenes: [ "0:34:12" ]
     clips:
     - movie: straight_time
       segment: "021708"
       offset: 0
 
-  - count: 93
+  - id: "051457"
+    count: 93
     scenes: [ "0:34:15" ]
     clips:
     - movie: executive_action
       segment: "030941"
       offset: 0
 
-  - count: 469
+  - id: "051550"
+    count: 469
     scenes: [ "0:34:20" ]
     clips:
     - movie: straight_time
       segment: "022059"
       offset: 0
 
-  - count: 438
+  - id: "052019"
+    count: 438
     scenes: [ "0:34:42" ]
     clips:
     - movie: executive_action
       segment: "031066"
       offset: 1
 
-  - count: 74
+  - id: "052457"
+    count: 74
     scenes: [ "0:34:56" ]
     clips:
     - movie: straight_time
       segment: "021901"
       offset: 0
 
-  - count: 306
+  - id: "052531"
+    count: 306
     scenes: [ "0:34:59" ]
     clips:
     - movie: executive_action
       segment: "031066"
       offset: 76
 
-  - count: 90
+  - id: "052837"
+    count: 90
     scenes: [ "0:35:11" ]
     clips:
     - movie: straight_time
       segment: "021708"
       offset: 0
 
-  - count: 373
+  - id: "052927"
+    count: 373
     scenes: [ "0:35:14" ]
     clips:
     - movie: executive_action
       segment: "031066"
       offset: 66
 
-  - count: 93
+  - id: "053300"
+    count: 93
     scenes: [ "0:35:30" ]
     clips:
     - movie: straight_time
       segment: "021901"
       offset: 0
 
-  - count: 58
+  - id: "053393"
+    count: 58
     scenes: [ "0:35:34" ]
     clips:
     - movie: executive_action
@@ -2943,28 +3338,32 @@ segments:
       offset: 63
       todo: "(ping-pong: first 30 frames forward, then 28 next ones backwards)"
 
-  - count: 136
+  - id: "053451"
+    count: 136
     scenes: [ "0:35:36" ]
     clips:
     - movie: straight_time
       segment: "024407"
       offset: 41
 
-  - count: 144
+  - id: "053587"
+    count: 144
     scenes: [ "0:35:42" ]
     clips:
     - movie: straight_time
       segment: "064841"
       offset: 14
 
-  - count: 111
+  - id: "053731"
+    count: 111
     scenes: [ "0:35:47" ]
     clips:
     - movie: straight_time
       segment: "066197"
       offset: 0
 
-  - count: 83
+  - id: "053842"
+    count: 83
     scenes: [ "0:35:52" ]
     clips:
     - movie: harper
@@ -2972,28 +3371,32 @@ segments:
       offset: 19
       gravity: right # recenter the character
 
-  - count: 692
+  - id: "053925"
+    count: 692
     scenes: [ "0:35:54" ]
     clips:
     - movie: the_candidate
       segment: "129292"
       offset: 146
 
-  - count: 202
+  - id: "054617"
+    count: 202
     scenes: [ "0:36:23" ]
     clips:
     - movie: straight_time
       segment: "067288"
       offset: 0
 
-  - count: 254
+  - id: "054819"
+    count: 254
     scenes: [ "0:36:31" ]
     clips:
     - movie: the_candidate
       segment: "130879"
       offset: 153
 
-  - count: 228
+  - id: "055073"
+    count: 228
     scenes: [ "0:36:41" ]
     clips:
     - movie: harper
@@ -3001,28 +3404,32 @@ segments:
       offset: 0
       gravity: right # recenter the character
 
-  - count: 82
+  - id: "055301"
+    count: 82
     scenes: [ "0:36:50" ]
     clips:
     - movie: straight_time
       segment: "066197"
       offset: 0
 
-  - count: 58
+  - id: "055383"
+    count: 58
     scenes: [ "0:36:54" ]
     clips:
     - movie: straight_time
       segment: "066813"
       offset: 0
 
-  - count: 44
+  - id: "055441"
+    count: 44
     scenes: [ "0:36:55" ]
     clips:
     - movie: straight_time
       segment: "066871"
       offset: 0
 
-  - count: 56
+  - id: "055485"
+    count: 56
     scenes: [ "0:36:57" ]
     clips:
     - movie: harper
@@ -3030,21 +3437,24 @@ segments:
       offset: 76
       todo: "(rotated)"
 
-  - count: 69
+  - id: "055541"
+    count: 69
     scenes: [ "0:36:59" ]
     clips:
     - movie: straight_time
       segment: "066940"
       offset: 0
 
-  - count: 253
+  - id: "055610"
+    count: 253
     scenes: [ "0:37:02" ]
     clips:
     - movie: the_candidate
       segment: "129292"
       offset: 743
 
-  - count: 77
+  - id: "055863"
+    count: 77
     scenes: [ "0:37:12" ]
     clips:
     - movie: harper
@@ -3052,56 +3462,64 @@ segments:
       offset: 43
       gravity: half-right # slightly recenter the character
 
-  - count: 86
+  - id: "055940"
+    count: 86
     scenes: [ "0:37:16" ]
     clips:
     - movie: the_candidate
       segment: "131340"
       offset: 1
 
-  - count: 25
+  - id: "056026"
+    count: 25
     scenes: [ "0:37:19" ]
     clips:
     - movie: straight_time
       segment: "067288"
       offset: 153
 
-  - count: 9
+  - id: "056051"
+    count: 9
     scenes: [ "0:37:20" ]
     clips:
     - movie: mad_max
       segment: "010605"
       offset: 22
 
-  - count: 17
+  - id: "056060"
+    count: 17
     scenes: [ "0:37:21" ]
     clips:
     - movie: mad_max
       segment: "010663"
       offset: 1
 
-  - count: 30
+  - id: "056077"
+    count: 30
     scenes: [ "0:37:22" ]
     clips:
     - movie: mad_max
       segment: "010690"
       offset: 1
 
-  - count: 32
+  - id: "056107"
+    count: 32
     scenes: [ "0:37:23" ]
     clips:
     - movie: straight_time
       segment: "067141"
       offset: 6
 
-  - count: 39
+  - id: "056139"
+    count: 39
     scenes: [ "0:37:24" ]
     clips:
     - movie: straight_time
       segment: "067179"
       offset: 0
 
-  - count: 69
+  - id: "056178"
+    count: 69
     scenes: [ "0:37:25" ]
     clips:
     - movie: the_towering_inferno
@@ -3109,14 +3527,16 @@ segments:
       offset: 90
     note: "Segment matching is hard but will be trivial once we fix the longer similar sequence"
 
-  - count: 236
+  - id: "056247"
+    count: 236
     scenes: [ "0:37:27" ]
     clips:
     - movie: straight_time
       segment: "079773"
       offset: 1
 
-  - count: 147
+  - id: "056483"
+    count: 147
     scenes: [ "0:37:37" ]
     clips:
     - movie: harper
@@ -3124,14 +3544,16 @@ segments:
       offset: 45
       transform: "hflip"
 
-  - count: 231
+  - id: "056630"
+    count: 231
     scenes: [ "0:37:44" ]
     clips:
     - movie: straight_time
       segment: "078903"
       offset: 28
 
-  - count: 483
+  - id: "056861"
+    count: 483
     scenes: [ "0:37:54" ]
     clips:
     - movie: harper
@@ -3140,14 +3562,16 @@ segments:
       transform: hflip
       gravity: half-right
 
-  - count: 237
+  - id: "057344"
+    count: 237
     scenes: [ "0:38:12" ]
     clips:
     - movie: straight_time
       segment: "079773"
       offset: 0
 
-  - count: 299
+  - id: "057581"
+    count: 299
     scenes: [ "0:38:21" ]
     clips:
     - movie: harper
@@ -3155,35 +3579,40 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 236
+  - id: "057880"
+    count: 236
     scenes: [ "0:38:33" ]
     clips:
     - movie: straight_time
       segment: "079773"
       offset: 1
 
-  - count: 155
+  - id: "058116"
+    count: 155
     scenes: [ "0:38:44" ]
     clips:
     - movie: jeremiah_johnson
       segment: "005846"
       offset: 14
 
-  - count: 127
+  - id: "058271"
+    count: 127
     scenes: [ "0:38:49" ]
     clips:
     - movie: jeremiah_johnson
       segment: "006015"
       offset: 0
 
-  - count: 133
+  - id: "058398"
+    count: 133
     scenes: [ "0:38:54" ]
     clips:
     - movie: jeremiah_johnson
       segment: "006274"
       offset: 37
 
-  - count: 113
+  - id: "058531"
+    count: 113
     scenes: [ "0:39:00" ]
     clips:
     - movie: all_the_presidents_men
@@ -3191,7 +3620,8 @@ segments:
       offset: 5
       transform: "hflip"
 
-  - count: 54
+  - id: "058644"
+    count: 54
     scenes: [ "0:39:04" ]
     clips:
     - movie: all_the_presidents_men
@@ -3199,7 +3629,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 109
+  - id: "058698"
+    count: 109
     scenes: [ "0:39:06" ]
     clips:
     - movie: all_the_presidents_men
@@ -3207,14 +3638,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 138
+  - id: "058807"
+    count: 138
     scenes: [ "0:39:10" ]
     clips:
     - movie: all_the_presidents_men
       segment: "065281"
       offset: 0
 
-  - count: 68
+  - id: "058945"
+    count: 68
     scenes: [ "0:39:16" ]
     clips:
     - movie: all_the_presidents_men
@@ -3222,7 +3655,8 @@ segments:
       offset: 2
       transform: "hflip"
 
-  - count: 225
+  - id: "059013"
+    count: 225
     scenes: [ "0:39:18", "0:39:24" ]
     clips:
     - movie: all_the_presidents_men
@@ -3234,21 +3668,24 @@ segments:
       offset: -115
       todo: "(flashback fade)"
 
-  - count: 137
+  - id: "059238"
+    count: 137
     scenes: [ "0:39:28" ]
     clips:
     - movie: deliverance
       segment: "062106"
       offset: 1
 
-  - count: 129
+  - id: "059375"
+    count: 129
     scenes: [ "0:39:35" ]
     clips:
     - movie: deliverance
       segment: "062244"
       offset: 0
 
-  - count: 286
+  - id: "059504"
+    count: 286
     scenes: [ "0:39:38", "0:39:42" ]
     clips:
     - movie: deliverance
@@ -3260,7 +3697,8 @@ segments:
       offset: -89
       todo: "(flashback fade)"
 
-  - count: 237
+  - id: "059790"
+    count: 237
     scenes: [ "0:39:49", "0:39:52" ]
     clips:
     - movie: all_the_presidents_men
@@ -3272,35 +3710,40 @@ segments:
       offset: -56
       todo: "(cross-fade)"
 
-  - count: 116
+  - id: "060027"
+    count: 116
     scenes: [ "0:39:59" ]
     clips:
     - movie: jeremiah_johnson
       segment: "019705"
       offset: 0
 
-  - count: 73
+  - id: "060143"
+    count: 73
     scenes: [ "0:40:03" ]
     clips:
     - movie: all_the_presidents_men
       segment: "148021"
       offset: 4
 
-  - count: 71
+  - id: "060216"
+    count: 71
     scenes: [ "0:40:06" ]
     clips:
     - movie: when_time_ran_out
       segment: "026092"
       offset: 4
 
-  - count: 158
+  - id: "060287"
+    count: 158
     scenes: [ "0:40:09" ]
     clips:
     - movie: all_the_presidents_men
       segment: "148809"
       offset: 0
 
-  - count: 92
+  - id: "060445"
+    count: 92
     scenes: [ "0:40:16" ]
     clips:
     - movie: when_time_ran_out
@@ -3308,14 +3751,16 @@ segments:
       offset: 116
       transform: "hflip"
 
-  - count: 41
+  - id: "060537"
+    count: 41
     scenes: [ "0:40:19" ]
     clips:
     - movie: all_the_presidents_men
       segment: "148348"
       offset: 0
 
-  - count: 86
+  - id: "060578"
+    count: 86
     scenes: [ "0:40:21" ]
     clips:
     - movie: when_time_ran_out
@@ -3323,7 +3768,8 @@ segments:
       offset: 30
       transform: "hflip"
 
-  - count: 183
+  - id: "060664"
+    count: 183
     scenes: [ "0:40:25", "0:40:27", "0:40:29" ]
     clips:
     - movie: jeremiah_johnson
@@ -3340,35 +3786,40 @@ segments:
       todo: "(cross-fade)"
     notes: "transitions of length ~ 10 centered at frame #55 and inbetween #109/#110"
 
-  - count: 101
+  - id: "060847"
+    count: 101
     scenes: [ "0:40:32" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
       segment: "025328"
       offset: 1
 
-  - count: 396
+  - id: "060948"
+    count: 396
     scenes: [ "0:40:36" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
       segment: "022896"
       offset: 818
 
-  - count: 98
+  - id: "061344"
+    count: 98
     scenes: [ "0:40:51" ]
     clips:
     - movie: around_the_world_in_eighty_days
       segment: "078395"
       offset: 1
 
-  - count: 137
+  - id: "061442"
+    count: 137
     scenes: [ "0:40:56" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
       segment: "024152"
       offset: 0
 
-  - count: 155
+  - id: "061579"
+    count: 155
     scenes: [ "0:41:01", "0:41:06" ]
     clips:
     - movie: around_the_world_in_eighty_days
@@ -3380,28 +3831,32 @@ segments:
       offset: -94
       todo: "(flashback fade)"
 
-  - count: 33
+  - id: "061734"
+    count: 33
     scenes: [ "0:41:07" ]
     clips:
     - movie: chisum
       segment: "149798"
       offset: 20
 
-  - count: 51
+  - id: "061767"
+    count: 51
     scenes: [ "0:41:09" ]
     clips:
     - movie: chisum
       segment: "150727"
       offset: 0
 
-  - count: 47
+  - id: "061818"
+    count: 47
     scenes: [ "0:41:11" ]
     clips:
     - movie: chisum
       segment: "150136"
       offset: 2
 
-  - count: 182
+  - id: "061865"
+    count: 182
     scenes: [ "0:41:13", "0:41:17" ]
     clips:
     - movie: chisum
@@ -3413,70 +3868,80 @@ segments:
       offset: -75
       todo: "(flashback fade)"
 
-  - count: 286
+  - id: "062047"
+    count: 286
     scenes: [ "0:41:21" ]
     clips:
     - movie: the_life_and_times_of_judge_roy_bean
       segment: "029062"
       offset: 98
 
-  - count: 91
+  - id: "062333"
+    count: 91
     scenes: [ "0:41:31" ]
     clips:
     - movie: jeremiah_johnson
       segment: "051196"
       offset: 460
 
-  - count: 117
+  - id: "062424"
+    count: 117
     scenes: [ "0:41:36" ]
     clips:
     - movie: jeremiah_johnson
       segment: "051747"
       offset: 0
 
-  - count: 52
+  - id: "062541"
+    count: 52
     scenes: [ "0:41:39" ]
     clips:
     - movie: jeremiah_johnson
       segment: "051864"
       offset: 0
 
-  - count: 62
+  - id: "062593"
+    count: 62
     scenes: [ "0:41:41" ]
     clips:
     - movie: all_the_presidents_men
       segment: "065219"
       offset: 0
 
-  - count: 145
+  - id: "062655"
+    count: 145
     scenes: [ "0:41:44" ]
     clips:
     - movie: oceans_eleven
       segment: "044598"
       offset: 0
 
-  - count: 66
+  - id: "062800"
+    count: 66
     scenes: [ "0:41:49" ]
     clips:
     - movie: all_the_presidents_men
       segment: "065725"
       offset: 0
 
-  - count: 118
+  - id: "062866"
+    count: 118
     scenes: [ "0:41:53" ]
     clips:
     - movie: oceans_eleven
       segment: "044801"
       offset: 0
 
-  - count: 159
+  - id: "062984"
+    count: 159
     scenes: [ "0:41:58" ]
     clips:
     - movie: all_the_presidents_men
       segment: "066016"
       offset: 0
 
-  - count: 449
+  - id: "063143"
+    count: 449
     scenes: [ "0:42:04", "0:42:19" ]
     clips:
     - movie: oceans_eleven
@@ -3488,56 +3953,64 @@ segments:
       offset: 692
       todo: "(flashback fade)"
 
-  - count: 843
+  - id: "063592"
+    count: 843
     scenes: [ "0:42:21" ]
     clips:
     - movie: rio_bravo
       segment: "119420"
       offset: 275
 
-  - count: 108
+  - id: "064435"
+    count: 108
     scenes: [ "0:42:56" ]
     clips:
     - movie: rio_bravo
       segment: "120538"
       offset: 0
 
-  - count: 98
+  - id: "064543"
+    count: 98
     scenes: [ "0:42:59" ]
     clips:
     - movie: rio_bravo
       segment: "120646"
       offset: 0
 
-  - count: 224
+  - id: "064641"
+    count: 224
     scenes: [ "0:43:04" ]
     clips:
     - movie: rio_bravo
       segment: "120744"
       offset: 0
 
-  - count: 36
+  - id: "064865"
+    count: 36
     scenes: [ "0:43:12" ]
     clips:
     - movie: rio_bravo
       segment: "120968"
       offset: 0
 
-  - count: 43
+  - id: "064901"
+    count: 43
     scenes: [ "0:43:14" ]
     clips:
     - movie: rio_bravo
       segment: "121004"
       offset: 0
 
-  - count: 116
+  - id: "064944"
+    count: 116
     scenes: [ "0:43:16" ]
     clips:
     - movie: rio_bravo
       segment: "121095"
       offset: 1
 
-  - count: 346
+  - id: "065060"
+    count: 346
     scenes: [ "0:43:20", "0:43:25" ]
     clips:
     - movie: rio_bravo
@@ -3549,35 +4022,40 @@ segments:
       offset: -31
       todo: "(flashback fade)"
 
-  - count: 80
+  - id: "065406"
+    count: 80
     scenes: [ "0:43:34" ]
     clips:
     - movie: all_the_presidents_men
       segment: "065449"
       offset: 0
 
-  - count: 114
+  - id: "065486"
+    count: 114
     scenes: [ "0:43:38" ]
     clips:
     - movie: jeremiah_johnson
       segment: "152432"
       offset: 0
 
-  - count: 94
+  - id: "065600"
+    count: 94
     scenes: [ "0:43:41" ]
     clips:
     - movie: jeremiah_johnson
       segment: "152109"
       offset: 1
 
-  - count: 81
+  - id: "065694"
+    count: 81
     scenes: [ "0:43:46" ]
     clips:
     - movie: jeremiah_johnson
       segment: "152204"
       offset: 0
 
-  - count: 101
+  - id: "065775"
+    count: 101
     scenes: [ "0:43:49" ]
     clips:
     - movie: jeremiah_johnson
@@ -3585,7 +4063,8 @@ segments:
       offset: 5
       transform: "hflip"
 
-  - count: 25
+  - id: "065876"
+    count: 25
     scenes: [ "0:43:53" ]
     clips:
     - movie: jeremiah_johnson
@@ -3593,14 +4072,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 153
+  - id: "065901"
+    count: 153
     scenes: [ "0:43:54" ]
     clips:
     - movie: the_old_man_and_the_sea
       segment: "010856"
       offset: 0
 
-  - count: 80
+  - id: "066054"
+    count: 80
     scenes: [ "0:44:00" ]
     clips:
     - movie: jeremiah_johnson
@@ -3608,28 +4089,32 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 77
+  - id: "066134"
+    count: 77
     scenes: [ "0:44:03" ]
     clips:
     - movie: the_old_man_and_the_sea
       segment: "011118"
       offset: 0
 
-  - count: 64
+  - id: "066211"
+    count: 64
     scenes: [ "0:44:06" ]
     clips:
     - movie: jeremiah_johnson
       segment: "153148"
       offset: 1
 
-  - count: 101
+  - id: "066275"
+    count: 101
     scenes: [ "0:44:08" ]
     clips:
     - movie: the_old_man_and_the_sea
       segment: "010564"
       offset: 113
 
-  - count: 67
+  - id: "066376"
+    count: 67
     scenes: [ "0:44:12" ]
     clips:
     - movie: jeremiah_johnson
@@ -3637,7 +4122,8 @@ segments:
       offset: 43
       todo: "ping-pong: after frame 13, frame 14 is repeated and playback is backwards (down to offset 5)"
 
-  - count: 270
+  - id: "066443"
+    count: 270
     scenes: [ "0:44:16", "0:44:23" ]
     clips:
     - movie: the_old_man_and_the_sea
@@ -3650,14 +4136,16 @@ segments:
       transform: "hflip"
       todo: "(cross-fade)"
 
-  - count: 84
+  - id: "066713"
+    count: 84
     scenes: [ "0:44:26" ]
     clips:
     - movie: the_old_man_and_the_sea
       segment: "047353"
       offset: 59
 
-  - count: 52
+  - id: "066797"
+    count: 52
     scenes: [ "0:44:30" ]
     clips:
     - movie: the_train_robbers
@@ -3665,35 +4153,40 @@ segments:
       offset: 967
       transform: hflip
 
-  - count: 39
+  - id: "066849"
+    count: 39
     scenes: [ "0:44:32" ]
     clips:
     - movie: the_old_man_and_the_sea
       segment: "048588"
       offset: 69
 
-  - count: 41
+  - id: "066888"
+    count: 41
     scenes: [ "0:44:33" ]
     clips:
     - movie: the_cowboys
       segment: "050899"
       todo: "ping-pong: offsets #14 to #0, #0 to #6, #5 to #0, #0 to #6, #5 to #0"
 
-  - count: 43
+  - id: "066929"
+    count: 43
     scenes: [ "0:44:35" ]
     clips:
     - movie: the_old_man_and_the_sea
       segment: "048588"
       offset: 496
 
-  - count: 68
+  - id: "066972"
+    count: 68
     scenes: [ "0:44:37" ]
     clips:
     - movie: the_cowboys
       segment: "050899"
       todo: "ping-pong: offsets #11 to #20, #19 to #0, #0 to #6, #5 to #0, #1 to #6, #5 to #0, #0 to #6, #5 to #0"
 
-  - count: 379
+  - id: "067040"
+    count: 379
     scenes: [ "0:44:40", "0:44:46" ]
     clips:
     - movie: the_old_man_and_the_sea
@@ -3709,7 +4202,8 @@ segments:
       offset: 0
       todo: "Special effect of wooden panel applied on previous clip, requires at least 232 frames"
 
-  - count: 106
+  - id: "067419"
+    count: 106
     scenes: [ "0:44:55" ]
     clips:
     - movie: the_towering_inferno
@@ -3717,28 +4211,32 @@ segments:
       offset: 53
     note: "Segment matching is hard but will be trivial once we fix the longer similar sequence"
 
-  - count: 447
+  - id: "067525"
+    count: 447
     scenes: [ "0:44:58" ]
     clips:
     - movie: all_the_presidents_men
       segment: "172819"
       offset: 349
 
-  - count: 100
+  - id: "067972"
+    count: 100
     scenes: [ "0:45:17" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173615"
       offset: 0
 
-  - count: 148
+  - id: "068072"
+    count: 148
     scenes: [ "0:45:21" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173715"
       offset: 0
 
-  - count: 241
+  - id: "068220"
+    count: 241
     scenes: [ "0:45:27" ]
     clips:
     - movie: harper
@@ -3746,42 +4244,48 @@ segments:
       offset: 0
       todo: crop to hide the character at the bottom?
 
-  - count: 83
+  - id: "068461"
+    count: 83
     scenes: [ "0:45:36" ]
     clips:
     - movie: harper
       segment: "018313"
       offset: 0
 
-  - count: 80
+  - id: "068544"
+    count: 80
     scenes: [ "0:45:40" ]
     clips:
     - movie: harper
       segment: "018396"
       offset: 0
 
-  - count: 67
+  - id: "068624"
+    count: 67
     scenes: [ "0:45:43" ]
     clips:
     - movie: harper
       segment: "018476"
       offset: 0
 
-  - count: 299
+  - id: "068691"
+    count: 299
     scenes: [ "0:45:45" ]
     clips:
     - movie: harper
       segment: "018543"
       offset: 0
 
-  - count: 120
+  - id: "068990"
+    count: 120
     scenes: [ "0:45:58" ]
     clips:
     - movie: harper
       segment: "018842"
       offset: 0
 
-  - count: 48
+  - id: "069110"
+    count: 48
     scenes: [ "0:46:02" ]
     clips:
     - movie: when_time_ran_out
@@ -3789,119 +4293,136 @@ segments:
       offset: 0
     notes: "Syncing is almost impossible, the frames are extremely similar"
 
-  - count: 71
+  - id: "069158"
+    count: 71
     scenes: [ "0:46:04" ]
     clips:
     - movie: harper
       segment: "019390"
       offset: 0
 
-  - count: 75
+  - id: "069229"
+    count: 75
     scenes: [ "0:46:07" ]
     clips:
     - movie: when_time_ran_out
       segment: "069304"
       offset: 47
 
-  - count: 35
+  - id: "069304"
+    count: 35
     scenes: [ "0:46:10" ]
     clips:
     - movie: harper
       segment: "020798"
       offset: 19
 
-  - count: 205
+  - id: "069339"
+    count: 205
     scenes: [ "0:46:11" ]
     clips:
     - movie: when_time_ran_out
       segment: "036581"
       offset: 14
 
-  - count: 85
+  - id: "069544"
+    count: 85
     scenes: [ "0:46:19" ]
     clips:
     - movie: harper
       segment: "019512"
       offset: 1
 
-  - count: 60
+  - id: "069629"
+    count: 60
     scenes: [ "0:46:23" ]
     clips:
     - movie: harper
       segment: "017873"
       offset: 0
 
-  - count: 181
+  - id: "069689"
+    count: 181
     scenes: [ "0:46:25" ]
     clips:
     - movie: when_time_ran_out
       segment: "036581"
       offset: 39
 
-  - count: 117
+  - id: "069870"
+    count: 117
     scenes: [ "0:46:32" ]
     clips:
     - movie: harper
       segment: "020901"
       offset: 26
 
-  - count: 168
+  - id: "069987"
+    count: 168
     scenes: [ "0:46:37" ]
     clips:
     - movie: harper
       segment: "017873"
       offset: 73
 
-  - count: 151
+  - id: "070155"
+    count: 151
     scenes: [ "0:46:44" ]
     clips:
     - movie: when_time_ran_out
       segment: "065735"
       offset: 1
 
-  - count: 51
+  - id: "070306"
+    count: 51
     scenes: [ "0:46:50" ]
     clips:
     - movie: hooper
       segment: "069710"
       offset: 4
 
-  - count: 110
+  - id: "070357"
+    count: 110
     scenes: [ "0:46:52" ]
     clips:
     - movie: when_time_ran_out
       segment: "066706"
       offset: 0
 
-  - count: 171
+  - id: "070467"
+    count: 171
     scenes: [ "0:46:56" ]
     clips:
     - movie: hooper
       segment: "069842"
       offset: 1
 
-  - count: 110
+  - id: "070638"
+    count: 110
     scenes: [ "0:47:03" ]
     clips:
     - movie: when_time_ran_out
       segment: "066706"
       offset: 0
 
-  - count: 49
+  - id: "070748"
+    count: 49
     scenes: [ "0:47:07" ]
     clips:
     - movie: hooper
       segment: "070060"
       offset: 2
 
-  - count: 122
+  - id: "070797"
+    count: 122
     scenes: [ "0:47:10" ]
     clips:
     - movie: when_time_ran_out
       segment: "066974"
       offset: 0
 
-  - count: 59
+  - id: "070919"
+    count: 59
     scenes: [ "0:47:16" ]
     clips:
     - movie: hooper
@@ -3909,35 +4430,40 @@ segments:
       offset: 1
       transform: "hflip"
 
-  - count: 152
+  - id: "070978"
+    count: 152
     scenes: [ "0:47:17" ]
     clips:
     - movie: when_time_ran_out
       segment: "090526"
       offset: 0
 
-  - count: 27
+  - id: "071130"
+    count: 27
     scenes: [ "0:47:22" ]
     clips:
     - movie: when_time_ran_out
       segment: "090694"
       offset: 19
 
-  - count: 10
+  - id: "071157"
+    count: 10
     scenes: [ "0:47:24" ]
     clips:
     - movie: when_time_ran_out
       segment: "090740"
       offset: 0
 
-  - count: 15
+  - id: "071167"
+    count: 15
     scenes: [ "0:47:25" ]
     clips:
     - movie: when_time_ran_out
       segment: "090766"
       offset: 0
 
-  - count: 22
+  - id: "071182"
+    count: 22
     scenes: [ "0:47:26" ]
     clips:
     - movie: when_time_ran_out
@@ -3945,49 +4471,56 @@ segments:
       offset: 0
       gravity: half-left
 
-  - count: 127
+  - id: "071204"
+    count: 127
     scenes: [ "0:47:28" ]
     clips:
     - movie: all_the_presidents_men
       segment: "122501"
       offset: 0
 
-  - count: 181
+  - id: "071331"
+    count: 181
     scenes: [ "0:47:31" ]
     clips:
     - movie: band_of_angels
       segment: "074201"
       offset: 0
 
-  - count: 62
+  - id: "071512"
+    count: 62
     scenes: [ "0:47:39" ]
     clips:
     - movie: all_the_presidents_men
       segment: "124170"
       offset: 34
 
-  - count: 150
+  - id: "071574"
+    count: 150
     scenes: [ "0:47:41" ]
     clips:
     - movie: band_of_angels
       segment: "073659"
       offset: 0
 
-  - count: 240
+  - id: "071724"
+    count: 240
     scenes: [ "0:47:47" ]
     clips:
     - movie: all_the_presidents_men
       segment: "123541"
       offset: 0
 
-  - count: 78
+  - id: "071964"
+    count: 78
     scenes: [ "0:47:57" ]
     clips:
     - movie: band_of_angels
       segment: "072032"
       offset: 0
 
-  - count: 378
+  - id: "072042"
+    count: 378
     scenes: [ "0:48:00", "0:48:02" ]
     clips:
     - movie: all_the_presidents_men
@@ -3999,21 +4532,24 @@ segments:
       offset: -49
       todo: "(flashback fade)"
 
-  - count: 102
+  - id: "072420"
+    count: 102
     scenes: [ "0:48:14" ]
     clips:
     - movie: band_of_angels
       segment: "140110"
       offset: 99
 
-  - count: 52
+  - id: "072522"
+    count: 52
     scenes: [ "0:48:18" ]
     clips:
     - movie: band_of_angels
       segment: "140551"
       offset: 49
 
-  - count: 95
+  - id: "072574"
+    count: 95
     scenes: [ "0:48:21" ]
     clips:
     - movie: band_of_angels
@@ -4021,77 +4557,88 @@ segments:
       offset: 10
       todo: 'modified speed: frame 0 has offset 10, frame 94 has offset 123 (1.3:1 rate?)'
 
-  - count: 77
+  - id: "072669"
+    count: 77
     scenes: [ "0:48:25" ]
     clips:
     - movie: band_of_angels
       segment: "140110"
       offset: 123
 
-  - count: 230
+  - id: "072746"
+    count: 230
     scenes: [ "0:48:27" ]
     clips:
     - movie: band_of_angels
       segment: "140551"
       offset: 26
 
-  - count: 67
+  - id: "072976"
+    count: 67
     scenes: [ "0:48:37" ]
     clips:
     - movie: band_of_angels
       segment: "140807"
       offset: 0
 
-  - count: 62
+  - id: "073043"
+    count: 62
     scenes: [ "0:48:40" ]
     clips:
     - movie: band_of_angels
       segment: "180830"
       offset: 1
 
-  - count: 98
+  - id: "073105"
+    count: 98
     scenes: [ "0:48:42" ]
     clips:
     - movie: band_of_angels
       segment: "180893"
       offset: 0
 
-  - count: 80
+  - id: "073203"
+    count: 80
     scenes: [ "0:48:46" ]
     clips:
     - movie: band_of_angels
       segment: "181274"
       offset: 1
 
-  - count: 73
+  - id: "073283"
+    count: 73
     scenes: [ "0:48:49" ]
     clips:
     - movie: band_of_angels
       segment: "181355"
       offset: 0
 
-  - count: 44
+  - id: "073356"
+    count: 44
     scenes: [ "0:48:52" ]
     clips:
     - movie: the_sea_chase
       segment: "086663"
       offset: 2
 
-  - count: 361
+  - id: "073400"
+    count: 361
     scenes: [ "0:48:54" ]
     clips:
     - movie: band_of_angels
       segment: "181542"
       offset: 0
 
-  - count: 256
+  - id: "073761"
+    count: 256
     scenes: [ "0:49:08" ]
     clips:
     - movie: the_sea_chase
       segment: "086784"
       offset: 0
 
-  - count: 359
+  - id: "074017"
+    count: 359
     scenes: [ "0:49:18", "0:49:28" ]
     clips:
     - movie: band_of_angels
@@ -4103,42 +4650,48 @@ segments:
       offset: -209
       todo: "(flashback fade)"
 
-  - count: 223
+  - id: "074376"
+    count: 223
     scenes: [ "0:49:33" ]
     clips:
     - movie: all_the_presidents_men
       segment: "123541"
       offset: 1
 
-  - count: 37
+  - id: "074599"
+    count: 37
     scenes: [ "0:49:42" ]
     clips:
     - movie: band_of_angels
       segment: "075061"
       offset: 0
 
-  - count: 59
+  - id: "074636"
+    count: 59
     scenes: [ "0:49:43" ]
     clips:
     - movie: all_the_presidents_men
       segment: "124491"
       offset: 0
 
-  - count: 325
+  - id: "074695"
+    count: 325
     scenes: [ "0:49:46" ]
     clips:
     - movie: all_the_presidents_men
       segment: "125855"
       offset: 0
 
-  - count: 73
+  - id: "075020"
+    count: 73
     scenes: [ "0:49:59" ]
     clips:
     - movie: rampage
       segment: "027690"
       offset: 0
 
-  - count: 23
+  - id: "075093"
+    count: 23
     scenes: [ "0:50:01" ]
     clips:
     - movie: harper
@@ -4146,14 +4699,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 73
+  - id: "075116"
+    count: 73
     scenes: [ "0:50:03" ]
     clips:
     - movie: rampage
       segment: "027690"
       offset: 0
 
-  - count: 128
+  - id: "075189"
+    count: 128
     scenes: [ "0:50:05" ]
     clips:
     - movie: harper
@@ -4161,7 +4716,8 @@ segments:
       offset: 17
       transform: "hflip"
 
-  - count: 948
+  - id: "075317"
+    count: 948
     scenes: [ "0:50:11", "0:50:17", "0:50:28", "0:50:44" ]
     clips:
     - movie: rampage
@@ -4181,7 +4737,8 @@ segments:
       offset: -826
       todo: "(flashback fade)"
 
-  - count: 45
+  - id: "076265"
+    count: 45
     scenes: [ "0:50:49" ]
     clips:
     - movie: rampage
@@ -4189,7 +4746,8 @@ segments:
       offset: 0
     notes: "Syncing done on frame 9, lowest intensity of the candle on the right"
 
-  - count: 64
+  - id: "076310"
+    count: 64
     scenes: [ "0:50:50" ]
     clips:
     - movie: harper
@@ -4197,7 +4755,8 @@ segments:
       offset: 59
       transform: hflip
 
-  - count: 233
+  - id: "076374"
+    count: 233
     scenes: [ "0:50:53", "0:50:59" ]
     clips:
     - movie: rampage
@@ -4209,28 +4768,32 @@ segments:
       offset: -142
       todo: "(flashback fade)"
 
-  - count: 49
+  - id: "076607"
+    count: 49
     scenes: [ "0:51:02" ]
     clips:
     - movie: cahill_us_marshal
       segment: "049585"
       offset: 1
 
-  - count: 69
+  - id: "076656"
+    count: 69
     scenes: [ "0:51:04" ]
     clips:
     - movie: westbound
       segment: "055439"
       offset: 0
 
-  - count: 46
+  - id: "076725"
+    count: 46
     scenes: [ "0:51:07" ]
     clips:
     - movie: cahill_us_marshal
       segment: "049776"
       offset: 0
 
-  - count: 330
+  - id: "076771"
+    count: 330
     scenes: [ "0:51:09" ]
     clips:
     - movie: westbound
@@ -4238,42 +4801,48 @@ segments:
       offset: 0
       todo: "ping-pong; 127 to 228 repeat 25 to 126 in reverse, 229 to 330 repeat 25 to 126 again"
 
-  - count: 30
+  - id: "077101"
+    count: 30
     scenes: [ "0:51:22" ]
     clips:
     - movie: cahill_us_marshal
       segment: "050008"
       offset: 0
 
-  - count: 63
+  - id: "077131"
+    count: 63
     scenes: [ "0:51:23" ]
     clips:
     - movie: cahill_us_marshal
       segment: "050038"
       offset: 0
 
-  - count: 138
+  - id: "077194"
+    count: 138
     scenes: [ "0:51:26" ]
     clips:
     - movie: cahill_us_marshal
       segment: "050101"
       offset: 0
 
-  - count: 43
+  - id: "077332"
+    count: 43
     scenes: [ "0:51:31" ]
     clips:
     - movie: westbound
       segment: "055309"
       offset: 1
 
-  - count: 141
+  - id: "077375"
+    count: 141
     scenes: [ "0:51:33" ]
     clips:
     - movie: cahill_us_marshal
       segment: "050101"
       offset: 32
 
-  - count: 102
+  - id: "077516"
+    count: 102
     scenes: [ "0:51:39" ]
     clips:
     - movie: cahill_us_marshal
@@ -4281,7 +4850,8 @@ segments:
       offset: 1
       gravity: half-left # slightly recenter the character
 
-  - count: 559
+  - id: "077618"
+    count: 559
     scenes: [ "0:51:43", "0:52:02" ]
     clips:
     - movie: westbound
@@ -4293,119 +4863,136 @@ segments:
       offset: -404
       todo: "(flashback fade)"
 
-  - count: 21
+  - id: "078177"
+    count: 21
     scenes: [ "0:52:04" ]
     clips:
     - movie: harper
       segment: "056022"
       offset: 0
 
-  - count: 38
+  - id: "078198"
+    count: 38
     scenes: [ "0:52:05" ]
     clips:
     - movie: harper
       segment: "056044"
       offset: 0
 
-  - count: 99
+  - id: "078236"
+    count: 99
     scenes: [ "0:52:07" ]
     clips:
     - movie: rampage
       segment: "030587"
       offset: 1
 
-  - count: 254
+  - id: "078335"
+    count: 254
     scenes: [ "0:52:11" ]
     clips:
     - movie: harper
       segment: "056588"
       offset: 54
 
-  - count: 91
+  - id: "078589"
+    count: 91
     scenes: [ "0:52:21" ]
     clips:
     - movie: harper
       segment: "056896"
       offset: 0
 
-  - count: 31
+  - id: "078680"
+    count: 31
     scenes: [ "0:52:25" ]
     clips:
     - movie: harper
       segment: "056987"
       offset: 0
 
-  - count: 38
+  - id: "078711"
+    count: 38
     scenes: [ "0:52:26" ]
     clips:
     - movie: harper
       segment: "057018"
       offset: 0
 
-  - count: 349
+  - id: "078749"
+    count: 349
     scenes: [ "0:52:28" ]
     clips:
     - movie: when_time_ran_out
       segment: "007827"
       offset: 168
 
-  - count: 381
+  - id: "079098"
+    count: 381
     scenes: [ "0:52:42" ]
     clips:
     - movie: when_time_ran_out
       segment: "007827"
       offset: 1142
 
-  - count: 167
+  - id: "079479"
+    count: 167
     scenes: [ "0:52:57" ]
     clips:
     - movie: all_the_presidents_men
       segment: "069047"
       offset: 1194
 
-  - count: 348
+  - id: "079646"
+    count: 348
     scenes: [ "0:53:04" ]
     clips:
     - movie: when_time_ran_out
       segment: "007827"
       offset: 1570
 
-  - count: 162
+  - id: "079994"
+    count: 162
     scenes: [ "0:53:18" ]
     clips:
     - movie: all_the_presidents_men
       segment: "069047"
       offset: 5000
 
-  - count: 51
+  - id: "080156"
+    count: 51
     scenes: [ "0:53:24" ]
     clips:
     - movie: when_time_ran_out
       segment: "007827"
       offset: 1931
 
-  - count: 63
+  - id: "080207"
+    count: 63
     scenes: [ "0:53:26" ]
     clips:
     - movie: maigret_et_les_plaisirs_de_la_nuit
       segment: "009294"
       offset: 2
 
-  - count: 56
+  - id: "080270"
+    count: 56
     scenes: [ "0:53:29" ]
     clips:
     - movie: the_candidate
       segment: "013124"
       offset: 2
 
-  - count: 222
+  - id: "080326"
+    count: 222
     scenes: [ "0:53:31" ]
     clips:
     - movie: when_time_ran_out
       segment: "025869"
       offset: 0
 
-  - count: 102
+  - id: "080548"
+    count: 102
     scenes: [ "0:53:41" ]
     clips:
     - movie: the_candidate
@@ -4413,14 +5000,16 @@ segments:
       offset: 1
       transform: "hflip"
 
-  - count: 76
+  - id: "080650"
+    count: 76
     scenes: [ "0:53:44" ]
     clips:
     - movie: when_time_ran_out
       segment: "025869"
       offset: 110
 
-  - count: 91
+  - id: "080726"
+    count: 91
     scenes: [ "0:53:47" ]
     clips:
     - movie: the_candidate
@@ -4428,7 +5017,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 40
+  - id: "080817"
+    count: 40
     scenes: [ "0:53:51" ]
     clips:
     - movie: when_time_ran_out
@@ -4437,7 +5027,8 @@ segments:
       transform: "hflip"
       todo: "(ping-pong) 25-44 then 44-25"
 
-  - count: 171
+  - id: "080857"
+    count: 171
     scenes: [ "0:53:52" ]
     clips:
     - movie: the_candidate
@@ -4445,7 +5036,8 @@ segments:
       offset: 53
       transform: "hflip"
 
-  - count: 237
+  - id: "081028"
+    count: 237
     scenes: [ "0:53:59", "0:54:01" ]
     clips:
     - movie: when_time_ran_out
@@ -4457,7 +5049,8 @@ segments:
       offset: 715
       todo: "(flashback fade)"
 
-  - count: 185
+  - id: "081265"
+    count: 185
     scenes: [ "0:54:08" ]
     clips:
     - movie: carson_city
@@ -4465,28 +5058,32 @@ segments:
       offset: 49
       todo: 'framerate discrepancy, or missing frames in the DVD version?'
 
-  - count: 122
+  - id: "081450"
+    count: 122
     scenes: [ "0:54:16" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "085278"
       offset: 1078
 
-  - count: 67
+  - id: "081572"
+    count: 67
     scenes: [ "0:54:21" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "086883"
       offset: 1
 
-  - count: 40
+  - id: "081639"
+    count: 40
     scenes: [ "0:54:23" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "086951"
       offset: 0
 
-  - count: 70
+  - id: "081679"
+    count: 70
     scenes: [ "0:54:25" ]
     clips:
     - movie: carson_city
@@ -4494,14 +5091,16 @@ segments:
       offset: 48
       gravity: top
 
-  - count: 27
+  - id: "081749"
+    count: 27
     scenes: [ "0:54:28" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "092242"
       offset: 51
 
-  - count: 130
+  - id: "081776"
+    count: 130
     scenes: [ "0:54:29" ]
     clips:
     - movie: carson_city
@@ -4509,91 +5108,104 @@ segments:
       offset: 5
       todo: 'framerate discrepancy, or missing frames in the DVD version?'
 
-  - count: 28
+  - id: "081906"
+    count: 28
     scenes: [ "0:54:34" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "087296"
       offset: 1
 
-  - count: 76
+  - id: "081934"
+    count: 76
     scenes: [ "0:54:36" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "087326"
       offset: 2
 
-  - count: 121
+  - id: "082010"
+    count: 121
     scenes: [ "0:54:38" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "087404"
       offset: 0
 
-  - count: 70
+  - id: "082131"
+    count: 70
     scenes: [ "0:54:43" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "087537"
       offset: 1
 
-  - count: 35
+  - id: "082201"
+    count: 35
     scenes: [ "0:54:46" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "087931"
       offset: 82
 
-  - count: 60
+  - id: "082236"
+    count: 60
     scenes: [ "0:54:47" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "088075"
       offset: 1
 
-  - count: 40
+  - id: "082296"
+    count: 40
     scenes: [ "0:54:50" ]
     clips:
     - movie: the_searchers
       segment: "128529"
       offset: 0
 
-  - count: 43
+  - id: "082336"
+    count: 43
     scenes: [ "0:54:51" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "088137"
       offset: 1
 
-  - count: 35
+  - id: "082379"
+    count: 35
     scenes: [ "0:54:53" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "071801"
       offset: 0
 
-  - count: 41
+  - id: "082414"
+    count: 41
     scenes: [ "0:54:54" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "088791"
       offset: 73
 
-  - count: 34
+  - id: "082455"
+    count: 34
     scenes: [ "0:54:56" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "089909"
       offset: 5
 
-  - count: 83
+  - id: "082489"
+    count: 83
     scenes: [ "0:54:57" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "089948"
       offset: 0
 
-  - count: 37
+  - id: "082572"
+    count: 37
     scenes: [ "0:55:01" ]
     clips:
     - movie: the_valley_of_gwangi
@@ -4601,21 +5213,24 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 55
+  - id: "082609"
+    count: 55
     scenes: [ "0:55:02" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "090045"
       offset: 1
 
-  - count: 38
+  - id: "082664"
+    count: 38
     scenes: [ "0:55:04" ]
     clips:
     - movie: the_searchers
       segment: "128747"
       offset: 0
 
-  - count: 64
+  - id: "082702"
+    count: 64
     scenes: [ "0:55:06" ]
     clips:
     - movie: the_valley_of_gwangi
@@ -4623,21 +5238,24 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 82
+  - id: "082766"
+    count: 82
     scenes: [ "0:55:09" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "102319"
       offset: 0
 
-  - count: 38
+  - id: "082848"
+    count: 38
     scenes: [ "0:55:12" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "102277"
       offset: 3
 
-  - count: 185
+  - id: "082886"
+    count: 185
     scenes: [ "0:55:13", "0:55:18" ]
     clips:
     - movie: the_valley_of_gwangi
@@ -4649,14 +5267,16 @@ segments:
       offset: -104
       todo: "(cross-fade)"
 
-  - count: 215
+  - id: "083071"
+    count: 215
     scenes: [ "0:55:21" ]
     clips:
     - movie: the_valley_of_gwangi
       segment: "082806"
       offset: 2
 
-  - count: 134
+  - id: "083286"
+    count: 134
     scenes: [ "0:55:29", "0:55:32" ]
     clips:
     - movie: the_searchers
@@ -4669,14 +5289,16 @@ segments:
       todo: "(cross-fade)"
     notes: "La transition aurait dû être la version flashback"
 
-  - count: 50
+  - id: "083420"
+    count: 50
     scenes: [ "0:55:35" ]
     clips:
     - movie: the_candidate
       segment: "016176"
       offset: 0
 
-  - count: 65
+  - id: "083470"
+    count: 65
     scenes: [ "0:55:37" ]
     clips:
     - movie: when_time_ran_out
@@ -4684,14 +5306,16 @@ segments:
       offset: 0
       playback: reverse
 
-  - count: 183
+  - id: "083535"
+    count: 183
     scenes: [ "0:55:39" ]
     clips:
     - movie: the_candidate
       segment: "016265"
       offset: 0
 
-  - count: 281
+  - id: "083718"
+    count: 281
     scenes: [ "0:55:47", "0:55:54" ]
     clips:
     - movie: when_time_ran_out
@@ -4703,7 +5327,8 @@ segments:
       offset: -168
       todo: "(flashback fade)"
 
-  - count: 65
+  - id: "083999"
+    count: 65
     scenes: [ "0:55:58" ]
     clips:
     - movie: the_valley_of_gwangi
@@ -4711,7 +5336,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 57
+  - id: "084064"
+    count: 57
     scenes: [ "0:56:00" ]
     clips:
     - movie: the_valley_of_gwangi
@@ -4719,7 +5345,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 68
+  - id: "084121"
+    count: 68
     scenes: [ "0:56:03" ]
     clips:
     - movie: riding_shotgun
@@ -4727,7 +5354,8 @@ segments:
       offset: 176
       gravity: half-top
 
-  - count: 114
+  - id: "084189"
+    count: 114
     scenes: [ "0:56:05" ]
     clips:
     - movie: riding_shotgun
@@ -4736,7 +5364,8 @@ segments:
       gravity: top
       todo: "my DVD is missing a frame at the beginning of the scene!"
 
-  - count: 84
+  - id: "084303"
+    count: 84
     scenes: [ "0:56:10" ]
     clips:
     - movie: riding_shotgun
@@ -4744,7 +5373,8 @@ segments:
       offset: 1
       gravity: top
 
-  - count: 39
+  - id: "084387"
+    count: 39
     scenes: [ "0:56:13" ]
     clips:
     - movie: riding_shotgun
@@ -4752,7 +5382,8 @@ segments:
       offset: 0
       gravity: half-bottom
 
-  - count: 53
+  - id: "084426"
+    count: 53
     scenes: [ "0:56:15" ]
     clips:
     - movie: riding_shotgun
@@ -4761,7 +5392,8 @@ segments:
       gravity: half-top
       todo: 'My DVD has a duplicate on frame 38, breaking sync'
 
-  - count: 104
+  - id: "084479"
+    count: 104
     scenes: [ "0:56:17" ]
     clips:
     - movie: riding_shotgun
@@ -4770,7 +5402,8 @@ segments:
       gravity: half-top
       todo: 'My DVD has a duplicate on frame 95, breaking sync'
 
-  - count: 99
+  - id: "084583"
+    count: 99
     scenes: [ "0:56:21" ]
     clips:
     - movie: riding_shotgun
@@ -4779,14 +5412,16 @@ segments:
       gravity: half-top
       todo: 'Apply stencil on frames 6-11 to extend explosion area'
 
-  - count: 118
+  - id: "084682"
+    count: 118
     scenes: [ "0:56:25" ]
     clips:
     - movie: all_the_presidents_men
       segment: "106124"
       offset: 71
 
-  - count: 105
+  - id: "084800"
+    count: 105
     scenes: [ "0:56:30" ]
     clips:
     - movie: all_the_presidents_men
@@ -4794,14 +5429,16 @@ segments:
       offset: 113
     notes: "Peut-être ajuster le cadrage pour masquer le personnage du début de séquence"
 
-  - count: 146
+  - id: "084905"
+    count: 146
     scenes: [ "0:56:34" ]
     clips:
     - movie: harper
       segment: "011589"
       offset: 1
 
-  - count: 86
+  - id: "085051"
+    count: 86
     scenes: [ "0:56:40" ]
     clips:
     - movie: all_the_presidents_men
@@ -4809,14 +5446,16 @@ segments:
       offset: 151
       transform: "hflip"
 
-  - count: 72
+  - id: "085137"
+    count: 72
     scenes: [ "0:56:43" ]
     clips:
     - movie: harper
       segment: "011589"
       offset: 147
 
-  - count: 146
+  - id: "085209"
+    count: 146
     scenes: [ "0:56:46" ]
     clips:
     - movie: all_the_presidents_men
@@ -4824,21 +5463,24 @@ segments:
       offset: 32
       transform: hflip
 
-  - count: 218
+  - id: "085355"
+    count: 218
     scenes: [ "0:56:52" ]
     clips:
     - movie: harper
       segment: "011860"
       offset: 1
 
-  - count: 507
+  - id: "085573"
+    count: 507
     scenes: [ "0:57:01" ]
     clips:
     - movie: blood_alley
       segment: "026229"
       offset: 9
 
-  - count: 126
+  - id: "086080"
+    count: 126
     scenes: [ "0:57:21" ]
     clips:
     - movie: rampage
@@ -4846,14 +5488,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 441
+  - id: "086206"
+    count: 441
     scenes: [ "0:57:26" ]
     clips:
     - movie: blood_alley
       segment: "027040"
       offset: 895
 
-  - count: 162
+  - id: "086647"
+    count: 162
     scenes: [ "0:57:44" ]
     clips:
     - movie: rampage
@@ -4861,7 +5505,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 76
+  - id: "086809"
+    count: 76
     scenes: [ "0:57:50" ]
     clips:
     - movie: blood_alley
@@ -4869,14 +5514,16 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 94
+  - id: "086885"
+    count: 94
     scenes: [ "0:57:53" ]
     clips:
     - movie: blood_alley
       segment: "029632"
       offset: 0
 
-  - count: 91
+  - id: "086979"
+    count: 91
     scenes: [ "0:57:57" ]
     clips:
     - movie: rampage
@@ -4884,21 +5531,24 @@ segments:
       offset: 0
       transform: hflip
 
-  - count: 326
+  - id: "087070"
+    count: 326
     scenes: [ "0:58:01" ]
     clips:
     - movie: blood_alley
       segment: "028642"
       offset: 572
 
-  - count: 137
+  - id: "087396"
+    count: 137
     scenes: [ "0:58:14" ]
     clips:
     - movie: harper
       segment: "013318"
       offset: 0
 
-  - count: 246
+  - id: "087533"
+    count: 246
     scenes: [ "0:58:19" ]
     clips:
     - movie: all_the_presidents_men
@@ -4906,7 +5556,8 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 114
+  - id: "087779"
+    count: 114
     scenes: [ "0:58:29" ]
     clips:
     - movie: harper
@@ -4914,7 +5565,8 @@ segments:
       offset: 0
       gravity: half-right
 
-  - count: 241
+  - id: "087893"
+    count: 241
     scenes: [ "0:58:34" ]
     clips:
     - movie: all_the_presidents_men
@@ -4922,7 +5574,8 @@ segments:
       offset: 138
       transform: "hflip"
 
-  - count: 405
+  - id: "088134"
+    count: 405
     scenes: [ "0:58:43" ]
     clips:
     - movie: harper
@@ -4930,42 +5583,48 @@ segments:
       offset: 134
       gravity: left # All the movement happens on the left
 
-  - count: 68
+  - id: "088539"
+    count: 68
     scenes: [ "0:58:59" ]
     clips:
     - movie: harper
       segment: "092528"
       offset: 322
 
-  - count: 50
+  - id: "088607"
+    count: 50
     scenes: [ "0:59:02" ]
     clips:
     - movie: all_the_presidents_men
       segment: "170983"
       offset: 1
 
-  - count: 89
+  - id: "088657"
+    count: 89
     scenes: [ "0:59:04" ]
     clips:
     - movie: all_the_presidents_men
       segment: "170684"
       offset: 0
 
-  - count: 294
+  - id: "088746"
+    count: 294
     scenes: [ "0:59:08" ]
     clips:
     - movie: harper
       segment: "093234"
       offset: 1
 
-  - count: 143
+  - id: "089040"
+    count: 143
     scenes: [ "0:59:20" ]
     clips:
     - movie: all_the_presidents_men
       segment: "171325"
       offset: 98
 
-  - count: 64
+  - id: "089183"
+    count: 64
     scenes: [ "0:59:25" ]
     clips:
     - movie: all_the_presidents_men
@@ -4973,28 +5632,32 @@ segments:
       offset: 16
       todo: "ping-pong autour de la frame +31"
 
-  - count: 267
+  - id: "089247"
+    count: 267
     scenes: [ "0:59:28" ]
     clips:
     - movie: harper
       segment: "093561"
       offset: 0
 
-  - count: 47
+  - id: "089514"
+    count: 47
     scenes: [ "0:59:38" ]
     clips:
     - movie: all_the_presidents_men
       segment: "171144"
       offset: 0
 
-  - count: 483
+  - id: "089561"
+    count: 483
     scenes: [ "0:59:40" ]
     clips:
     - movie: all_the_presidents_men
       segment: "171325"
       offset: 742
 
-  - count: 64
+  - id: "090044"
+    count: 64
     scenes: [ "1:00:00" ]
     clips:
     - movie: all_the_presidents_men
@@ -5002,35 +5665,40 @@ segments:
       offset: 16
       todo: "ping-pong autour de la frame +31"
 
-  - count: 99
+  - id: "090108"
+    count: 99
     scenes: [ "1:00:02" ]
     clips:
     - movie: harper
       segment: "096049"
       offset: 182
 
-  - count: 190
+  - id: "090207"
+    count: 190
     scenes: [ "1:00:06" ]
     clips:
     - movie: all_the_presidents_men
       segment: "053649"
       offset: 0
 
-  - count: 129
+  - id: "090397"
+    count: 129
     scenes: [ "1:00:14" ]
     clips:
     - movie: all_the_presidents_men
       segment: "054183"
       offset: 106
 
-  - count: 43
+  - id: "090526"
+    count: 43
     scenes: [ "1:00:19" ]
     clips:
     - movie: all_the_presidents_men
       segment: "054512"
       offset: 1
 
-  - count: 231
+  - id: "090569"
+    count: 231
     scenes: [ "1:00:21" ]
     clips:
     - movie: beyond_the_poseidon_adventure
@@ -5038,21 +5706,24 @@ segments:
       offset: 5
       todo: "night filter? otherwise the background is too obvious"
 
-  - count: 129
+  - id: "090800"
+    count: 129
     scenes: [ "1:00:30" ]
     clips:
     - movie: all_the_presidents_men
       segment: "054973"
       offset: 1
 
-  - count: 160
+  - id: "090929"
+    count: 160
     scenes: [ "1:00:35" ]
     clips:
     - movie: mcq
       segment: "134164"
       offset: 0
 
-  - count: 299
+  - id: "091089"
+    count: 299
     scenes: [ "1:00:42" ]
     clips:
     - movie: beyond_the_poseidon_adventure
@@ -5060,245 +5731,280 @@ segments:
       offset: 0
       todo: "night filter? otherwise the background is too obvious"
 
-  - count: 112
+  - id: "091388"
+    count: 112
     scenes: [ "1:00:53" ]
     clips:
     - movie: mcq
       segment: "135480"
       offset: 175
 
-  - count: 134
+  - id: "091500"
+    count: 134
     scenes: [ "1:00:58" ]
     clips:
     - movie: mcq
       segment: "135767"
       offset: 0
 
-  - count: 131
+  - id: "091634"
+    count: 131
     scenes: [ "1:01:03" ]
     clips:
     - movie: all_the_presidents_men
       segment: "056119"
       offset: 0
 
-  - count: 37
+  - id: "091765"
+    count: 37
     scenes: [ "1:01:09" ]
     clips:
     - movie: mcq
       segment: "138392"
       offset: 18
 
-  - count: 65
+  - id: "091802"
+    count: 65
     scenes: [ "1:01:10" ]
     clips:
     - movie: freebie_and_the_bean
       segment: "052053"
       offset: 0
 
-  - count: 25
+  - id: "091867"
+    count: 25
     scenes: [ "1:01:12" ]
     clips:
     - movie: mcq
       segment: "084501"
       offset: 36
 
-  - count: 18
+  - id: "091892"
+    count: 18
     scenes: [ "1:01:13" ]
     clips:
     - movie: mcq
       segment: "084679"
       offset: 23
 
-  - count: 120
+  - id: "091910"
+    count: 120
     scenes: [ "1:01:14" ]
     clips:
     - movie: mcq
       segment: "084720"
       offset: 0
 
-  - count: 69
+  - id: "092030"
+    count: 69
     scenes: [ "1:01:19" ]
     clips:
     - movie: mcq
       segment: "084876"
       offset: 1
 
-  - count: 51
+  - id: "092099"
+    count: 51
     scenes: [ "1:01:22" ]
     clips:
     - movie: mcq
       segment: "076240"
       offset: 81
 
-  - count: 59
+  - id: "092150"
+    count: 59
     scenes: [ "1:01:24" ]
     clips:
     - movie: mcq
       segment: "076541"
       offset: 2
 
-  - count: 92
+  - id: "092209"
+    count: 92
     scenes: [ "1:01:26" ]
     clips:
     - movie: mcq
       segment: "076602"
       offset: 0
 
-  - count: 128
+  - id: "092301"
+    count: 128
     scenes: [ "1:01:30" ]
     clips:
     - movie: mcq
       segment: "036503"
       offset: 2
 
-  - count: 288
+  - id: "092429"
+    count: 288
     scenes: [ "1:01:35" ]
     clips:
     - movie: mcq
       segment: "037765"
       offset: 4
 
-  - count: 262
+  - id: "092717"
+    count: 262
     scenes: [ "1:01:46" ]
     clips:
     - movie: mcq
       segment: "038058"
       offset: 67
 
-  - count: 18
+  - id: "092979"
+    count: 18
     scenes: [ "1:01:56" ]
     clips:
     - movie: mcq
       segment: "038558"
       offset: 182
 
-  - count: 37
+  - id: "092997"
+    count: 37
     scenes: [ "1:01:57" ]
     clips:
     - movie: mcq
       segment: "038758"
       offset: 0
 
-  - count: 78
+  - id: "093034"
+    count: 78
     scenes: [ "1:01:59" ]
     clips:
     - movie: mcq
       segment: "038795"
       offset: 0
 
-  - count: 111
+  - id: "093112"
+    count: 111
     scenes: [ "1:02:02" ]
     clips:
     - movie: mcq
       segment: "038874"
       offset: 200
 
-  - count: 124
+  - id: "093223"
+    count: 124
     scenes: [ "1:02:07" ]
     clips:
     - movie: mcq
       segment: "039251"
       offset: 1
 
-  - count: 65
+  - id: "093347"
+    count: 65
     scenes: [ "1:02:12" ]
     clips:
     - movie: mcq
       segment: "027272"
       offset: 2
 
-  - count: 286
+  - id: "093412"
+    count: 286
     scenes: [ "1:02:14" ]
     clips:
     - movie: mcq
       segment: "027339"
       offset: 0
 
-  - count: 93
+  - id: "093698"
+    count: 93
     scenes: [ "1:02:26" ]
     clips:
     - movie: mcq
       segment: "027625"
       offset: 0
 
-  - count: 79
+  - id: "093791"
+    count: 79
     scenes: [ "1:02:30" ]
     clips:
     - movie: mcq
       segment: "027718"
       offset: 0
 
-  - count: 54
+  - id: "093870"
+    count: 54
     scenes: [ "1:02:33" ]
     clips:
     - movie: mcq
       segment: "027797"
       offset: 0
 
-  - count: 52
+  - id: "093924"
+    count: 52
     scenes: [ "1:02:35" ]
     clips:
     - movie: all_the_presidents_men
       segment: "080370"
       offset: 0
 
-  - count: 90
+  - id: "093976"
+    count: 90
     scenes: [ "1:02:38" ]
     clips:
     - movie: mcq
       segment: "039975"
       offset: 0
 
-  - count: 87
+  - id: "094066"
+    count: 87
     scenes: [ "1:02:40" ]
     clips:
     - movie: all_the_presidents_men
       segment: "083065"
       offset: 0
 
-  - count: 39
+  - id: "094153"
+    count: 39
     scenes: [ "1:02:44" ]
     clips:
     - movie: the_miracle_of_our_lady_of_fatima
       segment: "140223"
       offset: 0
 
-  - count: 58
+  - id: "094192"
+    count: 58
     scenes: [ "1:02:45" ]
     clips:
     - movie: the_miracle_of_our_lady_of_fatima
       segment: "140263"
       offset: 67
 
-  - count: 134
+  - id: "094250"
+    count: 134
     scenes: [ "1:02:48" ]
     clips:
     - movie: the_miracle_of_our_lady_of_fatima
       segment: "140388"
       offset: 0
 
-  - count: 250
+  - id: "094384"
+    count: 250
     scenes: [ "1:02:53" ]
     clips:
     - movie: mcq
       segment: "040283"
       offset: 2
 
-  - count: 117
+  - id: "094634"
+    count: 117
     scenes: [ "1:03:03" ]
     clips:
     - movie: all_the_presidents_men
       segment: "083408"
       offset: 52
 
-  - count: 59
+  - id: "094751"
+    count: 59
     scenes: [ "1:03:08" ]
     clips:
     - movie: all_the_presidents_men
       segment: "080728"
       offset: 0
 
-  - count: 116
+  - id: "094810"
+    count: 116
     scenes: [ "1:03:10" ]
     clips:
     - movie: mcq
@@ -5306,21 +6012,24 @@ segments:
       offset: 1
     notes: "Synced with the frame where he blinks"
 
-  - count: 93
+  - id: "094926"
+    count: 93
     scenes: [ "1:03:15" ]
     clips:
     - movie: all_the_presidents_men
       segment: "081395"
       offset: 4
 
-  - count: 102
+  - id: "095019"
+    count: 102
     scenes: [ "1:03:19" ]
     clips:
     - movie: mcq
       segment: "041320"
       offset: 1
 
-  - count: 53
+  - id: "095121"
+    count: 53
     scenes: [ "1:03:23" ]
     clips:
     - movie: all_the_presidents_men
@@ -5328,35 +6037,40 @@ segments:
       offset: 0
       transform: "hflip"
 
-  - count: 118
+  - id: "095174"
+    count: 118
     scenes: [ "1:03:25" ]
     clips:
     - movie: mcq
       segment: "041502"
       offset: 1
 
-  - count: 87
+  - id: "095292"
+    count: 87
     scenes: [ "1:03:30" ]
     clips:
     - movie: all_the_presidents_men
       segment: "083065"
       offset: 0
 
-  - count: 180
+  - id: "095379"
+    count: 180
     scenes: [ "1:03:33" ]
     clips:
     - movie: mcq
       segment: "041666"
       offset: 1
 
-  - count: 58
+  - id: "095559"
+    count: 58
     scenes: [ "1:03:40" ]
     clips:
     - movie: mcq
       segment: "083786"
       offset: 1
 
-  - count: 55
+  - id: "095617"
+    count: 55
     scenes: [ "1:03:43" ]
     clips:
     - movie: mcq
@@ -5364,7 +6078,8 @@ segments:
       offset: 0
       playback: reverse
 
-  - count: 36
+  - id: "095672"
+    count: 36
     scenes: [ "1:03:45" ]
     clips:
     - movie: mcq
@@ -5372,7 +6087,8 @@ segments:
       offset: 0
       playback: reverse
 
-  - count: 165
+  - id: "095708"
+    count: 165
     scenes: [ "1:03:46" ]
     clips:
     - movie: mcq
@@ -5380,21 +6096,24 @@ segments:
       offset: 37
       gravity: half-left
 
-  - count: 44
+  - id: "095873"
+    count: 44
     scenes: [ "1:03:53" ]
     clips:
     - movie: mcq
       segment: "083537"
       offset: 0
 
-  - count: 51
+  - id: "095917"
+    count: 51
     scenes: [ "1:03:55" ]
     clips:
     - movie: mcq
       segment: "083431"
       offset: 0
 
-  - count: 163
+  - id: "095968"
+    count: 163
     scenes: [ "1:03:57" ]
     clips:
     - movie: cleopatra_jones
@@ -5402,70 +6121,80 @@ segments:
       offset: 6
       transform: "hflip"
 
-  - count: 151
+  - id: "096131"
+    count: 151
     scenes: [ "1:04:03" ]
     clips:
     - movie: mcq
       segment: "067874"
       offset: 1
 
-  - count: 76
+  - id: "096282"
+    count: 76
     scenes: [ "1:04:09" ]
     clips:
     - movie: cleopatra_jones
       segment: "040313"
       offset: 5
 
-  - count: 63
+  - id: "096358"
+    count: 63
     scenes: [ "1:04:12" ]
     clips:
     - movie: mcq
       segment: "068105"
       offset: 1
 
-  - count: 99
+  - id: "096421"
+    count: 99
     scenes: [ "1:04:15" ]
     clips:
     - movie: cleopatra_jones
       segment: "040413"
       offset: 0
 
-  - count: 51
+  - id: "096520"
+    count: 51
     scenes: [ "1:04:19" ]
     clips:
     - movie: mcq
       segment: "068247"
       offset: 2
 
-  - count: 126
+  - id: "096571"
+    count: 126
     scenes: [ "1:04:21" ]
     clips:
     - movie: cleopatra_jones
       segment: "040413"
       offset: 212
 
-  - count: 210
+  - id: "096697"
+    count: 210
     scenes: [ "1:04:26" ]
     clips:
     - movie: cleopatra_jones
       segment: "040751"
       offset: 0
 
-  - count: 162
+  - id: "096907"
+    count: 162
     scenes: [ "1:04:34" ]
     clips:
     - movie: mcq
       segment: "069369"
       offset: 1
 
-  - count: 78
+  - id: "097069"
+    count: 78
     scenes: [ "1:04:41" ]
     clips:
     - movie: cleopatra_jones
       segment: "041111"
       offset: 1
 
-  - count: 68
+  - id: "097147"
+    count: 68
     scenes: [ "1:04:44" ]
     clips:
     - movie: mcq
@@ -5473,14 +6202,16 @@ segments:
       offset: 0
     notes: "Syncing done with subtle lower trajectory of nods"
 
-  - count: 102
+  - id: "097215"
+    count: 102
     scenes: [ "1:04:47" ]
     clips:
     - movie: cleopatra_jones
       segment: "041285"
       offset: 0
 
-  - count: 66
+  - id: "097317"
+    count: 66
     scenes: [ "1:04:51" ]
     clips:
     - movie: mcq
@@ -5488,28 +6219,32 @@ segments:
       offset: 2
     notes: "Syncing done with previous sequence and tiny speck on frame 29"
 
-  - count: 376
+  - id: "097383"
+    count: 376
     scenes: [ "1:04:53" ]
     clips:
     - movie: all_the_presidents_men
       segment: "172819"
       offset: 420
 
-  - count: 99
+  - id: "097759"
+    count: 99
     scenes: [ "1:05:08" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173615"
       offset: 1
 
-  - count: 141
+  - id: "097858"
+    count: 141
     scenes: [ "1:05:12" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173715"
       offset: 0
 
-  - count: 65
+  - id: "097999"
+    count: 65
     scenes: [ "1:05:18" ]
     clips:
     - movie: oceans_eleven
@@ -5517,70 +6252,80 @@ segments:
       offset: 523
       todo: "filtre bleu"
 
-  - count: 54
+  - id: "098064"
+    count: 54
     scenes: [ "1:05:20" ]
     clips:
     - movie: rampage
       segment: "031514"
       offset: 1
 
-  - count: 104
+  - id: "098118"
+    count: 104
     scenes: [ "1:05:23" ]
     clips:
     - movie: mcq
       segment: "063766"
       offset: 61
 
-  - count: 101
+  - id: "098222"
+    count: 101
     scenes: [ "1:05:27" ]
     clips:
     - movie: rampage
       segment: "034007"
       offset: 58
 
-  - count: 242
+  - id: "098323"
+    count: 242
     scenes: [ "1:05:31" ]
     clips:
     - movie: mcq
       segment: "064388"
       offset: 1
 
-  - count: 47
+  - id: "098565"
+    count: 47
     scenes: [ "1:05:40" ]
     clips:
     - movie: rampage
       segment: "031606"
       offset: 2
 
-  - count: 46
+  - id: "098612"
+    count: 46
     scenes: [ "1:05:42" ]
     clips:
     - movie: mcq
       segment: "064388"
       offset: 123
 
-  - count: 63
+  - id: "098658"
+    count: 63
     scenes: [ "1:05:44" ]
     clips:
     - movie: rampage
       segment: "031705"
       offset: 1
 
-  - count: 66
+  - id: "098721"
+    count: 66
     scenes: [ "1:05:47" ]
     clips:
     - movie: mcq
       segment: "071439"
       offset: 0
 
-  - count: 72
+  - id: "098787"
+    count: 72
     scenes: [ "1:05:49" ]
     clips:
     - movie: rampage
       segment: "032592"
       offset: 0
 
-  - count: 59
+  - id: "098859"
+    count: 59
     scenes: [ "1:05:52" ]
     clips:
     - movie: mcq
@@ -5588,7 +6333,8 @@ segments:
       offset: 0
       todo: "Maybe a perfect sync can be done with the speck on frame 61 in the original"
 
-  - count: 50
+  - id: "098918"
+    count: 50
     scenes: [ "1:05:55" ]
     clips:
     - movie: rampage
@@ -5596,7 +6342,8 @@ segments:
       offset: 14
       todo: "1:2 playback, each odd frame is exact, frame 0 is interpolated with offset 13, frame 1 is offset 14"
 
-  - count: 109
+  - id: "098968"
+    count: 109
     scenes: [ "1:05:57" ]
     clips:
     - movie: mcq
@@ -5605,7 +6352,8 @@ segments:
         This is the same as the previous sequence, played at something like 1:2.5 speed.
         Matching frames: 15 75 85 98 (this sequence) vs. 7 31 34 40 (previous seq from McQ)
 
-  - count: 76
+  - id: "099077"
+    count: 76
     scenes: [ "1:06:01" ]
     clips:
     - movie: rampage
@@ -5613,28 +6361,32 @@ segments:
       offset: 21
       todo: "1:4 playback, start at frame 21"
 
-  - count: 80
+  - id: "099153"
+    count: 80
     scenes: [ "1:06:04" ]
     clips:
     - movie: mcq
       segment: "071598"
       offset: 0
 
-  - count: 85
+  - id: "099233"
+    count: 85
     scenes: [ "1:06:07" ]
     clips:
     - movie: rampage
       segment: "034561"
       offset: 116
 
-  - count: 195
+  - id: "099318"
+    count: 195
     scenes: [ "1:06:11" ]
     clips:
     - movie: deliverance
       segment: "039884"
       offset: 1
 
-  - count: 217
+  - id: "099513"
+    count: 217
     scenes: [ "1:06:19", "1:06:25" ]
     clips:
     - movie: all_the_presidents_men
@@ -5642,112 +6394,128 @@ segments:
       offset: 356
     notes: 'Syncing was done with the character turning pages on the right'
 
-  - count: 367
+  - id: "099730"
+    count: 367
     scenes: [ "1:06:26" ]
     clips:
     - movie: all_the_presidents_men
       segment: "156758"
       offset: 160
 
-  - count: 69
+  - id: "100097"
+    count: 69
     scenes: [ "1:06:42" ]
     clips:
     - movie: all_the_presidents_men
       segment: "157285"
       offset: 0
 
-  - count: 1257
+  - id: "100166"
+    count: 1257
     scenes: [ "1:06:45" ]
     clips:
     - movie: all_the_presidents_men
       segment: "157354"
       offset: 0
 
-  - count: 101
+  - id: "101423"
+    count: 101
     scenes: [ "1:07:35" ]
     clips:
     - movie: all_the_presidents_men
       segment: "158611"
       offset: 0
 
-  - count: 78
+  - id: "101524"
+    count: 78
     scenes: [ "1:07:39" ]
     clips:
     - movie: all_the_presidents_men
       segment: "158712"
       offset: 0
 
-  - count: 67
+  - id: "101602"
+    count: 67
     scenes: [ "1:07:42" ]
     clips:
     - movie: all_the_presidents_men
       segment: "158790"
       offset: 0
 
-  - count: 54
+  - id: "101669"
+    count: 54
     scenes: [ "1:07:45" ]
     clips:
     - movie: all_the_presidents_men
       segment: "158857"
       offset: 0
 
-  - count: 46
+  - id: "101723"
+    count: 46
     scenes: [ "1:07:47" ]
     clips:
     - movie: all_the_presidents_men
       segment: "158911"
       offset: 0
 
-  - count: 47
+  - id: "101769"
+    count: 47
     scenes: [ "1:07:49" ]
     clips:
     - movie: all_the_presidents_men
       segment: "158957"
       offset: 0
 
-  - count: 46
+  - id: "101816"
+    count: 46
     scenes: [ "1:07:51" ]
     clips:
     - movie: all_the_presidents_men
       segment: "159004"
       offset: 0
 
-  - count: 79
+  - id: "101862"
+    count: 79
     scenes: [ "1:07:52" ]
     clips:
     - movie: all_the_presidents_men
       segment: "159050"
       offset: 0
 
-  - count: 126
+  - id: "101941"
+    count: 126
     scenes: [ "1:07:55" ]
     clips:
     - movie: all_the_presidents_men
       segment: "159130"
       offset: 97
 
-  - count: 342
+  - id: "102067"
+    count: 342
     scenes: [ "1:08:01" ]
     clips:
     - movie: all_the_presidents_men
       segment: "172819"
       offset: 419
 
-  - count: 98
+  - id: "102409"
+    count: 98
     scenes: [ "1:08:14" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173615"
       offset: 1
 
-  - count: 44
+  - id: "102507"
+    count: 44
     scenes: [ "1:08:18" ]
     clips:
     - movie: all_the_presidents_men
       segment: "172819"
       offset: 752
 
-  - count: 83
+  - id: "102551"
+    count: 83
     scenes: [ "1:08:20" ]
     clips:
     - movie: all_the_presidents_men
@@ -5755,28 +6523,32 @@ segments:
       offset: 1
       playback: reverse
 
-  - count: 139
+  - id: "102634"
+    count: 139
     scenes: [ "1:08:23" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173615"
       todo: "Ping-pong, frames 10730 and 10731 are the same, equal to last frame in original (173714)"
 
-  - count: 82
+  - id: "102773"
+    count: 82
     scenes: [ "1:08:29" ]
     clips:
     - movie: all_the_presidents_men
       segment: "173715"
       offset: 54
 
-  - count: 80
+  - id: "102855"
+    count: 80
     scenes: [ "1:08:32" ]
     clips:
     - movie: mad_max
       segment: "114610"
       offset: 0
 
-  - count: 158
+  - id: "102935"
+    count: 158
     scenes: [ "1:08:35" ]
     clips:
     - movie: harper
@@ -5784,14 +6556,16 @@ segments:
       offset: 1
       gravity: right
 
-  - count: 225
+  - id: "103093"
+    count: 225
     scenes: [ "1:08:42" ]
     clips:
     - movie: mcq
       segment: "141517"
       offset: 0
 
-  - count: 47
+  - id: "103318"
+    count: 47
     scenes: [ "1:08:51" ]
     clips:
     - movie: harper
@@ -5799,21 +6573,24 @@ segments:
       offset: 1
       gravity: right
 
-  - count: 47
+  - id: "103365"
+    count: 47
     scenes: [ "1:08:53" ]
     clips:
     - movie: mad_max
       segment: "114922"
       offset: 1
 
-  - count: 83
+  - id: "103412"
+    count: 83
     scenes: [ "1:08:56" ]
     clips:
     - movie: mad_max
       segment: "004538"
       offset: 9
 
-  - count: 188
+  - id: "103495"
+    count: 188
     scenes: [ "1:08:58" ]
     clips:
     - movie: harper
@@ -5821,14 +6598,16 @@ segments:
       offset: 0
       gravity: half-right
 
-  - count: 206
+  - id: "103683"
+    count: 206
     scenes: [ "1:09:05" ]
     clips:
     - movie: mcq
       segment: "141005"
       offset: 0
 
-  - count: 49
+  - id: "103889"
+    count: 49
     scenes: [ "1:09:13" ]
     clips:
     - movie: harper
@@ -5836,14 +6615,16 @@ segments:
       offset: 1
       gravity: half-right
 
-  - count: 189
+  - id: "103938"
+    count: 189
     scenes: [ "1:09:15" ]
     clips:
     - movie: mcq
       segment: "141270"
       offset: 1
 
-  - count: 46
+  - id: "104127"
+    count: 46
     scenes: [ "1:09:23" ]
     clips:
     - movie: harper
@@ -5851,35 +6632,40 @@ segments:
       offset: 2
       gravity: half-right
 
-  - count: 198
+  - id: "104173"
+    count: 198
     scenes: [ "1:09:25" ]
     clips:
     - movie: mcq
       segment: "142376"
       offset: 1
 
-  - count: 24
+  - id: "104371"
+    count: 24
     scenes: [ "1:09:33" ]
     clips:
     - movie: mad_max
       segment: "012500"
       offset: 0
 
-  - count: 36
+  - id: "104395"
+    count: 36
     scenes: [ "1:09:34" ]
     clips:
     - movie: mad_max
       segment: "016165"
       offset: 1
 
-  - count: 69
+  - id: "104431"
+    count: 69
     scenes: [ "1:09:36" ]
     clips:
     - movie: mcq
       segment: "142848"
       offset: 6
 
-  - count: 101
+  - id: "104500"
+    count: 101
     scenes: [ "1:09:38" ]
     clips:
     - movie: harper
@@ -5887,28 +6673,32 @@ segments:
       offset: 1
       gravity: right
 
-  - count: 217
+  - id: "104601"
+    count: 217
     scenes: [ "1:09:42" ]
     clips:
     - movie: mcq
       segment: "141517"
       offset: 8
 
-  - count: 169
+  - id: "104818"
+    count: 169
     scenes: [ "1:09:51" ]
     clips:
     - movie: harper
       segment: "151690"
       offset: 0
 
-  - count: 25
+  - id: "104987"
+    count: 25
     scenes: [ "1:09:57" ]
     clips:
     - movie: mad_max
       segment: "114922"
       offset: 25
 
-  - count: 16
+  - id: "105012"
+    count: 16
     scenes: [ "1:09:58" ]
     clips:
     - movie: mad_max
@@ -5916,49 +6706,56 @@ segments:
       offset: 1
       gravity: half-left # focus more on the car
 
-  - count: 54
+  - id: "105028"
+    count: 54
     scenes: [ "1:09:59" ]
     clips:
     - movie: mad_max
       segment: "017303"
       offset: 0
 
-  - count: 14
+  - id: "105082"
+    count: 14
     scenes: [ "1:10:00" ]
     clips:
     - movie: mad_max
       segment: "017357"
       offset: 0
 
-  - count: 3
+  - id: "105096"
+    count: 3
     scenes: [ "1:10:01" ]
     clips:
     - movie: mad_max
       segment: "017371"
       offset: 1
 
-  - count: 3
+  - id: "105099"
+    count: 3
     scenes: [ "1:10:02" ]
     clips:
     - movie: mad_max
       segment: "123612"
       offset: 0
 
-  - count: 7
+  - id: "105102"
+    count: 7
     scenes: [ "1:10:03" ]
     clips:
     - movie: mad_max
       segment: "017381"
       offset: 0
 
-  - count: 35
+  - id: "105109"
+    count: 35
     scenes: [ "1:10:04" ]
     clips:
     - movie: mad_max
       segment: "017388"
       offset: 0
 
-  - count: 39
+  - id: "105144"
+    count: 39
     scenes: [ "1:10:05" ]
     clips:
     - movie: hooper
@@ -5966,35 +6763,40 @@ segments:
       offset: -4
       todo: "source material is missing 4 frames before, 1 frame after; try to dilate time maybe?"
 
-  - count: 52
+  - id: "105183"
+    count: 52
     scenes: [ "1:10:06" ]
     clips:
     - movie: mad_max
       segment: "017388"
       offset: 35
 
-  - count: 41
+  - id: "105235"
+    count: 41
     scenes: [ "1:10:07" ]
     clips:
     - movie: mad_max
       segment: "017643"
       offset: 0
 
-  - count: 62
+  - id: "105276"
+    count: 62
     scenes: [ "1:10:09" ]
     clips:
     - movie: mad_max
       segment: "017547"
       offset: 1
 
-  - count: 13
+  - id: "105338"
+    count: 13
     scenes: [ "1:10:10" ]
     clips:
     - movie: bullitt
       segment: "108317"
       offset: 1
 
-  - count: 141
+  - id: "105351"
+    count: 141
     scenes: [ "1:10:11" ]
     clips:
     - movie: bullitt
@@ -6002,7 +6804,8 @@ segments:
       offset: 0
       todo: "fade to black"
 
-  - count: 1961
+  - id: "105492"
+    count: 1961
     scenes: [ "1:10:21", "1:10:24", "1:10:28", "1:10:32", "1:10:36", "1:10:39", "1:10:43", "1:10:47", "1:10:51", "1:10:54", "1:10:58", "1:11:02", "1:11:06", "1:11:09", "1:11:13", "1:11:17", "1:11:21", "1:11:24", "1:11:27" ]
     clips:
     - movie: "Credits"
