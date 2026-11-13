@@ -1,6 +1,19 @@
 ---
 
 #
+# Presets for effects applied to a whole movie
+#
+
+presets:
+  all_the_presidents_men:
+    gravity: u50
+  start_the_revolution_without_me:
+    gravity: u50
+  the_sea_chase:
+  the_cheyenne_social_club:
+    stretch: 0.95
+
+#
 # segments
 #
 # Ordered list of all the segments that compose the final movie.
@@ -17,13 +30,14 @@ segments:
     - movie: all_the_presidents_men
       segment: "198814"
       offset: 7
+      gravity: u0
     notes: "000000 would work better (modern logo) but it changes the length of the movie"
 
   - id: "000125"
     count: 177
     scenes: [ "0:00:03" ]
     clips:
-    - movie: "Attention"
+    - movie: intro_screen
 
   - id: "000302"
     count: 283
@@ -41,6 +55,7 @@ segments:
     - movie: the_sea_chase
       segment: "026546"
       offset: 337
+      stretch: 1.1
     notes: "The foam at the base of the ship makes it a definite match"
 
   - id: "000691"
@@ -50,6 +65,7 @@ segments:
     - movie: the_sea_chase
       segment: "032690"
       offset: 1
+      stretch: 1.1
 
   - id: "000905"
     count: 56
@@ -58,6 +74,7 @@ segments:
     - movie: the_sea_chase
       segment: "032982"
       offset: 1
+      stretch: 1.1
 
   - id: "000961"
     count: 54
@@ -66,6 +83,7 @@ segments:
     - movie: the_sea_chase
       segment: "068406"
       offset: 0
+      stretch: 1.1
 
   - id: "001015"
     count: 78
@@ -74,6 +92,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "018153"
       offset: 0
+      gravity: d40
 
   - id: "001093"
     count: 170
@@ -82,6 +101,7 @@ segments:
     - movie: the_sea_chase
       segment: "070375"
       offset: 107
+      stretch: 1.1
 
   - id: "001263"
     count: 158
@@ -90,7 +110,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "017258"
       offset: 0
-      gravity: top
+      gravity: u70
 
   - id: "001421"
     count: 159
@@ -99,6 +119,7 @@ segments:
     - movie: the_sea_chase
       segment: "077076"
       offset: 1
+      stretch: 1.1
 
   - id: "001580"
     count: 180
@@ -107,7 +128,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "014427"
       offset: 0
-      gravity: top
+      gravity: u60
 
   - id: "001760"
     count: 53
@@ -116,6 +137,7 @@ segments:
     - movie: the_sea_chase
       segment: "068051"
       offset: 1
+      stretch: 1.1
 
   - id: "001813"
     count: 94
@@ -124,7 +146,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "014684"
       offset: 1
-      gravity: top
+      gravity: u80
 
   - id: "001907"
     count: 89
@@ -133,6 +155,7 @@ segments:
     - movie: the_sea_chase
       segment: "076603"
       offset: 1
+      stretch: 1.1
 
   - id: "001996"
     count: 184
@@ -141,6 +164,8 @@ segments:
     - movie: the_sea_chase
       segment: "076817"
       offset: 0
+      stretch: 1.1
+      gravity: l30
 
   - id: "002180"
     count: 50
@@ -149,7 +174,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "015475"
       offset: 14
-      gravity: top
+      gravity: u90
       playback: reverse
 
   - id: "002230"
@@ -159,6 +184,8 @@ segments:
     - movie: the_sea_chase
       segment: "077076"
       offset: 0
+      stretch: 1.1
+      gravity: l30
 
   - id: "002313"
     count: 68
@@ -167,6 +194,8 @@ segments:
     - movie: the_sea_chase
       segment: "076817"
       offset: 10
+      stretch: 1.1
+      gravity: l50
 
   - id: "002381"
     count: 35
@@ -175,7 +204,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "016059"
       offset: 0
-      gravity: top
+      gravity: u90
 
   - id: "002416"
     count: 96
@@ -184,6 +213,8 @@ segments:
     - movie: the_sea_chase
       segment: "070663"
       offset: 9
+      stretch: 1.1
+      gravity: l40
 
   - id: "002512"
     count: 93
@@ -192,7 +223,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "016694"
       offset: 1
-      gravity: top
+      gravity: u80
       playback: reverse
 
   - id: "002605"
@@ -202,6 +233,8 @@ segments:
     - movie: the_sea_chase
       segment: "077076"
       offset: 1
+      stretch: 1.1
+      gravity: l30
 
   - id: "002686"
     count: 126
@@ -210,6 +243,8 @@ segments:
     - movie: the_sea_chase
       segment: "077236"
       offset: 4
+      stretch: 1.1
+      gravity: l50
 
   - id: "002812"
     count: 78
@@ -218,6 +253,7 @@ segments:
     - movie: the_crimson_pirate
       segment: "018153"
       offset: 0
+      gravity: d20
 
   - id: "002890"
     count: 206
@@ -227,6 +263,7 @@ segments:
       segment: "026546"
       offset: 388
       todo: "(cross-fade)"
+      stretch: 1.1
     - movie: the_sea_chase
       segment: "160288"
       offset: 13
@@ -325,6 +362,7 @@ segments:
     - movie: the_sea_chase
       segment: "161004"
       offset: 46
+      gravity: r20
 
   - id: "004575"
     count: 23
@@ -333,6 +371,7 @@ segments:
     - movie: the_sea_chase
       segment: "161135"
       offset: 0
+      gravity: r20
 
   - id: "004598"
     count: 85
@@ -341,6 +380,7 @@ segments:
     - movie: the_sea_chase
       segment: "165419"
       offset: 1
+      gravity: r20
 
   - id: "004683"
     count: 23
@@ -469,7 +509,7 @@ segments:
     - movie: harper
       segment: "159034"
       offset: 27
-      gravity: right
+      gravity: r100
       todo: "Zoom (or crop + autozoom) to hide the character on the left"
 
   - id: "006116"
@@ -495,7 +535,7 @@ segments:
     - movie: harper
       segment: "150137"
       offset: 16
-      gravity: half-right # slightly recenter the character
+      gravity: r50 # slightly recenter the character
 
   - id: "006314"
     count: 32
@@ -576,7 +616,7 @@ segments:
     - movie: harper
       segment: "151410"
       offset: 50
-      gravity: right # recenter the character
+      gravity: r100 # recenter the character
 
   - id: "006753"
     count: 43
@@ -601,7 +641,7 @@ segments:
     - movie: harper
       segment: "150400"
       offset: 14
-      gravity: right # recenter the character
+      gravity: r100 # recenter the character
 
   - id: "006838"
     count: 27
@@ -642,7 +682,7 @@ segments:
     - movie: harper
       segment: "146275"
       offset: 102
-      gravity: half-right # slightly recenter the character
+      gravity: r50 # slightly recenter the character
 
   - id: "006954"
     count: 34
@@ -1098,6 +1138,7 @@ segments:
     - movie: the_cheyenne_social_club
       segment: "129769"
       offset: 0
+      gravity: l50
 
   - id: "014862"
     count: 67
@@ -1267,7 +1308,7 @@ segments:
     - movie: drum_beat
       segment: "061645"
       offset: 58
-      gravity: right
+      gravity: r100
       todo: "pan & crop to hide Alan Ladd"
 
   - id: "018063"
@@ -1309,7 +1350,7 @@ segments:
     - movie: there_was_a_crooked_man
       segment: "078747"
       offset: 0
-      gravity: left
+      gravity: l100
     notes: Double check gravity once a wider image version is available
 
   - id: "018530"
@@ -3369,7 +3410,7 @@ segments:
     - movie: harper
       segment: "150137"
       offset: 19
-      gravity: right # recenter the character
+      gravity: r100 # recenter the character
 
   - id: "053925"
     count: 692
@@ -3402,7 +3443,7 @@ segments:
     - movie: harper
       segment: "150400"
       offset: 0
-      gravity: right # recenter the character
+      gravity: r100 # recenter the character
 
   - id: "055301"
     count: 82
@@ -3460,7 +3501,7 @@ segments:
     - movie: harper
       segment: "151690"
       offset: 43
-      gravity: half-right # slightly recenter the character
+      gravity: r50 # slightly recenter the character
 
   - id: "055940"
     count: 86
@@ -3560,7 +3601,7 @@ segments:
       segment: "128747"
       offset: 0
       transform: hflip
-      gravity: half-right
+      gravity: r50
 
   - id: "057344"
     count: 237
@@ -4469,7 +4510,7 @@ segments:
     - movie: when_time_ran_out
       segment: "090781"
       offset: 0
-      gravity: half-left
+      gravity: l50
 
   - id: "071204"
     count: 127
@@ -4848,7 +4889,7 @@ segments:
     - movie: cahill_us_marshal
       segment: "050315"
       offset: 1
-      gravity: half-left # slightly recenter the character
+      gravity: l50 # slightly recenter the character
 
   - id: "077618"
     count: 559
@@ -5089,7 +5130,7 @@ segments:
     - movie: carson_city
       segment: "033031"
       offset: 48
-      gravity: top
+      gravity: u100
 
   - id: "081749"
     count: 27
@@ -5352,7 +5393,7 @@ segments:
     - movie: riding_shotgun
       segment: "023334"
       offset: 176
-      gravity: half-top
+      gravity: u50
 
   - id: "084189"
     count: 114
@@ -5361,7 +5402,7 @@ segments:
     - movie: riding_shotgun
       segment: "021513"
       offset: -1
-      gravity: top
+      gravity: u100
       todo: "my DVD is missing a frame at the beginning of the scene!"
 
   - id: "084303"
@@ -5371,7 +5412,7 @@ segments:
     - movie: riding_shotgun
       segment: "016440"
       offset: 1
-      gravity: top
+      gravity: u100
 
   - id: "084387"
     count: 39
@@ -5380,7 +5421,7 @@ segments:
     - movie: riding_shotgun
       segment: "022380"
       offset: 0
-      gravity: half-bottom
+      gravity: d50
 
   - id: "084426"
     count: 53
@@ -5389,7 +5430,7 @@ segments:
     - movie: riding_shotgun
       segment: "021513"
       offset: 813
-      gravity: half-top
+      gravity: u50
       todo: 'My DVD has a duplicate on frame 38, breaking sync'
 
   - id: "084479"
@@ -5399,7 +5440,7 @@ segments:
     - movie: riding_shotgun
       segment: "016615"
       offset: 96
-      gravity: half-top
+      gravity: u50
       todo: 'My DVD has a duplicate on frame 95, breaking sync'
 
   - id: "084583"
@@ -5409,7 +5450,7 @@ segments:
     - movie: riding_shotgun
       segment: "022748"
       offset: 3
-      gravity: half-top
+      gravity: u50
       todo: 'Apply stencil on frames 6-11 to extend explosion area'
 
   - id: "084682"
@@ -5563,7 +5604,7 @@ segments:
     - movie: harper
       segment: "013559"
       offset: 0
-      gravity: half-right
+      gravity: r50
 
   - id: "087893"
     count: 241
@@ -5581,7 +5622,7 @@ segments:
     - movie: harper
       segment: "091912"
       offset: 134
-      gravity: left # All the movement happens on the left
+      gravity: l100 # All the movement happens on the left
 
   - id: "088539"
     count: 68
@@ -6094,7 +6135,7 @@ segments:
     - movie: mcq
       segment: "083846"
       offset: 37
-      gravity: half-left
+      gravity: l50
 
   - id: "095873"
     count: 44
@@ -6554,7 +6595,7 @@ segments:
     - movie: harper
       segment: "145862"
       offset: 1
-      gravity: right
+      gravity: r100
 
   - id: "103093"
     count: 225
@@ -6571,7 +6612,7 @@ segments:
     - movie: harper
       segment: "146758"
       offset: 1
-      gravity: right
+      gravity: r100
 
   - id: "103365"
     count: 47
@@ -6596,7 +6637,7 @@ segments:
     - movie: harper
       segment: "146275"
       offset: 0
-      gravity: half-right
+      gravity: r50
 
   - id: "103683"
     count: 206
@@ -6613,7 +6654,7 @@ segments:
     - movie: harper
       segment: "146078"
       offset: 1
-      gravity: half-right
+      gravity: r50
 
   - id: "103938"
     count: 189
@@ -6630,7 +6671,7 @@ segments:
     - movie: harper
       segment: "146758"
       offset: 2
-      gravity: half-right
+      gravity: r50
 
   - id: "104173"
     count: 198
@@ -6671,7 +6712,7 @@ segments:
     - movie: harper
       segment: "150137"
       offset: 1
-      gravity: right
+      gravity: r100
 
   - id: "104601"
     count: 217
@@ -6704,7 +6745,7 @@ segments:
     - movie: mad_max
       segment: "017286"
       offset: 1
-      gravity: half-left # focus more on the car
+      gravity: l50 # focus more on the car
 
   - id: "105028"
     count: 54
@@ -6808,7 +6849,7 @@ segments:
     count: 1961
     scenes: [ "1:10:21", "1:10:24", "1:10:28", "1:10:32", "1:10:36", "1:10:39", "1:10:43", "1:10:47", "1:10:51", "1:10:54", "1:10:58", "1:11:02", "1:11:06", "1:11:09", "1:11:13", "1:11:17", "1:11:21", "1:11:24", "1:11:27" ]
     clips:
-    - movie: "Credits"
+    - movie: end_credits
 
 #
 # movies
