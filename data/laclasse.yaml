@@ -28,7 +28,7 @@ segments:
     scenes: [ "0:00:01" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "198814"
+      segment: "198809"
       offset: 7
       gravity: u0
     notes: "000000 would work better (modern logo) but it changes the length of the movie"
@@ -726,7 +726,7 @@ segments:
     scenes: [ "0:04:50" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086999"
+      segment: "086994"
       offset: 0
 
   - id: "007391"
@@ -743,7 +743,7 @@ segments:
     scenes: [ "0:04:58" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086999"
+      segment: "086994"
       offset: 107
 
   - id: "007577"
@@ -760,7 +760,7 @@ segments:
     scenes: [ "0:05:04" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "087568"
+      segment: "087563"
       offset: 0
 
   - id: "007732"
@@ -777,7 +777,7 @@ segments:
     scenes: [ "0:05:09" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "085326"
+      segment: "085321"
       offset: 65
 
   - id: "007888"
@@ -785,7 +785,7 @@ segments:
     scenes: [ "0:05:13" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086442"
+      segment: "086437"
       offset: 1
 
   - id: "008020"
@@ -793,7 +793,7 @@ segments:
     scenes: [ "0:05:18" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086575"
+      segment: "086570"
       offset: 0
 
   - id: "008189"
@@ -801,7 +801,7 @@ segments:
     scenes: [ "0:05:26" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "085545"
+      segment: "085540"
       offset: 30
 
   - id: "008316"
@@ -809,7 +809,7 @@ segments:
     scenes: [ "0:05:32" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086107"
+      segment: "086102"
       offset: 0
 
   - id: "008403"
@@ -817,7 +817,7 @@ segments:
     scenes: [ "0:05:34" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086194"
+      segment: "086189"
       offset: 0
 
   - id: "008451"
@@ -825,7 +825,7 @@ segments:
     scenes: [ "0:05:36" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086312"
+      segment: "086307"
       offset: 1
 
   - id: "008495"
@@ -833,7 +833,7 @@ segments:
     scenes: [ "0:05:38" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "085545"
+      segment: "085540"
       offset: 129
 
   - id: "008657"
@@ -841,7 +841,7 @@ segments:
     scenes: [ "0:05:44" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "085836"
+      segment: "085831"
       offset: 0
 
   - id: "008729"
@@ -849,7 +849,7 @@ segments:
     scenes: [ "0:05:46" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "085908"
+      segment: "085903"
       offset: 0
 
   - id: "008928"
@@ -857,7 +857,7 @@ segments:
     scenes: [ "0:05:55" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086107"
+      segment: "086102"
       offset: 0
 
   - id: "009015"
@@ -865,7 +865,7 @@ segments:
     scenes: [ "0:06:00" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086194"
+      segment: "086189"
       offset: 0
 
   - id: "009132"
@@ -873,7 +873,7 @@ segments:
     scenes: [ "0:06:04" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086442"
+      segment: "086437"
       offset: 1
 
   - id: "009263"
@@ -881,7 +881,7 @@ segments:
     scenes: [ "0:06:08" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "087252"
+      segment: "087247"
       offset: 1
 
   - id: "009334"
@@ -937,7 +937,7 @@ segments:
     scenes: [ "0:06:56" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "131623"
+      segment: "131618"
       offset: 0
 
   - id: "010635"
@@ -945,7 +945,7 @@ segments:
     scenes: [ "0:07:03" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "131831"
+      segment: "131826"
       offset: 0
 
   - id: "010762"
@@ -953,7 +953,7 @@ segments:
     scenes: [ "0:07:09" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "132475"
+      segment: "132470"
       offset: 1
 
   - id: "010934"
@@ -961,7 +961,7 @@ segments:
     scenes: [ "0:07:15" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086575"
+      segment: "086570"
       offset: 21
 
   - id: "011080"
@@ -969,7 +969,7 @@ segments:
     scenes: [ "0:07:22" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "132203"
+      segment: "132198"
       offset: 0
 
   - id: "011175"
@@ -977,7 +977,7 @@ segments:
     scenes: [ "0:07:24" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "086357"
+      segment: "086352"
       offset: 35
 
   - id: "011225"
@@ -985,7 +985,7 @@ segments:
     scenes: [ "0:07:27" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "131623"
+      segment: "131618"
       offset: 21
 
   - id: "011302"
@@ -1434,7 +1434,7 @@ segments:
     scenes: [ "0:13:07", "0:13:09" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "035813"
+      segment: "035808"
       offset: 1062
       todo: "speed change? check more frames"
     - movie: harper
@@ -1446,7 +1446,7 @@ segments:
     scenes: [ "0:13:34", "0:13:40", "0:13:42" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "037655"
+      segment: "037650"
       offset: -1
       todo: "(fade to black on the right) (red filter) (etc.)"
     notes: "L'offset est bien -1, la première frame est dupliquée dans La Classe"
@@ -1456,7 +1456,7 @@ segments:
     scenes: [ "0:14:02", "0:14:05" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "038923"
+      segment: "038918"
       offset: 0
       todo: "(yellow filter)"
 
@@ -1465,7 +1465,7 @@ segments:
     scenes: [ "0:14:06" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "039552"
+      segment: "039547"
       offset: 422
 
   - id: "021513"
@@ -1473,7 +1473,7 @@ segments:
     scenes: [ "0:14:18" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "040285"
+      segment: "040280"
       offset: 0
 
   - id: "021556"
@@ -1488,7 +1488,7 @@ segments:
     scenes: [ "0:14:26" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "040575"
+      segment: "040570"
       offset: 0
 
   - id: "021807"
@@ -1496,7 +1496,7 @@ segments:
     scenes: [ "0:14:31" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "040706"
+      segment: "040701"
       offset: 0
 
   - id: "021953"
@@ -1510,7 +1510,7 @@ segments:
     scenes: [ "0:14:44" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "039268"
+      segment: "039263"
       offset: 0
 
   - id: "022390"
@@ -1580,7 +1580,7 @@ segments:
     scenes: [ "0:15:44" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "039268"
+      segment: "039263"
       todo: "(ping-pong)"
 
   - id: "023893"
@@ -2244,7 +2244,7 @@ segments:
     scenes: [ "0:20:58" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "038923"
+      segment: "038918"
       offset: 0
 
   - id: "031603"
@@ -2252,7 +2252,7 @@ segments:
     scenes: [ "0:21:02" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "038704"
+      segment: "038699"
       offset: 0
 
   - id: "031822"
@@ -2317,7 +2317,7 @@ segments:
     scenes: [ "0:21:55" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "039268"
+      segment: "039263"
       offset: 24
 
   - id: "033041"
@@ -2332,7 +2332,7 @@ segments:
     scenes: [ "0:22:14" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "163838"
+      segment: "163833"
       offset: 662
 
   - id: "033719"
@@ -2340,7 +2340,7 @@ segments:
     scenes: [ "0:22:27" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "164817"
+      segment: "164812"
       offset: 0
 
   - id: "034164"
@@ -2348,7 +2348,7 @@ segments:
     scenes: [ "0:22:45" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "092456"
+      segment: "092451"
       offset: 10
 
   - id: "034687"
@@ -2364,7 +2364,7 @@ segments:
     scenes: [ "0:23:12" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "127432"
+      segment: "127427"
       offset: 0
 
   - id: "034902"
@@ -2372,7 +2372,7 @@ segments:
     scenes: [ "0:23:14" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "127658"
+      segment: "127653"
       offset: 34
 
   - id: "034962"
@@ -2388,7 +2388,7 @@ segments:
     scenes: [ "0:23:20" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "128997"
+      segment: "128992"
       offset: 0
 
   - id: "035278"
@@ -2404,7 +2404,7 @@ segments:
     scenes: [ "0:23:40" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "127933"
+      segment: "127928"
       offset: 24
 
   - id: "035655"
@@ -2420,7 +2420,7 @@ segments:
     scenes: [ "0:23:50" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "130764"
+      segment: "130759"
       offset: 0
 
   - id: "036019"
@@ -2436,7 +2436,7 @@ segments:
     scenes: [ "0:24:06", "0:24:15" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "129754"
+      segment: "129749"
       offset: 35
       todo: "(flashback fade)"
     - movie: four_for_texas
@@ -2764,7 +2764,7 @@ segments:
     scenes: [ "0:28:01" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "128378"
+      segment: "128373"
       offset: 5
 
   - id: "042311"
@@ -2780,7 +2780,7 @@ segments:
     scenes: [ "0:28:20", "0:28:24" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "128700"
+      segment: "128695"
       offset: 0
       todo: "(flashback fade)"
     - movie: four_for_texas
@@ -3049,7 +3049,7 @@ segments:
     scenes: [ "0:31:01" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "170192"
+      segment: "170187"
       offset: 0
       transform: "hflip"
 
@@ -3239,7 +3239,7 @@ segments:
     scenes: [ "0:32:21" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "172819"
+      segment: "172814"
       offset: 0
 
   - id: "049372"
@@ -3247,7 +3247,7 @@ segments:
     scenes: [ "0:32:52" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173615"
+      segment: "173610"
       offset: 1
 
   - id: "049471"
@@ -3255,7 +3255,7 @@ segments:
     scenes: [ "0:32:56" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173715"
+      segment: "173710"
       offset: 0
 
   - id: "049619"
@@ -3263,7 +3263,7 @@ segments:
     scenes: [ "0:33:03" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "159544"
+      segment: "159539"
       offset: 0
 
   - id: "050584"
@@ -3657,7 +3657,7 @@ segments:
     scenes: [ "0:39:00" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "064469"
+      segment: "064464"
       offset: 5
       transform: "hflip"
 
@@ -3666,7 +3666,7 @@ segments:
     scenes: [ "0:39:04" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "066331"
+      segment: "066326"
       offset: 0
       transform: "hflip"
 
@@ -3675,7 +3675,7 @@ segments:
     scenes: [ "0:39:06" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "064825"
+      segment: "064820"
       offset: 0
       transform: "hflip"
 
@@ -3684,7 +3684,7 @@ segments:
     scenes: [ "0:39:10" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "065281"
+      segment: "065276"
       offset: 0
 
   - id: "058945"
@@ -3692,7 +3692,7 @@ segments:
     scenes: [ "0:39:16" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "066528"
+      segment: "066523"
       offset: 2
       transform: "hflip"
 
@@ -3701,7 +3701,7 @@ segments:
     scenes: [ "0:39:18", "0:39:24" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "066528"
+      segment: "066523"
       offset: 36
       todo: "(flashback fade)"
     - movie: deliverance
@@ -3734,7 +3734,7 @@ segments:
       offset: 1
       todo: "(flashback fade)"
     - movie: all_the_presidents_men
-      segment: "066331"
+      segment: "066326"
       offset: -89
       todo: "(flashback fade)"
 
@@ -3743,7 +3743,7 @@ segments:
     scenes: [ "0:39:49", "0:39:52" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "066528"
+      segment: "066523"
       offset: 0
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
@@ -3764,7 +3764,7 @@ segments:
     scenes: [ "0:40:03" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "148021"
+      segment: "148016"
       offset: 4
 
   - id: "060216"
@@ -3780,7 +3780,7 @@ segments:
     scenes: [ "0:40:09" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "148809"
+      segment: "148804"
       offset: 0
 
   - id: "060445"
@@ -3797,7 +3797,7 @@ segments:
     scenes: [ "0:40:19" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "148348"
+      segment: "148343"
       offset: 0
 
   - id: "060578"
@@ -3946,7 +3946,7 @@ segments:
     scenes: [ "0:41:41" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "065219"
+      segment: "065214"
       offset: 0
 
   - id: "062655"
@@ -3962,7 +3962,7 @@ segments:
     scenes: [ "0:41:49" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "065725"
+      segment: "065720"
       offset: 0
 
   - id: "062866"
@@ -3978,7 +3978,7 @@ segments:
     scenes: [ "0:41:58" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "066016"
+      segment: "066011"
       offset: 0
 
   - id: "063143"
@@ -4068,7 +4068,7 @@ segments:
     scenes: [ "0:43:34" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "065449"
+      segment: "065444"
       offset: 0
 
   - id: "065486"
@@ -4257,7 +4257,7 @@ segments:
     scenes: [ "0:44:58" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "172819"
+      segment: "172814"
       offset: 349
 
   - id: "067972"
@@ -4265,7 +4265,7 @@ segments:
     scenes: [ "0:45:17" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173615"
+      segment: "173610"
       offset: 0
 
   - id: "068072"
@@ -4273,7 +4273,7 @@ segments:
     scenes: [ "0:45:21" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173715"
+      segment: "173710"
       offset: 0
 
   - id: "068220"
@@ -4517,7 +4517,7 @@ segments:
     scenes: [ "0:47:28" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "122501"
+      segment: "122496"
       offset: 0
 
   - id: "071331"
@@ -4533,7 +4533,7 @@ segments:
     scenes: [ "0:47:39" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "124170"
+      segment: "124165"
       offset: 34
 
   - id: "071574"
@@ -4549,7 +4549,7 @@ segments:
     scenes: [ "0:47:47" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "123541"
+      segment: "123536"
       offset: 0
 
   - id: "071964"
@@ -4565,7 +4565,7 @@ segments:
     scenes: [ "0:48:00", "0:48:02" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "124491"
+      segment: "124486"
       offset: 0
       todo: "(flashback fade)"
     - movie: band_of_angels
@@ -4696,7 +4696,7 @@ segments:
     scenes: [ "0:49:33" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "123541"
+      segment: "123536"
       offset: 1
 
   - id: "074599"
@@ -4712,7 +4712,7 @@ segments:
     scenes: [ "0:49:43" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "124491"
+      segment: "124486"
       offset: 0
 
   - id: "074695"
@@ -4720,7 +4720,7 @@ segments:
     scenes: [ "0:49:46" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "125855"
+      segment: "125850"
       offset: 0
 
   - id: "075020"
@@ -4981,7 +4981,7 @@ segments:
     scenes: [ "0:52:57" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "069047"
+      segment: "069042"
       offset: 1194
 
   - id: "079646"
@@ -4997,7 +4997,7 @@ segments:
     scenes: [ "0:53:18" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "069047"
+      segment: "069042"
       offset: 5000
 
   - id: "080156"
@@ -5458,7 +5458,7 @@ segments:
     scenes: [ "0:56:25" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "106124"
+      segment: "106119"
       offset: 71
 
   - id: "084800"
@@ -5466,7 +5466,7 @@ segments:
     scenes: [ "0:56:30" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "107171"
+      segment: "107166"
       offset: 113
     notes: "Peut-être ajuster le cadrage pour masquer le personnage du début de séquence"
 
@@ -5483,7 +5483,7 @@ segments:
     scenes: [ "0:56:40" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "109367"
+      segment: "109362"
       offset: 151
       transform: "hflip"
 
@@ -5500,7 +5500,7 @@ segments:
     scenes: [ "0:56:46" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "113297"
+      segment: "113292"
       offset: 32
       transform: hflip
 
@@ -5593,7 +5593,7 @@ segments:
     scenes: [ "0:58:19" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "109712"
+      segment: "109707"
       offset: 0
       transform: "hflip"
 
@@ -5611,7 +5611,7 @@ segments:
     scenes: [ "0:58:34" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "112566"
+      segment: "112561"
       offset: 138
       transform: "hflip"
 
@@ -5637,7 +5637,7 @@ segments:
     scenes: [ "0:59:02" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "170983"
+      segment: "170978"
       offset: 1
 
   - id: "088657"
@@ -5645,7 +5645,7 @@ segments:
     scenes: [ "0:59:04" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "170684"
+      segment: "170679"
       offset: 0
 
   - id: "088746"
@@ -5661,7 +5661,7 @@ segments:
     scenes: [ "0:59:20" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "171325"
+      segment: "171320"
       offset: 98
 
   - id: "089183"
@@ -5669,7 +5669,7 @@ segments:
     scenes: [ "0:59:25" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "170983"
+      segment: "170978"
       offset: 16
       todo: "ping-pong autour de la frame +31"
 
@@ -5686,7 +5686,7 @@ segments:
     scenes: [ "0:59:38" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "171144"
+      segment: "171139"
       offset: 0
 
   - id: "089561"
@@ -5694,7 +5694,7 @@ segments:
     scenes: [ "0:59:40" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "171325"
+      segment: "171320"
       offset: 742
 
   - id: "090044"
@@ -5702,7 +5702,7 @@ segments:
     scenes: [ "1:00:00" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "170983"
+      segment: "170978"
       offset: 16
       todo: "ping-pong autour de la frame +31"
 
@@ -5719,7 +5719,7 @@ segments:
     scenes: [ "1:00:06" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "053649"
+      segment: "053643"
       offset: 0
 
   - id: "090397"
@@ -5727,7 +5727,7 @@ segments:
     scenes: [ "1:00:14" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "054183"
+      segment: "054177"
       offset: 106
 
   - id: "090526"
@@ -5735,7 +5735,7 @@ segments:
     scenes: [ "1:00:19" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "054512"
+      segment: "054506"
       offset: 1
 
   - id: "090569"
@@ -5752,7 +5752,7 @@ segments:
     scenes: [ "1:00:30" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "054973"
+      segment: "054967"
       offset: 1
 
   - id: "090929"
@@ -5793,7 +5793,7 @@ segments:
     scenes: [ "1:01:03" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "056119"
+      segment: "056113"
       offset: 0
 
   - id: "091765"
@@ -5977,7 +5977,7 @@ segments:
     scenes: [ "1:02:35" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "080370"
+      segment: "080365"
       offset: 0
 
   - id: "093976"
@@ -5993,7 +5993,7 @@ segments:
     scenes: [ "1:02:40" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "083065"
+      segment: "083060"
       offset: 0
 
   - id: "094153"
@@ -6033,7 +6033,7 @@ segments:
     scenes: [ "1:03:03" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "083408"
+      segment: "083403"
       offset: 52
 
   - id: "094751"
@@ -6041,7 +6041,7 @@ segments:
     scenes: [ "1:03:08" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "080728"
+      segment: "080723"
       offset: 0
 
   - id: "094810"
@@ -6058,7 +6058,7 @@ segments:
     scenes: [ "1:03:15" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "081395"
+      segment: "081390"
       offset: 4
 
   - id: "095019"
@@ -6074,7 +6074,7 @@ segments:
     scenes: [ "1:03:23" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "080787"
+      segment: "080782"
       offset: 0
       transform: "hflip"
 
@@ -6091,7 +6091,7 @@ segments:
     scenes: [ "1:03:30" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "083065"
+      segment: "083060"
       offset: 0
 
   - id: "095379"
@@ -6265,7 +6265,7 @@ segments:
     scenes: [ "1:04:53" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "172819"
+      segment: "172814"
       offset: 420
 
   - id: "097759"
@@ -6273,7 +6273,7 @@ segments:
     scenes: [ "1:05:08" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173615"
+      segment: "173610"
       offset: 1
 
   - id: "097858"
@@ -6281,7 +6281,7 @@ segments:
     scenes: [ "1:05:12" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173715"
+      segment: "173710"
       offset: 0
 
   - id: "097999"
@@ -6431,7 +6431,7 @@ segments:
     scenes: [ "1:06:19", "1:06:25" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "191431"
+      segment: "191426"
       offset: 356
     notes: 'Syncing was done with the character turning pages on the right'
 
@@ -6440,7 +6440,7 @@ segments:
     scenes: [ "1:06:26" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "156758"
+      segment: "156753"
       offset: 160
 
   - id: "100097"
@@ -6448,7 +6448,7 @@ segments:
     scenes: [ "1:06:42" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "157285"
+      segment: "157280"
       offset: 0
 
   - id: "100166"
@@ -6456,7 +6456,7 @@ segments:
     scenes: [ "1:06:45" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "157354"
+      segment: "157349"
       offset: 0
 
   - id: "101423"
@@ -6464,7 +6464,7 @@ segments:
     scenes: [ "1:07:35" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "158611"
+      segment: "158606"
       offset: 0
 
   - id: "101524"
@@ -6472,7 +6472,7 @@ segments:
     scenes: [ "1:07:39" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "158712"
+      segment: "158707"
       offset: 0
 
   - id: "101602"
@@ -6480,7 +6480,7 @@ segments:
     scenes: [ "1:07:42" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "158790"
+      segment: "158785"
       offset: 0
 
   - id: "101669"
@@ -6488,7 +6488,7 @@ segments:
     scenes: [ "1:07:45" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "158857"
+      segment: "158852"
       offset: 0
 
   - id: "101723"
@@ -6496,7 +6496,7 @@ segments:
     scenes: [ "1:07:47" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "158911"
+      segment: "158906"
       offset: 0
 
   - id: "101769"
@@ -6504,7 +6504,7 @@ segments:
     scenes: [ "1:07:49" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "158957"
+      segment: "158952"
       offset: 0
 
   - id: "101816"
@@ -6512,7 +6512,7 @@ segments:
     scenes: [ "1:07:51" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "159004"
+      segment: "158999"
       offset: 0
 
   - id: "101862"
@@ -6520,7 +6520,7 @@ segments:
     scenes: [ "1:07:52" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "159050"
+      segment: "159045"
       offset: 0
 
   - id: "101941"
@@ -6528,7 +6528,7 @@ segments:
     scenes: [ "1:07:55" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "159130"
+      segment: "159125"
       offset: 97
 
   - id: "102067"
@@ -6536,7 +6536,7 @@ segments:
     scenes: [ "1:08:01" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "172819"
+      segment: "172814"
       offset: 419
 
   - id: "102409"
@@ -6544,7 +6544,7 @@ segments:
     scenes: [ "1:08:14" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173615"
+      segment: "173610"
       offset: 1
 
   - id: "102507"
@@ -6552,7 +6552,7 @@ segments:
     scenes: [ "1:08:18" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "172819"
+      segment: "172814"
       offset: 752
 
   - id: "102551"
@@ -6560,7 +6560,7 @@ segments:
     scenes: [ "1:08:20" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173715"
+      segment: "173710"
       offset: 1
       playback: reverse
 
@@ -6569,7 +6569,7 @@ segments:
     scenes: [ "1:08:23" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173615"
+      segment: "173610"
       todo: "Ping-pong, frames 10730 and 10731 are the same, equal to last frame in original (173714)"
 
   - id: "102773"
@@ -6577,7 +6577,7 @@ segments:
     scenes: [ "1:08:29" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "173715"
+      segment: "173710"
       offset: 54
 
   - id: "102855"
