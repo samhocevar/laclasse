@@ -211,6 +211,9 @@ for s in data['segments']:
             if crop := clip_presets.get(f'letterbox-{src.shape[0]}'):
                 if crop > 0:
                     src = src[crop:-crop,:]
+            if crop := clip_presets.get(f'letterbox-{src.shape[1]}'):
+                if crop > 0:
+                    src = src[:,crop:-crop]
 
             src_h, src_w, _ = src.shape
 
@@ -272,9 +275,10 @@ for s in data['segments']:
             # Blit image from this clip to target (FIXME: blending etc. not handled yet)
             cv2_blit(target_image, src[rect_y:rect_y+rect_w,rect_x:rect_x+rect_w], 0, 0)
 
-            # "Quality" is the density of source pixels in the target image
-            quality = min(100, round(100 * src_w * src_h / rect_w / rect_h))
-            clipinfo.append(f'Quality: {quality}%')
+            # "Quality" is the density of source pixels in the target image, a rough
+            # estimate of the number of pixels lost through scaling in both dimensions.
+            quality = min(1, src_w / dst_w) * min(1, src_h / dst_h)
+            clipinfo.append(f'Quality: {100 * quality:.1f}%')
 
             # Add debug info etc.
             ythumb = yinfo
@@ -318,6 +322,7 @@ for s in data['segments']:
             yinfo += NEWLINE
 
         for e in errors:
+            print(e)
             cv2.putText(canvas_image, f'Error: {e}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
             fatal = e
             yinfo += NEWLINE

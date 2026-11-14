@@ -15,6 +15,9 @@ presets:
   blood_alley:
     letterbox-1080: 164
 
+  bullitt:
+    letterbox-1920: 6 # XXX: Those are vertical bars!
+
   cleopatra_jones:
     letterbox-1080: 140
 
@@ -24,6 +27,9 @@ presets:
   jeremiah_johnson:
     letterbox-1080: 140
     letterbox-2160: 278
+
+  mad_max:
+    letterbox-2160: 263
 
   mcq:
     letterbox-1080: 140
@@ -90,6 +96,7 @@ segments:
       segment: "026565"
       offset: 337
       stretch: 1.1
+      gravity: r15
     notes: Syncing done on the foam lighting on frames 100-102
 
   - id: "000691"
@@ -608,7 +615,7 @@ segments:
     scenes: [ "0:04:18" ]
     clips:
     - movie: mad_max
-      segment: "005582"
+      segment: "005712"
       offset: 0
 
   - id: "006549"
@@ -3564,7 +3571,7 @@ segments:
     scenes: [ "0:37:20" ]
     clips:
     - movie: mad_max
-      segment: "010605"
+      segment: "010735"
       offset: 22
 
   - id: "056060"
@@ -3572,7 +3579,7 @@ segments:
     scenes: [ "0:37:21" ]
     clips:
     - movie: mad_max
-      segment: "010663"
+      segment: "010793"
       offset: 1
 
   - id: "056077"
@@ -3580,7 +3587,7 @@ segments:
     scenes: [ "0:37:22" ]
     clips:
     - movie: mad_max
-      segment: "010690"
+      segment: "010820"
       offset: 1
 
   - id: "056107"
@@ -6633,7 +6640,7 @@ segments:
     scenes: [ "1:08:32" ]
     clips:
     - movie: mad_max
-      segment: "114610"
+      segment: "114740"
       offset: 0
 
   - id: "102935"
@@ -6667,7 +6674,7 @@ segments:
     scenes: [ "1:08:53" ]
     clips:
     - movie: mad_max
-      segment: "114922"
+      segment: "115052"
       offset: 1
 
   - id: "103412"
@@ -6675,7 +6682,7 @@ segments:
     scenes: [ "1:08:56" ]
     clips:
     - movie: mad_max
-      segment: "004538"
+      segment: "004668"
       offset: 9
 
   - id: "103495"
@@ -6734,7 +6741,7 @@ segments:
     scenes: [ "1:09:33" ]
     clips:
     - movie: mad_max
-      segment: "012500"
+      segment: "012630"
       offset: 0
 
   - id: "104395"
@@ -6742,7 +6749,7 @@ segments:
     scenes: [ "1:09:34" ]
     clips:
     - movie: mad_max
-      segment: "016165"
+      segment: "016295"
       offset: 1
 
   - id: "104431"
@@ -6783,7 +6790,7 @@ segments:
     scenes: [ "1:09:57" ]
     clips:
     - movie: mad_max
-      segment: "114922"
+      segment: "115052"
       offset: 25
 
   - id: "105012"
@@ -6791,7 +6798,7 @@ segments:
     scenes: [ "1:09:58" ]
     clips:
     - movie: mad_max
-      segment: "017286"
+      segment: "017416"
       offset: 1
       gravity: l50 # focus more on the car
 
@@ -6800,7 +6807,7 @@ segments:
     scenes: [ "1:09:59" ]
     clips:
     - movie: mad_max
-      segment: "017303"
+      segment: "017433"
       offset: 0
 
   - id: "105082"
@@ -6808,7 +6815,7 @@ segments:
     scenes: [ "1:10:00" ]
     clips:
     - movie: mad_max
-      segment: "017357"
+      segment: "017487"
       offset: 0
 
   - id: "105096"
@@ -6816,7 +6823,7 @@ segments:
     scenes: [ "1:10:01" ]
     clips:
     - movie: mad_max
-      segment: "017371"
+      segment: "017501"
       offset: 1
 
   - id: "105099"
@@ -6824,7 +6831,7 @@ segments:
     scenes: [ "1:10:02" ]
     clips:
     - movie: mad_max
-      segment: "123612"
+      segment: "123742"
       offset: 0
 
   - id: "105102"
@@ -6832,7 +6839,7 @@ segments:
     scenes: [ "1:10:03" ]
     clips:
     - movie: mad_max
-      segment: "017381"
+      segment: "017511"
       offset: 0
 
   - id: "105109"
@@ -6840,7 +6847,7 @@ segments:
     scenes: [ "1:10:04" ]
     clips:
     - movie: mad_max
-      segment: "017388"
+      segment: "017518"
       offset: 0
 
   - id: "105144"
@@ -6857,7 +6864,7 @@ segments:
     scenes: [ "1:10:06" ]
     clips:
     - movie: mad_max
-      segment: "017388"
+      segment: "017518"
       offset: 35
 
   - id: "105235"
@@ -6865,7 +6872,7 @@ segments:
     scenes: [ "1:10:07" ]
     clips:
     - movie: mad_max
-      segment: "017643"
+      segment: "017773"
       offset: 0
 
   - id: "105276"
@@ -6873,7 +6880,7 @@ segments:
     scenes: [ "1:10:09" ]
     clips:
     - movie: mad_max
-      segment: "017547"
+      segment: "017677"
       offset: 1
 
   - id: "105338"
@@ -6927,10 +6934,12 @@ movies:
       bitrate: 23.44
       link: https://www.blu-ray.com/movies/All-the-Presidents-Men-Blu-ray/33492/
     sources:
+    - name: "All.The.Presidents.Men.1976.Multi.VFi.Bluray.Remux.2160p.HEVC.HDR10.DV.DTS-HDMA.ZatNik07.mkv"
+      resolution: 3840x2076
+      rating: 10
     - name: "All the Presidents Men 1976 1080p MAX WEB-DL H264-GPRS.mkv"
       resolution: "1920x1080"
     - name: "All the Presidents Men (1976) MULTi VFI 2160p 10bit DV HDR10 BluRay x265 DTS-HD MA 2.0-MHD.mkv"
-    - name: "All.The.Presidents.Men.1976.Multi.VFi.Bluray.Remux.2160p.HEVC.HDR10.DV.DTS-HDMA.ZatNik07.mkv"
     status:
       segments: true
 
@@ -7009,10 +7018,12 @@ movies:
       bitrate: 16.93
       link: https://www.blu-ray.com/movies/Battle-of-the-Bulge-Blu-ray/414/
     sources:
+    - name: "La.Bataille.Des.Ardennes.1965.REMASTERED.MULTi.VFF.1080p.BluRay.REMUX.AC3.1.0.VC1-NTG.mkv"
+      resolution: 1920x692
+      rating: 8
     - name: "Battle.Of.The.Bulge.1965.1080p.BluRay.x264-[YTS.LT].mp4"
       resolution: "1904x688"
     - name: "La.Bataille.Des.Ardennes.1965.MULTI.1080p.BluRay.HDLight.AC3.x264-gismo65.mkv"
-    - name: "La.Bataille.Des.Ardennes.1965.REMASTERED.MULTi.VFF.1080p.BluRay.REMUX.AC3.1.0.VC1-NTG.mkv"
     status:
       segments: true
 
@@ -7081,8 +7092,11 @@ movies:
       link: https://www.blu-ray.com/movies/Bullitt-Blu-ray/355/
     sources:
     - name: "Bullitt 1968 BluRay 1080p DD 2 0 VC-1 REMUX-FraMeSToR.mkv"
-      resolution: "1920x1080"
+      resolution: 1908x1080
+      rating: 8
     - name: "Bullitt.1968.BD.Remux.1080p.MULTi.FR-EN.VC-1.AC3.2.0.AC3.1.0-om.mkv"
+      resolution: 1908x1080
+      rating: 8
     - name: "Bullitt.1968.MULTI.VFF.1080p.BluRay.AC3.1.0.x264-PURE.mkv"
     status:
       segments: true
@@ -7591,10 +7605,13 @@ movies:
       year: 2007
       link: https://www.blu-ray.com/dvd/Jeremiah-Johnson-DVD/15204/
     sources:
-    - name: "Jeremiah Johnson 1972 2160p.mkv"
-      resolution: "3840x2160"
-    - name: "Jeremiah.Johnson.1972.EXTENDED.REMASTERED.MULTi.1080p.BluRay.x264.DTS.HD.MA.5.1-RiFiFi.mkv"
     - name: "Jeremiah.Johnson.1972.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.5.1.AVC-Raf66.mkv"
+      resolution: 1920x800
+      rating: 8
+    - name: "Jeremiah Johnson 1972 2160p.mkv"
+      resolution: 3840x2160
+      bad: upscaled from a 1080p source
+    - name: "Jeremiah.Johnson.1972.EXTENDED.REMASTERED.MULTi.1080p.BluRay.x264.DTS.HD.MA.5.1-RiFiFi.mkv"
     status:
       segments: true
 
@@ -7621,6 +7638,8 @@ movies:
       link: https://www.blu-ray.com/dvd/The-Life-and-Times-of-Judge-Roy-Bean-DVD/82524/
     sources:
     - name: "Juge.Et.Hors.La.Loi.1972.MULTI.VFF.1080p.BLURAY.REMUX.DTS.HD.MA.2.0.AVC-Raf66.mkv"
+      resolution: 1920x1080
+      rating: 8
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.1080p.BluRay.x264-[YTS.AM].mp4"
     - name: "The Life and Times of Judge Roy Bean  (Western 1972)  Paul Newman, Ava Gardner & Roy Jenson  (BR).mp4"
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.720p.BluRay.x264-[YTS.AM].mp4"
@@ -7659,11 +7678,13 @@ movies:
       bitrate: 34.92
       link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/134334/
     sources:
+    - name: "Mad.Max.1979.2160p.UHD.BLURAY.REMUX.HDR.HEVC.MULTi.VFi.AC3.1.0.x265-EXTREME.mkv"
+      resolution: 3840x1634
+      rating: 10
     - name: "Mad Max (1979) MULTi VFI 2160p 10bit 4KLight DOLBY VISION BluRay AC3 5.1 x265-QTZ.mkv"
     - name: "Mad Max (1979) MULTi VFI 2160p 10bit 4KLight HDR BluRay AC3 5.1 x265-QTZ.mkv"
     - name: "Mad Max 1979 BluRay 1080p DDP 5 1 x264-hallowed.mkv"
       resolution: "1920x820"
-    - name: "Mad.Max.1979.2160p.UHD.BLURAY.REMUX.HDR.HEVC.MULTi.VFi.AC3.1.0.x265-EXTREME.mkv"
     status:
       segments: true
 
@@ -7700,12 +7721,14 @@ movies:
       year: 2007
       link: https://www.blu-ray.com/dvd/McQ-DVD/7128/
     sources:
+    - name: "McQ.1974.Multi.VFF.1080p.BluRay.REMUX.HD.MA.2.0.AVC-SamH.mkv"
+      resolution: 1920x800
+      rating: 8
     - name: "McQ.1974.720p.BluRay.H264.AAC-RARBG.mp4"
       resolution: "1280x534"
     - name: "Un.Silencieux.Au.Bout.Du.Canon.1974..Multi.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
     - name: "McQ.1974.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "McQ.1974.720p.BluRay.x264.AAC-[YTS.MX].mp4"
-    - name: "McQ.1974.Multi.VFF.1080p.BluRay.REMUX.HD.MA.2.0.AVC-SamH.mkv"
     status:
       segments: true
 
@@ -7855,10 +7878,12 @@ movies:
       bitrate: 19.62
       link: https://www.blu-ray.com/movies/Rio-Bravo-Blu-ray/437/
     sources:
+    - name: "Rio.Bravo.1959.MULTi.VFi.2160p.UHD.BluRay.REMUX.HDR.HEVC.DTS-HD.MA.2.0-ONLY.mkv"
+      resolution: 3840x2076
+      rating: 10
     - name: "Rio Bravo 1959 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
     - name: "Rio Bravo (1959) MULTi VFI 2160p 10bit DV HDR BluRay x265 DTS-HDMA 2.0-XANDER.mkv"
-    - name: "Rio.Bravo.1959.MULTi.VFi.2160p.UHD.BluRay.REMUX.HDR.HEVC.DTS-HD.MA.2.0-ONLY.mkv"
     status:
       segments: true
 
@@ -7883,9 +7908,11 @@ movies:
       year: 2007
       link: https://www.blu-ray.com/dvd/The-Sea-Chase-DVD/6872/
     sources:
+    - name: "Le.Renard.Des.Oceans.1955.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.2.0.AVC-Raf66.mkv"
+      resolution: 1920x752
+      rating: 8
     - name: "The Sea Chase  (War Drama 1955)  John Wayne, David Farrar & Lana Turner  1080p.mp4"
       resolution: "1910x780"
-    - name: "Le.Renard.Des.Oceans.1955.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.2.0.AVC-Raf66.mkv"
     status:
       segments: true
 
@@ -7912,10 +7939,12 @@ movies:
       bitrate: 37.49
       link: https://www.blu-ray.com/movies/The-Searchers-Blu-ray/375104/
     sources:
+    - name: "La.Prisonnière.Du.Désert.1956.MULTI.VFF.UHD.Remux.HDR10.DV.DTS.HD.MA.2.0.HEVC-FgCw.mkv"
+      resolution: 3840x2076
+      rating: 10
     - name: "The.Searchers.1956.1080p.BluRay.x265.HEVC.AC3-SARTRE.mkv"
       resolution: "1920x1080"
     - name: "The Searchers (1956) MULTi VFI 2160p 10bit 4KLight DV HDR BluRay FLAC 1.0 x265-QTZ.mkv"
-    - name: "La.Prisonnière.Du.Désert.1956.MULTI.VFF.UHD.Remux.HDR10.DV.DTS.HD.MA.2.0.HEVC-FgCw.mkv"
     status:
       segments: true
 
@@ -7936,6 +7965,9 @@ movies:
       year: 2011
       link: https://www.blu-ray.com/dvd/Start-The-Revolution-Without-Me-DVD/82538/
     sources:
+    - name: "Start.The.Revolution.Without.Me.1970.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
+      resolution: 1920x1036
+      rating: 8
     - name: "Start The Revolution Without Me 1970 DVDRip x264[N1C].mkv"
     status:
       segments: true
@@ -8046,10 +8078,12 @@ movies:
       year: 2005
       link: https://www.blu-ray.com/dvd/The-Train-Robbers-DVD/99139/
     sources:
+    - name: "The.Train.Robbers.1973.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
+      resolution: 1920x800
+      rating: 8
     - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
     - name: "Les.Voleurs.De.Trains.1973.MULTI.VFI.1080p.BluRay.DTS.HD.MA.1.0.x264-gismo65.mkv"
-    - name: "The.Train.Robbers.1973.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
     status:
       segments: true
 
