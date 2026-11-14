@@ -1512,6 +1512,7 @@ segments:
     - movie: all_the_presidents_men
       segment: "039263"
       offset: 0
+      playback: 0-132, 131-29 # ping-pong after frame 132
 
   - id: "022390"
     count: 138
@@ -1581,7 +1582,9 @@ segments:
     clips:
     - movie: all_the_presidents_men
       segment: "039263"
-      todo: "(ping-pong)"
+      offset: 0
+      # Normal playback for the first 120 frames, then ping-pong
+      playback: 26-145, 144-11
 
   - id: "023893"
     count: 157
@@ -1676,8 +1679,8 @@ segments:
     - movie: rio_bravo
       segment: "147515"
       offset: 0
+      playback: 0-34, 33-10 # ping-pong after frame 34
       transform: hflip
-      todo: "ping-pong autour de la frame +34"
 
   - id: "025564"
     count: 113
@@ -1845,9 +1848,9 @@ segments:
     scenes: [ "0:18:37" ]
     clips:
     - movie: chisum
-      segment: "075236"
-      offset: 6
-      todo: "(ping-pong) check offsets and params with a better dump"
+      segment: "074752"
+      offset: 5
+      playback: 0-69, 69-0
 
   - id: "028107"
     count: 42
@@ -1864,7 +1867,7 @@ segments:
     - movie: chisum
       segment: "075236"
       offset: 0
-      todo: "(ping-pong) 101 frames + 101 frames reversed"
+      playback: 0-101, 100-1 # ping-pong at frame 101
 
   - id: "028351"
     count: 51
@@ -2498,7 +2501,8 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "024626"
-      todo: "(ping-pong)"
+      offset: 1
+      playback: reverse
 
   - id: "037124"
     count: 64
@@ -2506,7 +2510,8 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "026313"
-      todo: "(ping-pong)"
+      offset: 34
+      playback: reverse
 
   - id: "037188"
     count: 47
@@ -2741,7 +2746,8 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "064345"
-      todo: "(ping-pong)"
+      offset: 42
+      playback: reverse
 
   - id: "041651"
     count: 243
@@ -3377,7 +3383,7 @@ segments:
     - movie: executive_action
       segment: "030941"
       offset: 63
-      todo: "(ping-pong: first 30 frames forward, then 28 next ones backwards)"
+      playback: 0-29, 29-2
 
   - id: "053451"
     count: 136
@@ -4160,8 +4166,8 @@ segments:
     clips:
     - movie: jeremiah_johnson
       segment: "152999"
-      offset: 43
-      todo: "ping-pong: after frame 13, frame 14 is repeated and playback is backwards (down to offset 5)"
+      offset: 0
+      playback: 43-56, 56-4
 
   - id: "066443"
     count: 270
@@ -4208,7 +4214,8 @@ segments:
     clips:
     - movie: the_cowboys
       segment: "050899"
-      todo: "ping-pong: offsets #14 to #0, #0 to #6, #5 to #0, #0 to #6, #5 to #0"
+      offset: 0
+      playback: 14-0, 0-6, 5-0, 0-6, 5-0
 
   - id: "066929"
     count: 43
@@ -4224,7 +4231,8 @@ segments:
     clips:
     - movie: the_cowboys
       segment: "050899"
-      todo: "ping-pong: offsets #11 to #20, #19 to #0, #0 to #6, #5 to #0, #1 to #6, #5 to #0, #0 to #6, #5 to #0"
+      offset: 0
+      playback: 11-20, 19-0, 0-6, 5-0, 1-6, 5-0, 0-6, 5-0
 
   - id: "067040"
     count: 379
@@ -4824,6 +4832,7 @@ segments:
     - movie: westbound
       segment: "055439"
       offset: 0
+      gravity: u100
 
   - id: "076725"
     count: 46
@@ -4840,7 +4849,9 @@ segments:
     - movie: westbound
       segment: "056002"
       offset: 0
-      todo: "ping-pong; 127 to 228 repeat 25 to 126 in reverse, 229 to 330 repeat 25 to 126 again"
+      playback: 0-127, 126-24, 26-125
+      gravity: u100
+    notes: Sync was pretty hard in the last third, I think we need a better master
 
   - id: "077101"
     count: 30
@@ -4873,6 +4884,7 @@ segments:
     - movie: westbound
       segment: "055309"
       offset: 1
+      gravity: u100
 
   - id: "077375"
     count: 141
@@ -4899,6 +4911,7 @@ segments:
       segment: "056720"
       offset: 2
       todo: "(flashback fade)"
+      gravity: u100
     - movie: rampage
       segment: "028130"
       offset: -404
@@ -5065,8 +5078,8 @@ segments:
     - movie: when_time_ran_out
       segment: "028733"
       offset: 25
+      playback: 0-19, 19-0
       transform: "hflip"
-      todo: "(ping-pong) 25-44 then 44-25"
 
   - id: "080857"
     count: 171
@@ -5670,8 +5683,8 @@ segments:
     clips:
     - movie: all_the_presidents_men
       segment: "170978"
-      offset: 16
-      todo: "ping-pong autour de la frame +31"
+      offset: 15
+      playback: 1-32, 31-0 # ping-pong around frame 31
 
   - id: "089247"
     count: 267
@@ -5703,8 +5716,8 @@ segments:
     clips:
     - movie: all_the_presidents_men
       segment: "170978"
-      offset: 16
-      todo: "ping-pong autour de la frame +31"
+      offset: 15
+      playback: 1-32, 31-0 # ping-pong around frame 31
 
   - id: "090108"
     count: 99
@@ -6570,7 +6583,8 @@ segments:
     clips:
     - movie: all_the_presidents_men
       segment: "173610"
-      todo: "Ping-pong, frames 10730 and 10731 are the same, equal to last frame in original (173714)"
+      offset: 0
+      playback: 4-99, 99-57
 
   - id: "102773"
     count: 82
