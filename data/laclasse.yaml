@@ -9,6 +9,9 @@ presets:
     gravity: u50
     letterbox-2160: 42
 
+  battle_of_the_bulge:
+    letterbox-1080: 194
+
   blood_alley:
     letterbox-1080: 164
 
@@ -34,6 +37,12 @@ presets:
 
   the_sea_chase:
     letterbox-1080: 164
+
+  the_searchers:
+    letterbox-2160: 42
+
+  the_train_robbers:
+    letterbox-1080: 140
 
   the_cheyenne_social_club:
     stretch: 0.95
@@ -69,8 +78,8 @@ segments:
     scenes: [ "0:00:13", "0:00:19" ]
     clips:
     - movie: the_sea_chase
-      segment: "072663"
-      offset: 146
+      segment: "072686"
+      offset: 147
       todo: "(fade from black)"
 
   - id: "000585"
@@ -78,17 +87,17 @@ segments:
     scenes: [ "0:00:24" ]
     clips:
     - movie: the_sea_chase
-      segment: "026546"
+      segment: "026565"
       offset: 337
       stretch: 1.1
-    notes: "The foam at the base of the ship makes it a definite match"
+    notes: Syncing done on the foam lighting on frames 100-102
 
   - id: "000691"
     count: 214
     scenes: [ "0:00:28" ]
     clips:
     - movie: the_sea_chase
-      segment: "032690"
+      segment: "032710"
       offset: 1
       stretch: 1.1
 
@@ -97,7 +106,7 @@ segments:
     scenes: [ "0:00:35" ]
     clips:
     - movie: the_sea_chase
-      segment: "032982"
+      segment: "033002"
       offset: 1
       stretch: 1.1
 
@@ -106,7 +115,7 @@ segments:
     scenes: [ "0:00:37" ]
     clips:
     - movie: the_sea_chase
-      segment: "068406"
+      segment: "068429"
       offset: 0
       stretch: 1.1
 
@@ -124,7 +133,7 @@ segments:
     scenes: [ "0:00:41" ]
     clips:
     - movie: the_sea_chase
-      segment: "070375"
+      segment: "070398"
       offset: 107
       stretch: 1.1
 
@@ -142,7 +151,7 @@ segments:
     scenes: [ "0:00:55" ]
     clips:
     - movie: the_sea_chase
-      segment: "077076"
+      segment: "077100"
       offset: 1
       stretch: 1.1
 
@@ -160,7 +169,7 @@ segments:
     scenes: [ "0:01:09" ]
     clips:
     - movie: the_sea_chase
-      segment: "068051"
+      segment: "068074"
       offset: 1
       stretch: 1.1
 
@@ -178,7 +187,7 @@ segments:
     scenes: [ "0:01:14" ]
     clips:
     - movie: the_sea_chase
-      segment: "076603"
+      segment: "076627"
       offset: 1
       stretch: 1.1
 
@@ -187,7 +196,7 @@ segments:
     scenes: [ "0:01:18" ]
     clips:
     - movie: the_sea_chase
-      segment: "076817"
+      segment: "076841"
       offset: 0
       stretch: 1.1
       gravity: l30
@@ -207,7 +216,7 @@ segments:
     scenes: [ "0:01:28" ]
     clips:
     - movie: the_sea_chase
-      segment: "077076"
+      segment: "077100"
       offset: 0
       stretch: 1.1
       gravity: l30
@@ -217,7 +226,7 @@ segments:
     scenes: [ "0:01:30" ]
     clips:
     - movie: the_sea_chase
-      segment: "076817"
+      segment: "076841"
       offset: 10
       stretch: 1.1
       gravity: l50
@@ -236,7 +245,7 @@ segments:
     scenes: [ "0:01:35" ]
     clips:
     - movie: the_sea_chase
-      segment: "070663"
+      segment: "070686"
       offset: 9
       stretch: 1.1
       gravity: l40
@@ -256,7 +265,7 @@ segments:
     scenes: [ "0:01:41" ]
     clips:
     - movie: the_sea_chase
-      segment: "077076"
+      segment: "077100"
       offset: 1
       stretch: 1.1
       gravity: l30
@@ -266,7 +275,7 @@ segments:
     scenes: [ "0:01:46" ]
     clips:
     - movie: the_sea_chase
-      segment: "077236"
+      segment: "077260"
       offset: 4
       stretch: 1.1
       gravity: l50
@@ -285,12 +294,12 @@ segments:
     scenes: [ "0:01:53", "0:01:57" ]
     clips:
     - movie: the_sea_chase
-      segment: "026546"
+      segment: "026565"
       offset: 388
       todo: "(cross-fade)"
       stretch: 1.1
     - movie: the_sea_chase
-      segment: "160288"
+      segment: "160318"
       offset: 13
       todo: "(cross-fade)"
 
@@ -299,7 +308,7 @@ segments:
     scenes: [ "0:02:02" ]
     clips:
     - movie: the_sea_chase
-      segment: "154119"
+      segment: "154148"
       offset: 89
 
   - id: "003182"
@@ -307,7 +316,7 @@ segments:
     scenes: [ "0:02:11" ]
     clips:
     - movie: the_sea_chase
-      segment: "154294"
+      segment: "154324"
       offset: 0
 
   - id: "003623"
@@ -322,7 +331,7 @@ segments:
     scenes: [ "0:02:25" ]
     clips:
     - movie: the_sea_chase
-      segment: "154294"
+      segment: "154324"
       offset: 469
 
   - id: "003734"
@@ -330,7 +339,7 @@ segments:
     scenes: [ "0:02:28" ]
     clips:
     - movie: the_sea_chase
-      segment: "154836"
+      segment: "154866"
       offset: 0
 
   - id: "003819"
@@ -345,7 +354,7 @@ segments:
     scenes: [ "0:02:32" ]
     clips:
     - movie: the_sea_chase
-      segment: "158468"
+      segment: "158498"
       offset: 1
 
   - id: "004020"
@@ -353,7 +362,7 @@ segments:
     scenes: [ "0:02:39" ]
     clips:
     - movie: the_sea_chase
-      segment: "158742"
+      segment: "158772"
       offset: 23
 
   - id: "004084"
@@ -361,7 +370,7 @@ segments:
     scenes: [ "0:02:41" ]
     clips:
     - movie: the_sea_chase
-      segment: "158829"
+      segment: "158859"
       offset: 0
 
   - id: "004156"
@@ -369,7 +378,7 @@ segments:
     scenes: [ "0:02:49" ]
     clips:
     - movie: the_sea_chase
-      segment: "161440"
+      segment: "161470"
       offset: 50
 
   - id: "004417"
@@ -377,7 +386,7 @@ segments:
     scenes: [ "0:02:55" ]
     clips:
     - movie: the_sea_chase
-      segment: "152611"
+      segment: "152641"
       offset: 224
 
   - id: "004490"
@@ -385,7 +394,7 @@ segments:
     scenes: [ "0:02:59" ]
     clips:
     - movie: the_sea_chase
-      segment: "161004"
+      segment: "161034"
       offset: 46
       gravity: r20
 
@@ -394,7 +403,7 @@ segments:
     scenes: [ "0:03:01" ]
     clips:
     - movie: the_sea_chase
-      segment: "161135"
+      segment: "161165"
       offset: 0
       gravity: r20
 
@@ -403,7 +412,7 @@ segments:
     scenes: [ "0:03:02" ]
     clips:
     - movie: the_sea_chase
-      segment: "165419"
+      segment: "165449"
       offset: 1
       gravity: r20
 
@@ -419,7 +428,7 @@ segments:
     scenes: [ "0:03:07" ]
     clips:
     - movie: the_sea_chase
-      segment: "164863"
+      segment: "164893"
       offset: 22
 
   - id: "004764"
@@ -427,7 +436,7 @@ segments:
     scenes: [ "0:03:15" ]
     clips:
     - movie: the_sea_chase
-      segment: "165626"
+      segment: "165656"
       offset: 20
 
   - id: "004983"
@@ -435,7 +444,7 @@ segments:
     scenes: [ "0:03:18" ]
     clips:
     - movie: the_sea_chase
-      segment: "165865"
+      segment: "165895"
       offset: 0
 
   - id: "005045"
@@ -443,7 +452,7 @@ segments:
     scenes: [ "0:03:20" ]
     clips:
     - movie: the_sea_chase
-      segment: "165927"
+      segment: "165957"
       offset: 0
 
   - id: "005198"
@@ -1299,7 +1308,7 @@ segments:
     scenes: [ "0:11:47" ]
     clips:
     - movie: the_searchers
-      segment: "117342"
+      segment: "117334"
       offset: 1
 
   - id: "017793"
@@ -2868,7 +2877,7 @@ segments:
       segment: "118622"
       todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
     - movie: the_searchers
-      segment: "070845"
+      segment: "070837"
       offset: 734
       todo: "(flashback fade)"
 
@@ -2885,7 +2894,7 @@ segments:
     scenes: [ "0:29:09" ]
     clips:
     - movie: the_searchers
-      segment: "072606"
+      segment: "072598"
       offset: 0
 
   - id: "043828"
@@ -2902,7 +2911,7 @@ segments:
     scenes: [ "0:29:13", "0:29:22" ]
     clips:
     - movie: the_searchers
-      segment: "071988"
+      segment: "071980"
       offset: 1
       todo: "(flashback fade)"
     - movie: rio_bravo
@@ -2993,7 +3002,7 @@ segments:
       offset: 0
       todo: "(flashback fade)"
     - movie: the_searchers
-      segment: "071988"
+      segment: "071980"
       offset: -242
       todo: "(flashback fade)"
     - movie: four_for_texas
@@ -4692,7 +4701,7 @@ segments:
     scenes: [ "0:48:52" ]
     clips:
     - movie: the_sea_chase
-      segment: "086663"
+      segment: "086688"
       offset: 2
 
   - id: "073400"
@@ -4708,7 +4717,7 @@ segments:
     scenes: [ "0:49:08" ]
     clips:
     - movie: the_sea_chase
-      segment: "086784"
+      segment: "086809"
       offset: 0
 
   - id: "074017"
@@ -5240,7 +5249,7 @@ segments:
     scenes: [ "0:54:50" ]
     clips:
     - movie: the_searchers
-      segment: "128529"
+      segment: "128521"
       offset: 0
 
   - id: "082336"
@@ -5305,7 +5314,7 @@ segments:
     scenes: [ "0:55:04" ]
     clips:
     - movie: the_searchers
-      segment: "128747"
+      segment: "128739"
       offset: 0
 
   - id: "082702"
@@ -5342,7 +5351,7 @@ segments:
       offset: 39
       todo: "(cross-fade)"
     - movie: the_searchers
-      segment: "131180"
+      segment: "131172"
       offset: -104
       todo: "(cross-fade)"
 
@@ -5359,7 +5368,7 @@ segments:
     scenes: [ "0:55:29", "0:55:32" ]
     clips:
     - movie: the_searchers
-      segment: "131180"
+      segment: "131172"
       offset: 0
       todo: "(cross-fade)"
     - movie: when_time_ran_out

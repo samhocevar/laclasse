@@ -99,7 +99,8 @@ for s in data['segments']:
     fatal = None
 
     # XXX: hacks to quickly force generation
-    #force = force or any('jeremiah' in c.get('movie') or '' for c in clips)
+    #force = force or any('searchers' in c.get('movie') or '' for c in clips)
+    #force = force or any('judge' in c.get('movie') or '' for c in clips)
     #force = True
 
     for n, orig in enumerate(dumpfiles):
@@ -213,18 +214,19 @@ for s in data['segments']:
 
             src_h, src_w, _ = src.shape
 
-            # XXX: apply stretch to DVD images
-            if 'revolution' in clip_movie and src_w == 720:
-                src_w = 875
-            if 'firecreek' in clip_movie and src_w == 1920:
-                src_w = 2543
+            # XXX: apply stretch to DVD images, this is for debugging purposes
+            display_h, display_w = src_h, src_w
+            if 'revolution' in clip_movie and display_w == 720:
+                display_w = 875
+            if 'firecreek' in clip_movie and display_w == 1920:
+                display_w = 2543
 
-            clipinfo.append(f'DAR: {src_w/src_h:.2f}:1')
+            clipinfo.append(f'DAR: {display_w/display_h:.2f}:1')
 
-            dst_w, dst_h = src_w, src_h
+            dst_w, dst_h = display_w, display_h
             match stretch := c.get('stretch') or clip_presets.get('stretch'):
                 case None: pass
-                case _: w *= stretch
+                case _: dst_w *= stretch
             if stretch is not None:
                 fxinfo.append(f'STRETCH: {stretch}')
 
@@ -270,18 +272,22 @@ for s in data['segments']:
             # Blit image from this clip to target (FIXME: blending etc. not handled yet)
             cv2_blit(target_image, src[rect_y:rect_y+rect_w,rect_x:rect_x+rect_w], 0, 0)
 
+            # "Quality" is the density of source pixels in the target image
+            quality = min(100, round(100 * src_w * src_h / rect_w / rect_h))
+            clipinfo.append(f'Quality: {quality}%')
+
             # Add debug info etc.
             ythumb = yinfo
-            thumbscale = min(MINI_SIZE[0] / src_w, MINI_SIZE[1] / src_h)
-            thumb = cv2.resize(src, (int(src_w * thumbscale), int(src_h * thumbscale)), interpolation=cv2.INTER_LANCZOS4)
+            thumbscale = min(MINI_SIZE[0] / display_w, MINI_SIZE[1] / display_h)
+            thumb = cv2.resize(src, (int(display_w * thumbscale), int(display_h * thumbscale)), interpolation=cv2.INTER_LANCZOS4)
             x, y = xinfo, ythumb + 10
             cv2_blit(canvas_image, thumb, x, y)
             cv2.rectangle(canvas_image, (x-1, y-1), (x+thumb.shape[1], y+thumb.shape[0]), YELLOW, 1)
 
-            clip_x = x + int(rect_x / dst_w * src_w * thumbscale)
-            clip_y = y + int(rect_y / dst_h * src_h * thumbscale)
-            clip_x2 = x + int((rect_x + rect_w) / dst_w * src_w * thumbscale)
-            clip_y2 = y + int((rect_y + rect_h) / dst_h * src_h * thumbscale)
+            clip_x = x + int(rect_x / dst_w * display_w * thumbscale)
+            clip_y = y + int(rect_y / dst_h * display_h * thumbscale)
+            clip_x2 = x + int((rect_x + rect_w) / dst_w * display_w * thumbscale)
+            clip_y2 = y + int((rect_y + rect_h) / dst_h * display_h * thumbscale)
             cv2.rectangle(canvas_image, (clip_x - 1, clip_y - 1), (clip_x2, clip_y2), PURPLE, 2)
 
             cv2.putText(canvas_image, f'File: {Path(filename).name}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
