@@ -7,9 +7,34 @@
 presets:
   all_the_presidents_men:
     gravity: u50
+    letterbox-2160: 42
+
+  blood_alley:
+    letterbox-1080: 164
+
+  cleopatra_jones:
+    letterbox-1080: 140
+
+  harper:
+    letterbox-1080: 140
+
+  jeremiah_johnson:
+    letterbox-1080: 140
+    letterbox-2160: 278
+
+  mcq:
+    letterbox-1080: 140
+
+  rio_bravo:
+    letterbox-2160: 42
+
   start_the_revolution_without_me:
     gravity: u50
+    letterbox-1080: 22
+
   the_sea_chase:
+    letterbox-1080: 164
+
   the_cheyenne_social_club:
     stretch: 0.95
 
@@ -3639,7 +3664,7 @@ segments:
     scenes: [ "0:38:44" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "005846"
+      segment: "005845"
       offset: 14
 
   - id: "058271"
@@ -3647,7 +3672,7 @@ segments:
     scenes: [ "0:38:49" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "006015"
+      segment: "006014"
       offset: 0
 
   - id: "058398"
@@ -3655,7 +3680,7 @@ segments:
     scenes: [ "0:38:54" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "006274"
+      segment: "006273"
       offset: 37
 
   - id: "058531"
@@ -3753,7 +3778,7 @@ segments:
       offset: 0
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      segment: "019257"
+      segment: "019256"
       offset: -56
       todo: "(cross-fade)"
 
@@ -3762,7 +3787,7 @@ segments:
     scenes: [ "0:39:59" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "019705"
+      segment: "019704"
       offset: 0
 
   - id: "060143"
@@ -3820,15 +3845,15 @@ segments:
     scenes: [ "0:40:25", "0:40:27", "0:40:29" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "015479"
+      segment: "015478"
       offset: 0
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      segment: "015636"
+      segment: "015635"
       offset: -45
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      segment: "015816"
+      segment: "015815"
       offset: -105
       todo: "(cross-fade)"
     notes: "transitions of length ~ 10 centered at frame #55 and inbetween #109/#110"
@@ -3928,7 +3953,7 @@ segments:
     scenes: [ "0:41:31" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "051196"
+      segment: "051195"
       offset: 460
 
   - id: "062424"
@@ -3936,7 +3961,7 @@ segments:
     scenes: [ "0:41:36" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "051747"
+      segment: "051746"
       offset: 0
 
   - id: "062541"
@@ -3944,7 +3969,7 @@ segments:
     scenes: [ "0:41:39" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "051864"
+      segment: "051863"
       offset: 0
 
   - id: "062593"
@@ -4082,7 +4107,7 @@ segments:
     scenes: [ "0:43:38" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "152432"
+      segment: "152431"
       offset: 0
 
   - id: "065600"
@@ -4090,7 +4115,7 @@ segments:
     scenes: [ "0:43:41" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "152109"
+      segment: "152108"
       offset: 1
 
   - id: "065694"
@@ -4098,7 +4123,7 @@ segments:
     scenes: [ "0:43:46" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "152204"
+      segment: "152203"
       offset: 0
 
   - id: "065775"
@@ -4106,7 +4131,7 @@ segments:
     scenes: [ "0:43:49" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "154464"
+      segment: "154463"
       offset: 5
       transform: "hflip"
 
@@ -4132,7 +4157,7 @@ segments:
     scenes: [ "0:44:00" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "154893"
+      segment: "154892"
       offset: 0
       transform: "hflip"
 
@@ -4149,7 +4174,7 @@ segments:
     scenes: [ "0:44:06" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "153148"
+      segment: "153147"
       offset: 1
 
   - id: "066275"
@@ -4165,7 +4190,7 @@ segments:
     scenes: [ "0:44:12" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "152999"
+      segment: "152998"
       offset: 0
       playback: 43-56, 56-4
 
@@ -4243,11 +4268,11 @@ segments:
       offset: 542
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      segment: "155024"
+      segment: "155023"
       offset: -147
       todo: "(cross-fade)"
     - movie: jeremiah_johnson
-      segment: "152999"
+      segment: "152998"
       offset: 0
       todo: "Special effect of wooden panel applied on previous clip, requires at least 232 frames"
 

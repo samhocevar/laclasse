@@ -24,8 +24,8 @@ TARGET_SIZE = (1280, 620)
 TARGET_SIZE = (1920, int(1920 * ORIGINAL_SIZE[1] / ORIGINAL_SIZE[0]))
 
 CANVAS_SIZE = (
-    MARGIN + TARGET_SIZE[0] + MARGIN + INFO_WIDTH + MARGIN,
-    MARGIN + TARGET_SIZE[1] + MARGIN + ORIGINAL_SIZE[1] + MARGIN
+    (MARGIN + TARGET_SIZE[0] + MARGIN + INFO_WIDTH + MARGIN) // 4 * 4,
+    (MARGIN + TARGET_SIZE[1] + MARGIN + ORIGINAL_SIZE[1] + MARGIN) // 4 * 4
 )
 
 DESC = 'C:/Users/sam/laclasse/data/laclasse.yaml'
@@ -95,7 +95,12 @@ for s in data['segments']:
     destdir = f'{DEST_ROOT}/{segment:06d}'
     Path(destdir).mkdir(exist_ok=True)
 
+    force = False
     fatal = None
+
+    # XXX: hacks to quickly force generation
+    #force = force or any('jeremiah' in c.get('movie') or '' for c in clips)
+    #force = True
 
     for n, orig in enumerate(dumpfiles):
 
@@ -105,7 +110,7 @@ for s in data['segments']:
         dest = f'{destdir}/img{segment+n:06d}.jpeg'
 
         # Skip existing files
-        if Path(dest).is_file():
+        if not force and Path(dest).is_file():
           #if movie != 'cleopatra_jones':
           #if transform != 'hflip':
           #if 'revolution' not in movie:
@@ -113,7 +118,6 @@ for s in data['segments']:
           #if not playback:
           #if False:
           #if n != count // 2:
-          #if not clips or all(not c.get('movie') or 'presidents' not in c.get('movie') for c in clips):
             continue
 
         canvas_image = np.zeros((CANVAS_SIZE[1], CANVAS_SIZE[0], 3), np.uint8)
@@ -202,16 +206,10 @@ for s in data['segments']:
                 errors.append(f'[{n}/{count}] cannot find image for {srcglob} in {', '.join(SEARCH_ROOT)}')
                 continue
 
-            # XXX: special cases because I didn't have time to crop the fast dump
-            match src.shape[0]:
-                case 1080:
-                    if clip_movie == 'harper': src = src[140:1080-140,:]
-                    if clip_movie == 'blood_alley': src = src[164:1080-164,:]
-                    if 'cleopatra' in clip_movie: src = src[140:1080-140,:]
-                    if 'revolution' in clip_movie: src = src[22:1080-22,:]
-                case 2160:
-                    if 'jeremiah' in clip_movie: src = src[278:2160-278,:]
-                    if 'president' in clip_movie: src = src[42:2160-42,:]
+            # Apply letterbox cropping if the value is known to us
+            if crop := clip_presets.get(f'letterbox-{src.shape[0]}'):
+                if crop > 0:
+                    src = src[crop:-crop,:]
 
             src_h, src_w, _ = src.shape
 
@@ -287,6 +285,8 @@ for s in data['segments']:
             cv2.rectangle(canvas_image, (clip_x - 1, clip_y - 1), (clip_x2, clip_y2), PURPLE, 2)
 
             cv2.putText(canvas_image, f'File: {Path(filename).name}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
+            yinfo += NEWLINE
+            cv2.putText(canvas_image, f'Size: {src_w}x{src_h}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
             yinfo += NEWLINE
 
             for e in clipinfo:
