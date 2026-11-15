@@ -112,13 +112,6 @@ for s in data['segments']:
 
         # Skip existing files
         if not force and Path(dest).is_file():
-          #if movie != 'cleopatra_jones':
-          #if transform != 'hflip':
-          #if 'revolution' not in movie:
-          #if 'firecreek' not in movie:
-          #if not playback:
-          #if False:
-          #if n != count // 2:
             continue
 
         canvas_image = np.zeros((CANVAS_SIZE[1], CANVAS_SIZE[0], 3), np.uint8)

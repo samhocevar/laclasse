@@ -21,12 +21,15 @@ presets:
   cleopatra_jones:
     letterbox-1080: 140
 
+  deliverance:
+    # XXX: There are also two empty black columns on the left, but we probably don't care
+    letterbox-1080: 140
+
   harper:
     letterbox-1080: 140
 
   jeremiah_johnson:
     letterbox-1080: 140
-    letterbox-2160: 278
 
   mad_max:
     letterbox-2160: 263
@@ -3752,7 +3755,7 @@ segments:
       offset: 36
       todo: "(flashback fade)"
     - movie: deliverance
-      segment: "061860"
+      segment: "061903"
       offset: -115
       todo: "(flashback fade)"
 
@@ -3761,7 +3764,7 @@ segments:
     scenes: [ "0:39:28" ]
     clips:
     - movie: deliverance
-      segment: "062106"
+      segment: "062149"
       offset: 1
 
   - id: "059375"
@@ -3769,7 +3772,7 @@ segments:
     scenes: [ "0:39:35" ]
     clips:
     - movie: deliverance
-      segment: "062244"
+      segment: "062287"
       offset: 0
 
   - id: "059504"
@@ -3777,7 +3780,7 @@ segments:
     scenes: [ "0:39:38", "0:39:42" ]
     clips:
     - movie: deliverance
-      segment: "062423"
+      segment: "062466"
       offset: 1
       todo: "(flashback fade)"
     - movie: all_the_presidents_men
@@ -4396,7 +4399,7 @@ segments:
     scenes: [ "0:46:07" ]
     clips:
     - movie: when_time_ran_out
-      segment: "069304"
+      segment: "036081"
       offset: 47
 
   - id: "069304"
@@ -6477,7 +6480,7 @@ segments:
     scenes: [ "1:06:11" ]
     clips:
     - movie: deliverance
-      segment: "039884"
+      segment: "039927"
       offset: 1
 
   - id: "099513"
@@ -6997,8 +7000,11 @@ movies:
       link: https://www.blu-ray.com/dvd/Band-of-Angels-DVD/7586/
     sources:
     - name: "Band.of.Angels.1957.(Raoul.Walsh-Drama).1080p.x264-Classics.mkv"
-      resolution: "1920x1080"
+      resolution: 1920x1080
+      rating: 6
     - name: "L.Esclave.Libre.1957.FRENCH.1080p.WEBRip.HDLight.AAC.1.0.x264-Zacary.mkv"
+      resolution: 1440x1080
+      bad: bigger file size but clearly encoded from a bad source, quality is really poor compared to the other source; probably upscaled
     status:
       segments: true
 
@@ -7136,8 +7142,11 @@ movies:
       link: https://www.blu-ray.com/movies/The-Candidate-Blu-ray/43484/
     sources:
     - name: "The.Candidate.1972.1080p.WEBRip.DD2.0.x264-NTb.mkv"
-      resolution: "1920x1080"
+      resolution: 1920x1080
+      rating: 7
     - name: "1972 - Votez McKay MULTI TRUEFRENCH 1080 HD LIGHT AC3 x264.mkv"
+      resolution: 1920x1080
+      bad: clearly inferior encoding compared to the webrip
     status:
       segments: true
 
@@ -7172,6 +7181,7 @@ movies:
       year: 2007
       link: https://www.blu-ray.com/dvd/Charro-DVD/90199/
     sources:
+    - name: "Charro.1969.1080p.AMZN.WEB-DL.DDP2.0.H.264-SNAKE.mkv"
     - name: "Charro.1969.720p.WEB-DL.AAC2.0.H264-RARBG.mkv"
     - name: "Charro! 1969 Deutsch - Youtube [EJajA31vCQk].mp4"
     - name: "Charro.1969.1080p.WEB-DL.DD.2.0.H.264-SbR.mkv"
@@ -7350,6 +7360,9 @@ movies:
       bitrate: 21.12
       link: https://www.blu-ray.com/movies/Deliverance-Blu-ray/472/
     sources:
+    - name: "Deliverance (1972) 1080p BluRay REMUX DD5.1 + DUAL AVC-d3g.mkv"
+      resolution: 1918x800
+      rating: 8
     - name: "Deliverance 1972 1080p MAX WEB-DL DDP5 1 H 264-GPRS.mkv"
       resolution: "1920x800"
     - name: "Délivrance (1972) MULTi VFF 1080p x264 AC3-JiHeff.mkv"
@@ -7549,11 +7562,11 @@ movies:
       link: https://www.blu-ray.com/dvd/Harper-DVD/15267/
     sources:
     - name: "Harper 1966 1080p BluRay x264-OFT.mkv"
-      resolution: "1920x1080"
+      resolution: 1920x1080
+      rating: 7
     - name: "Harper.1966.1080p.BluRay.x264-[YTS.LT].mp4"
-      resolution: "1920x800"
-    comment: |
-      Scenes in La Classe are interleaved, so offsets could be off ±1
+      resolution: 1920x800
+      bad: Encoding is inferior to the OFT release, most of the film grain has disappeared
     status:
       segments: true
 
@@ -7778,9 +7791,14 @@ movies:
       link: https://www.blu-ray.com/dvd/Oceans-11-DVD/80520/
     sources:
     - name: "Oceans Eleven 1960 1080p HMAX WEB-DL AAC 2 0 H 264-PiRaTeS.mkv"
-      resolution: "1920x800"
+      resolution: 1920x800
+      rating: 7
     - name: "L'Inconnu de Las Vegas (1960) - 1080p x265 multi Dolby Digitl AC-3 1.0-NOTAG.mkv"
+      resolution: 1908x796
+      bad: Inferior encoding, film grain does not look as good as the webdl
     - name: "L'Inconnu de Las Vegas 1960 Multi WEBrip 1080p AVCx264 AAC-Ginonyll.mkv"
+      resolution: 1920x800
+      bad: Inferior encoding, film grain does not look as good as the webdl
     status:
       segments: true
 
@@ -7995,8 +8013,15 @@ movies:
       link: https://www.blu-ray.com/dvd/Straight-Time-DVD/30534/
     sources:
     - name: "Straight.Time.1978.WAC.1080p.BluRay.x265.HEVC.FLAC-SARTRE.mkv"
-      resolution: "1920x1040"
+      resolution: 1920x1040
+      rating: 7
     - name: "Le.Récidiviste.(Straight.Time).1978.BluRay.HDLight.1080p.Multi.x264.AC3-Arcadia.mkv"
+      resolution: 1916x1080
+      bad: Bad encoding, film grain almost entirely disappeared from this version
+      comment: |
+        Which version is this? Encoding is worse but it is 1.77:1 instead of 1.85:1 and has a bit
+        more image information at the top and the bottom. Also the Warner logo at the beginning is
+        the 3D animation whereas the other one has the flat red/white/black one.
     status:
       segments: true
 
@@ -8162,10 +8187,20 @@ movies:
       year: 2017
       link: https://www.blu-ray.com/dvd/When-Time-Ran-Out-DVD/146237/
     sources:
-    - name: "When Time Ran Out 1980 DVDRip x264.mkv"
-    - name: "When.Time.Ran.Out....1980.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
-    - name: "When.Time.Ran.Out....1980.720p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "Le.Jour.de.la.fin.du.monde.1980.MULTi.VFF.1080p.BluRay.HDLight.AC3.2.0.x264-LiHDL.mkv"
+      resolution: 1920x804
+      rating: 7
+      comment: This is the version I use for now
+    - name: "When.Time.Ran.Out....1980.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
+      resolution: 1920x804
+      rating: 7
+      comment: Exact same source as the LiHDL version, maybe the grain looks slightly worse, but hard to tell
+    - name: "When Time Ran Out 1980 DVDRip x264.mkv"
+      resolution: 718x426
+      bad: DVD quality is inferior to BluRay
+    - name: "When.Time.Ran.Out....1980.720p.BluRay.x264.AAC-[YTS.MX].mp4"
+      resolution: 1280x536
+      bad: downscaled
     status:
       segments: true
 
