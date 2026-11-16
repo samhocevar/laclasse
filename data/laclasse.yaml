@@ -90,6 +90,8 @@ segments:
     scenes: [ "0:00:03" ]
     clips:
     - movie: intro_screen
+      fade-in: [0, 25]
+      fade-out: [163, 176]
 
   - id: "000302"
     count: 283
@@ -98,7 +100,7 @@ segments:
     - movie: the_sea_chase
       segment: "072686"
       offset: 147
-      todo: "(fade from black)"
+      fade-in: [0, 24]
 
   - id: "000585"
     count: 106
@@ -301,11 +303,11 @@ segments:
     - movie: the_sea_chase
       segment: "026565"
       offset: 388
-      todo: "(cross-fade)"
+      fade-out: [56, 78]
     - movie: the_sea_chase
       segment: "160318"
       offset: 13
-      todo: "(cross-fade)"
+      fade-in: [56, 78]
 
   - id: "003096"
     count: 86
@@ -1108,13 +1110,14 @@ segments:
     - movie: battle_of_the_bulge
       segment: "034719"
       offset: 0
-      todo: "(flashback fade)"
-      transform: "hflip"
+      transform: hflip
+      fade-out: [440, 505]
     - movie: the_cheyenne_social_club
       segment: "140875"
       offset: -432
-      todo: "flashback fade"
-      transform: "hflip"
+      transform: hflip
+      fade-in: [440, 505]
+    todo: Add wave effect
 
   - id: "012952"
     count: 57
@@ -1163,11 +1166,11 @@ segments:
     - movie: the_cheyenne_social_club
       segment: "011227"
       offset: 4
-      todo: "(cross-fade)"
+      fade-out: [116, 142]
     - movie: the_cheyenne_social_club
       segment: "128442"
       offset: 776
-      todo: "(cross-fade)"
+      fade-in: [116, 142]
 
   - id: "014603"
     count: 259
@@ -1300,12 +1303,13 @@ segments:
     - movie: battle_of_the_bulge
       segment: "034719"
       offset: 234
-      todo: "(flashback fade)"
-      transform: "hflip"
+      transform: hflip
+      fade-out: [247, 277]
     - movie: there_was_a_crooked_man
       segment: "166412"
       offset: -247
-      todo: "(flashback fade)"
+      fade-in: [247, 277]
+    todo: Add wave effects
 
   - id: "017709"
     count: 84
@@ -1800,13 +1804,13 @@ segments:
     - movie: rio_bravo
       segment: "075614"
       offset: 532
-      todo: "(cross-fade)"
-      transform: "hflip"
+      transform: hflip
+      fade-out: [72, 92]
     - movie: the_cheyenne_social_club
       segment: "080247"
       offset: 32
-      todo: "(cross-fade)"
-      transform: "hflip"
+      transform: hflip
+      fade-in: [72, 92]
 
   - id: "026655"
     count: 64
@@ -2480,11 +2484,12 @@ segments:
     - movie: all_the_presidents_men
       segment: "129749"
       offset: 35
-      todo: "(flashback fade)"
+      fade-out: [177, 194]
     - movie: four_for_texas
       segment: "023495"
       offset: -178
-      todo: "(flashback fade)"
+      fade-in: [177, 194]
+    todo: Add wave effects
 
   - id: "036443"
     count: 261
@@ -2599,9 +2604,10 @@ segments:
     - movie: four_for_texas
       segment: "026949"
       offset: 17
-      todo: "(cross-fade)"
+      fade-out: [82, 94]
     - movie: the_fbi_story
-      todo: "(cross-fade) (1:24:59) - around 123000"
+      todo: "(1:24:59) - around 123000"
+      fade-in: [82, 94]
 
   - id: "038118"
     count: 49
@@ -2671,10 +2677,13 @@ segments:
       segment: "081273"
       offset: 24
       gravity: u100
-      todo: "(cross-fade)"
+      fade-out: [134, 149]
     - movie: four_for_texas
       segment: "071942"
-      todo: "(avec filtre bleu) (avec ping-pong pour prolonger ?)"
+      offset: -134
+      fade-in: [134, 149]
+      playback: 0-184, 183-136 # ping-pong to make sequence longer
+      todo: "blue filter"
 
   - id: "040399"
     count: 101
@@ -2832,11 +2841,12 @@ segments:
     - movie: all_the_presidents_men
       segment: "128695"
       offset: 0
-      todo: "(flashback fade)"
+      fade-out: [104, 129]
     - movie: four_for_texas
       segment: "111785"
       offset: -101
-      todo: "(flashback fade)"
+      fade-in: [104, 129]
+    todo: Add wave effects
 
   - id: "042802"
     count: 281
@@ -2844,11 +2854,13 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "118622"
-      todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
+      fade-out: [187, 202]
+      todo: "Scène introuvable, ce timestamp fera peut-être l'affaire"
     - movie: carson_city
       segment: "038729"
       offset: -187
-      todo: "(flashback fade)"
+      fade-in: [187, 202]
+    todo: Add wave effects
 
   - id: "043083"
     count: 136
@@ -2885,11 +2897,13 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "118622"
-      todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
+      todo: "Scène introuvable, ce timestamp fera peut-être l'affaire"
+      fade-out: [167, 182]
     - movie: the_searchers
       segment: "070837"
       offset: 734
-      todo: "(flashback fade)"
+      fade-in: [167, 182]
+    todo: Add wave effects
 
   - id: "043728"
     count: 39
@@ -2924,11 +2938,12 @@ segments:
     - movie: the_searchers
       segment: "071980"
       offset: 1
-      todo: "(flashback fade)"
+      fade-out: [163, 181]
     - movie: rio_bravo
       segment: "197131"
       offset: -164
-      todo: "(flashback fade)"
+      fade-in: [163, 181]
+    todo: Add wave effects
 
   - id: "044151"
     count: 44
@@ -3011,14 +3026,17 @@ segments:
     - movie: charro
       segment: "056011"
       offset: 0
-      todo: "(flashback fade)"
+      fade-out: [247, 259]
     - movie: the_searchers
       segment: "071980"
       offset: -242
-      todo: "(flashback fade)"
+      fade-in: [247, 259]
+      fade-out: [408, 425]
     - movie: four_for_texas
       segment: "118622"
-      todo: "(flashback fade) Scène introuvable, ce timestamp fera peut-être l'affaire"
+      fade-in: [408, 425]
+      todo: "Scène introuvable, ce timestamp fera peut-être l'affaire"
+    todo: Add wave effects
 
   - id: "045319"
     count: 286
@@ -3026,15 +3044,18 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "111785"
-      todo: "(flashback fade) (ping-pong)"
+      offset: 180
+      fade-out: [50, 65]
     - movie: oceans_eleven
       segment: "078734"
       offset: -49
-      todo: "(flashback fade) (0:52:56)"
+      fade-in: [50, 65]
+      fade-out: [220, 235]
     - movie: city_beneath_the_sea
       segment: "005195"
       offset: -220
-      todo: "(flashback fade)"
+      fade-in: [220, 235]
+    todo: Add wave effects
 
   - id: "045605"
     count: 516
@@ -3765,11 +3786,12 @@ segments:
     - movie: all_the_presidents_men
       segment: "065276"
       offset: 36
-      todo: "(flashback fade)"
+      fade-out: [116, 128]
     - movie: deliverance
       segment: "061903"
       offset: -116
-      todo: "(flashback fade)"
+      fade-in: [116, 128]
+    todo: Add wave effects
 
   - id: "059238"
     count: 137
@@ -3794,11 +3816,12 @@ segments:
     - movie: deliverance
       segment: "062466"
       offset: 1
-      todo: "(flashback fade)"
+      fade-out: [93, 102]
     - movie: all_the_presidents_men
       segment: "066326"
       offset: -89
-      todo: "(flashback fade)"
+      fade-in: [93, 102]
+    todo: Add wave effects
 
   - id: "059790"
     count: 237
@@ -3807,11 +3830,11 @@ segments:
     - movie: all_the_presidents_men
       segment: "066523"
       offset: 0
-      todo: "(cross-fade)"
+      fade-out: [62, 73]
     - movie: jeremiah_johnson
       segment: "019256"
       offset: -56
-      todo: "(cross-fade)"
+      fade-in: [62, 73]
 
   - id: "060027"
     count: 116
@@ -3878,16 +3901,16 @@ segments:
     - movie: jeremiah_johnson
       segment: "015478"
       offset: 0
-      todo: "(cross-fade)"
+      fade-out: [50, 63]
     - movie: jeremiah_johnson
       segment: "015635"
       offset: -45
-      todo: "(cross-fade)"
+      fade-in: [50, 63]
+      fade-out: [105, 116]
     - movie: jeremiah_johnson
       segment: "015815"
       offset: -105
-      todo: "(cross-fade)"
-    comment: "transitions of length ~ 10 centered at frame #55 and inbetween #109/#110"
+      fade-in: [105, 116]
 
   - id: "060847"
     count: 101
@@ -3928,11 +3951,12 @@ segments:
     - movie: around_the_world_in_eighty_days
       segment: "077902"
       offset: 0
-      todo: "(flashback fade)"
+      fade-out: [99, 109]
     - movie: chisum
       segment: "149736"
       offset: -94
-      todo: "(flashback fade)"
+      fade-in: [99, 109]
+    todo: Add wave effects
 
   - id: "061734"
     count: 33
@@ -3965,11 +3989,12 @@ segments:
     - movie: chisum
       segment: "151410"
       offset: 24
-      todo: "(flashback fade)"
+      fade-out: [88, 98]
     - movie: around_the_world_in_eighty_days
       segment: "077902"
       offset: -75
-      todo: "(flashback fade)"
+      fade-in: [88, 98]
+    todo: Add wave effects
 
   - id: "062047"
     count: 286
@@ -4050,11 +4075,12 @@ segments:
     - movie: oceans_eleven
       segment: "045181"
       offset: 0
-      todo: "(flashback fade)"
+      fade-out: [371, 381]
     - movie: rio_bravo
       segment: "118278"
       offset: 692
-      todo: "(flashback fade)"
+      fade-in: [371, 381]
+    todo: Add wave effects
 
   - id: "063592"
     count: 843
@@ -4119,11 +4145,12 @@ segments:
     - movie: rio_bravo
       segment: "121212"
       offset: 0
-      todo: "(flashback fade)"
+      fade-out: [91, 101]
     - movie: oceans_eleven
       segment: "045181"
       offset: -31
-      todo: "(flashback fade)"
+      fade-in: [91, 101]
+    todo: Add wave effects
 
   - id: "065406"
     count: 80
@@ -4232,12 +4259,12 @@ segments:
     - movie: the_old_man_and_the_sea
       segment: "011327"
       offset: 0
-      todo: "(cross-fade)"
+      fade-out: [180, 193]
     - movie: the_train_robbers
       segment: "039875"
       offset: 749
-      transform: "hflip"
-      todo: "(cross-fade)"
+      transform: hflip
+      fade-in: [180, 193]
 
   - id: "066713"
     count: 84
@@ -4297,15 +4324,15 @@ segments:
     - movie: the_old_man_and_the_sea
       segment: "048588"
       offset: 542
-      todo: "(cross-fade)"
+      fade-out: [147, 157]
     - movie: jeremiah_johnson
       segment: "155023"
       offset: -147
-      todo: "(cross-fade)"
-    - movie: jeremiah_johnson
-      segment: "152998"
-      offset: 0
-      todo: "Special effect of wooden panel applied on previous clip, requires at least 232 frames"
+      fade-in: [147, 157]
+    #- movie: jeremiah_johnson
+    #  segment: "152998"
+    #  offset: 0
+    todo: "Special effect of wooden panel applied on previous clip, requires at least 232 frames"
 
   - id: "067419"
     count: 106
@@ -4634,11 +4661,12 @@ segments:
     - movie: all_the_presidents_men
       segment: "124486"
       offset: 0
-      todo: "(flashback fade)"
+      fade-out: [49, 59]
     - movie: band_of_angels
       segment: "139777"
       offset: -49
-      todo: "(flashback fade)"
+      fade-in: [49, 59]
+    todo: Add wave effects
 
   - id: "072420"
     count: 102
@@ -4758,13 +4786,14 @@ segments:
     - movie: band_of_angels
       segment: "181542"
       offset: 361
-      todo: "(flashback fade)"
+      fade-out: [209, 219]
       gravity: u50
     - movie: band_of_angels
       segment: "073659"
       offset: -209
-      todo: "(flashback fade)"
+      fade-in: [209, 219]
       gravity: u50
+    todo: Add wave effects
 
   - id: "074376"
     count: 223
@@ -4842,20 +4871,23 @@ segments:
     - movie: rampage
       segment: "028130"
       offset: 1
-      todo: "(flashback fade)"
+      fade-out: [144, 154]
     - movie: the_good_guys_and_the_bad_guys
       segment: "032925"
-      offset: 38
-      todo: "(flashback fade with prev) (cross-fade with next)"
+      offset: 83
+      fade-in: [144, 154]
+      fade-out: [400, 420]
     - movie: the_good_guys_and_the_bad_guys
       segment: "032925"
       offset: 300
-      todo: "(cross-fade with prev) (flashback fade with next)"
+      fade-in: [400, 420]
+      fade-out: [827, 837]
     - movie: harper
       segment: "042898"
       offset: -826
       transform: hflip
-      todo: "(flashback fade)"
+      fade-in: [827, 837]
+    todo: Add wave effects (clips 0-1 and clips 2-3)
 
   - id: "076265"
     count: 45
@@ -4884,11 +4916,12 @@ segments:
       segment: "028130"
       offset: 2
       gravity: u50
-      todo: "(flashback fade)"
+      fade-out: [141, 149]
     - movie: westbound
       segment: "055103"
       offset: -142
-      todo: "(flashback fade)"
+      fade-in: [141, 149]
+    todo: Add wave effects
 
   - id: "076607"
     count: 49
@@ -4983,12 +5016,13 @@ segments:
     - movie: westbound
       segment: "056720"
       offset: 2
-      todo: "(flashback fade)"
       gravity: u100
+      fade-out: [429, 439]
     - movie: rampage
       segment: "028130"
       offset: -404
-      todo: "(flashback fade)"
+      fade-in: [429, 439]
+    todo: Add wave effects
 
   - id: "078177"
     count: 21
@@ -5171,11 +5205,12 @@ segments:
     - movie: when_time_ran_out
       segment: "025869"
       offset: 223
-      todo: "(flashback fade)"
+      fade-out: [40, 51]
     - movie: the_valley_of_gwangi
       segment: "085278"
       offset: 715
-      todo: "(flashback fade)"
+      fade-in: [40, 51]
+    todo: Add wave effects
 
   - id: "081265"
     count: 185
@@ -5389,11 +5424,11 @@ segments:
     - movie: the_valley_of_gwangi
       segment: "102892"
       offset: 39
-      todo: "(cross-fade)"
+      fade-out: [104, 115]
     - movie: the_searchers
       segment: "131172"
       offset: -104
-      todo: "(cross-fade)"
+      fade-in: [104, 115]
 
   - id: "083071"
     count: 215
@@ -5410,12 +5445,12 @@ segments:
     - movie: the_searchers
       segment: "131172"
       offset: 0
-      todo: "(cross-fade)"
+      fade-out: [68, 78]
     - movie: when_time_ran_out
       segment: "028733"
       offset: -69
-      todo: "(cross-fade)"
-    comment: "La transition aurait dû être la version flashback"
+      fade-in: [68, 78]
+    todo: Should we add a wave effect for consistency with the rest of the movie?
 
   - id: "083420"
     count: 50
@@ -5451,12 +5486,14 @@ segments:
       offset: 573
       transform: hflip
       playback: 0-92, 92-0, 1000-1094
-      todo: "(flashback fade) (ping-pong: 93 frames in, 93 frames out back to offset 498)"
+      fade-out: [168, 178]
     - movie: riding_shotgun
       segment: "011508"
       offset: -168
       transform: hflip
-      todo: "(flashback fade) (framerate issue?)"
+      fade-in: [168, 178]
+      todo: Framerate issue? things get out of sync
+    todo: Add wave effects
 
   - id: "083999"
     count: 65
@@ -6939,7 +6976,7 @@ segments:
     - movie: bullitt
       segment: "108624"
       offset: 0
-      todo: "fade to black"
+      fade-out: [121, 140]
 
   - id: "105492"
     count: 1961
