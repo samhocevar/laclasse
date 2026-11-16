@@ -34,7 +34,8 @@ FAST_ROOT = 'D:/clips/fast'
 GOOD_ROOT = 'D:/clips/good'
 SEARCH_ROOT = (GOOD_ROOT, FAST_ROOT)
 
-DEST_ROOT = 'D:/final/compare'
+DEBUG_ROOT = 'D:/final/compare'
+OUTPUT_ROOT = 'D:/final/movie'
 
 # Some convenient constants
 FONT = cv2.FONT_HERSHEY_SIMPLEX
@@ -92,8 +93,11 @@ for s in data['segments']:
     if len(dumpfiles) != count:
         raise BaseException(f'{segment:06d}: need {count} frames but dump directory has {len(dumpfiles)}')
 
-    destdir = f'{DEST_ROOT}/{segment:06d}'
-    Path(destdir).mkdir(exist_ok=True)
+    output_dir = f'{OUTPUT_ROOT}/{segment:06d}'
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+
+    debug_dir = f'{DEBUG_ROOT}/{segment:06d}'
+    Path(debug_dir).mkdir(parents=True, exist_ok=True)
 
     force = False
     fatal = None
@@ -108,10 +112,11 @@ for s in data['segments']:
         if len(sys.argv) >= 2 and sys.argv[1] != s.get('id'):
             continue
 
-        dest = f'{destdir}/img{segment+n:06d}.jpeg'
+        output_file = f'{output_dir}/img{segment+n:06d}.jpeg'
+        debug_file = f'{debug_dir}/img{segment+n:06d}.jpeg'
 
         # Skip existing files
-        if not force and Path(dest).is_file():
+        if not force and Path(output_file).is_file() and Path(debug_file).is_file():
             continue
 
         canvas_image = np.zeros((CANVAS_SIZE[1], CANVAS_SIZE[0], 3), np.uint8)
@@ -158,6 +163,7 @@ for s in data['segments']:
 
             clipinfo = []
             fxinfo = []
+            todo = []
 
             if clip_segment is None or clip_offset is None:
                 cv2.putText(canvas_image, f'Todo: missing segment or offset information', (xinfo + 20, yinfo + 25), FONT, SMALL, RED, 3)
@@ -216,6 +222,8 @@ for s in data['segments']:
                 display_w = 875
             if 'firecreek' in clip_movie and display_w == 1920:
                 display_w = 2543
+            if 'arrangement' in clip_movie and display_w == 1280:
+                todo.append(f'Must unscale to 960')
 
             clipinfo.append(f'DAR: {display_w/display_h:.2f}:1')
 
@@ -277,6 +285,7 @@ for s in data['segments']:
             ythumb = yinfo
             thumbscale = min(MINI_SIZE[0] / display_w, MINI_SIZE[1] / display_h)
             thumb = cv2.resize(src, (int(display_w * thumbscale), int(display_h * thumbscale)), interpolation=cv2.INTER_LANCZOS4)
+            #if transform == 'hflip': thumb = cv2.flip(thumb, 1)
             x, y = xinfo, ythumb + 10
             cv2_blit(canvas_image, thumb, x, y)
             cv2.rectangle(canvas_image, (x-1, y-1), (x+thumb.shape[1], y+thumb.shape[0]), YELLOW, 1)
@@ -296,8 +305,10 @@ for s in data['segments']:
                 cv2.putText(canvas_image, e, (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, WHITE, 3)
                 yinfo += NEWLINE
 
-            if todo := c.get('todo'):
-                cv2.putText(canvas_image, f'Todo: {todo}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, RED, 3)
+            if e := c.get('todo'):
+                todo.append(e)
+            for e in todo:
+                cv2.putText(canvas_image, f'Todo: {e}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, RED, 3)
                 yinfo += NEWLINE
 
             for e in fxinfo:
@@ -310,8 +321,8 @@ for s in data['segments']:
             cv2.putText(canvas_image, f'Todo: cannot handle segment with {len(clips)} clips yet', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
             yinfo += NEWLINE
 
-        if todo := s.get('todo'):
-            cv2.putText(canvas_image, f'Todo: {todo}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
+        if e := s.get('todo'):
+            cv2.putText(canvas_image, f'Todo: {e}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
             yinfo += NEWLINE
 
         for e in errors:
@@ -337,10 +348,11 @@ for s in data['segments']:
 #        # Draw border for destination frame
 #        cv2.rectangle(canvas_image, (x-2, y-2), (x2+1, y2+1), RED, 4)
 
-        cv2.imwrite(dest, canvas_image)
+        cv2.imwrite(output_file, target_image)
 
+        cv2.imwrite(debug_file, canvas_image)
         if n == count // 2:
-            cv2.imwrite(f'{DEST_ROOT}/{segment:06d}.jpeg', canvas_image)
+            cv2.imwrite(f'{DEBUG_ROOT}/{segment:06d}.jpeg', canvas_image)
 
     print(f'{segment:06d}: {fatal or 'OK'}')
 

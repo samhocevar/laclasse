@@ -18,8 +18,18 @@ presets:
   bullitt:
     letterbox-1920: 6 # XXX: Those are vertical bars!
 
+  the_cheyenne_social_club:
+    stretch: 0.95
+
+  chisum:
+    stretch: 0.95
+
   cleopatra_jones:
     letterbox-1080: 140
+
+  the_cowboys:
+    letterbox-1920: 6
+    letterbox-1080: 142
 
   deliverance:
     # XXX: There are also two empty black columns on the left, but we probably don't care
@@ -37,12 +47,11 @@ presets:
   mcq:
     letterbox-1080: 140
 
+  the_old_man_and_the_sea:
+    letterbox-1080: 20
+
   rio_bravo:
     letterbox-2160: 42
-
-  start_the_revolution_without_me:
-    gravity: u50
-    letterbox-1080: 22
 
   the_sea_chase:
     letterbox-1080: 164
@@ -50,11 +59,12 @@ presets:
   the_searchers:
     letterbox-2160: 42
 
+  start_the_revolution_without_me:
+    gravity: u50
+    letterbox-1080: 22
+
   the_train_robbers:
     letterbox-1080: 140
-
-  the_cheyenne_social_club:
-    stretch: 0.95
 
 #
 # segments
@@ -70,11 +80,10 @@ segments:
     count: 125
     scenes: [ "0:00:01" ]
     clips:
-    - movie: all_the_presidents_men
-      segment: "198809"
-      offset: 7
-      gravity: u0
-    notes: "000000 would work better (modern logo) but it changes the length of the movie"
+    - movie: warner_logo
+      segment: "077223"
+      offset: 0
+    comment: "Taken from the 'IT' Blu-Ray and rendered at 96fps"
 
   - id: "000125"
     count: 177
@@ -98,9 +107,8 @@ segments:
     - movie: the_sea_chase
       segment: "026565"
       offset: 337
-      stretch: 1.1
       gravity: r15
-    notes: Syncing done on the foam lighting on frames 100-102
+    comment: Syncing done on the foam lighting on frames 100-102
 
   - id: "000691"
     count: 214
@@ -109,7 +117,6 @@ segments:
     - movie: the_sea_chase
       segment: "032710"
       offset: 1
-      stretch: 1.1
 
   - id: "000905"
     count: 56
@@ -118,7 +125,6 @@ segments:
     - movie: the_sea_chase
       segment: "033002"
       offset: 1
-      stretch: 1.1
 
   - id: "000961"
     count: 54
@@ -127,7 +133,6 @@ segments:
     - movie: the_sea_chase
       segment: "068429"
       offset: 0
-      stretch: 1.1
 
   - id: "001015"
     count: 78
@@ -145,7 +150,6 @@ segments:
     - movie: the_sea_chase
       segment: "070398"
       offset: 107
-      stretch: 1.1
 
   - id: "001263"
     count: 158
@@ -163,7 +167,6 @@ segments:
     - movie: the_sea_chase
       segment: "077100"
       offset: 1
-      stretch: 1.1
 
   - id: "001580"
     count: 180
@@ -181,7 +184,6 @@ segments:
     - movie: the_sea_chase
       segment: "068074"
       offset: 1
-      stretch: 1.1
 
   - id: "001813"
     count: 94
@@ -199,7 +201,6 @@ segments:
     - movie: the_sea_chase
       segment: "076627"
       offset: 1
-      stretch: 1.1
 
   - id: "001996"
     count: 184
@@ -208,7 +209,6 @@ segments:
     - movie: the_sea_chase
       segment: "076841"
       offset: 0
-      stretch: 1.1
       gravity: l30
 
   - id: "002180"
@@ -228,7 +228,6 @@ segments:
     - movie: the_sea_chase
       segment: "077100"
       offset: 0
-      stretch: 1.1
       gravity: l30
 
   - id: "002313"
@@ -238,7 +237,6 @@ segments:
     - movie: the_sea_chase
       segment: "076841"
       offset: 10
-      stretch: 1.1
       gravity: l50
 
   - id: "002381"
@@ -257,7 +255,6 @@ segments:
     - movie: the_sea_chase
       segment: "070686"
       offset: 9
-      stretch: 1.1
       gravity: l40
 
   - id: "002512"
@@ -277,7 +274,6 @@ segments:
     - movie: the_sea_chase
       segment: "077100"
       offset: 1
-      stretch: 1.1
       gravity: l30
 
   - id: "002686"
@@ -287,7 +283,6 @@ segments:
     - movie: the_sea_chase
       segment: "077260"
       offset: 4
-      stretch: 1.1
       gravity: l50
 
   - id: "002812"
@@ -307,7 +302,6 @@ segments:
       segment: "026565"
       offset: 388
       todo: "(cross-fade)"
-      stretch: 1.1
     - movie: the_sea_chase
       segment: "160318"
       offset: 13
@@ -472,7 +466,6 @@ segments:
     - movie: the_arrangement
       segment: "003613"
       offset: 1
-      todo: "check offset with a better quality dump"
 
   - id: "005369"
     count: 110
@@ -744,7 +737,7 @@ segments:
       segment: "107116"
       offset: 61
       todo: "1.28:1 speedup?"
-    notes: |
+    comment: |
       Drop 11 frames: after 2, 5, 9, 12, 15, 19, 22, 25, 29, 32, 35
       So we play 51 frames (50 intervals) in the time for 40 (39 intervals)
 
@@ -761,9 +754,9 @@ segments:
     scenes: [ "0:04:44" ]
     clips:
     - movie: the_towering_inferno
-      segment: "014547"
+      segment: "014546"
       offset: 7
-    note: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
+      todo: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
 
   - id: "007284"
     count: 107
@@ -943,6 +936,7 @@ segments:
     - movie: start_the_revolution_without_me
       segment: "001104"
       offset: 301
+      playback: 0-220, 220-200, 201-219
 
   - id: "010099"
     count: 217
@@ -1395,7 +1389,7 @@ segments:
       segment: "078747"
       offset: 0
       gravity: l100
-    notes: Double check gravity once a wider image version is available
+    comment: Double check gravity once a wider image version is available
 
   - id: "018530"
     count: 154
@@ -1428,7 +1422,7 @@ segments:
     - movie: there_was_a_crooked_man
       segment: "079259"
       offset: 79
-    notes: |
+    comment: |
       Syncing done with the lighting on the cheekbones
       My copy of the movie is heavily cropped on the right; check gravity later
 
@@ -1437,8 +1431,9 @@ segments:
     scenes: [ "0:12:36" ]
     clips:
     - movie: drum_beat
-      segment: "061504"
-      offset: 141
+      segment: "061850"
+      offset: 0
+      gravity: l100
 
   - id: "019049"
     count: 176
@@ -1493,7 +1488,7 @@ segments:
       segment: "037650"
       offset: -1
       todo: "(fade to black on the right) (red filter) (etc.)"
-    notes: "L'offset est bien -1, la première frame est dupliquée dans La Classe"
+    comment: "L'offset est bien -1, la première frame est dupliquée dans La Classe"
 
   - id: "021100"
     count: 102
@@ -1733,7 +1728,7 @@ segments:
     - movie: firecreek
       segment: "079547"
       offset: 1
-    notes: "Proper syncing can be done on frame with darkest reflection (frame 11)"
+    comment: "Proper syncing can be done on frame with darkest reflection (frame 11)"
 
   - id: "025677"
     count: 148
@@ -2623,6 +2618,7 @@ segments:
     - movie: four_for_texas
       segment: "078957"
       offset: 31
+      gravity: u100
 
   - id: "038821"
     count: 310
@@ -2631,6 +2627,7 @@ segments:
     - movie: four_for_texas
       segment: "081273"
       offset: 7
+      gravity: u100
 
   - id: "039131"
     count: 151
@@ -2639,6 +2636,7 @@ segments:
     - movie: four_for_texas
       segment: "081960"
       offset: 314
+      gravity: u100
 
   - id: "039282"
     count: 364
@@ -2655,6 +2653,7 @@ segments:
     - movie: four_for_texas
       segment: "081960"
       offset: 0
+      gravity: u100
 
   - id: "040047"
     count: 119
@@ -2671,6 +2670,7 @@ segments:
     - movie: four_for_texas
       segment: "081273"
       offset: 24
+      gravity: u100
       todo: "(cross-fade)"
     - movie: four_for_texas
       segment: "071942"
@@ -2755,7 +2755,7 @@ segments:
     - movie: four_for_texas
       segment: "059920"
       offset: 11
-    notes: |
+    comment: |
       My dumped movie doesn't have frame 9, and has a deinterleaved
       frame for frame 6... see if another source may have it?
 
@@ -2774,7 +2774,7 @@ segments:
     - movie: four_for_texas
       segment: "060023"
       offset: 0
-    notes: Sinatra's face in frames 22-23-24 is different on both versions, that's strange
+    comment: Sinatra's face in frames 22-23-24 is different on both versions, that's strange
 
   - id: "041439"
     count: 86
@@ -2873,7 +2873,7 @@ segments:
     - movie: four_for_texas
       segment: "111785"
       offset: 83
-    notes: |
+    comment: |
       Frames 40 to 107 are perfectly synced (checked manually, shadows, dust specks...)
       Frame 112 is 1 frame late!
       Frames 113 to 117 are on time
@@ -2897,6 +2897,7 @@ segments:
     clips:
     - movie: rio_bravo
       segment: "151450"
+      offset: 0
       todo: "time dilation: frame 4 offset is +340, frame 34 offset is +389"
 
   - id: "043767"
@@ -2935,7 +2936,7 @@ segments:
     clips:
     - movie: charro
       segment: "054047"
-      offset: 3
+      offset: 2
       transform: "hflip"
 
   - id: "044195"
@@ -3614,9 +3615,9 @@ segments:
     scenes: [ "0:37:25" ]
     clips:
     - movie: the_towering_inferno
-      segment: "014565"
-      offset: 90
-    note: "Segment matching is hard but will be trivial once we fix the longer similar sequence"
+      segment: "014546"
+      offset: 7
+      todo: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
 
   - id: "056247"
     count: 236
@@ -3644,7 +3645,7 @@ segments:
       offset: 28
 
   - id: "056861"
-    count: 483
+    count: 472
     scenes: [ "0:37:54" ]
     clips:
     - movie: harper
@@ -3652,6 +3653,17 @@ segments:
       offset: 0
       transform: hflip
       gravity: r50
+
+  - id: "057333"
+    count: 11
+    scenes: [ "0:37:54" ]
+    clips:
+    - movie: harper
+      segment: "129297"
+      offset: 0
+      transform: hflip
+      gravity: r50
+    comment: The transition is seamless with the previous segment
 
   - id: "057344"
     count: 237
@@ -3751,12 +3763,12 @@ segments:
     scenes: [ "0:39:18", "0:39:24" ]
     clips:
     - movie: all_the_presidents_men
-      segment: "066523"
+      segment: "065276"
       offset: 36
       todo: "(flashback fade)"
     - movie: deliverance
       segment: "061903"
-      offset: -115
+      offset: -116
       todo: "(flashback fade)"
 
   - id: "059238"
@@ -3875,7 +3887,7 @@ segments:
       segment: "015815"
       offset: -105
       todo: "(cross-fade)"
-    notes: "transitions of length ~ 10 centered at frame #55 and inbetween #109/#110"
+    comment: "transitions of length ~ 10 centered at frame #55 and inbetween #109/#110"
 
   - id: "060847"
     count: 101
@@ -4159,7 +4171,7 @@ segments:
     scenes: [ "0:43:53" ]
     clips:
     - movie: jeremiah_johnson
-      segment: "154470"
+      segment: "154569"
       offset: 0
       transform: "hflip"
 
@@ -4300,9 +4312,9 @@ segments:
     scenes: [ "0:44:55" ]
     clips:
     - movie: the_towering_inferno
-      segment: "014565"
-      offset: 53
-    note: "Segment matching is hard but will be trivial once we fix the longer similar sequence"
+      segment: "014546"
+      offset: 7
+      todo: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
 
   - id: "067525"
     count: 447
@@ -4384,7 +4396,7 @@ segments:
     - movie: when_time_ran_out
       segment: "036081"
       offset: 0
-    notes: "Syncing is almost impossible, the frames are extremely similar"
+    comment: "Syncing is almost impossible, the frames are extremely similar"
 
   - id: "069158"
     count: 71
@@ -4579,6 +4591,7 @@ segments:
     - movie: band_of_angels
       segment: "074201"
       offset: 0
+      gravity: u50
 
   - id: "071512"
     count: 62
@@ -4595,6 +4608,7 @@ segments:
     - movie: band_of_angels
       segment: "073659"
       offset: 0
+      gravity: u50
 
   - id: "071724"
     count: 240
@@ -4611,6 +4625,7 @@ segments:
     - movie: band_of_angels
       segment: "072032"
       offset: 0
+      gravity: u50
 
   - id: "072042"
     count: 378
@@ -4632,6 +4647,7 @@ segments:
     - movie: band_of_angels
       segment: "140110"
       offset: 99
+      gravity: u50
 
   - id: "072522"
     count: 52
@@ -4649,6 +4665,7 @@ segments:
       segment: "140400"
       offset: 10
       todo: 'modified speed: frame 0 has offset 10, frame 94 has offset 123 (1.3:1 rate?)'
+      gravity: u50
 
   - id: "072669"
     count: 77
@@ -4673,6 +4690,7 @@ segments:
     - movie: band_of_angels
       segment: "140807"
       offset: 0
+      gravity: u50
 
   - id: "073043"
     count: 62
@@ -4689,6 +4707,7 @@ segments:
     - movie: band_of_angels
       segment: "180893"
       offset: 0
+      gravity: u50
 
   - id: "073203"
     count: 80
@@ -4705,6 +4724,7 @@ segments:
     - movie: band_of_angels
       segment: "181355"
       offset: 0
+      gravity: u50
 
   - id: "073356"
     count: 44
@@ -4721,6 +4741,7 @@ segments:
     - movie: band_of_angels
       segment: "181542"
       offset: 0
+      gravity: u50
 
   - id: "073761"
     count: 256
@@ -4738,10 +4759,12 @@ segments:
       segment: "181542"
       offset: 361
       todo: "(flashback fade)"
+      gravity: u50
     - movie: band_of_angels
       segment: "073659"
       offset: -209
       todo: "(flashback fade)"
+      gravity: u50
 
   - id: "074376"
     count: 223
@@ -4766,6 +4789,7 @@ segments:
     - movie: all_the_presidents_men
       segment: "124486"
       offset: 0
+      gravity: u50
 
   - id: "074695"
     count: 325
@@ -4782,6 +4806,7 @@ segments:
     - movie: rampage
       segment: "027690"
       offset: 0
+      gravity: u50
 
   - id: "075093"
     count: 23
@@ -4799,6 +4824,7 @@ segments:
     - movie: rampage
       segment: "027690"
       offset: 0
+      gravity: u50
 
   - id: "075189"
     count: 128
@@ -4828,6 +4854,7 @@ segments:
     - movie: harper
       segment: "042898"
       offset: -826
+      transform: hflip
       todo: "(flashback fade)"
 
   - id: "076265"
@@ -4837,7 +4864,8 @@ segments:
     - movie: rampage
       segment: "030094"
       offset: 0
-    notes: "Syncing done on frame 9, lowest intensity of the candle on the right"
+      gravity: u50
+    comment: "Syncing done on frame 9, lowest intensity of the candle on the right"
 
   - id: "076310"
     count: 64
@@ -4855,6 +4883,7 @@ segments:
     - movie: rampage
       segment: "028130"
       offset: 2
+      gravity: u50
       todo: "(flashback fade)"
     - movie: westbound
       segment: "055103"
@@ -4893,9 +4922,9 @@ segments:
     - movie: westbound
       segment: "056002"
       offset: 0
-      playback: 0-127, 126-24, 26-125
+      playback: 0-127, 126-26, 26-126
       gravity: u100
-    notes: Sync was pretty hard in the last third, I think we need a better master
+    comment: Sync was pretty hard in the last third, I think we need a better master
 
   - id: "077101"
     count: 30
@@ -5080,6 +5109,7 @@ segments:
     - movie: the_candidate
       segment: "013124"
       offset: 2
+      gravity: u50
 
   - id: "080326"
     count: 222
@@ -5187,7 +5217,7 @@ segments:
     - movie: carson_city
       segment: "033031"
       offset: 48
-      gravity: u100
+      gravity: u80
 
   - id: "081749"
     count: 27
@@ -5385,7 +5415,7 @@ segments:
       segment: "028733"
       offset: -69
       todo: "(cross-fade)"
-    notes: "La transition aurait dû être la version flashback"
+    comment: "La transition aurait dû être la version flashback"
 
   - id: "083420"
     count: 50
@@ -5418,12 +5448,15 @@ segments:
     clips:
     - movie: when_time_ran_out
       segment: "025869"
-      offset: 498
+      offset: 573
+      transform: hflip
+      playback: 0-92, 92-0, 1000-1094
       todo: "(flashback fade) (ping-pong: 93 frames in, 93 frames out back to offset 498)"
     - movie: riding_shotgun
       segment: "011508"
       offset: -168
-      todo: "(flashback fade)"
+      transform: hflip
+      todo: "(flashback fade) (framerate issue?)"
 
   - id: "083999"
     count: 65
@@ -5525,7 +5558,7 @@ segments:
     - movie: all_the_presidents_men
       segment: "107166"
       offset: 113
-    notes: "Peut-être ajuster le cadrage pour masquer le personnage du début de séquence"
+    comment: "Peut-être ajuster le cadrage pour masquer le personnage du début de séquence"
 
   - id: "084905"
     count: 146
@@ -5585,6 +5618,7 @@ segments:
       segment: "109558"
       offset: 0
       transform: "hflip"
+      gravity: u100
 
   - id: "086206"
     count: 441
@@ -5602,6 +5636,7 @@ segments:
       segment: "109761"
       offset: 0
       transform: "hflip"
+      gravity: u100
 
   - id: "086809"
     count: 76
@@ -5628,6 +5663,7 @@ segments:
       segment: "110072"
       offset: 0
       transform: hflip
+      gravity: u100
 
   - id: "087070"
     count: 326
@@ -5800,7 +5836,7 @@ segments:
     scenes: [ "1:00:21" ]
     clips:
     - movie: beyond_the_poseidon_adventure
-      segment: "050350"
+      segment: "050335"
       offset: 5
       todo: "night filter? otherwise the background is too obvious"
 
@@ -5825,7 +5861,7 @@ segments:
     scenes: [ "1:00:42" ]
     clips:
     - movie: beyond_the_poseidon_adventure
-      segment: "050707"
+      segment: "050692"
       offset: 0
       todo: "night filter? otherwise the background is too obvious"
 
@@ -6068,6 +6104,7 @@ segments:
     - movie: the_miracle_of_our_lady_of_fatima
       segment: "140263"
       offset: 67
+      gravity: d20
 
   - id: "094250"
     count: 134
@@ -6108,7 +6145,7 @@ segments:
     - movie: mcq
       segment: "040655"
       offset: 1
-    notes: "Synced with the frame where he blinks"
+    comment: "Synced with the frame where he blinks"
 
   - id: "094926"
     count: 93
@@ -6298,7 +6335,7 @@ segments:
     - movie: mcq
       segment: "069803"
       offset: 0
-    notes: "Syncing done with subtle lower trajectory of nods"
+    comment: "Syncing done with subtle lower trajectory of nods"
 
   - id: "097215"
     count: 102
@@ -6315,7 +6352,7 @@ segments:
     - movie: mcq
       segment: "069803"
       offset: 2
-    notes: "Syncing done with previous sequence and tiny speck on frame 29"
+    comment: "Syncing done with previous sequence and tiny speck on frame 29"
 
   - id: "097383"
     count: 376
@@ -6446,6 +6483,7 @@ segments:
     clips:
     - movie: mcq
       segment: "071824"
+      offset: 0
       todo: |
         This is the same as the previous sequence, played at something like 1:2.5 speed.
         Matching frames: 15 75 85 98 (this sequence) vs. 7 31 34 40 (previous seq from McQ)
@@ -6490,7 +6528,7 @@ segments:
     - movie: all_the_presidents_men
       segment: "191426"
       offset: 356
-    notes: 'Syncing was done with the character turning pages on the right'
+    comment: 'Syncing was done with the character turning pages on the right'
 
   - id: "099730"
     count: 367
@@ -6858,9 +6896,9 @@ segments:
     scenes: [ "1:10:05" ]
     clips:
     - movie: hooper
-      segment: "128104"
-      offset: -4
-      todo: "source material is missing 4 frames before, 1 frame after; try to dilate time maybe?"
+      segment: "128903"
+      offset: 22
+    comment: small trivia, sequence 128104 from the original movie is a duplicate of that explosion
 
   - id: "105183"
     count: 52
@@ -6943,8 +6981,6 @@ movies:
     - name: "All the Presidents Men 1976 1080p MAX WEB-DL H264-GPRS.mkv"
       resolution: "1920x1080"
     - name: "All the Presidents Men (1976) MULTi VFI 2160p 10bit DV HDR10 BluRay x265 DTS-HD MA 2.0-MHD.mkv"
-    status:
-      segments: true
 
   around_the_world_in_eighty_days:
     title: "Around the World in Eighty Days"
@@ -6964,8 +7000,6 @@ movies:
     comment: |
       Interesting discussion about the restoration of the movie on
       https://www.hometheaterforum.com/community/threads/381256
-    status:
-      segments: true
 
   the_arrangement:
     title: "The Arrangement"
@@ -6977,13 +7011,13 @@ movies:
     - type: dvd-ntsc
       year: 2007
       link: https://www.blu-ray.com/dvd/The-Arrangement-DVD/18971/
-    source:
+    sources:
     - name: "The.Arrangement.1969.720p.WEB-DL.AAC2.0.H264-FGT.mkv"
+      resolution: 1280x532
+      rating: 4
+      comment: Frequency analysis shows that this was upscaled from 960x532
     - name: "The Arrangement [Kirk Douglas] (1969) DVDRip Oldies.avi"
-    comment: |
-      Scenes in La Classe are interleaved, so offsets could be off ±1
-    status:
-      segments: true
+      resolution: 720x304
 
   band_of_angels:
     title: "Band of Angels"
@@ -7005,8 +7039,6 @@ movies:
     - name: "L.Esclave.Libre.1957.FRENCH.1080p.WEBRip.HDLight.AAC.1.0.x264-Zacary.mkv"
       resolution: 1440x1080
       bad: bigger file size but clearly encoded from a bad source, quality is really poor compared to the other source; probably upscaled
-    status:
-      segments: true
 
   battle_of_the_bulge:
     title: "Battle of the Bulge"
@@ -7030,8 +7062,6 @@ movies:
     - name: "Battle.Of.The.Bulge.1965.1080p.BluRay.x264-[YTS.LT].mp4"
       resolution: "1904x688"
     - name: "La.Bataille.Des.Ardennes.1965.MULTI.1080p.BluRay.HDLight.AC3.x264-gismo65.mkv"
-    status:
-      segments: true
 
   beyond_the_poseidon_adventure:
     title: "Beyond the Poseidon Adventure"
@@ -7051,11 +7081,17 @@ movies:
       link: https://www.blu-ray.com/movies/Beyond-the-Poseidon-Adventure-Blu-ray/341264/
     sources:
     - name: "Beyond the Poseidon Adventure (1979).mkv"
+      resolution: 3840x1608
+      comment: looks like a crazy upscale, but the quality is really, really good; grain is well preserved
     - name: "Beyond.The.Poseidon.Adventure.1979.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
+      resolution: 1920x804
+      bad: definitely not as much detail as the upscaled version
     - name: "Beyond.The.Poseidon.Adventure.1979.720p.BluRay.x264.AAC-[YTS.MX].mp4"
+      resolution: 1280x536
+      bad: poor resolution
     - name: "L'inferno sommerso - Beyond the Poseidon Adventure (1979) 1080p H264 Ac3 Ita Ac3 5.1 Eng Sub Ita Eng-MIRCrew.mkv"
-    status:
-      segments: true
+      resolution: 1872x784
+      bad: definitely not as much detail as the upscaled version
 
   blood_alley:
     title: "Blood Alley"
@@ -7073,10 +7109,11 @@ movies:
       link: https://www.blu-ray.com/movies/Blood-Alley-Blu-ray/182128/
     sources:
     - name: "Blood Alley 1955 1080p BluRay x264-OFT.mkv"
-      resolution: "1920x1080"
+      resolution: 1920x1080
+      comment: clearly the higher bitrate and better grain restitution
+      rating: 7
     - name: "Blood.Alley.1955.MULTi.VFi.1080p.HDLight.AC3.2.0.H264-LiHDL.mkv"
-    status:
-      segments: true
+      resolution: 1920x752
 
   bullitt:
     title: "Bullitt"
@@ -7104,8 +7141,6 @@ movies:
       resolution: 1908x1080
       rating: 8
     - name: "Bullitt.1968.MULTI.VFF.1080p.BluRay.AC3.1.0.x264-PURE.mkv"
-    status:
-      segments: true
 
   cahill_us_marshal:
     title: "Cahill U.S. Marshal"
@@ -7123,9 +7158,8 @@ movies:
       link: https://www.blu-ray.com/movies/Cahill-US-Marshal-Blu-ray/124841/
     sources:
     - name: "Cahill U.S. Marshal (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
-      resolution: "1920x800"
-    status:
-      segments: true
+      resolution: 1920x800
+      rating: 7
 
   the_candidate:
     title: "The Candidate"
@@ -7147,8 +7181,6 @@ movies:
     - name: "1972 - Votez McKay MULTI TRUEFRENCH 1080 HD LIGHT AC3 x264.mkv"
       resolution: 1920x1080
       bad: clearly inferior encoding compared to the webrip
-    status:
-      segments: true
 
   carson_city:
     title: "Carson City"
@@ -7166,8 +7198,6 @@ movies:
       link: https://www.blu-ray.com/dvd/Carson-City-DVD/68310/
     sources:
     - name: "Carson City  (Western 1952)  Randolph Scott, Raymond Massey & Lucille Norman.mp4"
-    status:
-      segments: true
 
   charro:
     title: "Charro!"
@@ -7181,12 +7211,14 @@ movies:
       year: 2007
       link: https://www.blu-ray.com/dvd/Charro-DVD/90199/
     sources:
+    - name: "Charro.1969.1080p.WEB-DL.DD.2.0.H.264-SbR.mkv"
+      resolution: 1920x800
+      rating: 6
+      comment: this web-dl has a slightly higher bitrate, gonna trust it even if I can't tell the difference
     - name: "Charro.1969.1080p.AMZN.WEB-DL.DDP2.0.H.264-SNAKE.mkv"
+      resolution: 1920x800
     - name: "Charro.1969.720p.WEB-DL.AAC2.0.H264-RARBG.mkv"
     - name: "Charro! 1969 Deutsch - Youtube [EJajA31vCQk].mp4"
-    - name: "Charro.1969.1080p.WEB-DL.DD.2.0.H.264-SbR.mkv"
-    status:
-      segments: true
 
   the_cheyenne_social_club:
     title: "The Cheyenne Social Club"
@@ -7204,17 +7236,15 @@ movies:
       link: https://www.blu-ray.com/dvd/The-Cheyenne-Social-Club-DVD/101943/
     sources:
     - name: "Attaque.au.Cheyenne.Club.1970.DVDRip.FR.MULTi.h264.mkv"
-      resolution: "1136x480"
+      resolution: 1136x480
       bad: "Encoding problems: 25fps was achieved by duplicating every 24th frame"
     - name: "The Cheyenne Social Club (West. Comedy 1970) James Stewart, Henry Fonda & Shirley Jones.mp4"
-      resolution: "1280x532"
+      resolution: 1280x532
       bad: "Encoding problems: 30fps was created using a 25fps version already converted from 24fps, creating a +5/+2/+8 frame pattern"
     - name: "Cheyenne Social Club, The (Henry Fonda, James Stewart) [1970]@.avi"
-      resolution: "608x256"
+      resolution: 608x256
     comment: |
       The Apple TV version is clearly better visually, though I don’t know by how much
-    status:
-      segments: true
 
   chisum:
     title: "Chisum"
@@ -7229,13 +7259,14 @@ movies:
       bitrate: 34.90
       link: https://www.blu-ray.com/movies/Chisum-Blu-ray/103214/
     sources:
-    - name: "Chisum (1970) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
-      resolution: "1920x800"
     - name: "Chisum.1970.MULTI.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
+      resolution: 1920x800
+      rating: 7
+    - name: "Chisum (1970) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
+      resolution: 1920x800
+      bad: Encoding is clearly inferior, film grain has disappeared
     comment: |
       Scenes in La Classe are interleaved, so offsets could be off ±1
-    status:
-      segments: true
 
   city_beneath_the_sea:
     title: "City Beneath the Sea"
@@ -7258,8 +7289,6 @@ movies:
     sources:
     - name: "City Beneath the Sea (Irwin Allen, 1971).mkv"
     - name: "La città degli Acquanauti - City Beneath the Sea (1971) SD h264 Ac3 Ita Eng Sub Ita-MIRCrew.mkv"
-    status:
-      segments: true
 
   cleopatra_jones:
     title: "Cleopatra Jones"
@@ -7277,10 +7306,9 @@ movies:
       link: https://www.blu-ray.com/movies/Cleopatra-Jones-Blu-ray/234589/
     sources:
     - name: "Cleopatra Jones 1973 1080p BluRay x264-OFT.mkv"
-      resolution: "1920x1080"
+      resolution: 1920x1080
+      rating: 7
     - name: "Dynamite Jones 1973 Multi WEBrip 1080p AVC AC3-Ginonyll.h264.mkv"
-    status:
-      segments: true
 
   the_cowboys:
     title: "The Cowboys"
@@ -7298,10 +7326,11 @@ movies:
       link: https://www.blu-ray.com/movies/The-Cowboys-Blu-ray/436/
     sources:
     - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
-      resolution: "1920x1080"
+      resolution: 1908x796
+      rating: 7
+      comment: for some reason this fil is smaller but encoding seems better, especially the film grain
     - name: "Les.Cowboys.1972.MULTI.VFI.1080p.BluRay.AC3.5.1.x264-gismo65.mkv"
-    status:
-      segments: true
+      resolution: 1920x802
 
   the_crimson_pirate:
     title: "The Crimson Pirate"
@@ -7328,12 +7357,11 @@ movies:
       link: https://www.blu-ray.com/dvd/The-Crimson-Pirate-DVD/19564/
     sources:
     - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265.HEVC.FLAC.DUAL-SARTRE.mkv"
-      resolution: "1440x1080"
+      resolution: 1440x1080
+      quality: 7
     - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265-RARBG.mp4"
-    comment: |
-      Scenes in La Classe are interleaved, so offsets could be off ±1
-    status:
-      segments: true
+      resolution: 1440x1080
+      bad: Inferior encoding, missing a lot of film grain
 
   deliverance:
     title: "Deliverance"
@@ -7366,8 +7394,6 @@ movies:
     - name: "Deliverance 1972 1080p MAX WEB-DL DDP5 1 H 264-GPRS.mkv"
       resolution: "1920x800"
     - name: "Délivrance (1972) MULTi VFF 1080p x264 AC3-JiHeff.mkv"
-    status:
-      segments: true
 
   drum_beat:
     title: "Drum Beat"
@@ -7388,12 +7414,18 @@ movies:
       link: https://www.blu-ray.com/dvd/Drum-Beat-DVD/87417/
     sources:
     - name: "Drum Beat (1954) 1080p-H264-AC 3 (DolbyDigital-5.1) & nickarad.mp4"
+      resolution: 1920x1080
+      bad: Blurry details, probably a badly upscaled version, worse than the other nickarad release
     - name: "Drum Beat (1954) BluRay H264 DolbyD 5.1 + nickarad.mp4"
-      resolution: "1920x752"
+      resolution: 1920x752
+      rating: 6
+      comment: Can't be a BluRay rip, since there is no Blu-Ray as of 2026
     - name: "Drum.Beat.1954.1080p.WEBRip.x264.AAC-[YTS.MX].mp4"
+      resolution: 1920x752
+      comment: Spectral analysis shows exact same low frequencies as the good nickarad release
     - name: "L.Aigle Solitaire (1954) VFF ENG 1080p WEBRiP MULTi AAC 2.0.x264-RHT.mkv"
-    status:
-      segments: true
+      resolution: 1920x752
+      comment: Not significantly better than the other ones
 
   executive_action:
     title: "Executive Action"
@@ -7410,11 +7442,11 @@ movies:
       year: 2007
       link: https://www.blu-ray.com/dvd/Executive-Action-DVD/7594/
     sources:
-    - name: "Executive.Action.1973.720p.WEBRip.x264.AAC-LAMA.mp4"
-      resolution: "1280x722"
     - name: "Executive.Action.1973.CUSTOM.MULTI.1080p.AMZN.WEB-DL.H.264-BRDN.mkv"
-    status:
-      segments: true
+      resolution: 1920x1080
+      rating: 6
+    - name: "Executive.Action.1973.720p.WEBRip.x264.AAC-LAMA.mp4"
+      resolution: 1280x722
 
   the_fbi_story:
     title: "The FBI Story"
@@ -7456,11 +7488,11 @@ movies:
       link: https://www.blu-ray.com/dvd/Firecreek-DVD/101944/
     sources:
     - name: "Firecreek (1968) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
-      resolution: "1916x816"
-      bad: "Encoding problems: 25fps was achieved by duplicating every 24th frame"
+      resolution: 1916x816
+      bad: Encoding problems, poor image quality, also 25fps was achieved by duplicating every 24th frame
     - name: "Firecreek.1968.(Western-Henry.Fonda).1080p.x264-Classics.mkv"
-    status:
-      segments: true
+      resolution: 1920x1080
+      rating: 6
 
   four_for_texas:
     title: "4 for Texas"
@@ -7510,12 +7542,15 @@ movies:
       year: 2009
       link: https://www.blu-ray.com/dvd/Freebie-and-the-Bean-DVD/87726/
     sources:
-    - name: "Freebie.And.The.Bean.1974.INTERNAL.BDRip.x264-RedBlade.mkv"
-      resolution: "720x300"
-    - name: "Freebie.And.The.Bean.1974.1080p.BluRay.x264-[YTS.LT].mp4"
     - name: "Freebie.And.The.Bean.1974.1080p.BluRay.x264-RedBlade.mkv"
-    status:
-      segments: true
+      resolution: 1920x800
+      rating: 7
+    - name: "Freebie.And.The.Bean.1974.1080p.BluRay.x264-[YTS.LT].mp4"
+      resolution: 1920x800
+      bad: Inferior encoding, film grain is badly affected
+    - name: "Freebie.And.The.Bean.1974.INTERNAL.BDRip.x264-RedBlade.mkv"
+      resolution: 720x300
+      bad: Poor resolution, doesn't look like a BDRip
 
   the_good_guys_and_the_bad_guys:
     title: "The Good Guys and the Bad Guys"
@@ -7536,10 +7571,10 @@ movies:
       link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/250764/
     sources:
     - name: "The Good Guys and the Bad Guys  (Western 1969)  Robert Mitchum, George Kennedy & Martin Balsam.mp4"
+      resolution: 1280x544
+      comment: 25fps, hope this is OK
     - name: "the.good.guys.and.the.bad.guys.1969.proper.dvdrip.x264-regret.mkv"
       bad: File is corrupted
-    status:
-      segments: true
 
   harper:
     title: "Harper"
@@ -7567,8 +7602,6 @@ movies:
     - name: "Harper.1966.1080p.BluRay.x264-[YTS.LT].mp4"
       resolution: 1920x800
       bad: Encoding is inferior to the OFT release, most of the film grain has disappeared
-    status:
-      segments: true
 
   hooper:
     title: "Hooper"
@@ -7593,8 +7626,6 @@ movies:
     sources:
     - name: "Hooper.1978.1080p.BluRay.x264.YIFY.mp4"
       resolution: "1920x1080"
-    status:
-      segments: true
 
   jeremiah_johnson:
     title: "Jeremiah Johnson"
@@ -7621,12 +7652,11 @@ movies:
     - name: "Jeremiah.Johnson.1972.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.5.1.AVC-Raf66.mkv"
       resolution: 1920x800
       rating: 8
+      comment: this is probably the superior 2020 Blu-Ray because the bitrate is 35Mbps
     - name: "Jeremiah Johnson 1972 2160p.mkv"
       resolution: 3840x2160
       bad: upscaled from a 1080p source
     - name: "Jeremiah.Johnson.1972.EXTENDED.REMASTERED.MULTi.1080p.BluRay.x264.DTS.HD.MA.5.1-RiFiFi.mkv"
-    status:
-      segments: true
 
   the_life_and_times_of_judge_roy_bean:
     title: "The Life and Times of Judge Roy Bean"
@@ -7656,8 +7686,6 @@ movies:
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.1080p.BluRay.x264-[YTS.AM].mp4"
     - name: "The Life and Times of Judge Roy Bean  (Western 1972)  Paul Newman, Ava Gardner & Roy Jenson  (BR).mp4"
     - name: "The.Life.And.Times.Of.Judge.Roy.Bean.1972.720p.BluRay.x264-[YTS.AM].mp4"
-    status:
-      segments: true
 
   mad_max:
     title: "Mad Max"
@@ -7698,8 +7726,6 @@ movies:
     - name: "Mad Max (1979) MULTi VFI 2160p 10bit 4KLight HDR BluRay AC3 5.1 x265-QTZ.mkv"
     - name: "Mad Max 1979 BluRay 1080p DDP 5 1 x264-hallowed.mkv"
       resolution: "1920x820"
-    status:
-      segments: true
 
   maigret_et_les_plaisirs_de_la_nuit:
     title: "Maigret et les plaisirs de la nuit"
@@ -7707,11 +7733,11 @@ movies:
     year: 1992
     directed: [ "José Pinheiro" ]
     cast: []
+    alt_titles:
+      en: "Maigret in Montmartre"
     samples: [ "0:53:26" ]
     sources:
     - name: "Maigret.1991.E04.FRENCH.1080p.HDTV.H264-HYBRiS.mkv"
-    status:
-      segments: true
 
   mcq:
     title: "McQ"
@@ -7742,8 +7768,6 @@ movies:
     - name: "Un.Silencieux.Au.Bout.Du.Canon.1974..Multi.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
     - name: "McQ.1974.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
     - name: "McQ.1974.720p.BluRay.x264.AAC-[YTS.MX].mp4"
-    status:
-      segments: true
 
   the_miracle_of_our_lady_of_fatima:
     title: "The Miracle of Our Lady of Fatima"
@@ -7766,8 +7790,6 @@ movies:
       resolution: "1470x1080"
     - name: "the.miracle.of.our.lady.of.fatima.1952.1080p.hdtv.x264-regret.mkv"
     - name: "The Miracle of Our Lady of Fatima (1952) HDTV Oldies Dual-Audio.mkv"
-    status:
-      segments: true
 
   oceans_eleven:
     title: "Ocean’s Eleven"
@@ -7799,8 +7821,6 @@ movies:
     - name: "L'Inconnu de Las Vegas 1960 Multi WEBrip 1080p AVCx264 AAC-Ginonyll.mkv"
       resolution: 1920x800
       bad: Inferior encoding, film grain does not look as good as the webdl
-    status:
-      segments: true
 
   the_old_man_and_the_sea:
     title: "The Old Man and the Sea"
@@ -7823,10 +7843,10 @@ movies:
       link: https://www.blu-ray.com/dvd/The-Old-Man-and-the-Sea-DVD/167891/
     sources:
     - name: "The Old Man and the Sea 1958 1080p BluRay x264 DuaL-TURKO.mkv"
-      resolution: "1920x1080"
+      resolution: 1920x1038
+      rating: 7
     - name: "The.Old.Man.And.The.Sea.1958.1080p.WEBRip.x264.AAC-[YTS.MX].mp4"
-    status:
-      segments: true
+      resolution: 1916x1080
 
   rampage:
     title: "Rampage"
@@ -7849,8 +7869,6 @@ movies:
     - name: "Rampage (Phil Karlson, 1963).mkv"
       resolution: "848x480"
     comments: Interleaved
-    status:
-      segments: true
 
   riding_shotgun:
     title: "Riding Shotgun"
@@ -7872,8 +7890,6 @@ movies:
     sources:
     - name: "Riding Shotgun  (Western 1954)  Randolph Scott, Joan Weldon & Wayne Morris.mp4"
     - name: "Riding Shotgun (1954) 75 min.Randolph Scott Westerns.avi"
-    status:
-      segments: true
 
   rio_bravo:
     title: "Rio Bravo"
@@ -7902,8 +7918,6 @@ movies:
     - name: "Rio Bravo 1959 1080p BluRay x264-OFT.mkv"
       resolution: "1920x1080"
     - name: "Rio Bravo (1959) MULTi VFI 2160p 10bit DV HDR BluRay x265 DTS-HDMA 2.0-XANDER.mkv"
-    status:
-      segments: true
 
   the_sea_chase:
     title: "The Sea Chase"
@@ -7931,8 +7945,6 @@ movies:
       rating: 8
     - name: "The Sea Chase  (War Drama 1955)  John Wayne, David Farrar & Lana Turner  1080p.mp4"
       resolution: "1910x780"
-    status:
-      segments: true
 
   the_searchers:
     title: "The Searchers"
@@ -7963,8 +7975,6 @@ movies:
     - name: "The.Searchers.1956.1080p.BluRay.x265.HEVC.AC3-SARTRE.mkv"
       resolution: "1920x1080"
     - name: "The Searchers (1956) MULTi VFI 2160p 10bit 4KLight DV HDR BluRay FLAC 1.0 x265-QTZ.mkv"
-    status:
-      segments: true
 
   start_the_revolution_without_me:
     title: "Start the Revolution Without Me"
@@ -7987,8 +7997,6 @@ movies:
       resolution: 1920x1036
       rating: 8
     - name: "Start The Revolution Without Me 1970 DVDRip x264[N1C].mkv"
-    status:
-      segments: true
 
   straight_time:
     title: "Straight Time"
@@ -8022,8 +8030,6 @@ movies:
         Which version is this? Encoding is worse but it is 1.77:1 instead of 1.85:1 and has a bit
         more image information at the top and the bottom. Also the Warner logo at the beginning is
         the 3D animation whereas the other one has the flat red/white/black one.
-    status:
-      segments: true
 
   there_was_a_crooked_man:
     title: "There Was a Crooked Man…"
@@ -8048,15 +8054,31 @@ movies:
       link: https://www.blu-ray.com/dvd/There-Was-a-Crooked-Man-DVD/26155/
     sources:
     - name: "There.Was.a.Crooked.Man.1970.VOSTFR.1080p.WEB-DL.DD2.0.H.264-AZAZE.mkv"
+      resolution: 1920x1080
+      rating: 6
+      comment: |
+        Very high quality but 1.77:1 aspect ratio; still the preferred one.
+        Warning: looks like we need to correct gamma with libplacebo!
     - name: "Le.Reptile.1970.MULTI.VFF.576p.DVDRip.AC3.2.0.MPEG2-TT54.mkv"
+      resolution: 720x576
+      bad: old DVD resolution
     - name: "Le.Reptile.1970.MULTI.VFF.1080p.WEBRip.AAC.2.0.x265-TITCANAILLOU.mkv"
+      resolution: 1916x1080
+      bad: inferior to the other 1.77:1 rips
     - name: "There.Was.A.Crooked.Man....1970.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
+      resolution: 1920x816
+      comment: 2.33:1 version, very wide; is this the expected aspect ratio?
     - name: "There.Was.A.Crooked.Man....1970.1080p.WEBRip.x264.AAC-[YTS.LT].mp4"
+      resolution: 1904x1072
+      bad: inferior to the other 1.77:1 rips
     - name: "There.Was.a.Crooked.Man.1970.BluRay.600MB.h264.MP4-Zoetrope.mp4"
+      resolution: 720x306
+      bad: old DVD resolution
     comment: |
-      Scenes in La Classe are interleaved, so offsets could be off ±1
-    status:
-      segments: true
+      Should we opt for the 1.77:1 version or the 2.33:1 version? Given equivalent
+      pixel density, cropping 2.33:1 to 2.10:1 removes 11% of the screen, whereas
+      cropping 1.77:1 to 2.10:1 loses 19% of the screen. But since our best source
+      has 6 times as much information, we'll keep the 1.77 one.
 
   the_towering_inferno:
     title: "The Towering Inferno"
@@ -8076,11 +8098,11 @@ movies:
       year: 1999
       link: https://www.blu-ray.com/dvd/The-Towering-Inferno-DVD/24169/
     sources:
-    - name: "L'inferno di cristallo - The Towering Inferno (1974) 1080p h264 Ac3 Ita Storico Ita Eng Sub Ita Eng-MIRCrew.mkv"
-      resolution: "1904x816"
     - name: "La.Tour.Infernale.1974.Bluray.1080p.x265.HEVC.10Bits.VFF.VOSTFR.AC3.DTS-HDMA-Goldenyann.mkv"
-    status:
-      segments: true
+      resolution: 1890x816
+      rating: 7
+    - name: "L'inferno di cristallo - The Towering Inferno (1974) 1080p h264 Ac3 Ita Storico Ita Eng Sub Ita Eng-MIRCrew.mkv"
+      resolution: 1904x816
 
   the_train_robbers:
     title: "The Train Robbers"
@@ -8109,8 +8131,6 @@ movies:
     - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: "1920x800"
     - name: "Les.Voleurs.De.Trains.1973.MULTI.VFI.1080p.BluRay.DTS.HD.MA.1.0.x264-gismo65.mkv"
-    status:
-      segments: true
 
   the_valley_of_gwangi:
     title: "The Valley of Gwangi"
@@ -8126,7 +8146,8 @@ movies:
       year: 2017
       bitrate: 36.80
       link: https://www.blu-ray.com/movies/The-Valley-of-Gwangi-Blu-ray/123978/
-      note: Spanish Blu-Ray, not an official Warner Release
+      comment: Spanish Blu-Ray, not an official Warner Release; quality is still impressive
+      rating: 7
     - type: dvd-ntsc
       year: 2012
       link: https://www.blu-ray.com/dvd/The-Valley-of-Gwangi-DVD/36886/
@@ -8139,8 +8160,13 @@ movies:
     sources:
     - name: "The.Valley.of.Gwangi.1969.1080p.BluRay.x264-SADPANDA.mkv"
       resolution: "1920x1080"
-    status:
-      segments: true
+
+  warner_logo:
+    title: "Warner Bros. Logo"
+    sources:
+    - name: "IT Welcome to Derry S01E01 The Pilot 1080p TrueHD Atmos 7 1 AVC REMUX-FraMeSToR.mkv"
+      resolution: 1920x1080
+      rating: 8
 
   westbound:
     title: "Westbound"
@@ -8158,11 +8184,11 @@ movies:
       link: https://www.blu-ray.com/dvd/Westbound-DVD/18738/
     sources:
     - name: "Westbound 1959 1080p HMAX WEB-DL DDP2 0 H 264-BLOOM.mkv"
+      resolution: 1920x1080
       bad: "Encoding problems: 30fps achieved by duplicating frames"
     - name: "Westbound.1959.Upscale.1080p.DVD.x265.HEVC.AC3-SARTRE.mkv"
-    comments: Interleaved
-    status:
-      segments: true
+      resolution: 1920x1080
+      rating: 5
 
   when_time_ran_out:
     title: "When Time Ran Out…"
@@ -8201,8 +8227,6 @@ movies:
     - name: "When.Time.Ran.Out....1980.720p.BluRay.x264.AAC-[YTS.MX].mp4"
       resolution: 1280x536
       bad: downscaled
-    status:
-      segments: true
 
 #
 # directors
