@@ -83,7 +83,9 @@ segments:
     - movie: warner_logo
       segment: "077223"
       offset: 0
-    comment: "Taken from the 'IT' Blu-Ray and rendered at 96fps"
+      fade-in: [0, 37]
+      fade-out: [113, 124]
+    comment: For now, taken from the 'IT' Blu-Ray and rendered at 96fps
 
   - id: "000125"
     count: 177
@@ -91,7 +93,7 @@ segments:
     clips:
     - movie: intro_screen
       fade-in: [0, 25]
-      fade-out: [163, 176]
+      fade-out: [164, 176]
 
   - id: "000302"
     count: 283
@@ -1112,12 +1114,13 @@ segments:
       offset: 0
       transform: hflip
       fade-out: [440, 505]
+      wave-out: 436
     - movie: the_cheyenne_social_club
       segment: "140875"
       offset: -432
       transform: hflip
       fade-in: [440, 505]
-    todo: Add wave effect
+      wave-in: 507
 
   - id: "012952"
     count: 57
@@ -1305,11 +1308,12 @@ segments:
       offset: 234
       transform: hflip
       fade-out: [247, 277]
+      wave-out: 236
     - movie: there_was_a_crooked_man
       segment: "166412"
       offset: -247
       fade-in: [247, 277]
-    todo: Add wave effects
+      wave-in: 285
 
   - id: "017709"
     count: 84
@@ -2484,12 +2488,14 @@ segments:
     - movie: all_the_presidents_men
       segment: "129749"
       offset: 35
+      playback: 0-83, 83-0, 0-66
       fade-out: [177, 194]
+      wave-out: 162
     - movie: four_for_texas
       segment: "023495"
       offset: -178
       fade-in: [177, 194]
-    todo: Add wave effects
+      wave-in: 205
 
   - id: "036443"
     count: 261
@@ -2842,11 +2848,12 @@ segments:
       segment: "128695"
       offset: 0
       fade-out: [104, 129]
+      wave-out: 87
     - movie: four_for_texas
       segment: "111785"
       offset: -101
       fade-in: [104, 129]
-    todo: Add wave effects
+      wave-in: 159
 
   - id: "042802"
     count: 281
@@ -2856,11 +2863,12 @@ segments:
       segment: "118622"
       fade-out: [187, 202]
       todo: "Scène introuvable, ce timestamp fera peut-être l'affaire"
+      wave-out: 170
     - movie: carson_city
       segment: "038729"
       offset: -187
       fade-in: [187, 202]
-    todo: Add wave effects
+      wave-in: 219
 
   - id: "043083"
     count: 136
@@ -2899,11 +2907,12 @@ segments:
       segment: "118622"
       todo: "Scène introuvable, ce timestamp fera peut-être l'affaire"
       fade-out: [167, 182]
+      wave-out: 153
     - movie: the_searchers
       segment: "070837"
       offset: 734
       fade-in: [167, 182]
-    todo: Add wave effects
+      wave-in: 202
 
   - id: "043728"
     count: 39
@@ -2939,11 +2948,12 @@ segments:
       segment: "071980"
       offset: 1
       fade-out: [163, 181]
+      wave-out: 153
     - movie: rio_bravo
       segment: "197131"
       offset: -164
       fade-in: [163, 181]
-    todo: Add wave effects
+      wave-in: 202
 
   - id: "044151"
     count: 44
@@ -3027,16 +3037,19 @@ segments:
       segment: "056011"
       offset: 0
       fade-out: [247, 259]
+      wave-out: 230
     - movie: the_searchers
       segment: "071980"
       offset: -242
       fade-in: [247, 259]
+      wave-in: 278
       fade-out: [408, 425]
+      wave-out: 392
     - movie: four_for_texas
       segment: "118622"
       fade-in: [408, 425]
+      wave-in: 441
       todo: "Scène introuvable, ce timestamp fera peut-être l'affaire"
-    todo: Add wave effects
 
   - id: "045319"
     count: 286
@@ -3044,18 +3057,22 @@ segments:
     clips:
     - movie: four_for_texas
       segment: "111785"
-      offset: 180
+      offset: -75 # We start at +210 but we are reversed, so 210-286
+      playback: reverse
       fade-out: [50, 65]
+      wave-out: 35
     - movie: oceans_eleven
       segment: "078734"
       offset: -49
       fade-in: [50, 65]
+      wave-in: 85
       fade-out: [220, 235]
+      wave-out: 201
     - movie: city_beneath_the_sea
       segment: "005195"
       offset: -220
       fade-in: [220, 235]
-    todo: Add wave effects
+      wave-in: 247
 
   - id: "045605"
     count: 516
@@ -3787,11 +3804,12 @@ segments:
       segment: "065276"
       offset: 36
       fade-out: [116, 128]
+      wave-out: 103
     - movie: deliverance
       segment: "061903"
       offset: -116
       fade-in: [116, 128]
-    todo: Add wave effects
+      wave-in: 152
 
   - id: "059238"
     count: 137
@@ -3817,11 +3835,12 @@ segments:
       segment: "062466"
       offset: 1
       fade-out: [93, 102]
+      wave-out: 77
     - movie: all_the_presidents_men
       segment: "066326"
       offset: -89
       fade-in: [93, 102]
-    todo: Add wave effects
+      wave-in: 126
 
   - id: "059790"
     count: 237
@@ -3830,11 +3849,11 @@ segments:
     - movie: all_the_presidents_men
       segment: "066523"
       offset: 0
-      fade-out: [62, 73]
+      fade-out: [62, 70]
     - movie: jeremiah_johnson
       segment: "019256"
       offset: -56
-      fade-in: [62, 73]
+      fade-in: [62, 70]
 
   - id: "060027"
     count: 116
@@ -3952,11 +3971,12 @@ segments:
       segment: "077902"
       offset: 0
       fade-out: [99, 109]
+      wave-out: 81
     - movie: chisum
       segment: "149736"
       offset: -94
       fade-in: [99, 109]
-    todo: Add wave effects
+      wave-out: 130
 
   - id: "061734"
     count: 33
@@ -3990,11 +4010,12 @@ segments:
       segment: "151410"
       offset: 24
       fade-out: [88, 98]
+      wave-out: 72
     - movie: around_the_world_in_eighty_days
       segment: "077902"
       offset: -75
       fade-in: [88, 98]
-    todo: Add wave effects
+      wave-in: 121
 
   - id: "062047"
     count: 286
@@ -4076,11 +4097,12 @@ segments:
       segment: "045181"
       offset: 0
       fade-out: [371, 381]
+      wave-out: 356
     - movie: rio_bravo
       segment: "118278"
       offset: 692
       fade-in: [371, 381]
-    todo: Add wave effects
+      wave-in: 405
 
   - id: "063592"
     count: 843
@@ -4146,11 +4168,12 @@ segments:
       segment: "121212"
       offset: 0
       fade-out: [91, 101]
+      wave-out: 73
     - movie: oceans_eleven
       segment: "045181"
       offset: -31
       fade-in: [91, 101]
-    todo: Add wave effects
+      wave-in: 123
 
   - id: "065406"
     count: 80
@@ -4327,7 +4350,7 @@ segments:
       fade-out: [147, 157]
     - movie: jeremiah_johnson
       segment: "155023"
-      offset: -147
+      offset: -148
       fade-in: [147, 157]
     #- movie: jeremiah_johnson
     #  segment: "152998"
@@ -4662,11 +4685,12 @@ segments:
       segment: "124486"
       offset: 0
       fade-out: [49, 59]
+      wave-out: 33
     - movie: band_of_angels
       segment: "139777"
       offset: -49
       fade-in: [49, 59]
-    todo: Add wave effects
+      wave-in: 82
 
   - id: "072420"
     count: 102
@@ -4787,13 +4811,14 @@ segments:
       segment: "181542"
       offset: 361
       fade-out: [209, 219]
+      wave-out: 191
       gravity: u50
     - movie: band_of_angels
       segment: "073659"
       offset: -209
       fade-in: [209, 219]
+      wave-in: 242
       gravity: u50
-    todo: Add wave effects
 
   - id: "074376"
     count: 223
@@ -4872,22 +4897,25 @@ segments:
       segment: "028130"
       offset: 1
       fade-out: [144, 154]
+      wave-out: 125
     - movie: the_good_guys_and_the_bad_guys
       segment: "032925"
       offset: 83
       fade-in: [144, 154]
+      wave-in: 175
       fade-out: [400, 420]
     - movie: the_good_guys_and_the_bad_guys
       segment: "032925"
       offset: 300
       fade-in: [400, 420]
       fade-out: [827, 837]
+      wave-out: 808
     - movie: harper
       segment: "042898"
       offset: -826
       transform: hflip
       fade-in: [827, 837]
-    todo: Add wave effects (clips 0-1 and clips 2-3)
+      wave-in: 855
 
   - id: "076265"
     count: 45
@@ -4917,11 +4945,12 @@ segments:
       offset: 2
       gravity: u50
       fade-out: [141, 149]
+      wave-out: 123
     - movie: westbound
       segment: "055103"
       offset: -142
       fade-in: [141, 149]
-    todo: Add wave effects
+      wave-in: 173
 
   - id: "076607"
     count: 49
@@ -5018,11 +5047,12 @@ segments:
       offset: 2
       gravity: u100
       fade-out: [429, 439]
+      wave-out: 413
     - movie: rampage
       segment: "028130"
       offset: -404
       fade-in: [429, 439]
-    todo: Add wave effects
+      wave-in: 460
 
   - id: "078177"
     count: 21
@@ -5203,14 +5233,15 @@ segments:
     scenes: [ "0:53:59", "0:54:01" ]
     clips:
     - movie: when_time_ran_out
-      segment: "025869"
-      offset: 223
+      segment: "026167"
+      offset: 0
       fade-out: [40, 51]
+      wave-out: 22
     - movie: the_valley_of_gwangi
       segment: "085278"
       offset: 715
       fade-in: [40, 51]
-    todo: Add wave effects
+      wave-in: 71
 
   - id: "081265"
     count: 185
@@ -5446,11 +5477,13 @@ segments:
       segment: "131172"
       offset: 0
       fade-out: [68, 78]
+      wave-out: 48
     - movie: when_time_ran_out
       segment: "028733"
       offset: -69
       fade-in: [68, 78]
-    todo: Should we add a wave effect for consistency with the rest of the movie?
+      wave-in: 98
+    comment: I took the liberty of adding a wave effect for consistency with the rest of the movie
 
   - id: "083420"
     count: 50
@@ -5487,13 +5520,14 @@ segments:
       transform: hflip
       playback: 0-92, 92-0, 1000-1094
       fade-out: [168, 178]
+      wave-out: 153
     - movie: riding_shotgun
       segment: "011508"
       offset: -168
       transform: hflip
       fade-in: [168, 178]
+      wave-in: 200
       todo: Framerate issue? things get out of sync
-    todo: Add wave effects
 
   - id: "083999"
     count: 65

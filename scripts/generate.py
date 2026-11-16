@@ -5,7 +5,7 @@ import glob
 import cv2
 import numpy as np
 import sys
-#from math import round
+from math import sin, sqrt
 from pathlib import Path
 
 # To generate a movie after this script has run:
@@ -100,17 +100,27 @@ for s in data['segments']:
     Path(debug_dir).mkdir(parents=True, exist_ok=True)
 
     force = False
-    fatal = None
+    skip = False
+
+    if len(sys.argv) >= 2:
+        if sys.argv[1] == s.get('id'):
+            force = True
+        else:
+            skip = True
+
+    if not skip:
+        print(f'{segment:06d}: ', end='')
+        sys.stdout.flush()
 
     # XXX: hacks to quickly force generation
     #force = force or any('searchers' in c.get('movie') or '' for c in clip_desc)
-    #force = force or any('judge' in c.get('movie') or '' for c in clip_desc)
+    #force = force or any('wave-in' in c for c in clip_desc)
     #force = force or len(clip_desc) >= 2
     #force = True
 
     for n, orig in enumerate(dumpfiles):
 
-        if len(sys.argv) >= 2 and sys.argv[1] != s.get('id'):
+        if skip and not force:
             continue
 
         output_file = f'{output_dir}/img{segment+n:06d}.jpeg'
@@ -213,7 +223,7 @@ for s in data['segments']:
                     break
 
             if src is None:
-                errors.append(f'[{n}/{count}] cannot find image for {srcglob} in {', '.join(SEARCH_ROOT)}')
+                errors.append(f'cannot find image for {srcglob} in {', '.join(SEARCH_ROOT)}')
                 continue
 
             # Apply letterbox cropping if the value is known to us
@@ -258,12 +268,20 @@ for s in data['segments']:
             if transform is not None:
                 fxinfo.append(f'Transform: {transform}')
 
+            # Load wave parameters before scaling so that we know how much to zoom in
+            wave = 0
+            if x := c.get('wave-in'):
+                wave = max(wave, x - n)
+            if x := c.get('wave-out'):
+                wave = max(wave, n - x)
+
             # Apply scaling to the image; after this step, our frame lies somewhere
             # in there as a rectangle of size TARGET_SIZE.
             if src.shape[:2] != (dst_h, dst_w):
                 src = cv2.resize(src, (dst_w, dst_h), interpolation=cv2.INTER_LANCZOS4)
 
-            # Apply gravity
+            # Apply gravity FIXME: this should be done before scaling because some
+            # of that scaling is actually done after gravity
             rect_x, rect_y = (dst_w - TARGET_SIZE[0]) // 2, (dst_h - TARGET_SIZE[1]) // 2
             match gravity := c.get('gravity') or clip_presets.get('gravity'):
                 case None: pass
@@ -311,6 +329,50 @@ for s in data['segments']:
             cv2.putText(debug_image, f'Size: {src_w}x{src_h}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
             yinfo += NEWLINE
 
+            # Special effect: wavy deformation + zoom + motion blur
+            # Still very WIP; but works rather well on 043887
+            if wave > 0:
+                # Zoom slightly
+                # FIXME: this should be done at the same time as the first zoom, above
+                zoom = 1 + wave / 400
+                src = cv2.resize(src, (int(dst_w * zoom), int(dst_h * zoom)), interpolation=cv2.INTER_LANCZOS4)
+                rect_x = int(rect_x * zoom + rect_w * (zoom - 1) / 2)
+                rect_y = int(rect_y * zoom + rect_h * (zoom - 1) / 2)
+
+                # Apply wave; parameters are very guess-and-error
+                freq = 1.5 * (1 + wave / 1000)
+                shift = -0.1 * wave
+                amplitude = min(0.15 * wave, 20)
+                #shift = -pow(0.1 * wave, 2)
+                #amplitude = pow(0.1 * wave, 2)
+
+                stride = np.arange(src.shape[1])
+                for j in range(rect_h):
+                    dx = (0.5 + sin(6.28 * (freq * j / rect_h + shift))) * amplitude * 2000 / rect_h
+                    # Fast path XXX: doesn't work
+                    #src[rect_y+j,0:rect_x-int(dx)] = src[rect_y+j,int(dx):rect_x]
+                    # Slow path, must separate colour components
+                    for channel in range(src.shape[2]):
+                        tmp1 = np.interp(stride - dx, stride, src[rect_y+j,:,channel], left=0, right=0)
+                        src[rect_y+j,:,channel] = tmp1
+
+                # Apply blur; could be a separate effect; cap at 4%
+                blur = min(4, wave * 0.25)
+
+                # Box blur
+                ksize = int(blur * rect_h / 100)
+                #ksize = int(blur * 2 * rect_h / 100)
+                if ksize > 1:
+                    src = cv2.blur(src, (ksize, ksize))
+
+                # Gaussian blur
+                ksize = 1 + 2 * int(blur * rect_h / 100)
+                src = cv2.GaussianBlur(src, (ksize, ksize), 0)
+                #src = cv2.GaussianBlur(src, (ksize, ksize), 0)
+
+                fxinfo.append(f'Wave: f={freq:.2f} s={shift:.2f} a={amplitude:.2f}')
+                fxinfo.append(f'Blur: {blur:.2f}%')
+
             for e in clipinfo:
                 cv2.putText(debug_image, e, (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, WHITE, 3)
                 yinfo += NEWLINE
@@ -327,16 +389,15 @@ for s in data['segments']:
 
             yinfo = max(yinfo, ythumb + thumb.shape[0] + 20)
 
-            clips.append((src[rect_y:rect_y+rect_w,rect_x:rect_x+rect_w], opacity))
+            clips.append((src[rect_y:rect_y+rect_h,rect_x:rect_x+rect_w], opacity))
 
         if e := s.get('todo'):
             cv2.putText(debug_image, f'Todo: {e}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
             yinfo += NEWLINE
 
         for e in errors:
-            print(e)
+            print(f'{segment:06d}: [{n}/{count}: {e}')
             cv2.putText(debug_image, f'Error: {e}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
-            fatal = e
             yinfo += NEWLINE
 
         # Perform composition
@@ -379,8 +440,12 @@ for s in data['segments']:
         if n == count // 2:
             cv2.imwrite(f'{DEBUG_ROOT}/{segment:06d}.jpeg', debug_image)
 
-    print(f'{segment:06d}: {fatal or 'OK'}')
+        print('.', end='')
+        sys.stdout.flush()
+
+    if not skip:
+        print(f'done.')
 
     segment += count
 
-print(f'{segment:06d}: END')
+print(f'{segment:06d}: end')
