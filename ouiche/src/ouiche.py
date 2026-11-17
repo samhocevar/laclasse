@@ -1,6 +1,8 @@
 import click
 
+import arith
 import render
+import info
 
 class MyGroup(click.Group):
     ''' Override the --help flag everywhere to allow -h as a shortcut. '''
@@ -13,11 +15,18 @@ class MyGroup(click.Group):
         cmd.context_settings.setdefault('help_option_names', ['-h', '--help'])
         super().add_command(cmd, name=name)
 
+    ''' Override argument parsing if arithmetic mode is detected. '''
+    def parse_args(self, ctx, args):
+        if arith.try_parse(args):
+            ctx.exit(0)
+        return super().parse_args(ctx, args)
+
 @click.group(cls=MyGroup)
 def cli():
     pass
 
 cli.add_command(render.render)
+cli.add_command(info.info)
 
 if __name__ == '__main__':
     cli()
