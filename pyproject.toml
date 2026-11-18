@@ -1,12 +1,16 @@
 [project]
 name = "ouiche"
-version = "1.0.0"
+version = "0.1.0"
 description = "Ouiche"
 requires-python = ">=3.11"
 dependencies = [
     "click>=8.1",
-    "click-default-group",
+    "ffmpy",
+    "platformdirs",
 ]
 
+[tool.setuptools]
+packages = ['ouiche']
+
 [project.scripts]
-ouiche = "ouiche:cli"
+ouiche = "ouiche.ouiche:cli"

@@ -13,6 +13,10 @@ from pathlib import Path
 # To generate a movie after this script has run:
 # ffmpeg -safe 0 -f concat -i list.txt -i ../../original/*mkv -map 0:v:0 -map 1:a:0 -r 25 -c:v libx264 -pix_fmt yuv420p -c:a aac sidebyside.mkv
 
+# With audio resampling and libx265 max quality:
+# AF="rubberband=tempo=24/25:pitch=1:formant=preserved:transients=crisp"
+# ffmpeg -safe 0 -f concat -i list.txt -i ../../original/*mkv -map 0:v:0 -r 24 -c:v libx265 -map 1:a:0 -af "$AF" -c:a aac sidebyside.mkv
+
 ORIGINAL_SIZE = (750, 358)
 MINI_SIZE = (320, 240)
 INFO_WIDTH = 600
