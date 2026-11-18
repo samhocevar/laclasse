@@ -1,8 +1,8 @@
 import click
 
-import arith
-import render
-import info
+from . import arith
+from . import render
+from . import sources
 
 class MyGroup(click.Group):
     ''' Override the --help flag everywhere to allow -h as a shortcut. '''
@@ -26,7 +26,8 @@ def cli():
     pass
 
 cli.add_command(render.render)
-cli.add_command(info.info)
+cli.add_command(sources.info)
+cli.add_command(sources.dump)
 
 if __name__ == '__main__':
     cli()
