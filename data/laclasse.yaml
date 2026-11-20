@@ -760,7 +760,7 @@ segments:
     - movie: the_towering_inferno
       segment: "014546"
       offset: 7
-      todo: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
+    comment: Segment matching was done thanks to a speck of dust on frame 134
 
   - id: "007284"
     count: 107
@@ -3654,8 +3654,8 @@ segments:
     clips:
     - movie: the_towering_inferno
       segment: "014546"
-      offset: 7
-      todo: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
+      offset: 90
+    comment: Segment matching was done thanks to a speck of dust on frame 51
 
   - id: "056247"
     count: 236
@@ -4363,8 +4363,8 @@ segments:
     clips:
     - movie: the_towering_inferno
       segment: "014546"
-      offset: 7
-      todo: "Segment matching is hard on this scene; maybe find an old TV version that has the same film speck artifacts?"
+      offset: 53
+    comment: Segment matching was done thanks to a speck of dust on frame 88
 
   - id: "067525"
     count: 447
