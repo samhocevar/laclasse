@@ -7029,7 +7029,8 @@ segments:
 movies:
   all_the_presidents_men:
     title: "All the President’s Men"
-    imdb: "tt0074119"
+    imdb: 74119
+    brcom: 23827
     year: 1976
     directed: [ "Alan J. Pakula" ]
     cast: [ "Martin Balsam", "Ned Beatty", "Dustin Hoffman", "Robert Redford", "Jason Robards", "Jack Warden" ]
@@ -7040,11 +7041,11 @@ movies:
     - type: bluray-4k
       year: 2026
       bitrate: 72.60
-      link: https://www.blu-ray.com/movies/All-the-Presidents-Men-4K-Blu-ray/403756/
+      brcom: 403756
     - type: bluray
       year: 2013
       bitrate: 23.44
-      link: https://www.blu-ray.com/movies/All-the-Presidents-Men-Blu-ray/33492/
+      brcom: 33492
     sources:
     - name: "All.The.Presidents.Men.1976.Multi.VFi.Bluray.Remux.2160p.HEVC.HDR10.DV.DTS-HDMA.ZatNik07.mkv"
       resolution: 3840x2076
@@ -7055,16 +7056,16 @@ movies:
 
   around_the_world_in_eighty_days:
     title: "Around the World in Eighty Days"
-    imdb: "tt0048960"
+    imdb: 48960
     year: 1956
     samples: [ "0:40:51" ]
     media:
     - type: dvd-ntsc
       year: 2004
-      link: https://www.blu-ray.com/dvd/Around-the-World-in-80-Days-DVD/19546/
+      brcom: 19546
     - type: bluray
       year: TBA
-      link: https://www.blu-ray.com/movies/Around-the-World-in-80-Days-Blu-ray/43677/
+      brcom: 43677
     sources:
     - name: "Le Tour du Monde en 80 Jours 1956 HDTV MULTI.mkv"
     - name: "Le.Tour.Du.Monde.En.Quatre.Vingts.Jours.1956.MULTI.VFF.1080p.BluRay.HDLight.AAC.2.0.x264-mHDgz.mkv"
@@ -7074,14 +7075,14 @@ movies:
 
   the_arrangement:
     title: "The Arrangement"
-    imdb: "tt0064041"
+    imdb: 64041
     year: 1969
     directed: [ "Elia Kazan" ]
     samples: [ "0:03:26", "0:03:44" ]
     media:
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/The-Arrangement-DVD/18971/
+      brcom: 18971
     sources:
     - name: "The.Arrangement.1969.720p.WEB-DL.AAC2.0.H264-FGT.mkv"
       resolution: 1280x532
@@ -7092,7 +7093,7 @@ movies:
 
   band_of_angels:
     title: "Band of Angels"
-    imdb: "tt0050166"
+    imdb: 50166
     year: 1957
     directed: [ "Raoul Walsh" ]
     cast: [ "Yvonne De Carlo", "Clark Gable" ]
@@ -7102,7 +7103,7 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/Band-of-Angels-DVD/7586/
+      brcom: 7586
     sources:
     - name: "Band.of.Angels.1957.(Raoul.Walsh-Drama).1080p.x264-Classics.mkv"
       resolution: 1920x1080
@@ -7113,7 +7114,7 @@ movies:
 
   battle_of_the_bulge:
     title: "Battle of the Bulge"
-    imdb: "tt0058947"
+    imdb: 58947
     year: 1965
     directed: [ "Ken Annakin" ]
     cast: [ "Henri Fonda" ]
@@ -7125,7 +7126,7 @@ movies:
     - type: bluray
       year: 2007
       bitrate: 16.93
-      link: https://www.blu-ray.com/movies/Battle-of-the-Bulge-Blu-ray/414/
+      brcom: 414
     sources:
     - name: "La.Bataille.Des.Ardennes.1965.REMASTERED.MULTi.VFF.1080p.BluRay.REMUX.AC3.1.0.VC1-NTG.mkv"
       resolution: 1920x692
@@ -7136,7 +7137,7 @@ movies:
 
   beyond_the_poseidon_adventure:
     title: "Beyond the Poseidon Adventure"
-    imdb: "tt0078856"
+    imdb: 78856
     year: 1979
     directed: [ "Irwin Allen" ]
     cast: [ "Slim Pickens" ]
@@ -7149,7 +7150,7 @@ movies:
     - type: bluray
       year: 2023
       bitrate: 34.00
-      link: https://www.blu-ray.com/movies/Beyond-the-Poseidon-Adventure-Blu-ray/341264/
+      brcom: 341264
     sources:
     - name: "Beyond the Poseidon Adventure (1979).mkv"
       resolution: 3840x1608
@@ -7166,7 +7167,7 @@ movies:
 
   blood_alley:
     title: "Blood Alley"
-    imdb: "tt0047889"
+    imdb: 47889
     year: 1955
     directed: [ "William A. Wellman" ]
     cast: [ "Lauren Bacall", "John Wayne" ]
@@ -7177,7 +7178,7 @@ movies:
     - type: bluray
       year: 2017
       bitrate: 34.99
-      link: https://www.blu-ray.com/movies/Blood-Alley-Blu-ray/182128/
+      brcom: 182128
     sources:
     - name: "Blood Alley 1955 1080p BluRay x264-OFT.mkv"
       resolution: 1920x1080
@@ -7188,7 +7189,7 @@ movies:
 
   bullitt:
     title: "Bullitt"
-    imdb: "tt0062765"
+    imdb: 62765
     year: 1968
     directed: [ "Peter Yates" ]
     unused_cast: [ "Jacqueline Bisset" ]
@@ -7196,14 +7197,14 @@ movies:
     media:
     - type: bluray-4k
       year: 2026
-      link: https://www.blu-ray.com/movies/Bullitt-4K-Blu-ray/421755/
+      brcom: 421755
     - type: bluray
       year: 2026
-      link: https://www.blu-ray.com/movies/Bullitt-Blu-ray/421787/
+      brcom: 421787
     - type: bluray
       year: 2007
       bitrate: 19.03
-      link: https://www.blu-ray.com/movies/Bullitt-Blu-ray/355/
+      brcom: 355
     sources:
     - name: "Bullitt 1968 BluRay 1080p DD 2 0 VC-1 REMUX-FraMeSToR.mkv"
       resolution: 1908x1080
@@ -7215,7 +7216,7 @@ movies:
 
   cahill_us_marshal:
     title: "Cahill U.S. Marshal"
-    imdb: "tt0069834"
+    imdb: 69834
     year: 1973
     directed: [ "Andrew V. McLaglen" ]
     cast: [ "John Wayne" ]
@@ -7226,7 +7227,7 @@ movies:
     - type: bluray
       year: 2015
       bitrate: 18.96
-      link: https://www.blu-ray.com/movies/Cahill-US-Marshal-Blu-ray/124841/
+      brcom: 124841
     sources:
     - name: "Cahill U.S. Marshal (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: 1920x800
@@ -7234,7 +7235,7 @@ movies:
 
   the_candidate:
     title: "The Candidate"
-    imdb: "tt0068334"
+    imdb: 68334
     year: 1972
     directed: [ "Michael Ritchie" ]
     cast: [ "Robert Redford" ]
@@ -7244,7 +7245,7 @@ movies:
     media:
     - type: bluray
       year: TBA
-      link: https://www.blu-ray.com/movies/The-Candidate-Blu-ray/43484/
+      brcom: 43484
     sources:
     - name: "The.Candidate.1972.1080p.WEBRip.DD2.0.x264-NTb.mkv"
       resolution: 1920x1080
@@ -7255,7 +7256,7 @@ movies:
 
   carson_city:
     title: "Carson City"
-    imdb: "tt0044488"
+    imdb: 44488
     year: 1952
     directed: [ "André De Toth" ]
     cast: [ "Randolph Scott" ]
@@ -7266,13 +7267,13 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2009
-      link: https://www.blu-ray.com/dvd/Carson-City-DVD/68310/
+      brcom: 68310
     sources:
     - name: "Carson City  (Western 1952)  Randolph Scott, Raymond Massey & Lucille Norman.mp4"
 
   charro:
     title: "Charro!"
-    imdb: "tt0064155"
+    imdb: 64155
     year: 1969
     directed: [ "Charles Marquis Warren" ]
     cast: [ "Elvis Presley" ]
@@ -7280,7 +7281,7 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/Charro-DVD/90199/
+      brcom: 90199
     sources:
     - name: "Charro.1969.1080p.WEB-DL.DD.2.0.H.264-SbR.mkv"
       resolution: 1920x800
@@ -7293,7 +7294,7 @@ movies:
 
   the_cheyenne_social_club:
     title: "The Cheyenne Social Club"
-    imdb: "tt0065542"
+    imdb: 65542
     year: 1970
     directed: [ "Gene Kelly" ]
     cast: [ "Henry Fonda", "James Stewart" ]
@@ -7304,7 +7305,7 @@ movies:
     media:
     - type: dvd-ntsc
       year: TBA
-      link: https://www.blu-ray.com/dvd/The-Cheyenne-Social-Club-DVD/101943/
+      brcom: 101943
     sources:
     - name: "Attaque.au.Cheyenne.Club.1970.DVDRip.FR.MULTi.h264.mkv"
       resolution: 1136x480
@@ -7319,7 +7320,7 @@ movies:
 
   chisum:
     title: "Chisum"
-    imdb: "tt0065547"
+    imdb: 65547
     year: 1970
     directed: [ "Andrew V. McLaglen" ]
     cast: [ "John Wayne" ]
@@ -7328,7 +7329,7 @@ movies:
     - type: bluray
       year: 2016
       bitrate: 34.90
-      link: https://www.blu-ray.com/movies/Chisum-Blu-ray/103214/
+      brcom: 103214
     sources:
     - name: "Chisum.1970.MULTI.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
       resolution: 1920x800
@@ -7341,7 +7342,7 @@ movies:
 
   city_beneath_the_sea:
     title: "City Beneath the Sea"
-    imdb: "tt0065556"
+    imdb: 65556
     year: 1971
     directed: [ "Irwin Allen" ]
     cast: [ "Stuart Whitman" ]
@@ -7356,14 +7357,14 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2010
-      link: https://www.blu-ray.com/dvd/City-Beneath-the-Sea-DVD/17545/
+      brcom: 17545
     sources:
     - name: "City Beneath the Sea (Irwin Allen, 1971).mkv"
     - name: "La città degli Acquanauti - City Beneath the Sea (1971) SD h264 Ac3 Ita Eng Sub Ita-MIRCrew.mkv"
 
   cleopatra_jones:
     title: "Cleopatra Jones"
-    imdb: "tt0069890"
+    imdb: 69890
     year: 1973
     directed: [ "Jack Starrett" ]
     cast: [ "Antonio Fargas" ]
@@ -7374,7 +7375,7 @@ movies:
     - type: bluray
       year: 2019
       bitrate: 31.98
-      link: https://www.blu-ray.com/movies/Cleopatra-Jones-Blu-ray/234589/
+      brcom: 234589
     sources:
     - name: "Cleopatra Jones 1973 1080p BluRay x264-OFT.mkv"
       resolution: 1920x1080
@@ -7383,7 +7384,7 @@ movies:
 
   the_cowboys:
     title: "The Cowboys"
-    imdb: "tt0068421"
+    imdb: 68421
     year: 1972
     directed: [ "Mark Rydell" ]
     cast: [ "John Wayne" ]
@@ -7394,7 +7395,7 @@ movies:
     media:
     - type: bluray
       year: 2016
-      link: https://www.blu-ray.com/movies/The-Cowboys-Blu-ray/436/
+      brcom: 436
     sources:
     - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
       resolution: 1908x796
@@ -7405,7 +7406,7 @@ movies:
 
   the_crimson_pirate:
     title: "The Crimson Pirate"
-    imdb: "tt0044517"
+    imdb: 44517
     year: 1952
     directed: [ "Robert Siodmak" ]
     cast: [ "Burt Lancaster" ]
@@ -7415,17 +7416,17 @@ movies:
     media:
     - type: bluray
       year: 2023
-      link: https://www.blu-ray.com/movies/The-Crimson-Pirate-Blu-ray/339466/
+      brcom: 339466
     - type: bluray
       year: 2026
       resolution: 1080i
-      link: https://www.blu-ray.com/movies/The-Crimson-Pirate-Blu-ray/399762/
+      brcom: 399762
     - type: dvd-ntsc
       year: 2018
-      link: https://www.blu-ray.com/dvd/The-Crimson-Pirate-DVD/152284/
+      brcom: 152284
     - type: dvd-ntsc
       year: 2003
-      link: https://www.blu-ray.com/dvd/The-Crimson-Pirate-DVD/19564/
+      brcom: 19564
     sources:
     - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265.HEVC.FLAC.DUAL-SARTRE.mkv"
       resolution: 1440x1080
@@ -7436,7 +7437,7 @@ movies:
 
   deliverance:
     title: "Deliverance"
-    imdb: "tt0068473"
+    imdb: 68473
     year: 1972
     directed: [ "John Boorman" ]
     cast: [ "Ned Beatty" ]
@@ -7446,18 +7447,18 @@ movies:
     media:
     - type: bluray-4k
       year: 2027
-      link: https://www.blu-ray.com/movies/Deliverance-4K-Blu-ray/423298/
+      brcom: 423298
     - type: bluray
       year: 2027
-      link: https://www.blu-ray.com/movies/Deliverance-Blu-ray/423300/
+      brcom: 423300
     - type: bluray
       year: 2012
       bitrate: 24.38
-      link: https://www.blu-ray.com/movies/Deliverance-Blu-ray/40238/
+      brcom: 40238
     - type: bluray
       year: 2007
       bitrate: 21.12
-      link: https://www.blu-ray.com/movies/Deliverance-Blu-ray/472/
+      brcom: 472
     sources:
     - name: "Deliverance (1972) 1080p BluRay REMUX DD5.1 + DUAL AVC-d3g.mkv"
       resolution: 1918x800
@@ -7468,7 +7469,7 @@ movies:
 
   drum_beat:
     title: "Drum Beat"
-    imdb: "tt0046936"
+    imdb: 46936
     year: 1954
     directed: [ "Delmer Daves" ]
     cast: [ "Charles Bronson" ]
@@ -7482,7 +7483,7 @@ movies:
     media:
     - type: dvd
       year: 2014
-      link: https://www.blu-ray.com/dvd/Drum-Beat-DVD/87417/
+      brcom: 87417
     sources:
     - name: "Drum Beat (1954) 1080p-H264-AC 3 (DolbyDigital-5.1) & nickarad.mp4"
       resolution: 1920x1080
@@ -7500,7 +7501,7 @@ movies:
 
   executive_action:
     title: "Executive Action"
-    imdb: "tt0070046"
+    imdb: 70046
     year: 1973
     directed: [ "David Miller" ]
     cast: [ "Burt Lancaster" ]
@@ -7511,7 +7512,7 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/Executive-Action-DVD/7594/
+      brcom: 7594
     sources:
     - name: "Executive.Action.1973.CUSTOM.MULTI.1080p.AMZN.WEB-DL.H.264-BRDN.mkv"
       resolution: 1920x1080
@@ -7521,7 +7522,7 @@ movies:
 
   the_fbi_story:
     title: "The FBI Story"
-    imdb: "tt0052792"
+    imdb: 52792
     year: 1959
     directed: [ "Mervyn LeRoy" ]
     cast: [ "James Stewart" ]
@@ -7531,10 +7532,10 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2006
-      link: https://www.blu-ray.com/dvd/The-FBI-Story-DVD/36627/
+      brcom: 36627
     - type: dvd
       year: 2018
-      link: https://www.blu-ray.com/dvd/The-FBI-Story-DVD/213539/
+      brcom: 213539
     sources:
     - name: "The FBI Story  (Drama 1959)  James Stewart, Vera Miles & Murray Hamilton.mp4"
       resolution: "1280x692"
@@ -7542,7 +7543,7 @@ movies:
 
   firecreek:
     title: "Firecreek"
-    imdb: "tt0062975"
+    imdb: 62975
     year: 1968
     directed: [ "Vincent McEveety" ]
     cast: [ "Henry Fonda", "James Stewart" ]
@@ -7553,10 +7554,10 @@ movies:
     media:
     - type: bluray
       year: 2023
-      link: https://www.blu-ray.com/movies/Firecreek-Blu-ray/339896/
+      brcom: 339896
     - type: dvd-ntsc
       year: TBA
-      link: https://www.blu-ray.com/dvd/Firecreek-DVD/101944/
+      brcom: 101944
     sources:
     - name: "Firecreek (1968) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: 1916x816
@@ -7567,7 +7568,7 @@ movies:
 
   four_for_texas:
     title: "4 for Texas"
-    imdb: "tt0057071"
+    imdb: 57071
     year: 1963
     directed: [ "Robert Aldrich" ]
     cast: [ "Dean Martin", "Frank Sinatra" ]
@@ -7578,7 +7579,7 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2002
-      link: https://www.blu-ray.com/dvd/4-for-Texas-DVD/18563/
+      brcom: 18563
     sources:
     - name: "4 for Texas (1963) DVDRip Oldies.mkv"
       resolution: "720x480"
@@ -7594,7 +7595,7 @@ movies:
 
   freebie_and_the_bean:
     title: "Freebie and the Bean"
-    imdb: "tt0071521"
+    imdb: 71521
     year: 1974
     directed: [ "Richard Rush" ]
     cast: []
@@ -7608,10 +7609,10 @@ movies:
     - type: bluray
       year: 2017
       bitrate: 34.99
-      link: https://www.blu-ray.com/movies/Freebie-and-the-Bean-Blu-ray/184182/
+      brcom: 184182
     - type: dvd-ntsc
       year: 2009
-      link: https://www.blu-ray.com/dvd/Freebie-and-the-Bean-DVD/87726/
+      brcom: 87726
     sources:
     - name: "Freebie.And.The.Bean.1974.1080p.BluRay.x264-RedBlade.mkv"
       resolution: 1920x800
@@ -7625,7 +7626,7 @@ movies:
 
   the_good_guys_and_the_bad_guys:
     title: "The Good Guys and the Bad Guys"
-    imdb: "tt0064379"
+    imdb: 64379
     year: 1969
     directed: [ "Burt Kennedy" ]
     cast: [ "Robert Mitchum" ]
@@ -7636,10 +7637,10 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/36419/
+      brcom: 36419
     - type: dvd-ntsc
       year: 2016
-      link: https://www.blu-ray.com/dvd/The-Good-Guys-and-the-Bad-Guys-DVD/250764/
+      brcom: 250764
     sources:
     - name: "The Good Guys and the Bad Guys  (Western 1969)  Robert Mitchum, George Kennedy & Martin Balsam.mp4"
       resolution: 1280x544
@@ -7649,7 +7650,7 @@ movies:
 
   harper:
     title: "Harper"
-    imdb: "tt0060490"
+    imdb: 60490
     year: 1966
     directed: [ "Jack Smight" ]
     cast: [ "Lauren Bacall", "Paul Newman" ]
@@ -7662,10 +7663,10 @@ movies:
     - type: bluray
       year: 2018
       bitrate: 34.99
-      link: https://www.blu-ray.com/movies/Harper-Blu-ray/49049/
+      brcom: 49049
     - type: dvd-ntsc
       year: 2006
-      link: https://www.blu-ray.com/dvd/Harper-DVD/15267/
+      brcom: 15267
     sources:
     - name: "Harper 1966 1080p BluRay x264-OFT.mkv"
       resolution: 1920x1080
@@ -7676,7 +7677,7 @@ movies:
 
   hooper:
     title: "Hooper"
-    imdb: "tt0077696"
+    imdb: 77696
     year: 1978
     directed: [ "Hal Needham" ]
     cast: [ "Jan-Michael Vincent" ]
@@ -7687,20 +7688,20 @@ movies:
     - type: bluray
       year: 2015
       bitrate: 23.25
-      link: https://www.blu-ray.com/movies/Hooper-Blu-ray/120560/
+      brcom: 120560
     - type: dvd-ntsc
       year: 1998
-      link: https://www.blu-ray.com/dvd/Hooper-DVD/1996/
+      brcom: 1996
     - type: dvd-ntsc
       year: 2018
-      link: https://www.blu-ray.com/dvd/Hooper-DVD/159748/
+      brcom: 159748
     sources:
     - name: "Hooper.1978.1080p.BluRay.x264.YIFY.mp4"
       resolution: "1920x1080"
 
   jeremiah_johnson:
     title: "Jeremiah Johnson"
-    imdb: "tt0068762"
+    imdb: 68762
     year: 1972
     directed: [ "Sydney Pollack" ]
     cast: [ "Robert Redford" ]
@@ -7708,17 +7709,17 @@ movies:
     media:
     - type: bluray
       year: 2020
-      link: https://www.blu-ray.com/movies/Jeremiah-Johnson-Blu-ray/275393/
+      brcom: 275393
     - type: bluray
       year: 2012
       bitrate: 29.89
-      link: https://www.blu-ray.com/movies/Jeremiah-Johnson-Blu-ray/36349/
+      brcom: 36349
     - type: dvd-ntsc
       year: 1997
-      link: https://www.blu-ray.com/dvd/Jeremiah-Johnson-DVD/2554/
+      brcom: 2554
     - type: dvd
       year: 2007
-      link: https://www.blu-ray.com/dvd/Jeremiah-Johnson-DVD/15204/
+      brcom: 15204
     sources:
     - name: "Jeremiah.Johnson.1972.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.5.1.AVC-Raf66.mkv"
       resolution: 1920x800
@@ -7731,7 +7732,7 @@ movies:
 
   the_life_and_times_of_judge_roy_bean:
     title: "The Life and Times of Judge Roy Bean"
-    imdb: "tt0068853"
+    imdb: 68853
     year: 1972
     directed: [ "John Huston" ]
     cast: [ "Paul Newman" ]
@@ -7743,13 +7744,13 @@ movies:
     - type: bluray
       year: 2018
       bitrate: 35.00
-      link: https://www.blu-ray.com/movies/The-Life-and-Times-of-Judge-Roy-Bean-Blu-ray/208027/
+      brcom: 208027
     - type: dvd-ntsc
       year: 2003
-      link: https://www.blu-ray.com/dvd/The-Life-and-Times-of-Judge-Roy-Bean-DVD/36703/
+      brcom: 36703
     - type: dvd-ntsc
       year: 2012
-      link: https://www.blu-ray.com/dvd/The-Life-and-Times-of-Judge-Roy-Bean-DVD/82524/
+      brcom: 82524
     sources:
     - name: "Juge.Et.Hors.La.Loi.1972.MULTI.VFF.1080p.BLURAY.REMUX.DTS.HD.MA.2.0.AVC-Raf66.mkv"
       resolution: 1920x1080
@@ -7760,7 +7761,7 @@ movies:
 
   mad_max:
     title: "Mad Max"
-    imdb: "tt0079501"
+    imdb: 79501
     year: 1979
     directed: [ "George Miller" ]
     cast: []
@@ -7769,26 +7770,26 @@ movies:
     - type: bluray-4k
       year: 2020
       bitrate: 79.50
-      link: https://www.blu-ray.com/movies/Mad-Max-4K-Blu-ray/274995/
+      brcom: 274995
     - type: bluray-4k
       year: 2021
-      link: https://www.blu-ray.com/movies/Mad-Max-4K-Blu-ray/305653/
+      brcom: 305653
     - type: bluray
       year: 2015
       bitrate: 35.00
-      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/109610/
+      brcom: 109610
     - type: bluray
       year: 2010
       bitrate: 36.64
-      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/14749/
+      brcom: 14749
     - type: bluray
       year: 2015
       bitrate: 36.64
-      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/134334/
+      brcom: 134334
     - type: bluray
       year: 2020
       bitrate: 34.92
-      link: https://www.blu-ray.com/movies/Mad-Max-Blu-ray/134334/
+      brcom: 134334
     sources:
     - name: "Mad.Max.1979.2160p.UHD.BLURAY.REMUX.HDR.HEVC.MULTi.VFi.AC3.1.0.x265-EXTREME.mkv"
       resolution: 3840x1634
@@ -7800,7 +7801,7 @@ movies:
 
   maigret_et_les_plaisirs_de_la_nuit:
     title: "Maigret et les plaisirs de la nuit"
-    imdb: "tt0102379"
+    imdb: 102379
     year: 1992
     directed: [ "José Pinheiro" ]
     cast: []
@@ -7812,7 +7813,7 @@ movies:
 
   mcq:
     title: "McQ"
-    imdb: "tt0071824"
+    imdb: 71824
     year: 1974
     directed: [ "John Sturges" ]
     cast: [ "John Wayne" ]
@@ -7823,13 +7824,13 @@ movies:
     - type: bluray
       year: 2016
       bitrate: 35.00
-      link: https://www.blu-ray.com/movies/McQ-Blu-ray/152732/
+      brcom: 152732
     - type: dvd-ntsc
       year: TBA
-      link: https://www.blu-ray.com/dvd/McQ-DVD/98818/
+      brcom: 98818
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/McQ-DVD/7128/
+      brcom: 7128
     sources:
     - name: "McQ.1974.Multi.VFF.1080p.BluRay.REMUX.HD.MA.2.0.AVC-SamH.mkv"
       resolution: 1920x800
@@ -7842,7 +7843,7 @@ movies:
 
   the_miracle_of_our_lady_of_fatima:
     title: "The Miracle of Our Lady of Fatima"
-    imdb: "tt0044905"
+    imdb: 44905
     year: 1952
     directed: [ "John Brahm" ]
     cast: []
@@ -7852,10 +7853,10 @@ movies:
     media:
     - type: bluray
       year: TBA
-      link: https://www.blu-ray.com/movies/The-Miracle-of-Our-Lady-of-Fatima-Blu-ray/298084/
+      brcom: 298084
     - type: dvd-ntsc
       year: 2006
-      link: https://www.blu-ray.com/dvd/The-Miracle-of-Our-Lady-of-Fatima-DVD/17021/
+      brcom: 17021
     sources:
     - name: "The Miracle of Our Lady of Fatima (1952) [720p] [Drama].mkv"
       resolution: "1470x1080"
@@ -7864,7 +7865,7 @@ movies:
 
   oceans_eleven:
     title: "Ocean’s Eleven"
-    imdb: "tt0054135"
+    imdb: 54135
     year: 1960
     directed: [ "Lewis Milestone" ]
     cast: [ "Angie Dickinson", "Dean Martin", "Frank Sinatra", "Akim Tamiroff" ]
@@ -7875,13 +7876,13 @@ movies:
     - type: bluray
       year: 2010
       bitrate: 18.00
-      link: https://www.blu-ray.com/movies/Oceans-11-Blu-ray/12284/
+      brcom: 12284
     - type: dvd-ntsc
       year: 2002
-      link: https://www.blu-ray.com/dvd/Oceans-11-DVD/30228/
+      brcom: 30228
     - type: dvd-ntsc
       year: 2008
-      link: https://www.blu-ray.com/dvd/Oceans-11-DVD/80520/
+      brcom: 80520
     sources:
     - name: "Oceans Eleven 1960 1080p HMAX WEB-DL AAC 2 0 H 264-PiRaTeS.mkv"
       resolution: 1920x800
@@ -7895,7 +7896,8 @@ movies:
 
   the_old_man_and_the_sea:
     title: "The Old Man and the Sea"
-    imdb: "tt0052027"
+    imdb: 52027
+    brcom: 255552
     year: 1958
     directed: [ "John Sturges" ]
     cast: [ "Spencer Tracy" ]
@@ -7905,13 +7907,12 @@ movies:
     media:
     - type: bluray
       year: 2023
-      link: https://www.blu-ray.com/The-Old-Man-and-the-Sea/255552/#Releases
     - type: dvd-ntsc
       year: 2010
-      link: https://www.blu-ray.com/dvd/The-Old-Man-and-the-Sea-DVD/62963/
+      brcom: 62963
     - type: dvd-ntsc
       year: 2001
-      link: https://www.blu-ray.com/dvd/The-Old-Man-and-the-Sea-DVD/167891/
+      brcom: 167891
     sources:
     - name: "The Old Man and the Sea 1958 1080p BluRay x264 DuaL-TURKO.mkv"
       resolution: 1920x1038
@@ -7921,7 +7922,7 @@ movies:
 
   rampage:
     title: "Rampage"
-    imdb: "tt0057447"
+    imdb: 57447
     year: 1963
     directed: [ "Phil Karlson" ]
     cast: [ "Robert Mitchum" ]
@@ -7935,7 +7936,7 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2010
-      link: https://www.blu-ray.com/dvd/Rampage-DVD/93714/
+      brcom: 93714
     sources:
     - name: "Rampage (Phil Karlson, 1963).mkv"
       resolution: "848x480"
@@ -7943,7 +7944,7 @@ movies:
 
   riding_shotgun:
     title: "Riding Shotgun"
-    imdb: "tt0047413"
+    imdb: 47413
     year: 1954
     directed: [ "André De Toth" ]
     cast: [ "Randolph Scott" ]
@@ -7957,14 +7958,14 @@ movies:
     media:
     - type: dvd-ntsc
       year: TBA
-      link: https://www.blu-ray.com/dvd/Riding-Shotgun-DVD/87852/
+      brcom: 87852
     sources:
     - name: "Riding Shotgun  (Western 1954)  Randolph Scott, Joan Weldon & Wayne Morris.mp4"
     - name: "Riding Shotgun (1954) 75 min.Randolph Scott Westerns.avi"
 
   rio_bravo:
     title: "Rio Bravo"
-    imdb: "tt0053221"
+    imdb: 53221
     year: 1959
     directed: [ "Howard Hawks" ]
     cast: [ "Walter Brennan", "Angie Dickinson", "Dean Martin", "Ricky Nelson", "John Wayne" ]
@@ -7973,15 +7974,15 @@ movies:
     - type: bluray-4k
       year: 2023
       bitrate: 53.39
-      link: https://www.blu-ray.com/movies/Rio-Bravo-4K-Blu-ray/332494/
+      brcom: 332494
     - type: bluray
       year: 2015
       bitrate: 19.62
-      link: https://www.blu-ray.com/movies/Rio-Bravo-Blu-ray/124985/
+      brcom: 124985
     - type: bluray
       year: 2007
       bitrate: 19.62
-      link: https://www.blu-ray.com/movies/Rio-Bravo-Blu-ray/437/
+      brcom: 437
     sources:
     - name: "Rio.Bravo.1959.MULTi.VFi.2160p.UHD.BluRay.REMUX.HDR.HEVC.DTS-HD.MA.2.0-ONLY.mkv"
       resolution: 3840x2076
@@ -7992,7 +7993,7 @@ movies:
 
   the_sea_chase:
     title: "The Sea Chase"
-    imdb: "tt0048593"
+    imdb: 48593
     year: 1955
     directed: [ "John Farrow" ]
     cast: [ "Lana Turner", "John Wayne" ]
@@ -8003,13 +8004,13 @@ movies:
     - type: bluray
       year: 2017
       bitrate: 34.99
-      link: https://www.blu-ray.com/movies/The-Sea-Chase-Blu-ray/182129/
+      brcom: 182129
     - type: dvd-ntsc
       year: 2005
-      link: https://www.blu-ray.com/dvd/The-Sea-Chase-DVD/80464/
+      brcom: 80464
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/The-Sea-Chase-DVD/6872/
+      brcom: 6872
     sources:
     - name: "Le.Renard.Des.Oceans.1955.MULTi.VFF.1080p.BluRay.ReMuX.DTS.HD.MA.2.0.AVC-Raf66.mkv"
       resolution: 1920x752
@@ -8019,7 +8020,7 @@ movies:
 
   the_searchers:
     title: "The Searchers"
-    imdb: "tt0049730"
+    imdb: 49730
     year: 1956
     directed: [ "John Ford" ]
     cast: [ "John Wayne" ]
@@ -8030,15 +8031,15 @@ movies:
     - type: bluray-4k
       year: 2024
       bitrate: 94.25
-      link: https://www.blu-ray.com/movies/The-Searchers-4K-Blu-ray/375103/
+      brcom: 375103
     - type: bluray
       year: 2006
       bitrate: 23.25
-      link: https://www.blu-ray.com/movies/The-Searchers-Blu-ray/231/
+      brcom: 231
     - type: bluray
       year: 2024
       bitrate: 37.49
-      link: https://www.blu-ray.com/movies/The-Searchers-Blu-ray/375104/
+      brcom: 375104
     sources:
     - name: "La.Prisonnière.Du.Désert.1956.MULTI.VFF.UHD.Remux.HDR10.DV.DTS.HD.MA.2.0.HEVC-FgCw.mkv"
       resolution: 3840x2076
@@ -8049,7 +8050,7 @@ movies:
 
   start_the_revolution_without_me:
     title: "Start the Revolution Without Me"
-    imdb: "tt0066402"
+    imdb: 66402
     year: 1970
     directed: [ "Bud Yorkin" ]
     cast: [ "Orson Welles" ]
@@ -8059,10 +8060,10 @@ movies:
     media:
     - type: bluray
       year: 2026
-      link: https://www.blu-ray.com/movies/Start-the-Revolution-Without-Me-Blu-ray/191019/
+      brcom: 191019
     - type: dvd
       year: 2011
-      link: https://www.blu-ray.com/dvd/Start-The-Revolution-Without-Me-DVD/82538/
+      brcom: 82538
     sources:
     - name: "Start.The.Revolution.Without.Me.1970.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
       resolution: 1920x1036
@@ -8071,7 +8072,7 @@ movies:
 
   straight_time:
     title: "Straight Time"
-    imdb: "tt0078326"
+    imdb: 78326
     year: 1978
     directed: [ "Ulu Grosbard" ]
     cast: [ "Dustin Hoffman" ]
@@ -8083,13 +8084,13 @@ movies:
     media:
     - type: bluray
       year: 2021
-      link: https://www.blu-ray.com/movies/Straight-Time-Blu-ray/68788/
+      brcom: 68788
     - type: dvd-ntsc
       year: 2015
-      link: https://www.blu-ray.com/dvd/Straight-Time-DVD/112504/
+      brcom: 112504
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/Straight-Time-DVD/30534/
+      brcom: 30534
     sources:
     - name: "Straight.Time.1978.WAC.1080p.BluRay.x265.HEVC.FLAC-SARTRE.mkv"
       resolution: 1920x1040
@@ -8104,7 +8105,7 @@ movies:
 
   there_was_a_crooked_man:
     title: "There Was a Crooked Man…"
-    imdb: "tt0066448"
+    imdb: 66448
     year: 1970
     directed: [ "Joseph L. Mankiewicz" ]
     cast: [ "Henry Fonda" ]
@@ -8116,13 +8117,13 @@ movies:
     media:
     - type: bluray
       year: 2021
-      link: https://www.blu-ray.com/movies/There-Was-a-Crooked-Man-Blu-ray/290489/
+      brcom: 290489
     - type: dvd-ntsc
       year: 2021
-      link: https://www.blu-ray.com/dvd/There-Was-a-Crooked-Man-DVD/250593/
+      brcom: 250593
     - type: dvd-ntsc
       year: 2006
-      link: https://www.blu-ray.com/dvd/There-Was-a-Crooked-Man-DVD/26155/
+      brcom: 26155
     sources:
     - name: "There.Was.a.Crooked.Man.1970.VOSTFR.1080p.WEB-DL.DD2.0.H.264-AZAZE.mkv"
       resolution: 1920x1080
@@ -8153,7 +8154,7 @@ movies:
 
   the_towering_inferno:
     title: "The Towering Inferno"
-    imdb: "tt0072308"
+    imdb: 72308
     year: 1974
     directed: [ "John Guillermin", "Irwin Allen" ]
     unused_cast: [ "Jacqueline Bisset", "Paul Newman" ]
@@ -8164,10 +8165,10 @@ movies:
     - type: bluray
       year: 2009
       bitrate: 24.82
-      link: https://www.blu-ray.com/movies/The-Towering-Inferno-Blu-ray/5024/
+      brcom: 5024
     - type: dvd-ntsc
       year: 1999
-      link: https://www.blu-ray.com/dvd/The-Towering-Inferno-DVD/24169/
+      brcom: 24169
     sources:
     - name: "La.Tour.Infernale.1974.Bluray.1080p.x265.HEVC.10Bits.VFF.VOSTFR.AC3.DTS-HDMA-Goldenyann.mkv"
       resolution: 1890x816
@@ -8177,7 +8178,7 @@ movies:
 
   the_train_robbers:
     title: "The Train Robbers"
-    imdb: "tt0070825"
+    imdb: 70825
     year: 1973
     directed: [ "Burt Kennedy" ]
     cast: [ "John Wayne" ]
@@ -8188,13 +8189,13 @@ movies:
     - type: bluray
       year: 2015
       bitrate: 24.95
-      link: https://www.blu-ray.com/movies/The-Train-Robbers-Blu-ray/124975/
+      brcom: 124975
     - type: dvd-ntsc
       year: 2007
-      link: https://www.blu-ray.com/dvd/The-Train-Robbers-DVD/18547/
+      brcom: 18547
     - type: dvd-ntsc
       year: 2005
-      link: https://www.blu-ray.com/dvd/The-Train-Robbers-DVD/99139/
+      brcom: 99139
     sources:
     - name: "The.Train.Robbers.1973.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
       resolution: 1920x800
@@ -8205,7 +8206,7 @@ movies:
 
   the_valley_of_gwangi:
     title: "The Valley of Gwangi"
-    imdb: "tt0065163"
+    imdb: 65163
     year: 1969
     directed: [ "Jim O’Connolly" ]
     cast: [ "James Franciscus" ]
@@ -8216,18 +8217,18 @@ movies:
     - type: bluray
       year: 2017
       bitrate: 36.80
-      link: https://www.blu-ray.com/movies/The-Valley-of-Gwangi-Blu-ray/123978/
+      brcom: 123978
       comment: Spanish Blu-Ray, not an official Warner Release; quality is still impressive
       rating: 7
     - type: dvd-ntsc
       year: 2012
-      link: https://www.blu-ray.com/dvd/The-Valley-of-Gwangi-DVD/36886/
+      brcom: 36886
     - type: dvd-ntsc
       year: 2003
-      link: https://www.blu-ray.com/dvd/The-Valley-of-Gwangi-DVD/218641/
+      brcom: 218641
     - type: dvd-ntsc
       year: 1999
-      link: https://www.blu-ray.com/dvd/The-Valley-of-Gwangi-DVD/3802/
+      brcom: 3802
     sources:
     - name: "The.Valley.of.Gwangi.1969.1080p.BluRay.x264-SADPANDA.mkv"
       resolution: "1920x1080"
@@ -8241,7 +8242,7 @@ movies:
 
   westbound:
     title: "Westbound"
-    imdb: "tt0053441"
+    imdb: 53441
     year: 1959
     directed: [ "Budd Boetticher" ]
     cast: [ "Randolph Scott" ]
@@ -8252,7 +8253,7 @@ movies:
     media:
     - type: dvd-ntsc
       year: 2009
-      link: https://www.blu-ray.com/dvd/Westbound-DVD/18738/
+      brcom: 18738
     sources:
     - name: "Westbound 1959 1080p HMAX WEB-DL DDP2 0 H 264-BLOOM.mkv"
       resolution: 1920x1080
@@ -8263,7 +8264,7 @@ movies:
 
   when_time_ran_out:
     title: "When Time Ran Out…"
-    imdb: "tt0081747"
+    imdb: 81747
     year: 1980
     directed: [ "James Goldstone" ]
     cast: [ "Jacqueline Bisset", "Ernest Borgnine", "James Franciscus", "Burgess Meredith", "Paul Newman" ]
@@ -8276,13 +8277,13 @@ movies:
     - type: bluray
       year: 2023
       bitrate: 34.00
-      link: https://www.blu-ray.com/movies/When-Time-Ran-Out-Blu-ray/341263/
+      brcom: 341263
     - type: dvd-ntsc
       year: 2009
-      link: https://www.blu-ray.com/dvd/When-Time-Ran-Out-DVD/6921/
+      brcom: 6921
     - type: dvd-ntsc
       year: 2017
-      link: https://www.blu-ray.com/dvd/When-Time-Ran-Out-DVD/146237/
+      brcom: 146237
     sources:
     - name: "Le.Jour.de.la.fin.du.monde.1980.MULTi.VFF.1080p.BluRay.HDLight.AC3.2.0.x264-LiHDL.mkv"
       resolution: 1920x804
