@@ -6,6 +6,7 @@ import glob
 import cv2
 import numpy as np
 import sys
+from PIL import Image, ImageDraw, ImageFont, ImageText
 from itertools import accumulate
 from math import sin, sqrt
 from pathlib import Path
@@ -35,6 +36,7 @@ CANVAS_SIZE = (
 )
 
 DESC = Path.home() / 'laclasse/data/laclasse.yaml'
+FONT_ROOT = Path.home() / 'laclasse/data'
 DUMP_ROOT = Path.home() / 'laclasse/dump-dvd'
 FAST_ROOT = 'D:/clips/fast'
 GOOD_ROOT = 'D:/clips/good'
@@ -62,10 +64,19 @@ def cv2_blit(bg, fg, x, y):
 
     x1, y1 = max(x, 0), max(y, 0)
     x2, y2 = min(x + sw, w), min(y + sh, h)
-    if x1 < x2 and y1 < y2:
-        sx1, sy1 = x1 - x, y1 - y
-        sx2, sy2 = sx1 + (x2 - x1), sy1 + (y2 - y1)
-        bg[y1:y2, x1:x2] += fg[sy1:sy2, sx1:sx2]
+    if x1 >= x2 or y1 >= y2:
+        return
+
+    sx1, sy1 = x1 - x, y1 - y
+    sx2, sy2 = sx1 + (x2 - x1), sy1 + (y2 - y1)
+
+    dst = bg[y1:y2, x1:x2]
+    src = fg[sy1:sy2, sx1:sx2]
+
+    if src.shape[2] == 4:
+        dst += src[:,:,3:] * (src[:,:,:3] - dst)
+    else:
+        dst += src
 
 def parse_playback(playback):
     sequence = []
@@ -79,12 +90,27 @@ def parse_playback(playback):
             case _: return None
     return sequence
 
+
+def render_text(text: str, font: str, size: float):
+    image_font = ImageFont.truetype(FONT_ROOT / font, size)
+    image_text = ImageText.Text(text, image_font)
+    im = Image.new('F', image_text.get_bbox()[2:])
+    draw = ImageDraw.Draw(im)
+    draw.text((0, 0), image_text, 1.0)
+
+    # Use rendered text image as an alpha layer for a white image
+    return (np.dstack((np.full((im.height, im.width, 3), 255.0),
+                       np.array(im)[:,:,np.newaxis])),
+            image_text.get_bbox(anchor='ls')[:2])
+
+
 @click.command()
-@click.option('-f', '--force', is_flag=True, default=False)
-@click.option('-n', '--dry-run', is_flag=True, default=False)
-@click.option('-m', '--movie', default='', help='Only render frames from this movie (comma-separated, partial match OK).')
+@click.option('-f', '--force',    is_flag=True, default=False)
+@click.option('-n', '--dry-run',  is_flag=True, default=False)
+@click.option(      '--id',       default='', help='Only render frames from this segment (comma-separated).')
+@click.option('-m', '--movie',    default='', help='Only render frames from this movie (comma-separated, partial match OK).')
 @click.option('-p', '--property', default='', help='Only render frames with this clip property (comma-separated).')
-def render(force: bool, dry_run: bool, movie: str, property: str):
+def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
 
     """ Render movie frames. """
     with open(DESC, encoding='utf-8') as f:
@@ -106,6 +132,9 @@ def render(force: bool, dry_run: bool, movie: str, property: str):
             continue
 
         if property and not any(property in c for c in clip_desc):
+            continue
+
+        if id and s.get('id') not in id.split(','):
             continue
 
         # Find original image
@@ -172,7 +201,6 @@ def render(force: bool, dry_run: bool, movie: str, property: str):
 
             # Enumerate clips
             for i, c in enumerate(clip_desc):
-                clip_movie, clip_segment, clip_offset = c.get('movie'), c.get('segment'), c.get('offset')
 
                 # Compute opacity early on; if it is zero, we can bail out quickly
                 opacity = 1.0
@@ -183,7 +211,33 @@ def render(force: bool, dry_run: bool, movie: str, property: str):
                 if opacity <= 0.0:
                     continue
 
-                if clip_movie is None:
+                # If it is a text clip, handle it here
+                if text := c.get('text'):
+                    font, size, pos, frames = c.get('font'), c.get('size'), c.get('pos'), c.get('frames')
+                    if frames is None or n < frames[0] or n > frames[1]:
+                        continue
+
+                    cv2.putText(debug_image, f'Clip {i}: "{text}"', (xinfo, yinfo + 25), FONT, SMALL, WHITE, 3)
+                    yinfo += NEWLINE
+
+                    data, anchor = render_text(text, font, size * TARGET_SIZE[1] / 100)
+                    dx, dy = pos[0] * TARGET_SIZE[0] / 100, pos[1] * TARGET_SIZE[1] / 100
+                    # XXX: debug baseline
+                    tmp_image = np.zeros((TARGET_SIZE[1], TARGET_SIZE[0], 4), float)
+                    cv2.line(tmp_image, (int(dx), 0), (int(dx), TARGET_SIZE[1]), (*RED, 255.0), 1)
+                    cv2.line(tmp_image, (0, int(dy)), (TARGET_SIZE[0], int(dy)), (*RED, 255.0), 1)
+                    clips.append((tmp_image, 0, 0, 1.0))
+                    # XXX: the computation for x is not very accurate for right-aligned text because
+                    # we use the bounding box instead of the right anchor.
+                    x = int(anchor[0] + dx if dx >= 0 else TARGET_SIZE[0] - data.shape[0] - dx - 1)
+                    y = anchor[1] + int(dy if dy >= 0 else TARGET_SIZE[1] - data.shape[1] - dy - 1)
+                    clips.append((data, x, y, 1.0))
+                    continue
+
+                # Otherwise it must be a movie clip
+                if clip_movie := c.get('movie'):
+                    clip_segment, clip_offset = c.get('segment'), c.get('offset')
+                else:
                     errors.append(f'no movie associated with clip {i}')
                     continue
 
@@ -400,7 +454,7 @@ def render(force: bool, dry_run: bool, movie: str, property: str):
 
                 yinfo = max(yinfo, ythumb + thumb.shape[0] + 20)
 
-                clips.append((src[rect_y:rect_y+rect_h,rect_x:rect_x+rect_w], opacity))
+                clips.append((src[rect_y:rect_y+rect_h,rect_x:rect_x+rect_w], 0, 0, opacity))
 
             if e := s.get('todo'):
                 cv2.putText(debug_image, f'Todo: {e}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
@@ -414,18 +468,20 @@ def render(force: bool, dry_run: bool, movie: str, property: str):
             # Perform composition
             target_image = np.zeros((TARGET_SIZE[1], TARGET_SIZE[0], 3), float)
 
-            # If more than one image, opacity is actually a blend for cross-fade, so
-            # we will want to normalise it.
-            total_opacity = sum(np.clip(opacity, 0.0, 1.0) for _, opacity in clips) if len(clips) > 2 else 1.0
+            # If more than one image has opacity != 1.0, it is actually a blend
+            # for cross-fade, so we will want to normalise it.
+            total_opacity = 1.0
+            if sum(1 for e in clips if e[3] != 1.0) >= 2:
+                total_opacity = sum(np.clip(e[3], 0.0, 1.0) for e in clips)
 
-            for image, opacity in clips:
+            for image, x, y, opacity in clips:
                 if total_opacity > 0.0:
                     opacity /= total_opacity
                 if opacity != 1.0:
                     # FIXME: do this in linear colorspace one day?
                     image = image * pow(opacity, 1.0)
                 if opacity > 0.0:
-                    cv2_blit(target_image, image, 0, 0)
+                    cv2_blit(target_image, image, x, y)
 
             # Blit final image to canvas
             x, y = MARGIN, MARGIN

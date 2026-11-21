@@ -5,7 +5,8 @@ description = "Ouiche"
 requires-python = ">=3.11"
 dependencies = [
     "click>=8.1",
-    "ffmpy",
+    "ffmpy", # not really using that for now
+    "pillow",
     "platformdirs",
 ]
 

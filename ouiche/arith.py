@@ -5,7 +5,7 @@ import re
 def try_parse(args):
 
     def_tokens = [
-        ('name',    r'(?P<prefix>[^-+0-9]*)(?P<id>[0-9]{6})(?P<suffix>[^-+0-9]*)'),
+        ('name',    r'(?P<prefix>[^-+0-9\s]*)(?P<id>[0-9]{6})(?P<suffix>[^-+0-9\s]*)'),
         ('num',     r'\d+'),
         ('op',      r'[-+]'),
         ('ignore',  r'[ \t]+'),
@@ -14,7 +14,7 @@ def try_parse(args):
     r_tokens = '|'.join(f'(?P<{t}>{r})' for t, r in def_tokens)
 
     ret, op, prefix, suffix = None, None, None, None
-    for t in re.finditer(r_tokens, ''.join(args)):
+    for t in re.finditer(r_tokens, ' '.join(args)):
         match t.lastgroup:
             case 'name' | 'num':
                 if prefix is None or suffix is None:
