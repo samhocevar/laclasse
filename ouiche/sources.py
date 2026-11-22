@@ -31,6 +31,9 @@ class Source:
 
         print(f'# Dumping movie frames to {output}... (quality: {quality})')
 
+        sinfo = self.get_section('stream')
+        finfo = self.get_section('frame')
+
         def split(s): return re.split(' +', s.strip())
 
         input_options, filters, output_options = '', [], ''
@@ -57,9 +60,6 @@ class Source:
         # If an initial offset is required, use the pts of the first frame and the
         # stream framerate to decide exactly where to seek.
         if start > 0:
-            sinfo = self.get_section('stream')
-            finfo = self.get_section('frame')
-
             fps = sinfo.get('r_frame_rate')
             CAN_SEEK = True
             if CAN_SEEK and fps is not None:
@@ -77,23 +77,70 @@ class Source:
         if count > 0:
             filters.append(f'trim=end_frame={count}')
 
+        # Perform colour conversions, if necessary
+        lines = int(sinfo.get('height', '0'))
+        color_space = sinfo.get('color_space', 'unknown')
+        color_range = sinfo.get('color_range', 'unknown')
+        color_transfer = sinfo.get('color_transfer', 'unknown')
+
+        if color_transfer in ('arib-std-b67', 'smpte2084'):
+            in_transfer = color_transfer
+            is_hdr = True
+        elif color_space.startswith('bt2020') or lines >= 2160:
+            in_transfer = 'arib-std-b67'
+            is_hdr = True
+        else:
+            is_hdr = False
+
+        if color_space not in ('bt709', 'bt480bg', 'bt2020nc', 'smpte170m'):
+            if lines >= 2160:
+                color_space = 'bt2020nc'
+            elif lines >= 720:
+                color_space = 'bt709'
+            else:
+                color_space = 'bt601'
+
+        if color_range not in ('pc', 'tv'):
+            color_range = 'tv'
+
         # Ensure correct numbering of output files
         output_options += f' -start_number {start}'
-
-        if len(filters):
-            output_options += ' -vf ' + ','.join(filters)
 
         # It is important to lock the quality, otherwise identical frames may not
         # get the same checksum due to the dynamic quantisation table, making things
         # non-reproducible and harder to debug.
-        if output.endswith('jpeg') or output.endswith('jpg'):
+        if output.endswith('.jpeg') or output.endswith('.jpg'):
             # Quality options have really no impact on the mjpeg encoder performance
             # but the resulting file size is 1:3 between fast and best here.
             output_options += ' -c:v mjpeg'
             match quality:
-                case 'fast': output_options += ' -global_quality 50 -q:v 15 -huffman default'
-                case 'good': output_options += ' -global_quality 80 -q:v 5 -huffman default'
-                case 'best': output_options += ' -global_quality 99 -q:v 2 -huffman optimal'
+                case 'fast': output_options += ' -global_quality 50'
+                case 'good': output_options += ' -global_quality 80'
+                case 'best': output_options += ' -global_quality 99 -qmin 1 -q:v 1'
+            if is_hdr:
+                # npl=100 is standard for SDR; the other settings are for straightforward
+                # tonemapping to bt709, then gamma correction.
+                filters.append(f'zscale=tin={in_transfer}:pin=bt2020:min=bt2020nc:rin=tv:t=linear:npl=100,'
+                                'format=gbrpf32le,'
+                                'zscale=p=bt709,'
+                                'tonemap=tonemap=hable:desat=0,'
+                                'zscale=t=bt709:m=bt709:r=pc,'
+                                'format=yuv444p')
+            else:
+                filters.append(f'scale=in_color_matrix={color_space}:out_color_matrix=bt601:'
+                               f'in_range={color_range}:out_range=pc,format=yuv444p')
+
+        if output.endswith('.exr'):
+            output_options += ' -compression zip16'
+            if is_hdr:
+                filters.append(f'zscale=tin={in_transfer}:pin=bt2020:min=bt2020nc:rin=tv:t=linear:npl=100,'
+                                'format=gbrpf32le')
+            else:
+                filters.append(f'zscale=rin=limited:min={color_space}:pin={color_space}:tin={color_space}:t=linear:p=bt709:r=full,'
+                                'format=gbrpf32le')
+
+        if len(filters):
+            output_options += ' -vf ' + ','.join(filters)
 
         # This is very important, it avoids dropping or duplicating frames when the
         # first pts is not what the demuxer expects.
@@ -102,6 +149,7 @@ class Source:
         # Other options of variable but minor importance
         output_options += ' -strict unofficial'
         output_options += ' -map_chapters -1'
+
         # Not sure about this yet, it makes decoding non-reproducible
         # TODO: investigate and report to FFmpeg upstream when I have the time
         #output_options += ' -flags2 +icc_profiles'
@@ -182,28 +230,35 @@ class Source:
             f = re.sub(r"(['\\])", r'\\\1', f)
             return f
 
-        cmd = 'ffprobe -v error -select_streams v:0 -show_streams -show_frames -f lavfi -i'
+        commands = []
+        cmd = 'ffprobe -v error -select_streams v:0 -of compact'
+
+        # First command: print stream metadata
+        commands.append([*cmd.split(' '), '-show_streams', self.filename])
+
+        # Second command: decode a frame using the lavfi filter and print its metadata
         flt = f'movie={super_escape(self.filename)},trim=end_frame=1,showinfo'
-        p = subprocess.Popen([*cmd.split(' '), flt],
-                             stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
-                             bufsize=1, text=True)
+        commands.append([*cmd.split(' '), '-show_frames', '-f', 'lavfi', '-i', flt])
 
-        r_entry = re.compile(r'^([a-z_]+)=')
-        section = {}
-        for l in p.stdout:
-            if l.startswith('[/'):
-                match l.strip():
-                    case '[/FRAME]':  cache_data['frame'] = section
-                    case '[/STREAM]': cache_data['stream'] = section
-                section = {}
-            elif m := r_entry.match(l):
-                section[m.group(1)] = l.strip()[m.span()[1]:]
+        for c in commands:
+            p = subprocess.Popen(c, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                                 bufsize=1, text=True)
 
-        p.wait()
-        if p.returncode != 0:
-            print('Error probing file!')
-            if p.stderr:
-                print(''.join(p.stderr))
+            r_entry = re.compile(r'^(frame|stream)\|')
+            r_values = re.compile(r'((?:\\\||[^|])+)=([^|]*)')
+            section = {}
+            for l in p.stdout:
+                if m := r_entry.match(l):
+                    section = {}
+                    for k, v in r_values.findall(l.strip()[m.span()[1]:]):
+                        section[k] = v
+                    cache_data[m.group(1)] = section
+
+            p.wait()
+            if p.returncode != 0:
+                print('Error probing file!')
+                if p.stderr:
+                    print(''.join(p.stderr))
 
 
     #def _read_stream_keyframes(self):
@@ -302,8 +357,10 @@ def info(files: tuple[str, ...], invalidate: bool):
             source.invalidate_cache()
         stream = source.get_section('stream')
         frame = source.get_section('frame')
-        print(f'# Stream info: {' '.join(f'{k}: {v}' for k, v in stream.items())}')
-        print(f'# Initial frame: {' '.join(f'{k}: {v}' for k, v in frame.items())}')
+        print(f'# Codec info: {' '.join(f'{k}={stream.get(k)}' for k in ['width', 'height', 'coded_width', 'coded_height', 'sample_aspect_ratio'])}')
+        print(f'# Color info: {' '.join(f'{k}={stream.get(k)}' for k in ['color_range', 'color_space', 'color_transfer'])}')
+        print(f'# Frame info: {' '.join(f'{k}={frame.get(k)}' for k in ['best_effort_timestamp_time'])}'
+                           f' {' '.join(f'{k}={stream.get(k)}' for k in ['r_frame_rate'])}')
 
 
 @click.command()
