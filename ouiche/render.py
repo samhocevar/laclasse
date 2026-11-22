@@ -40,7 +40,8 @@ FONT_ROOT = Path.home() / 'laclasse/data'
 DUMP_ROOT = Path.home() / 'laclasse/dump-dvd'
 FAST_ROOT = 'D:/clips/fast'
 GOOD_ROOT = 'D:/clips/good'
-SEARCH_ROOT = (GOOD_ROOT, FAST_ROOT)
+NEW_ROOT = 'D:/clips/new'
+SEARCH_ROOT = (NEW_ROOT, GOOD_ROOT, FAST_ROOT)
 
 DEBUG_ROOT = 'D:/final/compare'
 OUTPUT_ROOT = 'D:/final/movie'
@@ -57,6 +58,9 @@ RED = (127, 127, 255)
 PURPLE = (255, 0, 255)
 GREEN = (127, 255, 127)
 YELLOW = (127, 255, 255)
+
+INTRO_COLOR = (251, 238, 98)
+INTRO_SHADOW = (34, 28, 6)
 
 def cv2_blit(bg, fg, x, y):
     h, w, _ = bg.shape
@@ -91,17 +95,24 @@ def parse_playback(playback):
     return sequence
 
 
-def render_text(text: str, font: str, size: float):
-    image_font = ImageFont.truetype(FONT_ROOT / font, size)
+def render_text(text: str, font: str, size: float, border: int=0):
+    # FIXME: this is ridiculous, PIL doesn't do antialiasing?!
+    SCALE = 4
+    image_font = ImageFont.truetype(FONT_ROOT / font, size * SCALE)
     image_text = ImageText.Text(text, image_font)
-    im = Image.new('F', image_text.get_bbox()[2:])
+
+    left, top, right, bottom = image_text.get_bbox()
+    anchor_x, anchor_y = image_text.get_bbox(anchor='ls')[:2]
+
+    im = Image.new('F', (right - left + 2 * border * SCALE, bottom - top + 2 * border * SCALE))
     draw = ImageDraw.Draw(im)
-    draw.text((0, 0), image_text, 1.0)
+    draw.text((border * SCALE - left, border * SCALE - top), image_text, 1.0)
+    im = im.resize((im.width // SCALE, im.height // SCALE), Image.LANCZOS)
 
     # Use rendered text image as an alpha layer for a white image
     return (np.dstack((np.full((im.height, im.width, 3), 255.0),
                        np.array(im)[:,:,np.newaxis])),
-            image_text.get_bbox(anchor='ls')[:2])
+            (anchor_x // SCALE - border, anchor_y // SCALE - border))
 
 
 @click.command()
@@ -214,23 +225,45 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                 # If it is a text clip, handle it here
                 if text := c.get('text'):
                     font, size, pos, frames = c.get('font'), c.get('size'), c.get('pos'), c.get('frames')
-                    if frames is None or n < frames[0] or n > frames[1]:
+                    if frames is not None and (n < frames[0] or n > frames[1]):
                         continue
 
                     cv2.putText(debug_image, f'Clip {i}: "{text}"', (xinfo, yinfo + 25), FONT, SMALL, WHITE, 3)
                     yinfo += NEWLINE
 
-                    data, anchor = render_text(text, font, size * TARGET_SIZE[1] / 100)
-                    dx, dy = pos[0] * TARGET_SIZE[0] / 100, pos[1] * TARGET_SIZE[1] / 100
+                    border = 5
+                    data, anchor = render_text(text, font, size * TARGET_SIZE[1] / 100, border=border)
+                    tx, ty = pos[0] * TARGET_SIZE[0] / 100, pos[1] * TARGET_SIZE[1] / 100
+
                     # XXX: debug baseline
-                    tmp_image = np.zeros((TARGET_SIZE[1], TARGET_SIZE[0], 4), float)
-                    cv2.line(tmp_image, (int(dx), 0), (int(dx), TARGET_SIZE[1]), (*RED, 255.0), 1)
-                    cv2.line(tmp_image, (0, int(dy)), (TARGET_SIZE[0], int(dy)), (*RED, 255.0), 1)
-                    clips.append((tmp_image, 0, 0, 1.0))
-                    # XXX: the computation for x is not very accurate for right-aligned text because
-                    # we use the bounding box instead of the right anchor.
-                    x = int(anchor[0] + dx if dx >= 0 else TARGET_SIZE[0] - data.shape[0] - dx - 1)
-                    y = anchor[1] + int(dy if dy >= 0 else TARGET_SIZE[1] - data.shape[1] - dy - 1)
+                    #tmp_image = np.zeros((TARGET_SIZE[1], TARGET_SIZE[0], 4), float)
+                    #cv2.line(tmp_image, (int(tx), 0), (int(tx), TARGET_SIZE[1]), (*RED, 255.0), 1)
+                    #cv2.line(tmp_image, (0, int(ty)), (TARGET_SIZE[0], int(ty)), (*RED, 255.0), 1)
+                    #clips.append((tmp_image, 0, 0, 1.0))
+
+                    # We do not use the anchor when padding to the right, so we need to manually add
+                    # the border value. Not very elegant.
+                    if tx == 0:   x = (TARGET_SIZE[0] - data.shape[1]) // 2
+                    elif tx >= 0: x = int(tx + anchor[0])
+                    else:         x = TARGET_SIZE[0] - data.shape[1] + tx - 1 + border
+
+                    y = anchor[1] + int(ty if ty >= 0 else TARGET_SIZE[1] - data.shape[0] + ty - 1)
+
+                    # Pre-apply opacity because opacity is actually some kind of alpha blend
+                    # FIXME: we need to merge everything _before_ adding a single clip to the
+                    # list, otherwise opacity will accumulate and will be wrong
+                    data[:,:,3] *= opacity
+
+                    # Add a little bit of blur and print a shadow
+                    data = cv2.blur(data, (3, 3))
+                    shadow = data.copy()
+                    shadow[:,:,:3] = INTRO_SHADOW[::-1]
+                    shadow[:,:,:3] += np.random.normal(0, 6, data[:,:,:3].shape).astype(float)
+                    step = 0.4 * TARGET_SIZE[1] / 100
+                    for k in range(1, 5):
+                        clips.append((shadow, int(x + step * k), int(y + step * k), 1.0))
+                    data[:,:,:3] = INTRO_COLOR[::-1]
+                    data[:,:,:3] += np.random.normal(0, 6, data[:,:,:3].shape).astype(float)
                     clips.append((data, x, y, 1.0))
                     continue
 

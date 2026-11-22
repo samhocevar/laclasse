@@ -477,22 +477,22 @@ segments:
     - text: 'Une production'
       font: helvetica-inserat-roman.otf
       size: 9.7
-      pos: [10, 16]
+      pos: [10, 18.15]
       frames: [20, 150]
     - text: 'DUNE'
       font: helvetica-inserat-roman.otf
       size: 14.73
-      pos: [10, 32]
+      pos: [10, 37.63]
       frames: [20, 150]
     - text: 'pour'
       font: helvetica-inserat-roman.otf
       size: 9.7
-      pos: [10, 66]
+      pos: [10, 66.33]
       frames: [20, 150]
     - text: 'WARNER BROS. TELEVISION'
       font: helvetica-inserat-roman.otf
       size: 14.73
-      pos: [10, 85]
+      pos: [10, 86.72]
       frames: [20, 150]
 
   - id: "005369"
@@ -502,6 +502,11 @@ segments:
     - movie: the_arrangement
       segment: "004116"
       offset: 0
+    - text: 'John Wayne'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 37.88]
+      frames: [0, 89]
 
   - id: "005479"
     count: 128
@@ -510,6 +515,11 @@ segments:
     - movie: freebie_and_the_bean
       segment: "011889"
       offset: 92
+    - text: 'Dustin Hoffman'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [-10, 84.12]
+      frames: [0, 107]
 
   - id: "005607"
     count: 43
@@ -518,6 +528,10 @@ segments:
     - movie: harper
       segment: "146529"
       offset: 0
+    - text: 'Paul Newman'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 84.12]
 
   - id: "005650"
     count: 26
@@ -526,6 +540,10 @@ segments:
     - movie: the_arrangement
       segment: "003152"
       offset: 1
+    - text: 'Paul Newman'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 84.12]
 
   - id: "005676"
     count: 66
@@ -542,6 +560,11 @@ segments:
     - movie: freebie_and_the_bean
       segment: "140549"
       offset: 1
+    - text: 'Robert Redford'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 84.12]
+      frames: [0, 54]
 
   - id: "005812"
     count: 167
@@ -550,6 +573,16 @@ segments:
     - movie: freebie_and_the_bean
       segment: "140620"
       offset: 0
+    - text: 'Burt Lancaster'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 39.55]
+      frames: [0, 74]
+    - text: 'Henry Fonda'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [-10, 84.12]
+      frames: [93, 166]
 
   - id: "005979"
     count: 47
@@ -566,6 +599,11 @@ segments:
     - movie: freebie_and_the_bean
       segment: "140620"
       offset: 288
+    - text: 'James Stewart'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 39.55]
+      frames: [0, 58]
 
   - id: "006099"
     count: 17
@@ -584,6 +622,11 @@ segments:
     - movie: freebie_and_the_bean
       segment: "051864"
       offset: 87
+    - text: 'Dean Martin'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [-10, 84.12]
+      frames: [0, 64]
 
   - id: "006201"
     count: 56
@@ -592,6 +635,11 @@ segments:
     - movie: freebie_and_the_bean
       segment: "051768"
       offset: 40
+    - text: 'Frank Sinatra'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [-10, 39.55]
+      frames: [0, 41]
 
   - id: "006257"
     count: 57
@@ -609,6 +657,10 @@ segments:
     - movie: freebie_and_the_bean
       segment: "105789"
       offset: 33
+    - text: 'Clark Gable'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [-10, 84.12]
 
   - id: "006346"
     count: 30
@@ -625,6 +677,11 @@ segments:
     - movie: freebie_and_the_bean
       segment: "057384"
       offset: 100
+    - text: 'Robert Mitchum'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 84.12]
+      frames: [0, 90]
 
   - id: "006489"
     count: 43
@@ -633,6 +690,10 @@ segments:
     - movie: freebie_and_the_bean
       segment: "053061"
       offset: 149
+    - text: 'Lauren Bacall'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [-10, 84.12]
 
   - id: "006532"
     count: 17
@@ -649,6 +710,10 @@ segments:
     - movie: freebie_and_the_bean
       segment: "014695"
       offset: 12
+    - text: 'Angie Dickinson'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 39.55]
 
   - id: "006591"
     count: 28
@@ -657,6 +722,10 @@ segments:
     - movie: freebie_and_the_bean
       segment: "014750"
       offset: 51
+    - text: 'Angie Dickinson'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [10, 39.55]
 
   - id: "006619"
     count: 45
@@ -673,6 +742,10 @@ segments:
     - movie: bullitt
       segment: "100481"
       offset: 239
+    - text: 'Orson Welles'
+      font: helvetica-inserat-roman.otf
+      size: 18.11
+      pos: [-10, 39.55]
 
   - id: "006730"
     count: 23
@@ -690,6 +763,14 @@ segments:
     - movie: bullitt
       segment: "100481"
       offset: 327
+    - text: 'Musique originale'
+      font: helvetica-inserat-roman.otf
+      size: 8.75
+      pos: [-10, 19.78]
+    - text: 'Laurent Petitgirard'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 34.82]
 
   - id: "006796"
     count: 25
@@ -698,6 +779,14 @@ segments:
     - movie: freebie_and_the_bean
       segment: "055432"
       offset: 18
+    - text: 'Musique originale'
+      font: helvetica-inserat-roman.otf
+      size: 8.75
+      pos: [-10, 19.78]
+    - text: 'Laurent Petitgirard'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 34.82]
 
   - id: "006821"
     count: 17
@@ -723,6 +812,22 @@ segments:
     - movie: freebie_and_the_bean
       segment: "056139"
       offset: 0
+    - text: 'Un film produit par'
+      font: helvetica-inserat-roman.otf
+      size: 8.75
+      pos: [-10, 12.78]
+    - text: 'Ève Vercel'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 34.82]
+    - text: 'Robert Nador'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 50.36]
+    - text: 'Michel Lecourt'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 65.90]
 
   - id: "006894"
     count: 17
@@ -731,6 +836,22 @@ segments:
     - movie: freebie_and_the_bean
       segment: "056122"
       offset: 0
+    - text: 'Un film produit par'
+      font: helvetica-inserat-roman.otf
+      size: 8.75
+      pos: [-10, 12.78]
+    - text: 'Ève Vercel'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 34.82]
+    - text: 'Robert Nador'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 50.36]
+    - text: 'Michel Lecourt'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 65.90]
 
   - id: "006911"
     count: 20
@@ -739,6 +860,22 @@ segments:
     - movie: freebie_and_the_bean
       segment: "056229"
       offset: 0
+    - text: 'Un film produit par'
+      font: helvetica-inserat-roman.otf
+      size: 8.75
+      pos: [-10, 12.78]
+    - text: 'Ève Vercel'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 34.82]
+    - text: 'Robert Nador'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 50.36]
+    - text: 'Michel Lecourt'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 65.90]
 
   - id: "006931"
     count: 23
@@ -756,6 +893,18 @@ segments:
     - movie: freebie_and_the_bean
       segment: "016049"
       offset: 2
+    - text: 'Écrit et réalisé par'
+      font: helvetica-inserat-roman.otf
+      size: 8.75
+      pos: [-10, 12.78]
+    - text: 'Michel Hazanavicius'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 32.82]
+    - text: 'Dominique Mézerette'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 50.36]
 
   - id: "006988"
     count: 40
@@ -765,6 +914,18 @@ segments:
       segment: "107116"
       offset: 61
       todo: "1.28:1 speedup?"
+    - text: 'Écrit et réalisé par'
+      font: helvetica-inserat-roman.otf
+      size: 8.75
+      pos: [-10, 12.78]
+    - text: 'Michel Hazanavicius'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 32.82]
+    - text: 'Dominique Mézerette'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [-10, 50.36]
     comment: |
       Drop 11 frames: after 2, 5, 9, 12, 15, 19, 22, 25, 29, 32, 35
       So we play 51 frames (50 intervals) in the time for 40 (39 intervals)
@@ -776,6 +937,21 @@ segments:
     - movie: freebie_and_the_bean
       segment: "016049"
       offset: 55
+    - text: 'LA CLASSE AMÉRICAINE'
+      font: helvetica-inserat-roman.otf
+      size: 15.32
+      pos: [0, 56.82]
+      fade-in: [33, 45]
+    - text: '© Warner MCMXCIII'
+      font: helvetica-inserat-roman.otf
+      size: 5.32
+      pos: [0, 67.41]
+      fade-in: [33, 45]
+    - text: 'Édition cônemémorative MMXXVI'
+      font: helvetica-inserat-roman.otf
+      size: 5.32
+      pos: [0, 76.41]
+      fade-in: [33, 45]
 
   - id: "007132"
     count: 152
