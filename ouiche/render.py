@@ -83,6 +83,16 @@ def cv2_blit(bg, fg, x, y):
     else:
         dst += src
 
+
+def cv2_tint_dark(im, color):
+    # Compute darkness weight
+    L = 0.299 / 255 * im[..., 0] + 0.587 / 255 * im[..., 1] + 0.114 / 255 * im[..., 2]
+    w = (1.0 - L) ** 2.0
+    w = w[..., None]
+    # Return blend
+    return im * (1.0 - w) + np.array(color) * w
+
+
 def parse_playback(playback):
     sequence = []
     for s in playback.split(','):
@@ -224,6 +234,8 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 if opacity <= 0.0:
                     continue
 
+                transforms = tuple(filter(None, re.split('\\s+', c.get('transform', ''))))
+
                 # If it is a text clip, handle it here
                 if text := c.get('text'):
                     font, size, pos, frames = c.get('font'), c.get('size'), c.get('pos'), c.get('frames')
@@ -335,7 +347,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                         src = src[:,crop:-crop]
 
                 # Apply horizontal flip early, it's easier to think with the flipped image
-                if 'hflip' in re.split(' +', c.get('transform', '').strip()):
+                if 'hflip' in transforms:
                     src = cv2.flip(src, 1)
 
                 # encoded_h, encoded_w: the size of the source image on disk, _after_ letterboxing
@@ -421,18 +433,6 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 if gravity is not None:
                     fxinfo.append(f'Gravity: {gravity}')
 
-                # Special effects
-                for transform in filter(None, re.split(' +', c.get('transform', ''))):
-                    match transform:
-                        case 'hflip': pass # already applied early
-                        case 'minable2':
-                            # Effet spéciau minable 2 happens between frames 136 and 171
-                            #t = (n - 136) / (171 - 136)
-                            #if t > 0.0 and t < 1.0:
-                            pass
-                        case _: errors.append(f'invalid transform "{transform}"')
-                    fxinfo.append(f'Transform: {transform}')
-
                 # Load wave parameters before scaling so that we know how much to zoom in
                 wave = 0
                 if x := c.get('wave-in'):
@@ -449,22 +449,85 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 if verbose:
                     print('  Final pick area:', rect_x, rect_y, rect_w, rect_h)
 
-                # Apply scaling to the image; after this step, our frame lies somewhere
-                # in there as a rectangle of size TARGET_SIZE.
+                # Compute the final parameters for scaling. After this step, our frame lies somewhere
+                # in there as a rectangle of size TARGET_SIZE, but we can apply more effects.
                 scale_x, scale_y = TARGET_SIZE[0] / rect_w, TARGET_SIZE[1] / rect_h
-                if scale_x > 10 or scale_y > 10:
-                    raise Exception('insane scaling, aborting')
 
                 if verbose:
                     print('  Scale factor:', scale_x, scale_y)
-
-                if scale_x != 1.0 or scale_y != 1.0:
-                    src = cv2.resize(src, (int(src.shape[1] * scale_x), int(src.shape[0] * scale_y)), interpolation=cv2.INTER_LANCZOS4)
 
                 final_x = int(rect_x * scale_x)
                 final_y = int(rect_y * scale_y)
                 final_w = TARGET_SIZE[0]
                 final_h = TARGET_SIZE[1]
+                blit_x = 0
+                blit_y = 0
+
+                # Effet spéciau minable 1
+                if 'cheesy-1' in transforms:
+                    bar_left, bar_right = 0.490, 0.505
+                    # Transition happens between frames 28 and 50
+                    if n > 28:
+                        dt = min(1.0, (n - 28) / (50 - 28))
+                        bar_x = int(final_w * (1 - bar_left * dt))
+                        bar_w = int(final_w * (bar_right - bar_left))
+                        if i == 0:
+                            final_x += int((final_w - bar_x) * 2 / 5)
+                            final_w = bar_x
+                        if i == 1:
+                            blit_x = int(TARGET_SIZE[0] * (1 - bar_left * dt + bar_right - bar_left))
+                            final_w = final_w // 2
+                            final_x += int(final_w * 0.85)
+                    else:
+                        if i == 1:
+                            opacity = 0.0
+
+                # Effet spéciau minable 2
+                if 'cheesy-2' in transforms:
+                    tint = (0.0, 0.0, 48.0)
+                    bar_left, bar_right = 0.530, 0.545
+                    # Need to preserve the left part of the screen
+                    if n > 197:
+                        saved = src[:,rect_x:rect_x+int(rect_w*bar_left)]
+                        saved = cv2_tint_dark(saved, tint)
+                    if n > 136:
+                        # FIXME: the black bar keeps readjusting until frame 194!
+                        # (the position is non-linear, it follows the scene background)
+                        # But this will do for now.
+                        dt = min(1.0, (n - 136) / (171 - 136))
+                        src[:,:int(rect_x+rect_w*dt*bar_right)] = (0, 0, 0)
+                    if n > 197:
+                        dt = min(1.0, (n - 197) / (222 - 197))
+                        cv2_blit(src, saved, rect_x, int((rect_y-display_h)*(1-dt)))
+
+                # Effet spéciau minable 3
+                if 'cheesy-3' in transforms:
+                    tint = (0.0, 64.0, 64.0)
+                    bar_left, bar_right = 0.400, 0.415
+                    # Transition happens between 52 and 77
+                    if n < 77:
+                        dt = min(1.0, (77 - n) / (77 - 52))
+                        bar_w = int(rect_w*(bar_right-bar_left))
+                        bar_x = rect_x + int(rect_w*bar_right*dt) - bar_w
+                        saved = src[:,rect_x:bar_x]
+                        saved[...] = cv2_tint_dark(saved, tint)
+                        src[:,max(0,bar_x):max(0,bar_x+bar_w)] = (0, 0, 0)
+
+                # Other transforms
+                for t in transforms:
+                    match t:
+                        case 'hflip': pass
+                        case 'cheesy-1': pass
+                        case 'cheesy-2': pass
+                        case 'cheesy-3': pass
+                        case _: errors.append(f'invalid transform "{t}"')
+                    fxinfo.append(f'Transform: {t}')
+
+                # Apply scaling to the source image, it's now time to get the good pixels
+                if scale_x > 10 or scale_y > 10:
+                    raise Exception('insane scaling, aborting')
+                if scale_x != 1.0 or scale_y != 1.0:
+                    src = cv2.resize(src, (int(src.shape[1] * scale_x), int(src.shape[0] * scale_y)), interpolation=cv2.INTER_LANCZOS4)
 
                 if verbose:
                     print('  Scaled pick area:', final_x, final_y, final_w, final_h)
@@ -550,7 +613,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
 
                 yinfo = max(yinfo, ythumb + thumb.shape[0] + 20)
 
-                clips.append((src[final_y:final_y+final_h,final_x:final_x+final_w], 0, 0, opacity))
+                clips.append((src[final_y:final_y+final_h,final_x:final_x+final_w], blit_x, blit_y, opacity))
 
             if e := s.get('todo'):
                 cv2.putText(debug_image, f'Todo: {e}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
@@ -605,7 +668,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                     cv2.imwrite(f'{DEBUG_ROOT}/{segstart:06d}.jpeg', debug_image)
 
             if not verbose:
-                print('.', end='')
+                print('.' if not n or n % 10 else str(n), end='')
                 sys.stdout.flush()
 
         print(f'done.')
