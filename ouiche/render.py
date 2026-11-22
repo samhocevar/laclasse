@@ -5,6 +5,7 @@ import yaml
 import glob
 import cv2
 import numpy as np
+import re
 import sys
 from PIL import Image, ImageDraw, ImageFont, ImageText
 from itertools import accumulate
@@ -118,10 +119,11 @@ def render_text(text: str, font: str, size: float, border: int=0):
 @click.command()
 @click.option('-f', '--force',    is_flag=True, default=False)
 @click.option('-n', '--dry-run',  is_flag=True, default=False)
+@click.option('-v', '--verbose',  is_flag=True, default=False, help='Verbose output for debugging purposes.')
 @click.option(      '--id',       default='', help='Only render frames from this segment (comma-separated).')
 @click.option('-m', '--movie',    default='', help='Only render frames from this movie (comma-separated, partial match OK).')
 @click.option('-p', '--property', default='', help='Only render frames with this clip property (comma-separated).')
-def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
+def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, property: str):
 
     """ Render movie frames. """
     with open(DESC, encoding='utf-8') as f:
@@ -245,7 +247,7 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                     # the border value. Not very elegant.
                     if tx == 0:   x = (TARGET_SIZE[0] - data.shape[1]) // 2
                     elif tx >= 0: x = int(tx + anchor[0])
-                    else:         x = TARGET_SIZE[0] - data.shape[1] + tx - 1 + border
+                    else:         x = int(TARGET_SIZE[0] - data.shape[1] + tx - 1 + border)
 
                     y = anchor[1] + int(ty if ty >= 0 else TARGET_SIZE[1] - data.shape[0] + ty - 1)
 
@@ -324,7 +326,7 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                     errors.append(f'cannot find image for {srcglob} in {', '.join(SEARCH_ROOT)}')
                     continue
 
-                # Apply letterbox cropping if the value is known to us
+                # Apply source letterbox cropping if the value is known to us
                 if crop := clip_presets.get(f'letterbox-{src.shape[0]}'):
                     if crop > 0:
                         src = src[crop:-crop,:]
@@ -332,10 +334,19 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                     if crop > 0:
                         src = src[:,crop:-crop]
 
-                src_h, src_w, _ = src.shape
+                # Apply horizontal flip early, it's easier to think with the flipped image
+                if 'hflip' in re.split(' +', c.get('transform', '').strip()):
+                    src = cv2.flip(src, 1)
+
+                # encoded_h, encoded_w: the size of the source image on disk, _after_ letterboxing
+                # display_h, display_w: the original display size of the source image, after anamorphic stretching
+                encoded_h, encoded_w, _ = src.shape
+                display_h, display_w = encoded_h, encoded_w
+
+                if verbose:
+                    print('  Encoded size:', encoded_w, encoded_h)
 
                 # XXX: apply stretch to DVD images, this is for debugging purposes
-                display_h, display_w = src_h, src_w
                 if 'revolution' in clip_movie and display_w == 720:
                     display_w = 875
                 if 'firecreek' in clip_movie and display_w == 1920:
@@ -343,27 +354,83 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                 if 'arrangement' in clip_movie and display_w == 1280:
                     todo.append(f'Must unscale to 960')
 
+                if verbose:
+                    print('  Display size:', display_w, display_h)
+
                 clipinfo.append(f'DAR: {display_w/display_h:.2f}:1')
 
-                dst_w, dst_h = display_w, display_h
+                # The authorised bounds where we can pick our target image
+                bounds_x, bounds_y, bounds_w, bounds_h = 0, 0, display_w, display_h
+
+                # Apply cropping by simply reducing the bounds
+                if crop := c.get('crop'):
+                    values = tuple(map(float, crop.strip().split(' ')))
+                    if len(values) == 4:
+                        left = int(values[0] * bounds_w / 100)
+                        right = int(values[1] * bounds_w / 100)
+                        top = int(values[2] * bounds_h / 100)
+                        bottom = int(values[3] * bounds_h / 100)
+                        bounds_x, bounds_w = bounds_x + left, bounds_w - left - right
+                        bounds_y, bounds_h = bounds_y + top, bounds_h - top - bottom
+                    elif len(values) in (1, 2):
+                        dx = int(values[0] * bounds_w / 100)
+                        dy = int(values[-1] * bounds_h / 100)
+                        bounds_x, bounds_w = bounds_x + dx, bounds_w - 2 * dx
+                        bounds_y, bounds_h = bounds_y + dy, bounds_h - 2 * dy
+                    else:
+                        errors.append(f'invalid crop {crop}')
+                    fxinfo.append(f'Crop: {crop}')
+
+                if verbose:
+                    print('  Bounds:', bounds_x, bounds_y, bounds_w, bounds_h)
+
+                # Compute pick rectangle aspect ratio (might be different from target aspect
+                # ratio because we apply stretching)
+                rect_ratio = TARGET_SIZE[0] / TARGET_SIZE[1]
                 match stretch := c.get('stretch') or clip_presets.get('stretch'):
                     case None: pass
-                    case _: dst_w *= stretch
+                    case _: rect_ratio *= stretch
                 if stretch is not None:
                     fxinfo.append(f'Stretch: {stretch}')
 
-                # Compute uniform scaling to target size, preserving aspect ratio
-                if dst_w / dst_h > TARGET_SIZE[0] / TARGET_SIZE[1]:
-                    dst_w, dst_h = int(round(dst_w * TARGET_SIZE[1] / dst_h)), TARGET_SIZE[1]
+                if verbose:
+                    print('  Pick ratio:', rect_ratio)
+
+                # rect_x, rect_y, rect_w, rect_h: the coordinates where we will actually
+                # pick our pixels, preserving desired aspect ratio
+                if bounds_w / bounds_h > rect_ratio:
+                    rect_w, rect_h = int(bounds_h * rect_ratio), bounds_h
                 else:
-                    dst_w, dst_h = TARGET_SIZE[0], int(round(dst_h * TARGET_SIZE[0] / dst_w))
+                    rect_w, rect_h = bounds_w, int(bounds_w / rect_ratio)
+                rect_x, rect_y = bounds_x + (bounds_w - rect_w) // 2, bounds_y + (bounds_h - rect_h) // 2
+
+                if verbose:
+                    print('  Initial pick area', rect_x, rect_y, rect_w, rect_h)
+
+                # Apply gravity (when we want to pan to a specific direction)
+                match gravity := c.get('gravity') or clip_presets.get('gravity'):
+                    case None: pass
+                    case _:
+                        for g in gravity.split(' '):
+                            match g[0]:
+                                case 'r': rect_x += (bounds_w - rect_w) * int(g[1:]) // 200
+                                case 'l': rect_x -= (bounds_w - rect_w) * int(g[1:]) // 200
+                                case 'd': rect_y += (bounds_h - rect_h) * int(g[1:]) // 200
+                                case 'u': rect_y -= (bounds_h - rect_h) * int(g[1:]) // 200
+                                case _: errors.append(f'invalid gravity {gravity}')
+                if gravity is not None:
+                    fxinfo.append(f'Gravity: {gravity}')
 
                 # Special effects
-                match transform := c.get('transform'):
-                    case None: pass
-                    case 'hflip': src = cv2.flip(src, 1)
-                    case _: errors.append(f'invalid transform {transform}')
-                if transform is not None:
+                for transform in filter(None, re.split(' +', c.get('transform', ''))):
+                    match transform:
+                        case 'hflip': pass # already applied early
+                        case 'minable2':
+                            # Effet spéciau minable 2 happens between frames 136 and 171
+                            #t = (n - 136) / (171 - 136)
+                            #if t > 0.0 and t < 1.0:
+                            pass
+                        case _: errors.append(f'invalid transform "{transform}"')
                     fxinfo.append(f'Transform: {transform}')
 
                 # Load wave parameters before scaling so that we know how much to zoom in
@@ -373,38 +440,41 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                 if x := c.get('wave-out'):
                     wave = min(wave, x - n)
 
+                if wave != 0:
+                    # Zoom slightly
+                    zoom = 1 + abs(wave) / 400
+                    rect_x, rect_w = rect_x + int(rect_w * (1 - 1 / zoom) / 2), int(rect_w / zoom)
+                    rect_y, rect_h = int(rect_y / zoom), int(rect_h / zoom)
+
+                if verbose:
+                    print('  Final pick area:', rect_x, rect_y, rect_w, rect_h)
+
                 # Apply scaling to the image; after this step, our frame lies somewhere
                 # in there as a rectangle of size TARGET_SIZE.
-                if src.shape[:2] != (dst_h, dst_w):
-                    src = cv2.resize(src, (dst_w, dst_h), interpolation=cv2.INTER_LANCZOS4)
+                scale_x, scale_y = TARGET_SIZE[0] / rect_w, TARGET_SIZE[1] / rect_h
+                if scale_x > 10 or scale_y > 10:
+                    raise Exception('insane scaling, aborting')
 
-                # Apply gravity FIXME: this should be done before scaling because some
-                # of that scaling is actually done after gravity
-                rect_x, rect_y = (dst_w - TARGET_SIZE[0]) // 2, (dst_h - TARGET_SIZE[1]) // 2
-                match gravity := c.get('gravity') or clip_presets.get('gravity'):
-                    case None: pass
-                    case _:
-                        for g in gravity.split(' '):
-                            match g[0]:
-                                case 'r': rect_x += (dst_w - TARGET_SIZE[0]) * int(g[1:]) // 200
-                                case 'l': rect_x -= (dst_w - TARGET_SIZE[0]) * int(g[1:]) // 200
-                                case 'd': rect_y += (dst_h - TARGET_SIZE[1]) * int(g[1:]) // 200
-                                case 'u': rect_y -= (dst_h - TARGET_SIZE[1]) * int(g[1:]) // 200
-                                case _: errors.append(f'invalid gravity {gravity}')
-                if gravity is not None:
-                    fxinfo.append(f'Gravity: {gravity}')
+                if verbose:
+                    print('  Scale factor:', scale_x, scale_y)
 
-                rect_x = min(max(0, rect_x), dst_w - TARGET_SIZE[0])
-                rect_y = min(max(0, rect_y), dst_h - TARGET_SIZE[1])
-                rect_w = TARGET_SIZE[0]
-                rect_h = TARGET_SIZE[1]
+                if scale_x != 1.0 or scale_y != 1.0:
+                    src = cv2.resize(src, (int(src.shape[1] * scale_x), int(src.shape[0] * scale_y)), interpolation=cv2.INTER_LANCZOS4)
+
+                final_x = int(rect_x * scale_x)
+                final_y = int(rect_y * scale_y)
+                final_w = TARGET_SIZE[0]
+                final_h = TARGET_SIZE[1]
+
+                if verbose:
+                    print('  Scaled pick area:', final_x, final_y, final_w, final_h)
 
                 if opacity != 1.0:
                     fxinfo.append(f'Opacity: {opacity:.2f}')
 
                 # "Quality" is the density of source pixels in the target image, a rough
                 # estimate of the number of pixels lost through scaling in both dimensions.
-                quality = min(1, src_w / dst_w) * min(1, src_h / dst_h)
+                quality = min(1, encoded_w / src.shape[1]) * min(1, encoded_h / src.shape[0])
                 clipinfo.append(f'Quality: {100 * quality:.1f}%')
 
                 # Add debug info etc.
@@ -416,27 +486,20 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                 cv2_blit(debug_image, thumb.clip(0, 255).astype(np.uint8), x, y)
                 cv2.rectangle(debug_image, (x-1, y-1), (x+thumb.shape[1], y+thumb.shape[0]), YELLOW, 1)
 
-                clip_x = x + int(rect_x / dst_w * display_w * thumbscale)
-                clip_y = y + int(rect_y / dst_h * display_h * thumbscale)
-                clip_x2 = x + int((rect_x + rect_w) / dst_w * display_w * thumbscale)
-                clip_y2 = y + int((rect_y + rect_h) / dst_h * display_h * thumbscale)
+                clip_x = x + int(rect_x * thumbscale)
+                clip_y = y + int(rect_y * thumbscale)
+                clip_x2 = x + int((rect_x + rect_w) * thumbscale)
+                clip_y2 = y + int((rect_y + rect_h) * thumbscale)
                 cv2.rectangle(debug_image, (clip_x - 1, clip_y - 1), (clip_x2, clip_y2), PURPLE, 2)
 
                 cv2.putText(debug_image, f'File: {Path(filename).name}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
                 yinfo += NEWLINE
-                cv2.putText(debug_image, f'Size: {src_w}x{src_h}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
+                cv2.putText(debug_image, f'Size: {encoded_w}x{encoded_h}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
                 yinfo += NEWLINE
 
                 # Special effect: wavy deformation + zoom + motion blur
                 # Still very WIP; but works rather well on 043887
                 if wave != 0:
-                    # Zoom slightly
-                    # FIXME: this should be done at the same time as the first zoom, above
-                    zoom = 1 + abs(wave) / 400
-                    src = cv2.resize(src, (int(dst_w * zoom), int(dst_h * zoom)), interpolation=cv2.INTER_LANCZOS4)
-                    rect_x = int(rect_x * zoom + rect_w * (zoom - 1) / 2)
-                    rect_y = int(rect_y * zoom + rect_h * (zoom - 1) / 2)
-
                     # Apply wave; parameters are very guess-and-error
                     freq = 1.5 * (1 + abs(wave) / 1000)
                     shift = -0.1 * wave
@@ -445,26 +508,26 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                     #amplitude = pow(0.1 * wave, 2)
 
                     stride = np.arange(src.shape[1])
-                    for j in range(rect_h):
-                        dx = (0.5 + sin(6.28 * (freq * j / rect_h + shift))) * amplitude * 2000 / rect_h
+                    for j in range(final_h):
+                        dx = (0.5 + sin(6.28 * (freq * j / final_h + shift))) * amplitude * 2000 / final_h
                         # Fast path XXX: doesn't work
-                        #src[rect_y+j,0:rect_x-int(dx)] = src[rect_y+j,int(dx):rect_x]
+                        #src[final_y+j,0:final_x-int(dx)] = src[final_y+j,int(dx):final_x]
                         # Slow path, must separate colour components
                         for channel in range(src.shape[2]):
-                            tmp1 = np.interp(stride - dx, stride, src[rect_y+j,:,channel], left=0, right=0)
-                            src[rect_y+j,:,channel] = tmp1
+                            tmp1 = np.interp(stride - dx, stride, src[final_y+j,:,channel], left=0, right=0)
+                            src[final_y+j,:,channel] = tmp1
 
                     # Apply blur; could be a separate effect; cap at 4%
                     blur = min(4, abs(wave) * 0.25)
 
                     # Box blur
-                    ksize = int(blur * rect_h / 100)
-                    #ksize = int(blur * 2 * rect_h / 100)
+                    ksize = int(blur * final_h / 100)
+                    #ksize = int(blur * 2 * final_h / 100)
                     if ksize > 1:
                         src = cv2.blur(src, (ksize, ksize))
 
                     # Gaussian blur
-                    ksize = 1 + 2 * int(blur * rect_h / 100)
+                    ksize = 1 + 2 * int(blur * final_h / 100)
                     src = cv2.GaussianBlur(src, (ksize, ksize), 0)
                     #src = cv2.GaussianBlur(src, (ksize, ksize), 0)
 
@@ -487,7 +550,7 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
 
                 yinfo = max(yinfo, ythumb + thumb.shape[0] + 20)
 
-                clips.append((src[rect_y:rect_y+rect_h,rect_x:rect_x+rect_w], 0, 0, opacity))
+                clips.append((src[final_y:final_y+final_h,final_x:final_x+final_w], 0, 0, opacity))
 
             if e := s.get('todo'):
                 cv2.putText(debug_image, f'Todo: {e}', (xinfo, yinfo + 25), FONT, SMALL, RED, 3)
@@ -541,7 +604,8 @@ def render(force: bool, dry_run: bool, id: str, movie: str, property: str):
                 if n == count // 2:
                     cv2.imwrite(f'{DEBUG_ROOT}/{segstart:06d}.jpeg', debug_image)
 
-            print('.', end='')
-            sys.stdout.flush()
+            if not verbose:
+                print('.', end='')
+                sys.stdout.flush()
 
         print(f'done.')

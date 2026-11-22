@@ -612,8 +612,8 @@ segments:
     - movie: harper
       segment: "159034"
       offset: 27
-      gravity: r100
-      todo: "Zoom (or crop + autozoom) to hide the character on the left"
+      gravity: u50
+      crop: 32 0 0 0 # Hide the car’s passenger
 
   - id: "006116"
     count: 85
@@ -1538,6 +1538,7 @@ segments:
     - movie: drum_beat
       segment: "063859"
       offset: 1
+      crop: 0 0 0 25 # Hide the body on the ground
 
   - id: "017903"
     count: 24
@@ -1554,8 +1555,7 @@ segments:
     - movie: drum_beat
       segment: "061645"
       offset: 58
-      gravity: r100
-      todo: "pan & crop to hide Alan Ladd"
+      crop: 32 0 0 0 # Hide Alan Ladd’s character
 
   - id: "018063"
     count: 61
@@ -1694,9 +1694,9 @@ segments:
     clips:
     - movie: all_the_presidents_men
       segment: "037650"
-      offset: -1
-      todo: "(fade to black on the right) (red filter) (etc.)"
-    comment: "L’offset est bien -1, la première frame est dupliquée dans La Classe"
+      offset: 0
+      playback: 0, 0-619, 618-531
+      transform: minable2
 
   - id: "021100"
     count: 102
@@ -4597,7 +4597,7 @@ segments:
     - movie: harper
       segment: "017358"
       offset: 0
-      todo: crop to hide the character at the bottom?
+      crop: 0 0 0 15 # Hide the character at the bottom but don't remove too much
 
   - id: "068461"
     count: 83
