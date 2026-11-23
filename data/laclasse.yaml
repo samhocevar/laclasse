@@ -63,6 +63,9 @@ presets:
     gravity: u50
     letterbox-1080: 22
 
+  there_was_a_crooked_man:
+    letterbox-1080: 130 # XXX: bottom value is 132, but do we care?
+
   the_train_robbers:
     letterbox-1080: 140
 
@@ -85,7 +88,15 @@ segments:
       offset: 0
       fade-in: [24, 37]
       fade-out: [113, 124]
-    comment: For now, taken from the 'IT' Blu-Ray and rendered at 96fps
+      playback: |
+        0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9,
+        10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19,
+        20, 20, 21, 21, 22, 22, 23, 23, 24, 24, 25, 25, 26, 26, 27, 27, 28, 28, 29, 29,
+        30, 30, 31, 31, 32, 32, 33, 33, 34, 34, 35, 35, 36, 36, 37, 37, 38, 38, 39, 39,
+        40, 40, 41, 41, 42, 42, 43, 43, 44, 44, 45, 45, 46, 46, 47, 47, 48, 48, 49, 49,
+        50, 50, 51, 51, 52, 52, 53, 53, 54, 54, 55, 55, 56, 56, 57, 57, 58, 58, 59, 59,
+        60, 60, 61, 61, 62
+    comment: For now, taken from the 'IT' Blu-Ray and played at 2:1 speed
 
   - id: "000125"
     count: 177
@@ -332,7 +343,7 @@ segments:
     scenes: [ "0:02:22" ]
     clips:
     - movie: blood_alley
-      segment: "125239"
+      segment: "127177"
       offset: 0
     comment: Does not look like the right movie, but for now it’ll do.
 
@@ -357,7 +368,7 @@ segments:
     scenes: [ "0:02:31" ]
     clips:
     - movie: blood_alley
-      segment: "127177"
+      segment: "125239"
       offset: 0
     comment: Does not look like the right movie, but for now it’ll do.
 
@@ -433,7 +444,9 @@ segments:
     scenes: [ "0:03:05" ]
     clips:
     - movie: blood_alley
-      todo: "(introuvable, pas sûr)"
+      segment: "125239"
+      offset: 23
+    comment: Does not look like the right movie, but for now it’ll do.
 
   - id: "004706"
     count: 58
@@ -958,8 +971,9 @@ segments:
     scenes: [ "0:04:44" ]
     clips:
     - movie: the_towering_inferno
-      segment: "014546"
+      segment: "014547"
       offset: 7
+      crop: 8 0 # Hide the building on the left
     comment: Segment matching was done thanks to a speck of dust on frame 134
 
   - id: "007284"
@@ -1510,7 +1524,7 @@ segments:
       fade-out: [247, 277]
       wave-out: 236
     - movie: there_was_a_crooked_man
-      segment: "166412"
+      segment: "166418"
       offset: -247
       fade-in: [247, 277]
       wave-in: 285
@@ -1528,7 +1542,7 @@ segments:
     scenes: [ "0:11:50" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "166687"
+      segment: "166693"
       offset: 0
 
   - id: "017858"
@@ -1545,7 +1559,7 @@ segments:
     scenes: [ "0:11:54" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "077089"
+      segment: "077091"
       offset: 84
 
   - id: "017927"
@@ -1562,7 +1576,7 @@ segments:
     scenes: [ "0:12:01" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "077686"
+      segment: "077688"
       offset: 0
 
   - id: "018124"
@@ -1578,7 +1592,7 @@ segments:
     scenes: [ "0:12:08" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "077903"
+      segment: "077905"
       offset: 0
 
   - id: "018321"
@@ -1594,7 +1608,7 @@ segments:
     scenes: [ "0:12:15" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "078747"
+      segment: "078749"
       offset: 0
       gravity: l100
     comment: Double check gravity once a wider image version is available
@@ -1612,7 +1626,7 @@ segments:
     scenes: [ "0:12:25" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "080592"
+      segment: "080595"
       offset: 0
 
   - id: "018717"
@@ -1628,7 +1642,7 @@ segments:
     scenes: [ "0:12:33" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "079259"
+      segment: "079262"
       offset: 79
     comment: |
       Syncing done with the lighting on the cheekbones
@@ -1648,7 +1662,7 @@ segments:
     scenes: [ "0:12:40" ]
     clips:
     - movie: there_was_a_crooked_man
-      segment: "080592"
+      segment: "080595"
       offset: 0
 
   - id: "019225"
@@ -1708,6 +1722,9 @@ segments:
     - movie: harper
       segment: "080502"
       offset: 0
+      # This is some kind of reverse 1.18:1 playback
+      playback: 570, 570, 569, 568, 567, 566, 565, 565, 564, 563, 562, 561, 560, 559, 559, 558, 557, 556, 555, 554, 554, 553, 552, 551, 550, 549, 548, 548, 547, 546, 545, 544, 543, 542, 542, 541, 540, 539, 538, 537, 537, 536, 535, 534, 533, 532, 531, 531, 530, 529, 528, 527, 526, 526, 525, 524, 523, 522, 521, 520, 520, 519, 518, 517, 516, 515, 514, 514, 513, 512, 511, 510, 509, 509, 508, 507, 506, 505, 504, 503, 503, 502, 501, 500, 499, 498, 497, 497, 496, 495, 494, 493, 492, 492, 491, 490, 489, 488, 487, 486, 486, 485, 484, 483, 482, 481, 481, 480, 479, 478, 477, 476, 475, 475, 474, 473, 472, 471, 470, 469, 469, 468, 467, 466, 465, 464, 464, 463, 462, 461, 460, 459, 458, 458, 457, 456, 455, 454, 453, 453, 452, 451, 450, 449, 448, 447, 447, 446, 445, 444, 443, 442, 441, 441, 440, 439, 438, 437, 436, 436, 435, 434, 433, 432, 431, 430, 430, 429, 428, 427, 426, 425, 424, 424, 423, 422, 421, 420, 419, 419, 418, 417, 416, 415, 414, 413, 413, 412, 411, 410, 409, 408, 408, 407, 406, 405, 404, 403, 402, 402, 401, 400, 399, 398, 397, 396, 396, 395, 394, 393, 392, 391, 391, 390, 389, 388, 387, 386, 385, 385, 384, 383, 382, 381, 380, 380, 379, 378, 377, 376, 375, 374, 374, 373, 372, 371, 370, 369, 368, 368, 367, 366, 365, 364, 363, 363, 362, 361, 360, 359, 358, 357, 357, 356, 355, 354, 353, 352, 351, 351, 350, 349, 348, 347, 346, 346, 345, 344, 343, 342, 341, 340, 340, 339, 338, 337, 336, 335, 335, 334, 333, 332, 331, 330, 329, 329, 328, 327, 326, 325, 324, 323, 323, 322, 321, 320, 319, 318, 318, 317, 316, 315, 314, 313, 312, 312, 311, 310, 309, 308, 307, 307, 306, 305, 304, 303, 302, 301, 301, 300, 299, 298, 297, 296, 295, 295, 294, 293, 292, 291, 290, 290, 289, 288, 287, 286, 285, 284, 284, 283, 282, 281, 280, 279, 278, 278, 277, 276, 275, 274, 273, 273, 272, 271, 270, 269, 268, 267, 267, 266, 265, 264, 263, 262, 262, 261, 260, 259, 258, 257, 256, 256, 255, 254, 253, 252, 251, 250, 250, 249, 248, 247, 246, 245, 245, 244, 243, 242, 241, 240, 239, 239, 238, 237, 236, 235, 234, 234, 233, 232, 231, 230, 229, 228, 228, 227, 226, 225, 224, 223, 222, 222, 221, 220, 219, 218, 217, 217, 216, 215, 214, 213, 212, 211, 211, 210, 209, 208, 207, 206, 205, 205, 204, 203, 202, 201, 200, 200, 199, 198, 197, 196, 195, 194, 194, 193, 192, 191, 190, 189, 189, 188, 187, 186, 185, 184, 183, 183, 182, 181, 180, 179, 178, 177, 177, 176, 175, 174, 173, 172, 172, 171, 170, 169, 168, 167, 166, 166, 165, 164, 163, 162, 161, 161, 160, 159, 158, 157, 156, 155, 155, 154, 153, 152, 151, 150, 149, 149, 148, 147, 146, 145, 144, 144, 143, 142, 141, 140, 139, 138, 138, 137, 136, 135, 134, 133, 132, 132, 131, 130, 129, 128, 127, 127, 126, 125, 124, 123, 122, 121, 121, 120, 119, 118, 117, 116, 116, 115, 114, 113, 112, 111, 110, 110, 109, 108, 107, 106, 105, 104, 104, 103, 102, 101, 100, 99, 99, 98, 97, 96, 95, 94, 93, 93, 92, 91, 90, 89, 88, 88, 87, 86, 85, 84, 83, 82, 82, 81, 80, 79, 78, 77, 76, 76, 75, 74, 73, 72, 71, 71, 70, 69, 68, 67, 66, 65, 65, 64, 63, 62, 61, 60, 59, 59, 58, 57, 56, 55, 54, 54, 53, 52, 51, 50, 49, 48, 48, 47, 46, 45, 44, 43, 43, 42, 41, 40, 39, 38, 37, 37, 36, 35, 34, 33, 32, 31, 31, 30, 29, 28, 27, 26, 26, 25, 24, 23, 22, 21, 20, 20, 19, 18, 17, 16, 15, 15
+      fade-in: [28, 29]
       transform: cheesy-1
 
   - id: "020391"
@@ -3881,8 +3898,9 @@ segments:
     scenes: [ "0:37:25" ]
     clips:
     - movie: the_towering_inferno
-      segment: "014546"
+      segment: "014547"
       offset: 90
+      crop: 8 0 # Hide the building on the left
     comment: Segment matching was done thanks to a speck of dust on frame 51
 
   - id: "056247"
@@ -4590,8 +4608,9 @@ segments:
     scenes: [ "0:44:55" ]
     clips:
     - movie: the_towering_inferno
-      segment: "014546"
+      segment: "014547"
       offset: 53
+      crop: 8 0 # Hide the building on the left
     comment: Segment matching was done thanks to a speck of dust on frame 88
 
   - id: "067525"
@@ -8384,27 +8403,34 @@ movies:
       year: 2006
       brcom: 26155
     sources:
+    - name: "There.Was.a.Crooked.Man.1970.1080p.BluRay.Remux.HD.MA.2.0.AVC-SamH.mkv"
+      resolution: 1920x1080
+      rating: 8
     - name: "There.Was.a.Crooked.Man.1970.VOSTFR.1080p.WEB-DL.DD2.0.H.264-AZAZE.mkv"
       resolution: 1920x1080
-      rating: 6
-      comment: |
-        Very high quality but 1.77:1 aspect ratio; still the preferred one.
+      bad: |
+        Very high quality but 1.77:1 aspect ratio
         Warning: looks like we need to correct gamma with libplacebo!
+        Warning: at least one frame is missing, at the beginning of the sequence n=79075
     - name: "Le.Reptile.1970.MULTI.VFF.576p.DVDRip.AC3.2.0.MPEG2-TT54.mkv"
       resolution: 720x576
-      bad: old DVD resolution
+      bad: correct frame count, but old DVD resolution
     - name: "Le.Reptile.1970.MULTI.VFF.1080p.WEBRip.AAC.2.0.x265-TITCANAILLOU.mkv"
       resolution: 1916x1080
-      bad: inferior to the other 1.77:1 rips
+      bad: |
+        inferior to the other 1.77:1 rips
+        at least one frame is missing, at the beginning of the sequence n=79075
     - name: "There.Was.A.Crooked.Man....1970.1080p.BluRay.x264.AAC-[YTS.MX].mp4"
       resolution: 1920x816
-      comment: 2.33:1 version, very wide; is this the expected aspect ratio?
+      comment: 2.33:1 version, very wide; same aspect ratio as the BluRay
     - name: "There.Was.A.Crooked.Man....1970.1080p.WEBRip.x264.AAC-[YTS.LT].mp4"
       resolution: 1904x1072
-      bad: inferior to the other 1.77:1 rips
+      bad: |
+        inferior to the other 1.77:1 rips
+        at least one frame is missing, at the beginning of the sequence n=79075
     - name: "There.Was.a.Crooked.Man.1970.BluRay.600MB.h264.MP4-Zoetrope.mp4"
       resolution: 720x306
-      bad: old DVD resolution
+      bad: correct frame count, but old DVD resolution
     comment: |
       Should we opt for the 1.77:1 version or the 2.33:1 version? Given equivalent
       pixel density, cropping 2.33:1 to 2.10:1 removes 11% of the screen, whereas
