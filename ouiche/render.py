@@ -463,6 +463,8 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 # XXX: apply stretch to DVD images, this is for debugging purposes
                 if 'revolution' in clip_movie and display_w == 720:
                     display_w = 875
+                if 'texas' in clip_movie and display_w == 720:
+                    display_w = 853
                 if 'firecreek' in clip_movie and display_w == 1920:
                     display_w = 2543
                 if 'arrangement' in clip_movie and display_w == 1280:
@@ -474,7 +476,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 clipinfo.append(f'DAR: {display_w/display_h:.2f}:1')
 
                 # The authorised bounds where we can pick our target image
-                bounds_x, bounds_y, bounds_w, bounds_h = 0, 0, display_w, display_h
+                bounds_x, bounds_y, bounds_w, bounds_h = 0, 0, encoded_w, encoded_h
 
                 # Apply cropping by simply reducing the bounds
                 if crop := c.get('crop'):
@@ -499,8 +501,10 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                     print('  Bounds:', bounds_x, bounds_y, bounds_w, bounds_h)
 
                 # Compute pick rectangle aspect ratio (might be different from target aspect
-                # ratio because we apply stretching)
+                # ratio because we apply stretching, both from anamorphic encoding and from
+                # the clip properties)
                 rect_ratio = TARGET_SIZE[0] / TARGET_SIZE[1]
+                rect_ratio *= encoded_w / display_w
                 match stretch := c.get('stretch') or clip_presets.get('stretch'):
                     case None: pass
                     case _: rect_ratio *= stretch
@@ -649,6 +653,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 cv2_blit(debug_image, thumb.clip(0, 255).astype(np.uint8), x, y)
                 cv2.rectangle(debug_image, (x-1, y-1), (x+thumb.shape[1], y+thumb.shape[0]), YELLOW, 1)
 
+                # FIXME: somewhere on the way we lost rect_ratio and/or the stretch parameters
                 clip_x = x + int(rect_x * thumbscale)
                 clip_y = y + int(rect_y * thumbscale)
                 clip_x2 = x + int((rect_x + rect_w) * thumbscale)

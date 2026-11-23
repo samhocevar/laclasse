@@ -1335,7 +1335,7 @@ segments:
       fade-out: [440, 505]
       wave-out: 436
     - movie: the_cheyenne_social_club
-      segment: "140875"
+      segment: "140876"
       offset: -432
       transform: hflip
       fade-in: [440, 505]
@@ -1346,7 +1346,7 @@ segments:
     scenes: [ "0:08:36" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "141133"
+      segment: "141134"
       offset: 2
 
   - id: "013009"
@@ -1354,7 +1354,7 @@ segments:
     scenes: [ "0:08:39" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "141192"
+      segment: "141193"
       offset: 0
 
   - id: "013114"
@@ -1362,7 +1362,7 @@ segments:
     scenes: [ "0:08:42" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "141605"
+      segment: "141606"
       offset: 3
 
   - id: "013561"
@@ -1370,7 +1370,7 @@ segments:
     scenes: [ "0:09:10" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "009189"
+      segment: "009190"
       offset: 865
 
   - id: "013919"
@@ -1378,7 +1378,7 @@ segments:
     scenes: [ "0:09:16" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "011011"
+      segment: "011012"
       offset: 16
 
   - id: "014052"
@@ -1386,11 +1386,11 @@ segments:
     scenes: [ "0:09:20", "0:09:27" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "011227"
+      segment: "011228"
       offset: 4
       fade-out: [116, 142]
     - movie: the_cheyenne_social_club
-      segment: "128442"
+      segment: "128443"
       offset: 776
       fade-in: [116, 142]
 
@@ -1399,7 +1399,7 @@ segments:
     scenes: [ "0:09:44" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "129769"
+      segment: "129770"
       offset: 0
       gravity: l50
 
@@ -1408,7 +1408,7 @@ segments:
     scenes: [ "0:09:53" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "130028"
+      segment: "130029"
       offset: 0
 
   - id: "014929"
@@ -1416,7 +1416,7 @@ segments:
     scenes: [ "0:09:55" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "130204"
+      segment: "130205"
       offset: 110
 
   - id: "015308"
@@ -1433,7 +1433,7 @@ segments:
     scenes: [ "0:10:18" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "131043"
+      segment: "131044"
       offset: 1
 
   - id: "015662"
@@ -1449,7 +1449,7 @@ segments:
     scenes: [ "0:10:34" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "131272"
+      segment: "131273"
       offset: 0
 
   - id: "016087"
@@ -1465,7 +1465,7 @@ segments:
     scenes: [ "0:10:45" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "131507"
+      segment: "131508"
       offset: 1
 
   - id: "016240"
@@ -1481,7 +1481,7 @@ segments:
     scenes: [ "0:10:56" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "132060"
+      segment: "132061"
       offset: 1
 
   - id: "016822"
@@ -1555,7 +1555,7 @@ segments:
     scenes: [ "0:11:52" ]
     clips:
     - movie: drum_beat
-      segment: "063859"
+      segment: "063857"
       offset: 1
       crop: 0 0 0 25 # Hide the body on the ground
 
@@ -1572,7 +1572,7 @@ segments:
     scenes: [ "0:11:55" ]
     clips:
     - movie: drum_beat
-      segment: "061645"
+      segment: "061643"
       offset: 58
       crop: 32 0 0 0 # Hide Alan Ladd’s character
 
@@ -1589,7 +1589,7 @@ segments:
     scenes: [ "0:12:03" ]
     clips:
     - movie: drum_beat
-      segment: "059965"
+      segment: "059963"
       offset: 9
 
   - id: "018257"
@@ -1605,7 +1605,7 @@ segments:
     scenes: [ "0:12:11" ]
     clips:
     - movie: drum_beat
-      segment: "060242"
+      segment: "060240"
       offset: 0
 
   - id: "018424"
@@ -1623,7 +1623,7 @@ segments:
     scenes: [ "0:12:19" ]
     clips:
     - movie: drum_beat
-      segment: "060647"
+      segment: "060645"
       offset: 0
 
   - id: "018684"
@@ -1639,7 +1639,7 @@ segments:
     scenes: [ "0:12:27" ]
     clips:
     - movie: drum_beat
-      segment: "061504"
+      segment: "061502"
       offset: 2
 
   - id: "018856"
@@ -1658,7 +1658,7 @@ segments:
     scenes: [ "0:12:36" ]
     clips:
     - movie: drum_beat
-      segment: "061850"
+      segment: "061848"
       offset: 0
       gravity: l100
 
@@ -1816,7 +1816,7 @@ segments:
     scenes: [ "0:14:59" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "141133"
+      segment: "141134"
       offset: 35
 
   - id: "022552"
@@ -1824,7 +1824,7 @@ segments:
     scenes: [ "0:15:01" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "141192"
+      segment: "141193"
       offset: 0
 
   - id: "022681"
@@ -1832,7 +1832,7 @@ segments:
     scenes: [ "0:15:05" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "141605"
+      segment: "141606"
       offset: 42
 
   - id: "022971"
@@ -1840,7 +1840,7 @@ segments:
     scenes: [ "0:15:24" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "009189"
+      segment: "009190"
       offset: 953
 
   - id: "023241"
@@ -1848,7 +1848,7 @@ segments:
     scenes: [ "0:15:28" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "011011"
+      segment: "011012"
       offset: 21
 
   - id: "023369"
@@ -1856,7 +1856,7 @@ segments:
     scenes: [ "0:15:33" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "011227"
+      segment: "011228"
       offset: 1
 
   - id: "023488"
@@ -1864,7 +1864,7 @@ segments:
     scenes: [ "0:15:38" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "128442"
+      segment: "128443"
       offset: 961
 
   - id: "023639"
@@ -1888,7 +1888,7 @@ segments:
     scenes: [ "0:16:00" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "091124"
+      segment: "091125"
       offset: 0
       transform: "hflip"
 
@@ -1906,7 +1906,7 @@ segments:
     scenes: [ "0:16:11" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "091271"
+      segment: "091272"
       offset: 0
       transform: "hflip"
 
@@ -1924,7 +1924,7 @@ segments:
     scenes: [ "0:16:35" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "092162"
+      segment: "092163"
       offset: 0
       transform: "hflip"
 
@@ -1942,7 +1942,7 @@ segments:
     scenes: [ "0:16:44" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "093824"
+      segment: "093825"
       offset: 0
 
   - id: "025210"
@@ -1959,7 +1959,7 @@ segments:
     scenes: [ "0:16:52" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "091271"
+      segment: "091272"
       offset: 37
       transform: "hflip"
 
@@ -1987,7 +1987,7 @@ segments:
     scenes: [ "0:17:05" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "091766"
+      segment: "091767"
       offset: 0
       transform: "hflip"
 
@@ -2014,7 +2014,7 @@ segments:
     scenes: [ "0:17:21" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "092027"
+      segment: "092028"
       offset: 0
       transform: "hflip"
 
@@ -2032,7 +2032,7 @@ segments:
     scenes: [ "0:17:31" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "092162"
+      segment: "092163"
       offset: 0
       transform: "hflip"
 
@@ -2055,7 +2055,7 @@ segments:
       transform: hflip
       fade-out: [72, 92]
     - movie: the_cheyenne_social_club
-      segment: "080247"
+      segment: "080248"
       offset: 32
       transform: hflip
       fade-in: [72, 92]
@@ -2073,7 +2073,7 @@ segments:
     scenes: [ "0:17:47" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "080497"
+      segment: "080498"
       offset: 1
       transform: "hflip"
 
@@ -2082,7 +2082,7 @@ segments:
     scenes: [ "0:17:56" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "059512"
+      segment: "059513"
       offset: 355
 
   - id: "027404"
@@ -2099,7 +2099,7 @@ segments:
     scenes: [ "0:18:23" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "078924"
+      segment: "078925"
       offset: 0
 
   - id: "027646"
@@ -2115,7 +2115,7 @@ segments:
     scenes: [ "0:18:29" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "078661"
+      segment: "078662"
       offset: 0
 
   - id: "027820"
@@ -2131,7 +2131,7 @@ segments:
     scenes: [ "0:18:35" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "078104"
+      segment: "078105"
       offset: 8
 
   - id: "027967"
@@ -2148,7 +2148,7 @@ segments:
     scenes: [ "0:18:42" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "078661"
+      segment: "078662"
       offset: 0
 
   - id: "028149"
@@ -2165,7 +2165,7 @@ segments:
     scenes: [ "0:18:52" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "078924"
+      segment: "078925"
       offset: 0
       transform: "hflip"
 
@@ -2190,7 +2190,7 @@ segments:
     scenes: [ "0:19:00" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "119692"
+      segment: "119693"
       offset: 5
 
   - id: "028650"
@@ -2198,7 +2198,7 @@ segments:
     scenes: [ "0:19:04" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "119812"
+      segment: "119813"
       offset: 3
 
   - id: "028780"
@@ -2206,7 +2206,7 @@ segments:
     scenes: [ "0:19:09" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "119945"
+      segment: "119946"
       offset: 0
 
   - id: "028826"
@@ -2230,7 +2230,7 @@ segments:
     scenes: [ "0:19:18" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "120088"
+      segment: "120089"
       offset: 0
 
   - id: "029030"
@@ -2238,7 +2238,7 @@ segments:
     scenes: [ "0:19:19" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "119991"
+      segment: "119992"
       offset: 0
 
   - id: "029092"
@@ -2246,7 +2246,7 @@ segments:
     scenes: [ "0:19:22" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "119812"
+      segment: "119813"
       offset: 63
       transform: "hflip"
 
@@ -2255,7 +2255,7 @@ segments:
     scenes: [ "0:19:24" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "120053"
+      segment: "120054"
       offset: 0
 
   - id: "029196"
@@ -2295,7 +2295,7 @@ segments:
     scenes: [ "0:19:47" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "119812"
+      segment: "119813"
       offset: 34
 
   - id: "029772"
@@ -2311,7 +2311,7 @@ segments:
     scenes: [ "0:19:50" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "120718"
+      segment: "120719"
       offset: 0
 
   - id: "029852"
@@ -2319,7 +2319,7 @@ segments:
     scenes: [ "0:19:52" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "120771"
+      segment: "120772"
       offset: 0
 
   - id: "029936"
@@ -2351,7 +2351,7 @@ segments:
     scenes: [ "0:19:59" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "121875"
+      segment: "121876"
       offset: 0
 
   - id: "030073"
@@ -2367,7 +2367,7 @@ segments:
     scenes: [ "0:20:02" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "122082"
+      segment: "122083"
       offset: 0
 
   - id: "030118"
@@ -2375,7 +2375,7 @@ segments:
     scenes: [ "0:20:03" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "122153"
+      segment: "122154"
       offset: 0
 
   - id: "030147"
@@ -2392,7 +2392,7 @@ segments:
     scenes: [ "0:20:05" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "122201"
+      segment: "122202"
       offset: 0
 
   - id: "030270"
@@ -2408,7 +2408,7 @@ segments:
     scenes: [ "0:20:10" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "122153"
+      segment: "122154"
       offset: 0
 
   - id: "030332"
@@ -2416,7 +2416,7 @@ segments:
     scenes: [ "0:20:11" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "126285"
+      segment: "126286"
       offset: 0
 
   - id: "030374"
@@ -2441,7 +2441,7 @@ segments:
     scenes: [ "0:20:19" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "121386"
+      segment: "121387"
       offset: 0
 
   - id: "030625"
@@ -2465,7 +2465,7 @@ segments:
     scenes: [ "0:20:29" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "126221"
+      segment: "126222"
       offset: 0
 
   - id: "030822"
@@ -2490,7 +2490,7 @@ segments:
     scenes: [ "0:20:39" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "121683"
+      segment: "121684"
       offset: 0
 
   - id: "031152"
@@ -2506,7 +2506,7 @@ segments:
     scenes: [ "0:20:48" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "121683"
+      segment: "121684"
       offset: 37
 
   - id: "031307"
@@ -2778,7 +2778,7 @@ segments:
     scenes: [ "0:24:34" ]
     clips:
     - movie: four_for_texas
-      segment: "024626"
+      segment: "024627"
       offset: 0
 
   - id: "037004"
@@ -2794,7 +2794,7 @@ segments:
     scenes: [ "0:24:40" ]
     clips:
     - movie: four_for_texas
-      segment: "024626"
+      segment: "024627"
       offset: 1
       playback: reverse
 
@@ -2812,7 +2812,7 @@ segments:
     scenes: [ "0:24:45" ]
     clips:
     - movie: four_for_texas
-      segment: "014745"
+      segment: "014746"
       offset: 31
 
   - id: "037235"
@@ -2844,7 +2844,7 @@ segments:
     scenes: [ "0:25:05" ]
     clips:
     - movie: four_for_texas
-      segment: "017741"
+      segment: "017742"
       offset: 0
 
   - id: "037750"
@@ -2852,7 +2852,7 @@ segments:
     scenes: [ "0:25:08", "0:25:12", "0:25:15", "0:25:18", "0:25:21" ]
     clips:
     - movie: four_for_texas
-      segment: "026949"
+      segment: "026950"
       offset: 17
       fade-out: [82, 94]
     - movie: the_fbi_story
@@ -2864,7 +2864,7 @@ segments:
     scenes: [ "0:25:23" ]
     clips:
     - movie: four_for_texas
-      segment: "071942"
+      segment: "071943"
       offset: 0
 
   - id: "038167"
@@ -2872,7 +2872,7 @@ segments:
     scenes: [ "0:25:25" ]
     clips:
     - movie: four_for_texas
-      segment: "078957"
+      segment: "078958"
       offset: 31
       gravity: u100
 
@@ -2899,7 +2899,7 @@ segments:
     scenes: [ "0:26:09" ]
     clips:
     - movie: four_for_texas
-      segment: "082425"
+      segment: "082426"
       offset: 0
 
   - id: "039646"
@@ -2916,7 +2916,7 @@ segments:
     scenes: [ "0:26:40" ]
     clips:
     - movie: four_for_texas
-      segment: "081838"
+      segment: "081839"
       offset: 2
 
   - id: "040166"
@@ -2929,7 +2929,7 @@ segments:
       gravity: u100
       fade-out: [134, 149]
     - movie: four_for_texas
-      segment: "071942"
+      segment: "071943"
       offset: -134
       fade-in: [134, 149]
       playback: 0-184, 183-136 # ping-pong to make sequence longer
@@ -2940,7 +2940,7 @@ segments:
     scenes: [ "0:26:54" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "100296"
+      segment: "100297"
       offset: 1
 
   - id: "040500"
@@ -2948,7 +2948,7 @@ segments:
     scenes: [ "0:26:58" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "100398"
+      segment: "100399"
       offset: 0
 
   - id: "040626"
@@ -2956,7 +2956,7 @@ segments:
     scenes: [ "0:27:03" ]
     clips:
     - movie: four_for_texas
-      segment: "062490"
+      segment: "062491"
       offset: 0
 
   - id: "040789"
@@ -2964,7 +2964,7 @@ segments:
     scenes: [ "0:27:09" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "100596"
+      segment: "100597"
       offset: 0
 
   - id: "040949"
@@ -2972,7 +2972,7 @@ segments:
     scenes: [ "0:27:16" ]
     clips:
     - movie: four_for_texas
-      segment: "064345"
+      segment: "064346"
       offset: 21
 
   - id: "041096"
@@ -2980,7 +2980,7 @@ segments:
     scenes: [ "0:27:22" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "100757"
+      segment: "100758"
       offset: 1
 
   - id: "041220"
@@ -2988,7 +2988,7 @@ segments:
     scenes: [ "0:27:27" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "100937"
+      segment: "100938"
       offset: 0
 
   - id: "041267"
@@ -2996,7 +2996,7 @@ segments:
     scenes: [ "0:27:29" ]
     clips:
     - movie: four_for_texas
-      segment: "062750"
+      segment: "062751"
       offset: 127
 
   - id: "041327"
@@ -3004,7 +3004,7 @@ segments:
     scenes: [ "0:27:31" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "101482"
+      segment: "101483"
       offset: 30
 
   - id: "041364"
@@ -3023,7 +3023,7 @@ segments:
     scenes: [ "0:27:33" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "101747"
+      segment: "101748"
       offset: 0
 
   - id: "041407"
@@ -3031,7 +3031,7 @@ segments:
     scenes: [ "0:27:34" ]
     clips:
     - movie: four_for_texas
-      segment: "060023"
+      segment: "060024"
       offset: 0
     comment: Sinatra’s face in frames 22-23-24 is different on both versions, that’s strange
 
@@ -3040,7 +3040,7 @@ segments:
     scenes: [ "0:27:35" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "102099"
+      segment: "102100"
       offset: 0
 
   - id: "041525"
@@ -3048,7 +3048,7 @@ segments:
     scenes: [ "0:27:39" ]
     clips:
     - movie: four_for_texas
-      segment: "064345"
+      segment: "064346"
       offset: 42
       playback: reverse
 
@@ -3057,7 +3057,7 @@ segments:
     scenes: [ "0:27:44" ]
     clips:
     - movie: the_cheyenne_social_club
-      segment: "102294"
+      segment: "102295"
       offset: 0
 
   - id: "041894"
@@ -3104,7 +3104,8 @@ segments:
     scenes: [ "0:28:31", "0:28:38" ]
     clips:
     - movie: four_for_texas
-      segment: "118622"
+      segment: "118623"
+      offset: 0
       fade-out: [187, 202]
       todo: "Scène introuvable, ce timestamp fera peut-être l’affaire"
       wave-out: 170
@@ -3154,7 +3155,8 @@ segments:
     scenes: [ "0:28:56", "0:29:04" ]
     clips:
     - movie: four_for_texas
-      segment: "118622"
+      segment: "118623"
+      offset: 0
       todo: "Scène introuvable, ce timestamp fera peut-être l’affaire"
       fade-out: [167, 182]
       wave-out: 153
@@ -3296,7 +3298,8 @@ segments:
       fade-out: [408, 425]
       wave-out: 392
     - movie: four_for_texas
-      segment: "118622"
+      segment: "118623"
+      offset: -408
       fade-in: [408, 425]
       wave-in: 441
       todo: "Scène introuvable, ce timestamp fera peut-être l’affaire"
@@ -3319,7 +3322,7 @@ segments:
       fade-out: [220, 235]
       wave-out: 201
     - movie: city_beneath_the_sea
-      segment: "005195"
+      segment: "005196"
       offset: -220
       fade-in: [220, 235]
       wave-in: 247
@@ -3329,7 +3332,7 @@ segments:
     scenes: [ "0:30:22" ]
     clips:
     - movie: city_beneath_the_sea
-      segment: "005376"
+      segment: "005377"
       offset: 10
 
   - id: "046121"
@@ -3337,7 +3340,7 @@ segments:
     scenes: [ "0:30:46" ]
     clips:
     - movie: city_beneath_the_sea
-      segment: "006108"
+      segment: "006109"
       offset: 1
 
   - id: "046315"
@@ -3345,7 +3348,7 @@ segments:
     scenes: [ "0:30:51" ]
     clips:
     - movie: city_beneath_the_sea
-      segment: "006303"
+      segment: "006304"
       offset: 0
 
   - id: "046393"
@@ -3353,7 +3356,7 @@ segments:
     scenes: [ "0:30:55" ]
     clips:
     - movie: city_beneath_the_sea
-      segment: "006381"
+      segment: "006382"
       offset: 0
 
   - id: "046457"
@@ -3361,7 +3364,7 @@ segments:
     scenes: [ "0:30:57" ]
     clips:
     - movie: city_beneath_the_sea
-      segment: "006445"
+      segment: "006446"
       offset: 0
       transform: "hflip"
 
@@ -3370,7 +3373,7 @@ segments:
     scenes: [ "0:30:58" ]
     clips:
     - movie: city_beneath_the_sea
-      segment: "006582"
+      segment: "006583"
       offset: 2
       transform: "hflip"
 
@@ -3379,7 +3382,7 @@ segments:
     scenes: [ "0:31:00" ]
     clips:
     - movie: city_beneath_the_sea
-      segment: "006618"
+      segment: "006619"
       offset: 3
       transform: hflip
 
@@ -4203,8 +4206,9 @@ segments:
     scenes: [ "0:40:51" ]
     clips:
     - movie: around_the_world_in_eighty_days
-      segment: "078395"
+      segment: "078428"
       offset: 1
+      crop: 0 0 5 0 # Hide the red part of the arena
 
   - id: "061442"
     count: 137
@@ -4219,7 +4223,7 @@ segments:
     scenes: [ "0:41:01", "0:41:06" ]
     clips:
     - movie: around_the_world_in_eighty_days
-      segment: "077902"
+      segment: "077935"
       offset: 0
       fade-out: [99, 109]
       wave-out: 81
@@ -4263,7 +4267,7 @@ segments:
       fade-out: [88, 98]
       wave-out: 72
     - movie: around_the_world_in_eighty_days
-      segment: "077902"
+      segment: "077935"
       offset: -75
       fade-in: [88, 98]
       wave-in: 121
@@ -4570,7 +4574,7 @@ segments:
     scenes: [ "0:44:33" ]
     clips:
     - movie: the_cowboys
-      segment: "050899"
+      segment: "050898"
       offset: 0
       playback: 14-0, 0-6, 5-0, 0-6, 5-0
 
@@ -4587,7 +4591,7 @@ segments:
     scenes: [ "0:44:37" ]
     clips:
     - movie: the_cowboys
-      segment: "050899"
+      segment: "050898"
       offset: 0
       playback: 11-20, 19-0, 0-6, 5-0, 1-6, 5-0, 0-6, 5-0
 
@@ -5110,7 +5114,7 @@ segments:
     scenes: [ "0:49:59" ]
     clips:
     - movie: rampage
-      segment: "027690"
+      segment: "027691"
       offset: 0
       gravity: u50
 
@@ -5128,7 +5132,7 @@ segments:
     scenes: [ "0:50:03" ]
     clips:
     - movie: rampage
-      segment: "027690"
+      segment: "027691"
       offset: 0
       gravity: u50
 
@@ -5146,7 +5150,7 @@ segments:
     scenes: [ "0:50:11", "0:50:17", "0:50:28", "0:50:44" ]
     clips:
     - movie: rampage
-      segment: "028130"
+      segment: "028131"
       offset: 1
       fade-out: [144, 154]
       wave-out: 125
@@ -5174,7 +5178,7 @@ segments:
     scenes: [ "0:50:49" ]
     clips:
     - movie: rampage
-      segment: "030094"
+      segment: "030095"
       offset: 0
       gravity: u50
     comment: "Syncing done on frame 9, lowest intensity of the candle on the right"
@@ -5193,7 +5197,7 @@ segments:
     scenes: [ "0:50:53", "0:50:59" ]
     clips:
     - movie: rampage
-      segment: "028130"
+      segment: "028131"
       offset: 2
       gravity: u50
       fade-out: [141, 149]
@@ -5301,7 +5305,7 @@ segments:
       fade-out: [429, 439]
       wave-out: 413
     - movie: rampage
-      segment: "028130"
+      segment: "028131"
       offset: -404
       fade-in: [429, 439]
       wave-in: 460
@@ -5327,7 +5331,7 @@ segments:
     scenes: [ "0:52:07" ]
     clips:
     - movie: rampage
-      segment: "030587"
+      segment: "030588"
       offset: 1
 
   - id: "078335"
@@ -5415,8 +5419,10 @@ segments:
     scenes: [ "0:53:26" ]
     clips:
     - movie: maigret_et_les_plaisirs_de_la_nuit
-      segment: "009294"
+      segment: "018585"
       offset: 2
+      crop: 0 0 10 0 # TODO: This is for the watermark
+    comment: Warning, the source is 50fps!
 
   - id: "080270"
     count: 56
@@ -5778,7 +5784,7 @@ segments:
       fade-out: [168, 178]
       wave-out: 153
     - movie: riding_shotgun
-      segment: "011508"
+      segment: "011509"
       offset: 0
       transform: hflip
       fade-in: [168, 178]
@@ -5812,7 +5818,7 @@ segments:
     scenes: [ "0:56:03" ]
     clips:
     - movie: riding_shotgun
-      segment: "023334"
+      segment: "023335"
       offset: 176
       gravity: u50
 
@@ -5821,7 +5827,7 @@ segments:
     scenes: [ "0:56:05" ]
     clips:
     - movie: riding_shotgun
-      segment: "021513"
+      segment: "021514"
       offset: 0
       playback: 0, 0-112
       gravity: u100
@@ -5833,7 +5839,7 @@ segments:
     scenes: [ "0:56:10" ]
     clips:
     - movie: riding_shotgun
-      segment: "016440"
+      segment: "016442"
       offset: 1
       gravity: u100
 
@@ -5842,7 +5848,7 @@ segments:
     scenes: [ "0:56:13" ]
     clips:
     - movie: riding_shotgun
-      segment: "022380"
+      segment: "022381"
       offset: 0
       gravity: d50
 
@@ -5851,7 +5857,7 @@ segments:
     scenes: [ "0:56:15" ]
     clips:
     - movie: riding_shotgun
-      segment: "021513"
+      segment: "021514"
       offset: 813
       gravity: u50
       todo: 'My DVD has a duplicate on frame 38, breaking sync'
@@ -5861,7 +5867,7 @@ segments:
     scenes: [ "0:56:17" ]
     clips:
     - movie: riding_shotgun
-      segment: "016615"
+      segment: "016616"
       offset: 96
       gravity: u50
       todo: 'My DVD has a duplicate on frame 95, breaking sync'
@@ -5871,7 +5877,7 @@ segments:
     scenes: [ "0:56:21" ]
     clips:
     - movie: riding_shotgun
-      segment: "022748"
+      segment: "022749"
       offset: 3
       gravity: u50
       todo: 'Apply stencil on frames 6-11 to extend explosion area'
@@ -5948,7 +5954,7 @@ segments:
     scenes: [ "0:57:21" ]
     clips:
     - movie: rampage
-      segment: "109558"
+      segment: "109559"
       offset: 0
       transform: "hflip"
       gravity: u100
@@ -5966,7 +5972,7 @@ segments:
     scenes: [ "0:57:44" ]
     clips:
     - movie: rampage
-      segment: "109761"
+      segment: "109762"
       offset: 0
       transform: "hflip"
       gravity: u100
@@ -5993,7 +5999,7 @@ segments:
     scenes: [ "0:57:57" ]
     clips:
     - movie: rampage
-      segment: "110072"
+      segment: "110073"
       offset: 0
       transform: hflip
       gravity: u100
@@ -6585,7 +6591,7 @@ segments:
     scenes: [ "1:03:57" ]
     clips:
     - movie: cleopatra_jones
-      segment: "039875"
+      segment: "039874"
       offset: 6
       transform: "hflip"
 
@@ -6602,7 +6608,7 @@ segments:
     scenes: [ "1:04:09" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040313"
+      segment: "040312"
       offset: 5
 
   - id: "096358"
@@ -6618,7 +6624,7 @@ segments:
     scenes: [ "1:04:15" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040413"
+      segment: "040412"
       offset: 0
 
   - id: "096520"
@@ -6634,7 +6640,7 @@ segments:
     scenes: [ "1:04:21" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040413"
+      segment: "040412"
       offset: 212
 
   - id: "096697"
@@ -6642,7 +6648,7 @@ segments:
     scenes: [ "1:04:26" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040751"
+      segment: "040750"
       offset: 0
 
   - id: "096907"
@@ -6658,7 +6664,7 @@ segments:
     scenes: [ "1:04:41" ]
     clips:
     - movie: cleopatra_jones
-      segment: "041111"
+      segment: "041110"
       offset: 1
 
   - id: "097147"
@@ -6675,7 +6681,7 @@ segments:
     scenes: [ "1:04:47" ]
     clips:
     - movie: cleopatra_jones
-      segment: "041285"
+      segment: "041284"
       offset: 0
 
   - id: "097317"
@@ -6725,7 +6731,7 @@ segments:
     scenes: [ "1:05:20" ]
     clips:
     - movie: rampage
-      segment: "031514"
+      segment: "031515"
       offset: 1
 
   - id: "098118"
@@ -6741,7 +6747,7 @@ segments:
     scenes: [ "1:05:27" ]
     clips:
     - movie: rampage
-      segment: "034007"
+      segment: "034008"
       offset: 58
 
   - id: "098323"
@@ -6757,7 +6763,7 @@ segments:
     scenes: [ "1:05:40" ]
     clips:
     - movie: rampage
-      segment: "031606"
+      segment: "031607"
       offset: 2
 
   - id: "098612"
@@ -6773,7 +6779,7 @@ segments:
     scenes: [ "1:05:44" ]
     clips:
     - movie: rampage
-      segment: "031705"
+      segment: "031706"
       offset: 1
 
   - id: "098721"
@@ -6789,7 +6795,7 @@ segments:
     scenes: [ "1:05:49" ]
     clips:
     - movie: rampage
-      segment: "032592"
+      segment: "032593"
       offset: 0
 
   - id: "098859"
@@ -6806,7 +6812,7 @@ segments:
     scenes: [ "1:05:55" ]
     clips:
     - movie: rampage
-      segment: "032592"
+      segment: "032593"
       offset: 14
       playback: |
         0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9,
@@ -6836,7 +6842,7 @@ segments:
     scenes: [ "1:06:01" ]
     clips:
     - movie: rampage
-      segment: "033723"
+      segment: "033724"
       offset: 21
       playback: |
         0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4,
@@ -6858,7 +6864,7 @@ segments:
     scenes: [ "1:06:07" ]
     clips:
     - movie: rampage
-      segment: "034561"
+      segment: "034562"
       offset: 116
 
   - id: "099318"
