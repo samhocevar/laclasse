@@ -9,7 +9,7 @@ import re
 import sys
 from PIL import Image, ImageDraw, ImageFont, ImageText
 from itertools import accumulate
-from math import sin, sqrt
+from math import sin, sqrt, ceil
 from pathlib import Path
 
 # To generate a movie after this script has run:
@@ -33,6 +33,31 @@ ffmpeg -safe 0 -f concat -r 24 -i list.txt \
 # This is the size of the original movie (letterbox removed)
 ORIGINAL_SIZE = (750, 358)
 
+# Choose the aspect ratio
+#TARGET_RATIO = 16 / 9
+#TARGET_RATIO = 2.39
+#TARGET_RATIO = 4 / 3
+#TARGET_RATIO = 1.85
+TARGET_RATIO = ORIGINAL_SIZE[0] / ORIGINAL_SIZE[1] # Original ~2.10
+
+# Choose the mode here
+mode = 'dcp4k'
+match mode:
+    case 'dcp4k':
+        # Pillarboxed Scope 4K (better than Flat which would be letterboxed)
+        MEDIA_SIZE = (4096, 1716)
+        TARGET_SIZE = (int(MEDIA_SIZE[1] * TARGET_RATIO), MEDIA_SIZE[1])
+    case 'dcp2k':
+        # Pillarboxed Scope 2K (better than Flat which would be letterboxed)
+        MEDIA_SIZE = (2048, 858)
+        TARGET_SIZE = (int(MEDIA_SIZE[1] * TARGET_RATIO), MEDIA_SIZE[1])
+    case 'bluray':
+        # Letterboxed Blu-ray resolution
+        MEDIA_SIZE = (1920, 1080)
+        TARGET_SIZE = (MEDIA_SIZE[0], int(MEDIA_SIZE[0] / TARGET_RATIO))
+
+# This is for the debug canvas
+SCALED_SIZE = (1280, int(1280 / TARGET_RATIO))
 THUMBNAIL_SIZE = (320, 240)
 INFO_WIDTH = 800
 MARGIN = 20
@@ -45,24 +70,28 @@ MARGIN = 20
 #TARGET_SIZE = (1920, 1080) # 16:9 (1.77:1)
 #TARGET_SIZE = (1920, 1038) # 1.85:1 (widescreen flat)
 #TARGET_SIZE = (1920, 800) # 2.39:1 (scope)
-TARGET_SIZE = (1920, int(1920 * ORIGINAL_SIZE[1] / ORIGINAL_SIZE[0])) # original ~2.10 ratio
+#TARGET_SIZE = (1920, int(1920 * ORIGINAL_SIZE[1] / ORIGINAL_SIZE[0])) # original ~2.10 ratio
 
 # The debug canvas; make sure dimensions are multiples of 4
 DEBUG_SIZE = (
-    (MARGIN + TARGET_SIZE[0] + MARGIN + INFO_WIDTH + MARGIN) // 4 * 4,
-    (MARGIN + TARGET_SIZE[1] + MARGIN + ORIGINAL_SIZE[1] + MARGIN) // 4 * 4
+    (MARGIN + SCALED_SIZE[0] + MARGIN + INFO_WIDTH + MARGIN) // 4 * 4,
+    (MARGIN + SCALED_SIZE[1] + MARGIN + ORIGINAL_SIZE[1] + MARGIN) // 4 * 4
 )
 
 DESC = Path.home() / 'laclasse/data/laclasse.yaml'
 FONT_ROOT = Path.home() / 'laclasse/data'
 DUMP_ROOT = Path.home() / 'laclasse/dump-dvd'
-FAST_ROOT = 'D:/clips/fast'
-GOOD_ROOT = 'D:/clips/good'
-NEW_ROOT = 'D:/clips/new'
-SEARCH_ROOT = (NEW_ROOT, GOOD_ROOT, FAST_ROOT)
+
+SEARCH_ROOT = (
+    'D:/clips/jpeg-best',
+    'D:/clips/jpeg-good',
+    'D:/clips/jpeg-fast',
+    #'D:/clips/new',
+    #'D:/clips/good',
+)
 
 DEBUG_ROOT = 'D:/final/debug'
-OUTPUT_ROOT = 'D:/final/movie'
+OUTPUT_ROOT = f'D:/final/{mode}'
 DCP_ROOT = 'D:/final/dcp'
 
 # Some convenient constants
@@ -80,6 +109,17 @@ YELLOW = (127, 255, 255)
 
 INTRO_COLOR = (251, 238, 98)
 INTRO_SHADOW = (34, 28, 6)
+
+BAYER = np.array([[ 0, 32,  8, 40,  2, 34, 10, 42],
+                  [48, 16, 56, 24, 50, 18, 58, 26],
+                  [12, 44,  4, 36, 14, 46,  6, 38],
+                  [60, 28, 52, 20, 62, 30, 54, 22],
+                  [ 3, 35, 11, 43,  1, 33,  9, 41],
+                  [51, 19, 59, 27, 49, 17, 57, 25],
+                  [15, 47,  7, 39, 13, 45,  5, 37],
+                  [63, 31, 55, 23, 61, 29, 53, 21]]).astype(np.float32) / 64.0
+DITHER_MATRIX = np.tile(BAYER, (int(ceil(MEDIA_SIZE[1] / BAYER.shape[0])),
+                                int(ceil(MEDIA_SIZE[0] / BAYER.shape[1]))))[:MEDIA_SIZE[1],:MEDIA_SIZE[0]]
 
 def cv2_blit(bg, fg, x, y):
     h, w, _ = bg.shape
@@ -241,15 +281,15 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
             #src = cv2.imread(orig)
             src = cv2.imdecode(np.fromfile(orig, dtype=np.uint8), cv2.IMREAD_COLOR)
             h, w, _ = src.shape
-            x, y = MARGIN, MARGIN + TARGET_SIZE[1] + MARGIN
-            x += max(0, TARGET_SIZE[0] - ORIGINAL_SIZE[0]) // 2 # Center image for aesthetic purposes
+            x, y = MARGIN, MARGIN + SCALED_SIZE[1] + MARGIN
+            x += max(0, SCALED_SIZE[0] - ORIGINAL_SIZE[0]) // 2 # Center image for aesthetic purposes
             cv2_blit(debug_image, src, x, y)
             cv2.rectangle(debug_image, (x-1, y-1), (x+w, y+h), YELLOW, 1)
             cv2.putText(debug_image, f'Original: {ORIGINAL_SIZE[0]}x{ORIGINAL_SIZE[1]} ({ORIGINAL_SIZE[0]/ORIGINAL_SIZE[1]:.2f}:1)',
                         (x + ORIGINAL_SIZE[0] + MARGIN, y + ORIGINAL_SIZE[1]), FONT, SMALL, GRAY, 3)
 
             # Text information
-            xinfo, yinfo = MARGIN + TARGET_SIZE[0] + MARGIN, MARGIN
+            xinfo, yinfo = MARGIN + SCALED_SIZE[0] + MARGIN, MARGIN
             cv2.putText(debug_image, f'S.{segstart:06d} ({count})', (xinfo, yinfo + 25), FONT, LARGE, WHITE, 3)
             cv2.putText(debug_image, f'F.{segstart+n:06d} (+{n})', (xinfo + 300, yinfo + 25), FONT, LARGE, GREEN, 3)
             yinfo += NEWLINE
@@ -704,8 +744,8 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
 
             # Blit final image to canvas
             x, y = MARGIN, MARGIN
-            cv2_blit(debug_image, target_image.clip(0, 255).astype(np.uint8), x, y)
-            cv2.rectangle(debug_image, (x-1, y-1), (x+TARGET_SIZE[0], y+TARGET_SIZE[1]), YELLOW, 1)
+            cv2_blit(debug_image, cv2.resize(target_image, SCALED_SIZE, interpolation=cv2.INTER_LANCZOS4).clip(0, 255).astype(np.uint8), x, y)
+            cv2.rectangle(debug_image, (x-1, y-1), (x+SCALED_SIZE[0], y+SCALED_SIZE[1]), YELLOW, 1)
 
 #            x, y = (CANVAS_WIDTH - WIDTH) // 2, (CANVAS_HEIGHT * 3 // 2 - HEIGHT) // 2
 #            x2, y2 = x + WIDTH, y + HEIGHT
@@ -721,7 +761,10 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
 
             if not dry_run:
                 # FIXME: handle gamma, maybe HDR etc.
-                cv2.imwrite(output_file, target_image.clip(0, 255).astype(np.uint8))
+                media_image = np.zeros((MEDIA_SIZE[1], MEDIA_SIZE[0], 3), float)
+                cv2_blit(media_image, target_image, (MEDIA_SIZE[0] - TARGET_SIZE[0]) // 2, (MEDIA_SIZE[1] - TARGET_SIZE[1]) // 2)
+                # FIXME: blue-noise dithering on separate colour layers
+                cv2.imwrite(output_file, (media_image + DITHER_MATRIX[...,np.newaxis]).clip(0, 255).astype(np.uint8))
 
                 cv2.imwrite(debug_file, debug_image)
                 if n == count // 2:
