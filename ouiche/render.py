@@ -13,25 +13,42 @@ from math import sin, sqrt
 from pathlib import Path
 
 # To generate a movie after this script has run:
-# ffmpeg -safe 0 -f concat -i list.txt -i ../../original/*mkv -map 0:v:0 -map 1:a:0 -r 25 -c:v libx264 -pix_fmt yuv420p -c:a aac sidebyside.mkv
+'''
+ffmpeg -safe 0 -f concat -i list.txt \
+       -i ../../sources/dvd/la_classe*/*mkv
+       -map 0:v:0 -r 25 -c:v libx264 -pix_fmt yuv420p \
+       -map 1:a:0 -c:a aac \
+       debug.mkv
+'''
 
-# With audio resampling and libx265 max quality:
-# AF="rubberband=tempo=24/25:pitch=1:formant=preserved:transients=crisp"
-# ffmpeg -safe 0 -f concat -i list.txt -i ../../original/*mkv -map 0:v:0 -r 24 -c:v libx265 -map 1:a:0 -af "$AF" -c:a aac sidebyside.mkv
+# At 24 fps with audio resampling and libx265 max quality:
+'''
+ffmpeg -safe 0 -f concat -r 24 -i list.txt \
+       -i ../../sources/dvd/la_classe*/*mkv
+       -map 0:v:0 -c:v libx265 \
+       -map 1:a:0 -af "rubberband=tempo=24/25:pitch=1:formant=preserved:transients=crisp" -c:a aac \
+       debug.mkv
+'''
 
+# This is the size of the original movie (letterbox removed)
 ORIGINAL_SIZE = (750, 358)
-MINI_SIZE = (320, 240)
-INFO_WIDTH = 600
-MARGIN = 25
+
+THUMBNAIL_SIZE = (320, 240)
+INFO_WIDTH = 800
+MARGIN = 20
 
 # 16:9 misses a lot of information, try 1.85:1
 #TARGET_SIZE = (ORIGINAL_SIZE[0], int(ORIGINAL_SIZE[0] / 1.85))
 #TARGET_SIZE = (ORIGINAL_SIZE[0], int(ORIGINAL_SIZE[0] / 1.77))
 #TARGET_SIZE = ORIGINAL_SIZE
-TARGET_SIZE = (1280, 620)
-TARGET_SIZE = (1920, int(1920 * ORIGINAL_SIZE[1] / ORIGINAL_SIZE[0]))
+#TARGET_SIZE = (1280, 620)
+#TARGET_SIZE = (1920, 1080) # 16:9 (1.77:1)
+#TARGET_SIZE = (1920, 1038) # 1.85:1 (widescreen flat)
+#TARGET_SIZE = (1920, 800) # 2.39:1 (scope)
+TARGET_SIZE = (1920, int(1920 * ORIGINAL_SIZE[1] / ORIGINAL_SIZE[0])) # original ~2.10 ratio
 
-CANVAS_SIZE = (
+# The debug canvas; make sure dimensions are multiples of 4
+DEBUG_SIZE = (
     (MARGIN + TARGET_SIZE[0] + MARGIN + INFO_WIDTH + MARGIN) // 4 * 4,
     (MARGIN + TARGET_SIZE[1] + MARGIN + ORIGINAL_SIZE[1] + MARGIN) // 4 * 4
 )
@@ -44,14 +61,15 @@ GOOD_ROOT = 'D:/clips/good'
 NEW_ROOT = 'D:/clips/new'
 SEARCH_ROOT = (NEW_ROOT, GOOD_ROOT, FAST_ROOT)
 
-DEBUG_ROOT = 'D:/final/compare'
+DEBUG_ROOT = 'D:/final/debug'
 OUTPUT_ROOT = 'D:/final/movie'
+DCP_ROOT = 'D:/final/dcp'
 
 # Some convenient constants
 FONT = cv2.FONT_HERSHEY_SIMPLEX
-LARGE = INFO_WIDTH / 600
-SMALL = INFO_WIDTH / 800
-NEWLINE = int(INFO_WIDTH / 20)
+LARGE = THUMBNAIL_SIZE[1] / 240
+SMALL = THUMBNAIL_SIZE[1] / 320
+NEWLINE = int(THUMBNAIL_SIZE[1] / 8)
 
 WHITE = (255, 255, 255)
 GRAY = (127, 127, 127)
@@ -89,8 +107,31 @@ def cv2_tint_dark(im, color):
     L = 0.299 / 255 * im[..., 0] + 0.587 / 255 * im[..., 1] + 0.114 / 255 * im[..., 2]
     w = (1.0 - L) ** 2.0
     w = w[..., None]
-    # Return blend
-    return im * (1.0 - w) + np.array(color) * w
+    # Return blend but don't touch alpha if it is there)
+    ret = im.copy()
+    im[...,:3] *= (1.0 - w)
+    im[...,:3] += np.array(color) * w
+    return im
+
+
+def cv2_emboss(im, shift, strength):
+    ''' Add highlights and shadows in an image along the alpha channel border. '''
+    m1 = np.array([[1.0, 0.0, shift],
+                   [0.0, 1.0, shift]])
+    emboss = cv2.warpAffine(im[...,3], m1, (im.shape[1], im.shape[0]), flags=cv2.INTER_LINEAR)
+    m2 = np.array([[1.0, 0.0, -shift],
+                   [0.0, 1.0, -shift]])
+    shadow = cv2.warpAffine(im[...,3], m2, (im.shape[1], im.shape[0]), flags=cv2.INTER_LINEAR)
+    a = np.maximum(0, im[...,3] - emboss)
+    b = np.maximum(0, im[...,3] - shadow)
+    bevel = (a - b) * im[...,3] * strength
+
+    ret = im.copy()
+    #ret[...,:3] = bevel[...,np.newaxis]
+    #return ret
+    #ret[...,:3] = 127.0
+    ret[...,:3] = np.clip(ret[...,:3] + bevel[...,np.newaxis], 0, 255)
+    return ret
 
 
 def parse_playback(playback):
@@ -151,7 +192,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
         segstart = start_sum - count
 
         # Early checks for requirements so we can skip whole segments
-        if movie and not any(m in c.get('movie') for c in clip_desc for m in movie.split(',')):
+        if movie and not any(m in c.get('movie', '') for c in clip_desc for m in movie.split(',')):
             continue
 
         if property and not any(property in c for c in clip_desc):
@@ -193,7 +234,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
             if not force and Path(output_file).is_file() and Path(debug_file).is_file():
                 continue
 
-            debug_image = np.zeros((CANVAS_SIZE[1], CANVAS_SIZE[0], 3), np.uint8)
+            debug_image = np.zeros((DEBUG_SIZE[1], DEBUG_SIZE[0], 3), np.uint8)
 
             # Blit original dumped image
             # XXX: imread does not handle UTF-8 paths!
@@ -245,6 +286,10 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                     cv2.putText(debug_image, f'Clip {i}: "{text}"', (xinfo, yinfo + 25), FONT, SMALL, WHITE, 3)
                     yinfo += NEWLINE
 
+                    # XXX: adjust size in case the aspect ratio is narrower than the original!
+                    if (λ := (TARGET_SIZE[0] / TARGET_SIZE[1]) / (ORIGINAL_SIZE[0] / ORIGINAL_SIZE[1])) < 1.0:
+                        size *= λ
+
                     border = 5
                     data, anchor = render_text(text, font, size * TARGET_SIZE[1] / 100, border=border)
                     tx, ty = pos[0] * TARGET_SIZE[0] / 100, pos[1] * TARGET_SIZE[1] / 100
@@ -271,13 +316,30 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                     # Add a little bit of blur and print a shadow
                     data = cv2.blur(data, (3, 3))
                     shadow = data.copy()
-                    shadow[:,:,:3] = INTRO_SHADOW[::-1]
-                    shadow[:,:,:3] += np.random.normal(0, 6, data[:,:,:3].shape).astype(float)
+                    shadow[...,:3] = INTRO_SHADOW[::-1]
+                    shadow[...,:3] += np.random.normal(0, 6, data[...,:3].shape).astype(float)
                     step = 0.4 * TARGET_SIZE[1] / 100
                     for k in range(1, 5):
                         clips.append((shadow, int(x + step * k), int(y + step * k), 1.0))
-                    data[:,:,:3] = INTRO_COLOR[::-1]
-                    data[:,:,:3] += np.random.normal(0, 6, data[:,:,:3].shape).astype(float)
+
+                    #data[...,3] = cv2.blur(data[...,3], (5, 5))
+
+                    # XXX: just a little test, like embossing
+                    #emboss = data.copy()
+                    #emboss[...,3] = cv2.blur(emboss[...,3], (3, 3))
+                    #emboss[...,:3] = np.array(INTRO_COLOR[::-1]) * 0.25
+                    #clips.append((emboss.copy(), int(x + step / 2), int(y + step / 2), 1.0))
+                    #emboss[...,:3] = 255.0 - (255.0 - np.array(INTRO_COLOR[::-1])) * 0.25
+                    #clips.append((emboss.copy(), int(x - step / 2), int(y - step / 2), 1.0))
+
+                    data[...,:3] = INTRO_COLOR[::-1]
+                    data = cv2_emboss(data, step * 0.1, 500.0)
+
+                    data[...,:3] += np.random.normal(0, 10, data[...,:3].shape).astype(float)
+                    data[...,:3] = cv2.blur(data[...,:3], (3, 3))
+                    data[...,:3] += np.random.normal(0, 6, data[...,:3].shape).astype(float)
+                    #data = cv2.blur(data, (3, 3))
+
                     clips.append((data, x, y, 1.0))
                     continue
 
@@ -317,7 +379,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                         else:
                             current_offset = seq[n]
                 if playback is not None:
-                    fxinfo.append(f'Playback: {playback}')
+                    fxinfo.append(f'Playback: {re.sub(r'\s+', ' ', playback)}')
 
                 src_offset = clip_offset + current_offset
 
@@ -465,31 +527,29 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
 
                 # Effet spéciau minable 1
                 if 'cheesy-1' in transforms:
-                    bar_left, bar_right = 0.490, 0.505
+                    bar_left, bar_right = 0.495, 0.515
                     # Transition happens between frames 28 and 50
                     if n > 28:
                         dt = min(1.0, (n - 28) / (50 - 28))
-                        bar_x = int(final_w * (1 - bar_left * dt))
+                        dt = 1.0 - pow(1.0 - dt, 2)
+                        bar_x = int(final_w * (1 - (1 - bar_left) * dt))
                         bar_w = int(final_w * (bar_right - bar_left))
                         if i == 0:
-                            final_x += int((final_w - bar_x) * 2 / 5)
+                            final_x += int((final_w - bar_x) * 0.37)
                             final_w = bar_x
                         if i == 1:
-                            blit_x = int(TARGET_SIZE[0] * (1 - bar_left * dt + bar_right - bar_left))
+                            blit_x = int(TARGET_SIZE[0] * (1 - (1 - bar_left) * dt + bar_right - bar_left))
                             final_w = final_w // 2
                             final_x += int(final_w * 0.85)
-                    else:
-                        if i == 1:
-                            opacity = 0.0
 
                 # Effet spéciau minable 2
                 if 'cheesy-2' in transforms:
-                    tint = (0.0, 0.0, 48.0)
+                    tint = (48.0, 0.0, 0.0)
                     bar_left, bar_right = 0.530, 0.545
                     # Need to preserve the left part of the screen
                     if n > 197:
                         saved = src[:,rect_x:rect_x+int(rect_w*bar_left)]
-                        saved = cv2_tint_dark(saved, tint)
+                        saved = cv2_tint_dark(saved, tint[::-1])
                     if n > 136:
                         # FIXME: the black bar keeps readjusting until frame 194!
                         # (the position is non-linear, it follows the scene background)
@@ -502,7 +562,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
 
                 # Effet spéciau minable 3
                 if 'cheesy-3' in transforms:
-                    tint = (0.0, 64.0, 64.0)
+                    tint = (64.0, 64.0, 0.0)
                     bar_left, bar_right = 0.400, 0.415
                     # Transition happens between 52 and 77
                     if n < 77:
@@ -510,7 +570,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                         bar_w = int(rect_w*(bar_right-bar_left))
                         bar_x = rect_x + int(rect_w*bar_right*dt) - bar_w
                         saved = src[:,rect_x:bar_x]
-                        saved[...] = cv2_tint_dark(saved, tint)
+                        saved[...] = cv2_tint_dark(saved, tint[::-1])
                         src[:,max(0,bar_x):max(0,bar_x+bar_w)] = (0, 0, 0)
 
                 # Other transforms
@@ -542,7 +602,7 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
 
                 # Add debug info etc.
                 ythumb = yinfo
-                thumbscale = min(MINI_SIZE[0] / display_w, MINI_SIZE[1] / display_h)
+                thumbscale = min(THUMBNAIL_SIZE[0] / display_w, THUMBNAIL_SIZE[1] / display_h)
                 thumb = cv2.resize(src, (int(display_w * thumbscale), int(display_h * thumbscale)), interpolation=cv2.INTER_LANCZOS4)
                 #if transform == 'hflip': thumb = cv2.flip(thumb, 1)
                 x, y = xinfo, ythumb + 10
@@ -555,9 +615,9 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 clip_y2 = y + int((rect_y + rect_h) * thumbscale)
                 cv2.rectangle(debug_image, (clip_x - 1, clip_y - 1), (clip_x2, clip_y2), PURPLE, 2)
 
-                cv2.putText(debug_image, f'File: {Path(filename).name}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
+                cv2.putText(debug_image, f'File: {Path(filename).name}', (xinfo + THUMBNAIL_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
                 yinfo += NEWLINE
-                cv2.putText(debug_image, f'Size: {encoded_w}x{encoded_h}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
+                cv2.putText(debug_image, f'Size: {encoded_w}x{encoded_h}', (xinfo + THUMBNAIL_SIZE[0] + 10, yinfo + 25), FONT, SMALL, GRAY, 3)
                 yinfo += NEWLINE
 
                 # Special effect: wavy deformation + zoom + motion blur
@@ -598,17 +658,17 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                     fxinfo.append(f'Blur: {blur:.2f}%')
 
                 for e in clipinfo:
-                    cv2.putText(debug_image, e, (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, WHITE, 3)
+                    cv2.putText(debug_image, e, (xinfo + THUMBNAIL_SIZE[0] + 10, yinfo + 25), FONT, SMALL, WHITE, 3)
                     yinfo += NEWLINE
 
                 if e := c.get('todo'):
                     todo.append(e)
                 for e in todo:
-                    cv2.putText(debug_image, f'Todo: {e}', (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, RED, 3)
+                    cv2.putText(debug_image, f'Todo: {e}', (xinfo + THUMBNAIL_SIZE[0] + 10, yinfo + 25), FONT, SMALL, RED, 3)
                     yinfo += NEWLINE
 
                 for e in fxinfo:
-                    cv2.putText(debug_image, e, (xinfo + MINI_SIZE[0] + 10, yinfo + 25), FONT, SMALL, YELLOW, 3)
+                    cv2.putText(debug_image, e, (xinfo + THUMBNAIL_SIZE[0] + 10, yinfo + 25), FONT, SMALL, YELLOW, 3)
                     yinfo += NEWLINE
 
                 yinfo = max(yinfo, ythumb + thumb.shape[0] + 20)
@@ -649,13 +709,13 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
 
 #            x, y = (CANVAS_WIDTH - WIDTH) // 2, (CANVAS_HEIGHT * 3 // 2 - HEIGHT) // 2
 #            x2, y2 = x + WIDTH, y + HEIGHT
-#    
+#
 #            # Darken clipped area
 #            debug_image[0:CANVAS_HEIGHT, 0:x] //= 3
 #            debug_image[0:CANVAS_HEIGHT, x2:CANVAS_WIDTH] //= 3
 #            debug_image[0:y, 0:CANVAS_WIDTH] //= 3
 #            debug_image[y2:CANVAS_HEIGHT, 0:CANVAS_WIDTH] //= 3
-#    
+#
 #            # Draw border for destination frame
 #            cv2.rectangle(debug_image, (x-2, y-2), (x2+1, y2+1), RED, 4)
 
@@ -671,4 +731,4 @@ def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, prope
                 print('.' if not n or n % 10 else str(n), end='')
                 sys.stdout.flush()
 
-        print(f'done.')
+        print(f' done.')
