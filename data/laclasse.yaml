@@ -22,6 +22,7 @@ presets:
     stretch: 0.95
 
   chisum:
+    letterbox-1080: 140
     stretch: 0.95
 
   cleopatra_jones:
@@ -46,6 +47,10 @@ presets:
 
   mcq:
     letterbox-1080: 140
+
+  oceans_eleven:
+    letterbox-1920: 6
+    letterbox-1080: 140 # XXX: top value is 142
 
   the_old_man_and_the_sea:
     letterbox-1080: 20
@@ -1144,7 +1149,7 @@ segments:
     scenes: [ "0:06:11" ]
     clips:
     - movie: start_the_revolution_without_me
-      segment: "000563"
+      segment: "000601"
       offset: 1
 
   - id: "009838"
@@ -1152,7 +1157,7 @@ segments:
     scenes: [ "0:06:31" ]
     clips:
     - movie: start_the_revolution_without_me
-      segment: "001104"
+      segment: "001142"
       offset: 301
       playback: 0-220, 220-200, 201-219
 
@@ -1161,7 +1166,7 @@ segments:
     scenes: [ "0:06:42" ]
     clips:
     - movie: start_the_revolution_without_me
-      segment: "127004"
+      segment: "127042"
       offset: 1
 
   - id: "010316"
@@ -1169,7 +1174,7 @@ segments:
     scenes: [ "0:06:50" ]
     clips:
     - movie: start_the_revolution_without_me
-      segment: "127222"
+      segment: "127260"
       offset: 0
 
   - id: "010324"
@@ -1177,7 +1182,7 @@ segments:
     scenes: [ "0:06:51" ]
     clips:
     - movie: start_the_revolution_without_me
-      segment: "127230"
+      segment: "127268"
       offset: 0
 
   - id: "010367"
@@ -1185,7 +1190,7 @@ segments:
     scenes: [ "0:06:52" ]
     clips:
     - movie: start_the_revolution_without_me
-      segment: "127273"
+      segment: "127311"
       offset: 0
 
   - id: "010427"
@@ -2085,7 +2090,7 @@ segments:
     scenes: [ "0:18:14", "0:18:21" ]
     clips:
     - movie: chisum
-      segment: "134374"
+      segment: "134373"
       offset: 0
       todo: "Check exact offset with an old copy that may have the mark on frame 27537"
 
@@ -2102,7 +2107,7 @@ segments:
     scenes: [ "0:18:25" ]
     clips:
     - movie: chisum
-      segment: "075000"
+      segment: "074999"
       offset: 0
 
   - id: "027778"
@@ -2118,7 +2123,7 @@ segments:
     scenes: [ "0:18:31" ]
     clips:
     - movie: chisum
-      segment: "075236"
+      segment: "075235"
       offset: 0
 
   - id: "027920"
@@ -2134,7 +2139,7 @@ segments:
     scenes: [ "0:18:37" ]
     clips:
     - movie: chisum
-      segment: "074752"
+      segment: "074751"
       offset: 5
       playback: 0-69, 69-0
 
@@ -2151,7 +2156,7 @@ segments:
     scenes: [ "0:18:44" ]
     clips:
     - movie: chisum
-      segment: "075236"
+      segment: "075235"
       offset: 0
       playback: 0-101, 100-1 # ping-pong at frame 101
 
@@ -2169,7 +2174,7 @@ segments:
     scenes: [ "0:18:54" ]
     clips:
     - movie: chisum
-      segment: "075470"
+      segment: "075469"
       offset: 0
 
   - id: "028483"
@@ -2645,7 +2650,7 @@ segments:
     scenes: [ "0:23:06" ]
     clips:
     - movie: oceans_eleven
-      segment: "078734"
+      segment: "078703"
       offset: 1
 
   - id: "034857"
@@ -2669,7 +2674,7 @@ segments:
     scenes: [ "0:23:16" ]
     clips:
     - movie: oceans_eleven
-      segment: "079872"
+      segment: "079840"
       offset: 107
 
   - id: "035045"
@@ -2685,7 +2690,7 @@ segments:
     scenes: [ "0:23:29" ]
     clips:
     - movie: oceans_eleven
-      segment: "085328"
+      segment: "085291"
       offset: 1
 
   - id: "035539"
@@ -2701,7 +2706,7 @@ segments:
     scenes: [ "0:23:44" ]
     clips:
     - movie: oceans_eleven
-      segment: "078734"
+      segment: "078703"
       offset: 204
 
   - id: "035801"
@@ -2717,7 +2722,7 @@ segments:
     scenes: [ "0:23:59" ]
     clips:
     - movie: oceans_eleven
-      segment: "079872"
+      segment: "079840"
       offset: 1
 
   - id: "036208"
@@ -3060,7 +3065,7 @@ segments:
     scenes: [ "0:27:54" ]
     clips:
     - movie: oceans_eleven
-      segment: "078734"
+      segment: "078703"
       offset: 1
 
   - id: "042071"
@@ -3076,7 +3081,7 @@ segments:
     scenes: [ "0:28:11" ]
     clips:
     - movie: oceans_eleven
-      segment: "079872"
+      segment: "079840"
       offset: 1
 
   - id: "042500"
@@ -3120,7 +3125,7 @@ segments:
     scenes: [ "0:28:41" ]
     clips:
     - movie: chisum
-      segment: "116775"
+      segment: "116774"
       offset: 0
 
   - id: "043219"
@@ -3128,7 +3133,7 @@ segments:
     scenes: [ "0:28:47" ]
     clips:
     - movie: chisum
-      segment: "116911"
+      segment: "116910"
       offset: 0
 
   - id: "043315"
@@ -3307,8 +3312,8 @@ segments:
       fade-out: [50, 65]
       wave-out: 35
     - movie: oceans_eleven
-      segment: "078734"
-      offset: -49
+      segment: "078703"
+      offset: -50
       fade-in: [50, 65]
       wave-in: 85
       fade-out: [220, 235]
@@ -4219,7 +4224,7 @@ segments:
       fade-out: [99, 109]
       wave-out: 81
     - movie: chisum
-      segment: "149736"
+      segment: "149735"
       offset: -94
       fade-in: [99, 109]
       wave-out: 130
@@ -4229,7 +4234,7 @@ segments:
     scenes: [ "0:41:07" ]
     clips:
     - movie: chisum
-      segment: "149798"
+      segment: "149797"
       offset: 20
 
   - id: "061767"
@@ -4237,7 +4242,7 @@ segments:
     scenes: [ "0:41:09" ]
     clips:
     - movie: chisum
-      segment: "150727"
+      segment: "150726"
       offset: 0
 
   - id: "061818"
@@ -4245,7 +4250,7 @@ segments:
     scenes: [ "0:41:11" ]
     clips:
     - movie: chisum
-      segment: "150136"
+      segment: "150135"
       offset: 2
 
   - id: "061865"
@@ -4253,7 +4258,7 @@ segments:
     scenes: [ "0:41:13", "0:41:17" ]
     clips:
     - movie: chisum
-      segment: "151410"
+      segment: "151409"
       offset: 24
       fade-out: [88, 98]
       wave-out: 72
@@ -4308,7 +4313,7 @@ segments:
     scenes: [ "0:41:44" ]
     clips:
     - movie: oceans_eleven
-      segment: "044598"
+      segment: "044601"
       offset: 0
 
   - id: "062800"
@@ -4324,7 +4329,7 @@ segments:
     scenes: [ "0:41:53" ]
     clips:
     - movie: oceans_eleven
-      segment: "044801"
+      segment: "044804"
       offset: 0
 
   - id: "062984"
@@ -4340,7 +4345,7 @@ segments:
     scenes: [ "0:42:04", "0:42:19" ]
     clips:
     - movie: oceans_eleven
-      segment: "045181"
+      segment: "045184"
       offset: 0
       fade-out: [371, 381]
       wave-out: 356
@@ -4416,8 +4421,8 @@ segments:
       fade-out: [91, 101]
       wave-out: 73
     - movie: oceans_eleven
-      segment: "045181"
-      offset: -31
+      segment: "045184"
+      offset: -32
       fade-in: [91, 101]
       wave-in: 123
 
@@ -6711,7 +6716,7 @@ segments:
     scenes: [ "1:05:18" ]
     clips:
     - movie: oceans_eleven
-      segment: "088968"
+      segment: "088927"
       offset: 523
       todo: "filtre bleu"
 
@@ -7339,8 +7344,15 @@ movies:
       year: TBA
       brcom: 43677
     sources:
+    - name: "AROUND.the.WORLD.in.80.DAYS.1956.HQ.1080p.x264.AC3.[FrOnkY].mkv"
+      comment: Definitely the best version, details are sharp.
+      rating: 7
+    - name: "Around the World in 80 Days (1956) [1080p.Todd-AO.H265.MKV] [PeteZ].mkv"
+      bad: A lot more blurry than the other option
     - name: "Le Tour du Monde en 80 Jours 1956 HDTV MULTI.mkv"
+      bad: A lot more blurry than the other option
     - name: "Le.Tour.Du.Monde.En.Quatre.Vingts.Jours.1956.MULTI.VFF.1080p.BluRay.HDLight.AAC.2.0.x264-mHDgz.mkv"
+      bad: A lot more blurry than the other option
     comment: |
       Interesting discussion about the restoration of the movie on
       https://www.hometheaterforum.com/community/threads/381256
@@ -7362,6 +7374,7 @@ movies:
       comment: Frequency analysis shows that this was upscaled from 960x532
     - name: "The Arrangement [Kirk Douglas] (1969) DVDRip Oldies.avi"
       resolution: 720x304
+      bad: Old DVD resolution; this movie should be available in HD
 
   band_of_angels:
     title: "Band of Angels"
@@ -7562,7 +7575,9 @@ movies:
     - name: "Charro.1969.1080p.AMZN.WEB-DL.DDP2.0.H.264-SNAKE.mkv"
       resolution: 1920x800
     - name: "Charro.1969.720p.WEB-DL.AAC2.0.H264-RARBG.mkv"
+      bad: Quality is really inferior
     - name: "Charro! 1969 Deutsch - Youtube [EJajA31vCQk].mp4"
+      bad: Old YouTube rip
 
   the_cheyenne_social_club:
     title: "The Cheyenne Social Club"
@@ -7603,9 +7618,11 @@ movies:
       bitrate: 34.90
       brcom: 103214
     sources:
+    - name: "Chisum.1970.Multi.VFF.1080p.BluRay.Remux.HD.MA.2.0.AVC-SamH.mkv"
+      resolution: 1920x800
+      rating: 8
     - name: "Chisum.1970.MULTI.VFI.1080p.BluRay.DTS.HD.MA.2.0.x264-gismo65.mkv"
       resolution: 1920x800
-      rating: 7
     - name: "Chisum (1970) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
       resolution: 1920x800
       bad: Encoding is clearly inferior, film grain has disappeared
@@ -7632,7 +7649,10 @@ movies:
       brcom: 17545
     sources:
     - name: "City Beneath the Sea (Irwin Allen, 1971).mkv"
+      comment: Slightly higher resolution, and more preserved details than the other option
+      rating: 3
     - name: "La città degli Acquanauti - City Beneath the Sea (1971) SD h264 Ac3 Ita Eng Sub Ita-MIRCrew.mkv"
+      bad: Encoding is really not great
 
   cleopatra_jones:
     title: "Cleopatra Jones"
@@ -7653,6 +7673,7 @@ movies:
       resolution: 1920x1080
       rating: 7
     - name: "Dynamite Jones 1973 Multi WEBrip 1080p AVC AC3-Ginonyll.h264.mkv"
+      bad: Poor encoding, most of the film grain has disappeared
 
   the_cowboys:
     title: "The Cowboys"
@@ -7672,7 +7693,7 @@ movies:
     - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
       resolution: 1908x796
       rating: 7
-      comment: for some reason this fil is smaller but encoding seems better, especially the film grain
+      comment: for some reason this file is smaller but encoding seems better, especially the film grain
     - name: "Les.Cowboys.1972.MULTI.VFI.1080p.BluRay.AC3.5.1.x264-gismo65.mkv"
       resolution: 1920x802
 
@@ -7706,7 +7727,7 @@ movies:
     - name: "The.Crimson.Pirate.1952.1080p.BluRay.x265-RARBG.mp4"
       resolution: 1440x1080
       bad: Inferior encoding, missing a lot of film grain
-    - name: "The.Crimson.Pirate.1952.Multi.VFF.1080p.BluRay.REMUX.AC3.AVC-SamH.mkv"
+    - name: "The.Crimson.Pirate.1952.Multi.VFF.1080p.BluRay.Remux.AC3.AVC-SamH.mkv"
       resolution: 1440x1080
       bad: Inferior encoding, missing film grain, looks like they actually reencoded another better source.
 
@@ -7794,6 +7815,7 @@ movies:
       rating: 6
     - name: "Executive.Action.1973.720p.WEBRip.x264.AAC-LAMA.mp4"
       resolution: 1280x722
+      bad: Restolution and detail are inferior to the other version
 
   the_fbi_story:
     title: "The FBI Story"
@@ -8107,7 +8129,7 @@ movies:
       year: 2007
       brcom: 7128
     sources:
-    - name: "McQ.1974.Multi.VFF.1080p.BluRay.REMUX.HD.MA.2.0.AVC-SamH.mkv"
+    - name: "McQ.1974.Multi.VFF.1080p.BluRay.Remux.HD.MA.2.0.AVC-SamH.mkv"
       resolution: 1920x800
       rating: 8
     - name: "McQ.1974.720p.BluRay.H264.AAC-RARBG.mp4"
@@ -8133,10 +8155,13 @@ movies:
       year: 2006
       brcom: 17021
     sources:
-    - name: "The Miracle of Our Lady of Fatima (1952) [720p] [Drama].mkv"
-      resolution: "1470x1080"
     - name: "the.miracle.of.our.lady.of.fatima.1952.1080p.hdtv.x264-regret.mkv"
+      resolution: "1470x1080"
+      rating: 5
+    - name: "The Miracle of Our Lady of Fatima (1952) [720p] [Drama].mkv"
+      comment: Absolutely pixel perfect equivalent of the 'regret' release
     - name: "The Miracle of Our Lady of Fatima (1952) HDTV Oldies Dual-Audio.mkv"
+      bad: Same source as the 'regret' release, but with worse encoding
 
   oceans_eleven:
     title: "Ocean’s Eleven"
@@ -8159,12 +8184,13 @@ movies:
       year: 2008
       brcom: 80520
     sources:
-    - name: "Oceans.Eleven.1960.Multi.VFF.1080p.BluRay.REMUX.1.0.VC1-SamH.mkv"
+    - name: "Oceans.Eleven.1960.Multi.VFF.1080p.BluRay.Remux.1.0.VC1-SamH.mkv"
       resolution: 1920x800
       rating: 8
     - name: "Oceans Eleven 1960 1080p HMAX WEB-DL AAC 2 0 H 264-PiRaTeS.mkv"
       resolution: 1920x800
       rating: 7
+      bad: Excellent encoding but at least one issue; frame 045545 is duplicated
     - name: "L'Inconnu de Las Vegas (1960) - 1080p x265 multi Dolby Digitl AC-3 1.0-NOTAG.mkv"
       resolution: 1908x796
       bad: Inferior encoding, film grain does not look as good as the webdl
@@ -8238,8 +8264,11 @@ movies:
       year: TBA
       brcom: 87852
     sources:
-    - name: "Riding Shotgun  (Western 1954)  Randolph Scott, Joan Weldon & Wayne Morris.mp4"
     - name: "Riding Shotgun (1954) 75 min.Randolph Scott Westerns.avi"
+      comment: Not great but the best we have for now
+      rating: 3
+    - name: "Riding Shotgun  (Western 1954)  Randolph Scott, Joan Weldon & Wayne Morris.mp4"
+      bad: Inferior encoding, very blurry
 
   rio_bravo:
     title: "Rio Bravo"
@@ -8343,10 +8372,11 @@ movies:
       year: 2011
       brcom: 82538
     sources:
-    - name: "Start.The.Revolution.Without.Me.1970.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
+    - name: "Start.The.Revolution.Without.Me.1970.Multi.VFF.1080p.BluRay.Remux.HD.MA.1.0.AVC-SamH.mkv"
       resolution: 1920x1036
       rating: 8
     - name: "Start The Revolution Without Me 1970 DVDRip x264[N1C].mkv"
+      bad: DVD resolution
 
   straight_time:
     title: "Straight Time"
@@ -8482,7 +8512,7 @@ movies:
       year: 2005
       brcom: 99139
     sources:
-    - name: "The.Train.Robbers.1973.Multi.VFF.1080p.BluRay.REMUX.HD.MA.1.0.AVC-SamH.mkv"
+    - name: "The.Train.Robbers.1973.Multi.VFF.1080p.BluRay.Remux.HD.MA.1.0.AVC-SamH.mkv"
       resolution: 1920x800
       rating: 8
     - name: "The Train Robbers (1973) [1080p.Panavision.H265.MKV] [PeteZ].mkv"
