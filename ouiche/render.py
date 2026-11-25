@@ -11,7 +11,7 @@ import sys
 from PIL import Image, ImageDraw, ImageFont, ImageText
 from itertools import accumulate
 from math import sin, sqrt, ceil
-from multiprocessing import Pool, TimeoutError
+import concurrent.futures as futures
 from pathlib import Path
 
 # To generate a movie after this script has run:
@@ -113,36 +113,26 @@ YELLOW = (127, 255, 255)
 INTRO_COLOR = (251, 238, 98)
 INTRO_SHADOW = (34, 28, 6)
 
-BAYER = np.array([[ 0, 32,  8, 40,  2, 34, 10, 42],
-                  [48, 16, 56, 24, 50, 18, 58, 26],
-                  [12, 44,  4, 36, 14, 46,  6, 38],
-                  [60, 28, 52, 20, 62, 30, 54, 22],
-                  [ 3, 35, 11, 43,  1, 33,  9, 41],
-                  [51, 19, 59, 27, 49, 17, 57, 25],
-                  [15, 47,  7, 39, 13, 45,  5, 37],
-                  [63, 31, 55, 23, 61, 29, 53, 21]]).astype(np.float32) / 64.0
-DITHER_MATRIX = np.tile(BAYER, (int(ceil(MEDIA_SIZE[1] / BAYER.shape[0])),
-                                int(ceil(MEDIA_SIZE[0] / BAYER.shape[1]))))[:MEDIA_SIZE[1],:MEDIA_SIZE[0]]
+def cv2_dither_matrix(width, height):
+    bayer = np.array([[ 0, 32,  8, 40,  2, 34, 10, 42],
+                      [48, 16, 56, 24, 50, 18, 58, 26],
+                      [12, 44,  4, 36, 14, 46,  6, 38],
+                      [60, 28, 52, 20, 62, 30, 54, 22],
+                      [ 3, 35, 11, 43,  1, 33,  9, 41],
+                      [51, 19, 59, 27, 49, 17, 57, 25],
+                      [15, 47,  7, 39, 13, 45,  5, 37],
+                      [63, 31, 55, 23, 61, 29, 53, 21]]).astype(np.float32) / 64.0
+    return np.tile(bayer, (int(ceil(height / bayer.shape[0])),
+                           int(ceil(width / bayer.shape[1]))))[:height,:width]
 
-
-def ignore_sigint():
-    signal.signal(signal.SIGINT, signal.SIG_IGN)
 
 def safe_pooled_map(num, fn, it):
-    with Pool(num, ignore_sigint) as p:
-        try:
-            result = p.map_async(fn, it)
-            while True:
-                try:
-                    result.get(0)
-                except TimeoutError: pass
-                else: break
-            p.close()
-            p.join()
-        except KeyboardInterrupt:
-            p.terminate()
-            p.join()
-            raise
+    with futures.ProcessPoolExecutor(max_workers=num) as e:
+        for f in futures.as_completed([e.submit(fn, arg) for arg in it]):
+            if f.done():
+                yield f.result()
+            else:
+                raise f.exception()
 
 
 def cv2_blit(bg, fg, x, y):
@@ -231,23 +221,28 @@ def render_text(text: str, font: str, size: float, border: int=0):
             (anchor_x // SCALE - border, anchor_y // SCALE - border))
 
 
-class Renderer:
+class RenderConfig:
     def __init__(self, force, verbose, dry_run):
-        with open(DESC, encoding='utf-8') as f:
-            data = yaml.safe_load(f)
-
         self.force = force
         self.verbose = verbose
         self.dry_run = dry_run
 
+
+class Renderer:
+    def __init__(self, config):
+        with open(DESC, encoding='utf-8') as f:
+            data = yaml.safe_load(f)
+
+        self.config = config
         self.presets = data['presets']
         self.segments = data['segments']
         self.movies = data['movies']
 
 
 class Segment:
-    def __init__(self, renderer, start, desc):
-        self.renderer = renderer
+    def __init__(self, config, renderer, start, desc):
+        self.config = config
+        self.presets = renderer.presets
         self.start = start
         self.desc = desc
         self.id = desc.get('id', 'unknown')
@@ -281,7 +276,7 @@ class Segment:
         print(f'{self.start:06d}: ', end='')
         sys.stdout.flush()
 
-        if not self.renderer.dry_run:
+        if not self.config.dry_run:
             self.output_dir.mkdir(parents=True, exist_ok=True)
             self.debug_dir.mkdir(parents=True, exist_ok=True)
 
@@ -289,30 +284,32 @@ class Segment:
         # pool worker will do it again and again. Not very elegant.
         self.orig_file(0)
 
-        safe_pooled_map(8, self.render_frame, range(self.count))
+        for n, ok in enumerate(safe_pooled_map(8, self.render_frame, range(self.count))):
+            if not self.config.verbose:
+                print('.' if not n or n % 10 else str(n), end='')
+                sys.stdout.flush()
 
 
     def render_frame(self, n: int):
 
-        f = Frame(self, n)
+        f = Frame(self.config, self, n)
 
         # Skip existing files
-        if not self.renderer.force and f.is_uptodate():
+        if not self.config.force and f.is_uptodate():
             return
 
         f.render()
 
-        if not self.renderer.dry_run:
+        if not self.config.dry_run:
             f.save()
 
-        if not self.renderer.verbose:
-            print('.' if not n or n % 10 else str(n), end='')
-            sys.stdout.flush()
+        return True
 
 
 class Frame:
-    def __init__(self, segment, n):
+    def __init__(self, config, segment, n):
         self.n = n
+        self.config = config
         self.segment = segment
         self.output_file = segment.output_dir / f'img{segment.start+n:06d}.jpeg'
         self.debug_file = segment.debug_dir / f'img{segment.start+n:06d}.jpeg'
@@ -442,7 +439,7 @@ class Frame:
                 errors.append(f'no movie associated with clip {i}')
                 continue
 
-            clip_presets = self.segment.renderer.presets.get(clip_movie) or {}
+            clip_presets = self.segment.presets.get(clip_movie) or {}
 
             self.debug_text(f'Clip {i}: {clip_movie}', color=WHITE)
 
@@ -507,7 +504,7 @@ class Frame:
             encoded_h, encoded_w, _ = src.shape
             display_h, display_w = encoded_h, encoded_w
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Encoded size:', encoded_w, encoded_h)
 
             # XXX: apply stretch to DVD images, this is for debugging purposes
@@ -520,7 +517,7 @@ class Frame:
             if 'arrangement' in clip_movie and display_w == 1280:
                 todo.append(f'Must unscale to 960')
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Display size:', display_w, display_h)
 
             clipinfo.append(f'DAR: {display_w/display_h:.2f}:1')
@@ -547,7 +544,7 @@ class Frame:
                     errors.append(f'invalid crop {crop}')
                 fxinfo.append(f'Crop: {crop}')
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Bounds:', bounds_x, bounds_y, bounds_w, bounds_h)
 
             # Compute pick rectangle aspect ratio (might be different from target aspect
@@ -561,7 +558,7 @@ class Frame:
             if stretch is not None:
                 fxinfo.append(f'Stretch: {stretch}')
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Pick ratio:', rect_ratio)
 
             # rect_x, rect_y, rect_w, rect_h: the coordinates where we will actually
@@ -572,7 +569,7 @@ class Frame:
                 rect_w, rect_h = bounds_w, int(bounds_w / rect_ratio)
             rect_x, rect_y = bounds_x + (bounds_w - rect_w) // 2, bounds_y + (bounds_h - rect_h) // 2
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Initial pick area', rect_x, rect_y, rect_w, rect_h)
 
             # Apply gravity (when we want to pan to a specific direction)
@@ -602,14 +599,14 @@ class Frame:
                 rect_x, rect_w = rect_x + int(rect_w * (1 - 1 / zoom) / 2), int(rect_w / zoom)
                 rect_y, rect_h = int(rect_y / zoom), int(rect_h / zoom)
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Final pick area:', rect_x, rect_y, rect_w, rect_h)
 
             # Compute the final parameters for scaling. After this step, our frame lies somewhere
             # in there as a rectangle of size TARGET_SIZE, but we can apply more effects.
             scale_x, scale_y = TARGET_SIZE[0] / rect_w, TARGET_SIZE[1] / rect_h
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Scale factor:', scale_x, scale_y)
 
             final_x = int(rect_x * scale_x)
@@ -683,7 +680,7 @@ class Frame:
             if scale_x != 1.0 or scale_y != 1.0:
                 src = cv2.resize(src, (int(src.shape[1] * scale_x), int(src.shape[0] * scale_y)), interpolation=cv2.INTER_LANCZOS4)
 
-            if self.segment.renderer.verbose:
+            if self.config.verbose:
                 print('  Scaled pick area:', final_x, final_y, final_w, final_h)
 
             if opacity != 1.0:
@@ -812,7 +809,8 @@ class Frame:
         media_image = np.zeros((MEDIA_SIZE[1], MEDIA_SIZE[0], 3), float)
         cv2_blit(media_image, self.target_image, (MEDIA_SIZE[0] - TARGET_SIZE[0]) // 2, (MEDIA_SIZE[1] - TARGET_SIZE[1]) // 2)
         # FIXME: blue-noise dithering on separate colour layers
-        cv2.imwrite(self.output_file, (media_image + DITHER_MATRIX[...,np.newaxis]).clip(0, 255).astype(np.uint8))
+        dither = cv2_dither_matrix(MEDIA_SIZE[0], MEDIA_SIZE[1])
+        cv2.imwrite(self.output_file, (media_image + dither[...,np.newaxis]).clip(0, 255).astype(np.uint8))
 
         cv2.imwrite(self.debug_file, self.debug_image)
         if self.n == self.segment.count // 2:
@@ -830,13 +828,14 @@ class Frame:
 def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, property: str):
 
     """ Render movie frames. """
-    r = Renderer(force=force, verbose=verbose, dry_run=dry_run)
+    config = RenderConfig(force=force, verbose=verbose, dry_run=dry_run)
+    r = Renderer(config)
 
     starts = accumulate((0, *(s['count'] for s in r.segments)))
 
     for start, desc in zip(starts, r.segments):
 
-        s = Segment(r, start, desc)
+        s = Segment(config, r, start, desc)
 
         # Early checks for requirements so we can skip whole segments
         if movie and not s.has_movie(movie):
