@@ -5,74 +5,33 @@
 #
 
 presets:
-  all_the_presidents_men:
-    gravity: u50
-    letterbox-2160: 42
-
-  battle_of_the_bulge:
-    letterbox-1080: 194
-
-  blood_alley:
-    letterbox-1080: 164
-
-  bullitt:
-    letterbox-1920: 6 # XXX: Those are vertical bars!
-
-  the_cheyenne_social_club:
-    stretch: 0.95
-
-  chisum:
-    letterbox-1080: 140
-    stretch: 0.95
-
-  cleopatra_jones:
-    letterbox-1080: 140
-
-  the_cowboys:
-    letterbox-1920: 6
-    letterbox-1080: 142
-
-  deliverance:
-    # XXX: There are also two empty black columns on the left, but we probably don’t care
-    letterbox-1080: 140
-
-  harper:
-    letterbox-1080: 140
-
-  jeremiah_johnson:
-    letterbox-1080: 140
-
-  mad_max:
-    letterbox-2160: 263
-
-  mcq:
-    letterbox-1080: 140
-
-  oceans_eleven:
-    letterbox-1920: 6
-    letterbox-1080: 140 # XXX: top value is 142
-
-  the_old_man_and_the_sea:
-    letterbox-1080: 20
-
-  rio_bravo:
-    letterbox-2160: 42
-
-  the_sea_chase:
-    letterbox-1080: 164
-
-  the_searchers:
-    letterbox-2160: 42
-
-  start_the_revolution_without_me:
-    gravity: u50
-    letterbox-1080: 22
-
-  there_was_a_crooked_man:
-    letterbox-1080: 130 # XXX: bottom value is 132, but do we care?
-
-  the_train_robbers:
-    letterbox-1080: 140
+  all_the_presidents_men: { letterbox-2160: 42, gravity: u50 }
+  battle_of_the_bulge: { letterbox-1080: 194 }
+  blood_alley: { letterbox-1080: 164 }
+  bullitt: { letterbox-1920: 6 } # XXX: Those are vertical bars!
+  cahill_us_marshal: { letterbox-1080: 140 }
+  the_cheyenne_social_club: { stretch: 0.95 }
+  chisum: { letterbox-1080: 140, stretch: 0.95 }
+  cleopatra_jones: { letterbox-1080: 140 }
+  drum_beat: { letterbox-1080: 165 }
+  the_cowboys: { letterbox-1920: 6, letterbox-1080: 142 }
+  deliverance: { letterbox-1080: 140 } # XXX: There are also two empty black columns on the left, but we probably don’t care
+  the_good_guys_and_the_bad_guys: { letterbox-1080: 133 }
+  harper: { letterbox-1080: 140 }
+  jeremiah_johnson: { letterbox-1080: 140 }
+  mad_max: { letterbox-2160: 263 }
+  mcq: { letterbox-1080: 140 }
+  oceans_eleven: { letterbox-1920: 6, letterbox-1080: 140 } # XXX: top value is 142
+  the_old_man_and_the_sea: { letterbox-1080: 20 }
+  rio_bravo: { letterbox-2160: 42 }
+  the_sea_chase: { letterbox-1080: 164 }
+  the_searchers: { letterbox-2160: 42 }
+  start_the_revolution_without_me: { letterbox-1080: 22, gravity: u50 }
+  straight_time: { letterbox-1080: 28 }
+  there_was_a_crooked_man: { letterbox-1080: 130 } # XXX: bottom value is 132, but do we care?
+  the_towering_inferno: { letterbox-1080: 132, letterbox-1920: 8 }
+  the_train_robbers: { letterbox-1080: 140 }
+  when_time_ran_out: { letterbox-1080: 140 }
 
 #
 # segments
@@ -1772,7 +1731,8 @@ segments:
     scenes: [ "0:14:21" ]
     clips:
     - movie: the_fbi_story
-      todo: "(2:11:44) - around 190600"
+      segment: "190600"
+      offset: 323
 
   - id: "021676"
     count: 131
@@ -1795,6 +1755,8 @@ segments:
     scenes: [ "0:14:36" ]
     clips:
     - movie: the_fbi_story
+      segment: "190600"
+      offset: 389
 
   - id: "022154"
     count: 236
@@ -1810,6 +1772,8 @@ segments:
     scenes: [ "0:14:54" ]
     clips:
     - movie: the_fbi_story
+      segment: "190600"
+      offset: 366
 
   - id: "022528"
     count: 24
@@ -1882,6 +1846,8 @@ segments:
     scenes: [ "0:15:54" ]
     clips:
     - movie: the_fbi_story
+      segment: "190600"
+      offset: 390
 
   - id: "024050"
     count: 92
@@ -2182,7 +2148,7 @@ segments:
     scenes: [ "0:18:57" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
-      segment: "106593"
+      segment: "106593" # 1:14:07
       offset: 2
 
   - id: "028555"
@@ -2222,7 +2188,7 @@ segments:
     scenes: [ "0:19:15" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
-      segment: "107685"
+      segment: "107685" # 01:14:50
       offset: 3
 
   - id: "028992"
@@ -2287,7 +2253,7 @@ segments:
     scenes: [ "0:19:44" ]
     clips:
     - movie: the_good_guys_and_the_bad_guys
-      segment: "108729"
+      segment: "108729" # 1:15:35
       offset: 0
 
   - id: "029722"
@@ -2554,6 +2520,8 @@ segments:
     scenes: [ "0:21:11" ]
     clips:
     - movie: the_fbi_story
+      segment: "190600"
+      offset: 376
 
   - id: "032123"
     count: 75
@@ -2619,7 +2587,8 @@ segments:
     scenes: [ "0:22:00" ]
     clips:
     - movie: the_fbi_story
-      todo: "(2:11:50)"
+      segment: "190600"
+      offset: 375
 
   - id: "033402"
     count: 317
@@ -2814,6 +2783,8 @@ segments:
     - movie: four_for_texas
       segment: "014746"
       offset: 31
+      playback: 0-45, 45
+    comment: Sequence should be 78 frames, the last one is missing on Apple TV
 
   - id: "037235"
     count: 228
@@ -2854,10 +2825,18 @@ segments:
     - movie: four_for_texas
       segment: "026950"
       offset: 17
-      fade-out: [82, 94]
+      fade-out: [73, 86]
     - movie: the_fbi_story
-      todo: "(1:24:59) - around 123000"
-      fade-in: [82, 94]
+      segment: "123000"
+      offset: 0
+      playback: 1000-1032, 0-155, 215-225, 238-291, 332-338, 362-468
+      fade-in: [73, 86]
+    comment: |
+      Correct fade-in/fade-out happens in [81, 94] but there is a transition
+      already happening in Four for Texas and we want to hide it, so we place
+      the cross-fade a little before.
+      Also the Apple TV version is missing the last two frames and duplicates
+      its last frame; they're not used so we don't care.
 
   - id: "038118"
     count: 49
@@ -2872,7 +2851,7 @@ segments:
     scenes: [ "0:25:25" ]
     clips:
     - movie: four_for_texas
-      segment: "078958"
+      segment: "078958" # 0:54:52
       offset: 31
       gravity: u100
 
@@ -2918,6 +2897,7 @@ segments:
     - movie: four_for_texas
       segment: "081839"
       offset: 2
+    comment: Frame 081959 is missing on Apple TV, but we don't need it.
 
   - id: "040166"
     count: 233
@@ -3112,11 +3092,11 @@ segments:
     - movie: carson_city
       segment: "038729"
       offset: 0
-      playback: 1000-1187, 0, 0, 0-90
+      playback: 1000-1187, 0, 0-91
       fade-in: [187, 202]
       wave-in: 219
     comment: |
-      Some frames from Carson City are interleaved in the original (245 and 273),
+      Some frames from Carson City are interleaved in La Classe (245 and 273),
       so instead of duplicating these frames I decided to do the duplication at
       the beginning of the flashback sequence, where the change is unnoticeable.
       Frame-perfect blayback sequence would be 1000-1187, 0-57, 57-85, 85-90
@@ -4227,11 +4207,12 @@ segments:
       offset: 0
       fade-out: [99, 109]
       wave-out: 81
+      crop: 0 0 7 0 # Hide the red part of the arena
     - movie: chisum
       segment: "149735"
       offset: -94
       fade-in: [99, 109]
-      wave-out: 130
+      wave-in: 130
 
   - id: "061734"
     count: 33
@@ -4271,6 +4252,7 @@ segments:
       offset: -75
       fade-in: [88, 98]
       wave-in: 121
+      crop: 0 0 7 0 # Hide the red part of the arena
 
   - id: "062047"
     count: 286
@@ -4574,7 +4556,7 @@ segments:
     scenes: [ "0:44:33" ]
     clips:
     - movie: the_cowboys
-      segment: "050898"
+      segment: "050899"
       offset: 0
       playback: 14-0, 0-6, 5-0, 0-6, 5-0
 
@@ -4591,7 +4573,7 @@ segments:
     scenes: [ "0:44:37" ]
     clips:
     - movie: the_cowboys
-      segment: "050898"
+      segment: "050899"
       offset: 0
       playback: 11-20, 19-0, 0-6, 5-0, 1-6, 5-0, 0-6, 5-0
 
@@ -5155,14 +5137,14 @@ segments:
       fade-out: [144, 154]
       wave-out: 125
     - movie: the_good_guys_and_the_bad_guys
-      segment: "032925"
-      offset: 83
+      segment: "032925" # 0:22:54
+      offset: 84
       fade-in: [144, 154]
       wave-in: 175
       fade-out: [400, 420]
     - movie: the_good_guys_and_the_bad_guys
       segment: "032925"
-      offset: 300
+      offset: 301
       fade-in: [400, 420]
       fade-out: [827, 837]
       wave-out: 808
@@ -6591,7 +6573,7 @@ segments:
     scenes: [ "1:03:57" ]
     clips:
     - movie: cleopatra_jones
-      segment: "039874"
+      segment: "039875"
       offset: 6
       transform: "hflip"
 
@@ -6608,7 +6590,7 @@ segments:
     scenes: [ "1:04:09" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040312"
+      segment: "040313"
       offset: 5
 
   - id: "096358"
@@ -6624,7 +6606,7 @@ segments:
     scenes: [ "1:04:15" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040412"
+      segment: "040413"
       offset: 0
 
   - id: "096520"
@@ -6640,7 +6622,7 @@ segments:
     scenes: [ "1:04:21" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040412"
+      segment: "040413"
       offset: 212
 
   - id: "096697"
@@ -6648,7 +6630,7 @@ segments:
     scenes: [ "1:04:26" ]
     clips:
     - movie: cleopatra_jones
-      segment: "040750"
+      segment: "040751"
       offset: 0
 
   - id: "096907"
@@ -6664,7 +6646,7 @@ segments:
     scenes: [ "1:04:41" ]
     clips:
     - movie: cleopatra_jones
-      segment: "041110"
+      segment: "041111"
       offset: 1
 
   - id: "097147"
@@ -6681,7 +6663,7 @@ segments:
     scenes: [ "1:04:47" ]
     clips:
     - movie: cleopatra_jones
-      segment: "041284"
+      segment: "041285"
       offset: 0
 
   - id: "097317"
@@ -7675,9 +7657,11 @@ movies:
       bitrate: 31.98
       brcom: 234589
     sources:
+    - name: "Cleopatra.Jones.1973.1080p.BluRay.HD.MA.2.0.AVC-SamH.mkv"
+      resolution: 1920x800
+      rating: 8
     - name: "Cleopatra Jones 1973 1080p BluRay x264-OFT.mkv"
       resolution: 1920x1080
-      rating: 7
     - name: "Dynamite Jones 1973 Multi WEBrip 1080p AVC AC3-Ginonyll.h264.mkv"
       bad: Poor encoding, most of the film grain has disappeared
 
@@ -7696,6 +7680,8 @@ movies:
       year: 2016
       brcom: 436
     sources:
+    - name: "The.Cowboys.1972.Multi.DL.1080p.BluRay.Remux.AC3.5.1.VC1-SamH.mkv"
+      rating: 8
     - name: "The Cowboys 1972 1080p BluRay x264-OFT.mkv"
       resolution: 1908x796
       rating: 7
@@ -7948,6 +7934,7 @@ movies:
     - name: "The Good Guys and the Bad Guys  (Western 1969)  Robert Mitchum, George Kennedy & Martin Balsam.mp4"
       resolution: 1280x544
       comment: 25fps, hope this is OK
+      bad: At least one missing frame (032941)
     - name: "the.good.guys.and.the.bad.guys.1969.proper.dvdrip.x264-regret.mkv"
       bad: File is corrupted
 
