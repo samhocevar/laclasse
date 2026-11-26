@@ -10,7 +10,7 @@ import signal
 import sys
 from PIL import Image, ImageDraw, ImageFont, ImageText
 from itertools import accumulate
-from math import sin, sqrt, ceil
+from math import sin, cos, radians, sqrt, ceil
 import concurrent.futures as futures
 from pathlib import Path
 
@@ -61,7 +61,7 @@ match mode:
 # This is for the debug canvas
 SCALED_SIZE = (1280, int(1280 / TARGET_RATIO))
 THUMBNAIL_SIZE = (320, 240)
-INFO_WIDTH = 800
+INFO_WIDTH = 600
 MARGIN = 20
 
 # 16:9 misses a lot of information, try 1.85:1
@@ -588,7 +588,7 @@ class Frame:
             rect_ratio *= encoded_w / display_w
             match stretch := c.get('stretch') or clip_presets.get('stretch'):
                 case None: pass
-                case _: rect_ratio *= stretch
+                case _: rect_ratio /= stretch
             if stretch is not None:
                 fxinfo.append(f'Stretch: {stretch}')
 
@@ -620,18 +620,28 @@ class Frame:
             if gravity is not None:
                 fxinfo.append(f'Gravity: {gravity}')
 
+            # Some parameters cause a zoom effect
+            zoom = 1.0
+
             # Load wave parameters before scaling so that we know how much to zoom in
             wave = 0
             if x := c.get('wave-in'):
                 wave = max(wave, x - self.n)
             if x := c.get('wave-out'):
                 wave = min(wave, x - self.n)
-
             if wave != 0:
                 # Zoom slightly
-                zoom = 1 + abs(wave) / 400
+                zoom *= 1 + abs(wave) / 400
+
+            # If rotating, we need to scale a bit more!
+            rotate = c.get('rotate', 0.0)
+            if rotate != 0:
+                zoom *= cos(radians(rotate)) + abs(sin(radians(rotate))) * rect_ratio
+
+            # Update pick area according to zoom
+            if zoom != 1.0:
                 rect_x, rect_w = rect_x + int(rect_w * (1 - 1 / zoom) / 2), int(rect_w / zoom)
-                rect_y, rect_h = int(rect_y / zoom), int(rect_h / zoom)
+                rect_y, rect_h = rect_y + int(rect_h * (1 - 1 / zoom) / 2), int(rect_h / zoom)
 
             if self.config.verbose:
                 print('  Final pick area:', rect_x, rect_y, rect_w, rect_h)
@@ -732,8 +742,14 @@ class Frame:
             # Apply scaling to the source image, it's now time to get the good pixels
             if scale_x > 10 or scale_y > 10:
                 raise Exception('insane scaling, aborting')
-            if scale_x != 1.0 or scale_y != 1.0:
-                src = cv2.resize(src, (int(src.shape[1] * scale_x), int(src.shape[0] * scale_y)), interpolation=cv2.INTER_LANCZOS4)
+            target_w, target_h = int(src.shape[1] * scale_x), int(src.shape[0] * scale_y)
+            if rotate != 0.0:
+                m_rot = cv2.getRotationMatrix2D((src.shape[1] / 2, src.shape[0] / 2), -rotate, 1.0)
+                # FIXME: we could do this in one go!
+                src = cv2.warpAffine(src, m_rot, (src.shape[1], src.shape[0]))
+                src = cv2.resize(src, (target_w, target_h), interpolation=cv2.INTER_LANCZOS4)
+            elif scale_x != 1.0 or scale_y != 1.0:
+                src = cv2.resize(src, (target_w, target_h), interpolation=cv2.INTER_LANCZOS4)
 
             if self.config.verbose:
                 print('  Scaled pick area:', final_x, final_y, final_w, final_h)

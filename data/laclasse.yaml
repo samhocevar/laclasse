@@ -11,7 +11,7 @@ presets:
   bullitt: { letterbox-1920: 6 } # XXX: Those are vertical bars!
   cahill_us_marshal: { letterbox-1080: 140 }
   the_cheyenne_social_club: { stretch: 0.95 }
-  chisum: { letterbox-1080: 140, stretch: 0.95 }
+  chisum: { letterbox-1080: 140 }
   cleopatra_jones: { letterbox-1080: 140 }
   drum_beat: { letterbox-1080: 165 }
   the_cowboys: { letterbox-1920: 6, letterbox-1080: 142 }
@@ -3088,8 +3088,8 @@ segments:
     - movie: four_for_texas
       segment: "118623"
       offset: 0
+      playback: 20-0, 1-161, 161-142, 1000-1078
       fade-out: [187, 202]
-      todo: "Scène introuvable, ce timestamp fera peut-être l’affaire"
       wave-out: 170
     - movie: carson_city
       segment: "038729"
@@ -3098,6 +3098,7 @@ segments:
       fade-in: [187, 202]
       wave-in: 219
     comment: |
+      The entire scene from Four for Texas is nowhere to be found!
       Some frames from Carson City are interleaved in La Classe (245 and 273),
       so instead of duplicating these frames I decided to do the duplication at
       the beginning of the flashback sequence, where the change is unnoticeable.
@@ -3139,7 +3140,7 @@ segments:
     - movie: four_for_texas
       segment: "118623"
       offset: 0
-      todo: "Scène introuvable, ce timestamp fera peut-être l’affaire"
+      playback: 20-0, 1-161, 1000-1112
       fade-out: [167, 182]
       wave-out: 153
     - movie: the_searchers
@@ -3147,6 +3148,8 @@ segments:
       offset: 734
       fade-in: [167, 182]
       wave-in: 202
+    comment: |
+      The entire scene from Four for Texas is nowhere to be found.
 
   - id: "043728"
     count: 39
@@ -3281,10 +3284,12 @@ segments:
       wave-out: 392
     - movie: four_for_texas
       segment: "118623"
-      offset: -408
+      offset: 0
       fade-in: [408, 425]
       wave-in: 441
-      todo: "Scène introuvable, ce timestamp fera peut-être l’affaire"
+      playback: 1000-1408, 1, 0, 1-161
+    comment: |
+      The entire scene from Four for Texas is nowhere to be found.
 
   - id: "045319"
     count: 286
@@ -3800,7 +3805,7 @@ segments:
     - movie: harper
       segment: "151690"
       offset: 76
-      todo: "(rotated)"
+      rotate: 15
 
   - id: "055541"
     count: 69
@@ -4639,7 +4644,7 @@ segments:
     clips:
     - movie: harper
       segment: "017358"
-      offset: 0
+      offset: 1
       crop: 0 0 0 15 # Hide the character at the bottom but don't remove too much
 
   - id: "068461"
@@ -5764,8 +5769,8 @@ segments:
     scenes: [ "0:55:47", "0:55:54" ]
     clips:
     - movie: when_time_ran_out
-      segment: "025869"
-      offset: 573
+      segment: "026167"
+      offset: 275
       transform: hflip
       playback: 0-92, 92-0, 1000-1094
       fade-out: [168, 178]
@@ -5778,8 +5783,8 @@ segments:
       wave-in: 200
       playback: 1000-1168, 0-84, 84-96, 98-111
     comment: |
-      On my DVD, frame 85 is missing, and 97 is a duplicate of 96, so even
-      though the errors cancel each other, I prefer to duplicate 84 and
+      On my Riding Shotgun DVD, frame 85 is missing, and 97 is a duplicate of 96,
+      so even though the errors cancel each other, I prefer to duplicate 84 and
       drop 96 for better sync.
 
   - id: "083999"
