@@ -1,6 +1,7 @@
 import click
 
 from . import arith
+from . import dumps
 from . import render
 from . import sources
 
@@ -28,6 +29,7 @@ def cli():
 cli.add_command(render.render)
 cli.add_command(sources.info)
 cli.add_command(sources.dump)
+cli.add_command(dumps.sequence)
 
 if __name__ == '__main__':
     cli()

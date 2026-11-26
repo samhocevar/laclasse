@@ -4589,10 +4589,13 @@ segments:
       segment: "155023"
       offset: -148
       fade-in: [147, 157]
-    #- movie: jeremiah_johnson
-    #  segment: "152998"
-    #  offset: 0
-    todo: "Special effect of wooden panel applied on previous clip, requires at least 232 frames"
+    - movie: jeremiah_johnson
+      segment: "152998"
+      offset: 0
+      crop: 10 0 0 0
+      fade-in: [147, 148] # Prevent applying on the first clip
+      playback: 0-70, 71-1, 0-70, 71-1, 0-70, 71-48
+      transform: woodpanel
 
   - id: "067419"
     count: 106

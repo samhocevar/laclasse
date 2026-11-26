@@ -81,7 +81,7 @@ DEBUG_SIZE = (
 )
 
 DESC = Path.home() / 'laclasse/data/laclasse.yaml'
-FONT_ROOT = Path.home() / 'laclasse/data'
+DATA_ROOT = Path.home() / 'laclasse/data'
 DUMP_ROOT = Path.home() / 'laclasse/dump-dvd'
 
 SEARCH_ROOT = (
@@ -135,7 +135,7 @@ def safe_pooled_map(num, fn, it):
                 raise f.exception()
 
 
-def cv2_blit(bg, fg, x, y):
+def cv2_blit(bg, fg, x, y, opacity=1.0):
     h, w, _ = bg.shape
     sh, sw, _ = fg.shape
 
@@ -151,9 +151,9 @@ def cv2_blit(bg, fg, x, y):
     src = fg[sy1:sy2, sx1:sx2]
 
     if src.shape[2] == 4:
-        dst += src[:,:,3:] * (src[:,:,:3] - dst)
+        dst += src[...,3:4] / 255.0 * (src[:,:,:3] - dst)
     else:
-        dst += src
+        dst += src if opacity == 1.0 else (src * opacity)
 
 
 def cv2_tint_dark(im, color):
@@ -204,7 +204,7 @@ def parse_playback(playback):
 def render_text(text: str, font: str, size: float, border: int=0):
     # FIXME: this is ridiculous, PIL doesn't do antialiasing?!
     SCALE = 4
-    image_font = ImageFont.truetype(FONT_ROOT / font, size * SCALE)
+    image_font = ImageFont.truetype(DATA_ROOT / font, size * SCALE)
     image_text = ImageText.Text(text, image_font)
 
     left, top, right, bottom = image_text.get_bbox()
@@ -487,6 +487,10 @@ class Frame:
                 errors.append(f'cannot find image for {srcglob} in {', '.join(SEARCH_ROOT)}')
                 continue
 
+            if 'woodpanel' in transforms:
+                stencil = cv2.imread(DATA_ROOT / 'woodstencil.png', cv2.IMREAD_UNCHANGED).astype(float)
+                src = np.dstack((src, 255.0 - stencil[...,3:]))
+
             # Apply source letterbox cropping if the value is known to us
             if crop := clip_presets.get(f'letterbox-{src.shape[0]}'):
                 if crop > 0:
@@ -671,6 +675,7 @@ class Frame:
                     case 'cheesy-1': pass
                     case 'cheesy-2': pass
                     case 'cheesy-3': pass
+                    case 'woodpanel': pass
                     case _: errors.append(f'invalid transform "{t}"')
                 fxinfo.append(f'Transform: {t}')
 
@@ -696,7 +701,7 @@ class Frame:
             thumbscale = min(THUMBNAIL_SIZE[0] / display_w, THUMBNAIL_SIZE[1] / display_h)
             thumb = cv2.resize(src, (int(display_w * thumbscale), int(display_h * thumbscale)), interpolation=cv2.INTER_LANCZOS4)
             #if transform == 'hflip': thumb = cv2.flip(thumb, 1)
-            cv2_blit(self.debug_image, thumb.clip(0, 255).astype(np.uint8), xthumb, ythumb)
+            cv2_blit(self.debug_image, thumb[...,:3].clip(0, 255).astype(np.uint8), xthumb, ythumb)
             cv2.rectangle(self.debug_image, (xthumb-1, ythumb-1), (xthumb+thumb.shape[1], ythumb+thumb.shape[0]), YELLOW, 1)
 
             # FIXME: somewhere on the way we lost rect_ratio and/or the stretch parameters
@@ -759,7 +764,10 @@ class Frame:
 
             self.debug_y = max(self.debug_y, ythumb + thumb.shape[0] + 20)
 
-            clips.append((src[final_y:final_y+final_h,final_x:final_x+final_w], blit_x, blit_y, opacity))
+            if 'woodpanel' in transforms:
+                cv2_blit(clips[-1][0], src[final_y:final_y+final_h,final_x:final_x+final_w], 0, 0)
+            else:
+                clips.append((src[final_y:final_y+final_h,final_x:final_x+final_w], blit_x, blit_y, opacity))
 
         if e := self.segment.desc.get('todo'):
             self.debug_text(f'Todo: {e}', color=RED)
@@ -774,17 +782,18 @@ class Frame:
         # If more than one image has opacity != 1.0, it is actually a blend
         # for cross-fade, so we will want to normalise it.
         total_opacity = 1.0
-        if sum(1 for e in clips if e[3] != 1.0) >= 2:
+        if sum(1 for e in clips if e[3] not in [0.0, 1.0]) >= 2:
             total_opacity = sum(np.clip(e[3], 0.0, 1.0) for e in clips)
+        self.debug_text(f'Total opacity: {total_opacity}', color=YELLOW)
 
         for image, x, y, opacity in clips:
             if total_opacity > 0.0:
                 opacity /= total_opacity
             if opacity != 1.0:
                 # FIXME: do this in linear colorspace one day?
-                image = image * pow(opacity, 1.0)
+                opacity = pow(opacity, 1.0)
             if opacity > 0.0:
-                cv2_blit(self.target_image, image, x, y)
+                cv2_blit(self.target_image, image, x, y, opacity)
 
         # Blit final image to canvas
         x, y = MARGIN, MARGIN
