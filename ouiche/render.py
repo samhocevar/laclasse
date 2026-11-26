@@ -156,16 +156,46 @@ def cv2_blit(bg, fg, x, y, opacity=1.0):
         dst += src if opacity == 1.0 else (src * opacity)
 
 
+def cv2_lift_gain_gamma(im, lift, gain, gamma):
+    ret = im.copy()
+    if lift is not None:
+        ret[...,:3] += np.array(lift[::-1]) * (255.0 - ret[...,:3])
+
+    if gain is not None:
+        ret[...,:3] *= np.array(gain[::-1])
+
+    if gamma is not None:
+        tmp = np.clip(ret[...,:3], 0.0, None) / 255.0
+        ret[...,:3] = 255.0 * np.power(tmp, 1.0 / np.maximum(np.array(gamma[::-1]), 1e-5))
+
+    return np.clip(ret, 0.0, 255.0)
+
+
+def cv2_tint_midtones(im, colorshift):
+    # Compute luma in the 0..1 range
+    gray = np.array([0.0722, 0.7152, 0.2126]) / 255.0
+    luma = im[...,:3] @ gray
+
+    # Only work in the midtones
+    mask = np.exp(-(((luma - 0.5) / 0.35) ** 4))
+
+    ret = im.copy()
+    ret[...,:3] += mask[...,np.newaxis] * colorshift[::-1]
+    return np.clip(ret[...,:3], 0.0, 255.0)
+
+
 def cv2_tint_dark(im, color):
     # Compute darkness weight
-    L = 0.299 / 255 * im[..., 0] + 0.587 / 255 * im[..., 1] + 0.114 / 255 * im[..., 2]
-    w = (1.0 - L) ** 2.0
+    gray = np.array([0.0722, 0.7152, 0.2126]) / 255.0
+    luma = im[...,:3] @ gray
+
+    w = (1.0 - luma) ** 2.0
     w = w[..., None]
     # Return blend but don't touch alpha if it is there)
     ret = im.copy()
-    im[...,:3] *= (1.0 - w)
-    im[...,:3] += np.array(color) * w
-    return im
+    ret[...,:3] *= (1.0 - w)
+    ret[...,:3] += np.array(color) * w
+    return ret
 
 
 def cv2_emboss(im, shift, strength):
@@ -620,13 +650,26 @@ class Frame:
             blit_x = 0
             blit_y = 0
 
+            # Tint effect
+            if tint := c.get('tint'):
+                src = cv2_tint_midtones(src, tint)
+                fxinfo.append(f'Tint: {tint}')
+
+            # Lift/gain/gamma
+            lift, gain, gamma = c.get('lift'), c.get('gain'), c.get('gamma')
+            if lift is not None or gain is not None or gamma is not None:
+                src = cv2_lift_gain_gamma(src, lift, gain, gamma)
+                if lift  is not None: fxinfo.append(f'Lift: {lift}')
+                if gain  is not None: fxinfo.append(f'Gain: {gain}')
+                if gamma is not None: fxinfo.append(f'Gamma: {gamma}')
+
             # Effet spéciau minable 1
             if 'cheesy-1' in transforms:
                 bar_left, bar_right = 0.495, 0.515
                 # Transition happens between frames 28 and 50
                 if self.n > 28:
                     dt = min(1.0, (self.n - 28) / (50 - 28))
-                    dt = 1.0 - pow(1.0 - dt, 2)
+                    dt = 1.0 - pow(1.0 - dt, 2) # smooth transition
                     bar_x = int(final_w * (1 - (1 - bar_left) * dt))
                     bar_w = int(final_w * (bar_right - bar_left))
                     if i == 0:
@@ -640,11 +683,15 @@ class Frame:
             # Effet spéciau minable 2
             if 'cheesy-2' in transforms:
                 tint = (48.0, 0.0, 0.0)
+                #lift = None #(0.1, 0.0, 0.0)
+                #gain = None #(1.0, 1.0, 1.0)
+                #gamma = (1.0, 0.9, 0.9)
                 bar_left, bar_right = 0.530, 0.545
                 # Need to preserve the left part of the screen
                 if self.n > 197:
                     saved = src[:,rect_x:rect_x+int(rect_w*bar_left)]
                     saved = cv2_tint_dark(saved, tint[::-1])
+                    #saved = cv2_lift_gain_gamma(saved, lift, gain, gamma)
                 if self.n > 136:
                     # FIXME: the black bar keeps readjusting until frame 194!
                     # (the position is non-linear, it follows the scene background)
@@ -653,6 +700,7 @@ class Frame:
                     src[:,:int(rect_x+rect_w*dt*bar_right)] = (0, 0, 0)
                 if self.n > 197:
                     dt = min(1.0, (self.n - 197) / (222 - 197))
+                    dt = 1.0 - pow(1.0 - dt, 2) # smooth transition
                     cv2_blit(src, saved, rect_x, int((rect_y-display_h)*(1-dt)))
 
             # Effet spéciau minable 3
@@ -665,7 +713,9 @@ class Frame:
                     bar_w = int(rect_w*(bar_right-bar_left))
                     bar_x = rect_x + int(rect_w*bar_right*dt) - bar_w
                     saved = src[:,rect_x:bar_x]
+                    #saved[...] = cv2_tint_midtones(saved, (100, 80, 0))
                     saved[...] = cv2_tint_dark(saved, tint[::-1])
+                    saved[...] = cv2_lift_gain_gamma(saved, None, None, (0.9, 0.8, 0.7))
                     src[:,max(0,bar_x):max(0,bar_x+bar_w)] = (0, 0, 0)
 
             # Other transforms

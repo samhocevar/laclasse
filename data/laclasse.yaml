@@ -2913,7 +2913,9 @@ segments:
       offset: -134
       fade-in: [134, 149]
       playback: 0-184, 183-136 # ping-pong to make sequence longer
-      todo: "blue filter"
+      gain: [0.75, 0.72, 0.98]
+      gamma: [0.45, 0.42, 0.68]
+      todo: These values are far from perfect
 
   - id: "040399"
     count: 101
@@ -6709,7 +6711,7 @@ segments:
     - movie: oceans_eleven
       segment: "088927"
       offset: 523
-      todo: "filtre bleu"
+      tint: [-50, 50, 200]
 
   - id: "098064"
     count: 54
