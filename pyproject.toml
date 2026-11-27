@@ -7,7 +7,9 @@ dependencies = [
     "click>=8.1",
     "click-log", # colour logging
     "opencv-python", # most of our image processing routines
-    "ffmpy", # not really using that for now
+    "cairosvg",
+    "cairocffi",
+    #"ffmpy", # not really using that for now
     "pillow", # somemetimes more convenient than cv2 for image processing
     "platformdirs",
 ]

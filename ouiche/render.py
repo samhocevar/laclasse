@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import click
+import click_log
+import logging
 import yaml
 import glob
 import cv2
@@ -8,11 +10,25 @@ import numpy as np
 import re
 import signal
 import sys
+import xml.etree.ElementTree as ET
 from PIL import Image, ImageDraw, ImageFont, ImageText
+
+# FIXME: This is really awful
+import os
+gimp_dir = 'C:/Program Files/GIMP 3/bin'
+orig_dir = os.getcwd()
+os.add_dll_directory(gimp_dir)
+os.chdir(gimp_dir)
+from cairosvg import svg2png
+os.chdir(orig_dir)
+
 from itertools import accumulate
 from math import sin, cos, radians, sqrt, ceil
 import concurrent.futures as futures
 from pathlib import Path
+
+logger = logging.getLogger(__name__)
+click_log.basic_config(logger)
 
 # To generate a movie after this script has run:
 '''
@@ -32,6 +48,22 @@ ffmpeg -safe 0 -f concat -r 24 -i list.txt \
        output.mkv
 '''
 
+'''
+find d:/render/bluray -mindepth 2 -type f | sort | awk '{ print "file " $1 }' \
+  | ffmpeg -safe 0 -protocol_whitelist file,pipe,fd,crypto,data -r 24 -f concat -i - \
+           -r 25 -i d:/sources/dvd/la_classe*/*mkv \
+           -map 0:v:0 -c:v libx265 -b:v 10M -maxrate 15M -bufsize 20M \
+           -map 1:a:0 -af "adelay=12000:all=1,rubberband=tempo=24/25:pitch=1:formant=preserved:transients=crisp" -c:a aac \
+           output.mkv
+
+find d:/render/bluray-debug -mindepth 2 -type f | sort | awk '{ print "file " $1 }' \
+  | ffmpeg -safe 0 -protocol_whitelist file,pipe,fd,crypto,data -r 24 -f concat -i - \
+           -r 25 -i d:/sources/dvd/la_classe*/*mkv \
+           -map 0:v:0 -c:v libx265 \
+           -map 1:a:0 -af "adelay=12000:all=1,rubberband=tempo=24/25:pitch=1:formant=preserved:transients=crisp" -c:a aac \
+           output_debug.mkv
+'''
+
 # This is the size of the original movie (letterbox removed)
 ORIGINAL_SIZE = (750, 358)
 
@@ -42,37 +74,11 @@ ORIGINAL_SIZE = (750, 358)
 #TARGET_RATIO = 1.85
 TARGET_RATIO = ORIGINAL_SIZE[0] / ORIGINAL_SIZE[1] # Original ~2.10
 
-# Choose the mode here
-mode = 'dcp4k'
-match mode:
-    case 'dcp4k':
-        # Pillarboxed Scope 4K (better than Flat which would be letterboxed)
-        MEDIA_SIZE = (4096, 1716)
-        TARGET_SIZE = (int(MEDIA_SIZE[1] * TARGET_RATIO), MEDIA_SIZE[1])
-    case 'dcp2k':
-        # Pillarboxed Scope 2K (better than Flat which would be letterboxed)
-        MEDIA_SIZE = (2048, 858)
-        TARGET_SIZE = (int(MEDIA_SIZE[1] * TARGET_RATIO), MEDIA_SIZE[1])
-    case 'bluray':
-        # Letterboxed Blu-ray resolution
-        MEDIA_SIZE = (1920, 1080)
-        TARGET_SIZE = (MEDIA_SIZE[0], int(MEDIA_SIZE[0] / TARGET_RATIO))
-
 # This is for the debug canvas
 SCALED_SIZE = (1280, int(1280 / TARGET_RATIO))
 THUMBNAIL_SIZE = (320, 240)
 INFO_WIDTH = 600
 MARGIN = 20
-
-# 16:9 misses a lot of information, try 1.85:1
-#TARGET_SIZE = (ORIGINAL_SIZE[0], int(ORIGINAL_SIZE[0] / 1.85))
-#TARGET_SIZE = (ORIGINAL_SIZE[0], int(ORIGINAL_SIZE[0] / 1.77))
-#TARGET_SIZE = ORIGINAL_SIZE
-#TARGET_SIZE = (1280, 620)
-#TARGET_SIZE = (1920, 1080) # 16:9 (1.77:1)
-#TARGET_SIZE = (1920, 1038) # 1.85:1 (widescreen flat)
-#TARGET_SIZE = (1920, 800) # 2.39:1 (scope)
-#TARGET_SIZE = (1920, int(1920 * ORIGINAL_SIZE[1] / ORIGINAL_SIZE[0])) # original ~2.10 ratio
 
 # The debug canvas; make sure dimensions are multiples of 4
 DEBUG_SIZE = (
@@ -93,9 +99,7 @@ SEARCH_ROOT = (
     #'D:/clips/good',
 )
 
-DEBUG_ROOT = 'D:/final/debug'
-OUTPUT_ROOT = f'D:/final/{mode}'
-DCP_ROOT = 'D:/final/dcp'
+RENDER_ROOT = Path('D:/render')
 
 # Some convenient constants
 FONT = cv2.FONT_HERSHEY_SIMPLEX
@@ -152,6 +156,7 @@ def cv2_blit(bg, fg, x, y, opacity=1.0):
 
     if src.shape[2] == 4:
         dst += src[...,3:4] / 255.0 * (src[:,:,:3] - dst)
+        #dst[...] = src[...,3:4]
     else:
         dst += src if opacity == 1.0 else (src * opacity)
 
@@ -242,21 +247,41 @@ def render_text(text: str, font: str, size: float, border: int=0):
 
     im = Image.new('F', (right - left + 2 * border * SCALE, bottom - top + 2 * border * SCALE))
     draw = ImageDraw.Draw(im)
-    draw.text((border * SCALE - left, border * SCALE - top), image_text, 1.0)
+    draw.text((border * SCALE - left, border * SCALE - top), image_text, fill='#fff')
     im = im.resize((im.width // SCALE, im.height // SCALE), Image.LANCZOS)
 
     # Use rendered text image as an alpha layer for a white image
     return (np.dstack((np.full((im.height, im.width, 3), 255.0),
-                       np.array(im)[:,:,np.newaxis])),
+                       np.array(im).clip(0.0, 255.0)[...,np.newaxis])),
             (anchor_x // SCALE - border, anchor_y // SCALE - border))
 
 
 class RenderConfig:
-    def __init__(self, force, verbose, dry_run):
+    def __init__(self, force, debug, verbose, dry_run, format):
         self.force = force
+        self.debug = debug
         self.verbose = verbose
         self.dry_run = dry_run
 
+        match format:
+            case 'dcp4k':
+                # Pillarboxed Scope 4K (better than Flat which would be letterboxed)
+                self.media_size = (4096, 1716)
+                self.target_size = (int(self.media_size[1] * TARGET_RATIO), self.media_size[1])
+            case 'dcp2k':
+                # Pillarboxed Scope 2K (better than Flat which would be letterboxed)
+                self.media_size = (2048, 858)
+                self.target_size = (int(self.media_size[1] * TARGET_RATIO), self.media_size[1])
+            case 'bluray':
+                # Letterboxed Blu-ray resolution
+                self.media_size = (1920, 1080)
+                self.target_size = (self.media_size[0], int(self.media_size[0] / TARGET_RATIO))
+            case _:
+                raise Exception(f'bad format {format}')
+        self.format = format
+
+        self.render_root = RENDER_ROOT / format
+        self.debug_root = RENDER_ROOT / f'{format}-debug'
 
 class Renderer:
     def __init__(self, config):
@@ -271,16 +296,19 @@ class Renderer:
 
 class Segment:
     def __init__(self, config, renderer, start, desc):
+        self.id = desc.get('id', 'unknown')
         self.config = config
         self.presets = renderer.presets
-        self.start = start
+        if re.match('^[0-9]+$', self.id):
+            self.start = int(self.id, 10)
+        else:
+            self.start = 0
         self.desc = desc
-        self.id = desc.get('id', 'unknown')
         self.count = desc.get('count', 0)
         self.clips = desc.get('clips', [])
 
-        self.output_dir = Path(f'{OUTPUT_ROOT}/{self.start:06d}')
-        self.debug_dir = Path(f'{DEBUG_ROOT}/{self.start:06d}')
+        self.output_dir = config.render_root / self.id
+        self.debug_dir = config.debug_root / self.id
         self._orig_files = None # Lazily loaded
 
     def has_movie(self, movie):
@@ -290,25 +318,28 @@ class Segment:
         return any(prop in c for c in self.clips)
 
     def orig_file(self, n):
-        if not self._orig_files:
+        if self._orig_files is None:
             # Find original image
-            dumpdir = glob.glob(f'{DUMP_ROOT}/{self.start:06d}-*')
+            dumpdir = glob.glob(f'{DUMP_ROOT}/{self.id}-*')
             if not dumpdir:
-                raise f'{self.start:06d}: cannot find source directory in {DUMP_ROOT}'
+                logger.warn(f'{self.id}: cannot find source directory in {DUMP_ROOT}')
+                self._orig_files = []
+                return None
             self._orig_files = glob.glob(f'{dumpdir[0]}/*')
             if len(self._orig_files) != self.count:
-                raise BaseException(f'{self.start:06d}: need {self.count} frames but dump directory has {len(dumpfiles)}')
-        return self._orig_files[n]
+                logger.warn(f'{self.id}: need {self.count} frames but dump directory has {len(dumpfiles)}')
+        return self._orig_files[n] if n < len(self._orig_files) else None
 
 
     def render_all(self):
 
-        print(f'{self.start:06d}: ', end='')
+        print(f'{self.id}: ', end='')
         sys.stdout.flush()
 
         if not self.config.dry_run:
             self.output_dir.mkdir(parents=True, exist_ok=True)
-            self.debug_dir.mkdir(parents=True, exist_ok=True)
+            if self.config.debug:
+                self.debug_dir.mkdir(parents=True, exist_ok=True)
 
         # XXX: Ensure the list of original files is cached, otherwise each
         # pool worker will do it again and again. Not very elegant.
@@ -354,31 +385,38 @@ class Frame:
 
 
     def is_uptodate(self):
-        return self.output_file.is_file() and self.debug_file.is_file()
+        return self.output_file.is_file() and (not self.config.debug or self.debug_file.is_file())
 
 
     def render(self):
-        self.debug_image = np.zeros((DEBUG_SIZE[1], DEBUG_SIZE[0], 3), np.uint8)
 
-        # Blit original dumped image
-        # XXX: imread does not handle UTF-8 paths!
-        #src = cv2.imread(self.segment.orig_file(self.n))
-        src = cv2.imdecode(np.fromfile(self.segment.orig_file(self.n), dtype=np.uint8), cv2.IMREAD_COLOR)
-        h, w, _ = src.shape
-        x, y = MARGIN, MARGIN + SCALED_SIZE[1] + MARGIN
-        x += max(0, SCALED_SIZE[0] - ORIGINAL_SIZE[0]) // 2 # Center image for aesthetic purposes
-        cv2_blit(self.debug_image, src, x, y)
-        cv2.rectangle(self.debug_image, (x-1, y-1), (x+w, y+h), YELLOW, 1)
-        cv2.putText(self.debug_image, f'Original: {ORIGINAL_SIZE[0]}x{ORIGINAL_SIZE[1]} ({ORIGINAL_SIZE[0]/ORIGINAL_SIZE[1]:.2f}:1)',
-                    (x + ORIGINAL_SIZE[0] + MARGIN, y + ORIGINAL_SIZE[1]), FONT, SMALL, GRAY, 3)
+        if self.config.debug:
+            self.debug_image = np.zeros((DEBUG_SIZE[1], DEBUG_SIZE[0], 3), np.uint8)
 
-        # Text information
-        self.debug_text(f'S.{self.segment.start:06d} ({self.segment.count})', size=LARGE, color=WHITE, newline=False)
-        self.debug_text(f'F.{self.segment.start+self.n:06d} (+{self.n})', dx=300, size=LARGE, color=GREEN)
+            # Blit original dumped image
+            # XXX: imread does not handle UTF-8 paths!
+            #src = cv2.imread(self.segment.orig_file(self.n))
+            w, h = ORIGINAL_SIZE[0], ORIGINAL_SIZE[1]
+            x, y = MARGIN, MARGIN + SCALED_SIZE[1] + MARGIN
+            x += max(0, SCALED_SIZE[0] - w) // 2 # Center image for aesthetic purposes
+            orig = self.segment.orig_file(self.n)
+            if orig is not None:
+                src = cv2.imdecode(np.fromfile(orig, dtype=np.uint8), cv2.IMREAD_COLOR)
+                if src.shape[1] != w or src.shape[0] != h:
+                    src = cv2.resize(src, (w, h), interpolation=cv2.INTER_LANCZOS4)
+                cv2_blit(self.debug_image, src, x, y)
+                cv2.putText(self.debug_image, f'Original: {ORIGINAL_SIZE[0]}x{ORIGINAL_SIZE[1]} ({ORIGINAL_SIZE[0]/ORIGINAL_SIZE[1]:.2f}:1)',
+                            (x + ORIGINAL_SIZE[0] + MARGIN, y + ORIGINAL_SIZE[1]), FONT, SMALL, GRAY, 3)
+            cv2.rectangle(self.debug_image, (x-1, y-1), (x+w, y+h), YELLOW, 1)
 
-        self.debug_text(f'Target: {TARGET_SIZE[0]}x{TARGET_SIZE[1]} ({TARGET_SIZE[0]/TARGET_SIZE[1]:.2f}:1)')
-        if scenes := self.segment.desc.get('scenes'):
-            self.debug_text(f'Scenes: {" ".join(scenes)}')
+            # Text information
+            self.debug_text(f'S.{self.segment.start:06d} ({self.segment.count})', size=LARGE, color=WHITE, newline=False)
+            self.debug_text(f'F.{self.segment.start+self.n:06d} (+{self.n})', dx=300, size=LARGE, color=GREEN)
+
+            w, h = self.config.target_size
+            self.debug_text(f'Target: {w}x{h} ({w/h:.2f}:1)')
+            if scenes := self.segment.desc.get('scenes'):
+                self.debug_text(f'Scenes: {" ".join(scenes)}')
 
         errors = []
         clips = []
@@ -397,35 +435,51 @@ class Frame:
 
             transforms = tuple(filter(None, re.split('\\s+', c.get('transform', ''))))
 
+            if svg := c.get('svg'):
+                frames = c.get('scrolling', self.segment.count)
+                tree = ET.parse(DATA_ROOT / svg)
+                root = tree.getroot()
+                h = int(root.get('height'))
+                dy = (h - 800) * min(1.0, self.n / (frames - 1)) if frames > 1 else 0
+                root.set('viewBox', f'{0} {dy} {1920} {800}')
+                root.set('width', str(1920))
+                root.set('height', str(800))
+                png = svg2png(bytestring=ET.tostring(root, encoding='utf-8'), scale=self.config.target_size[1] / 800)
+                src = cv2.imdecode(np.frombuffer(png, np.uint8), cv2.IMREAD_UNCHANGED)
+                clips.append((src, int((self.config.target_size[0] - src.shape[1]) / 2), 0, opacity))
+                continue
+
             # If it is a text clip, handle it here
             if text := c.get('text'):
                 font, size, pos, frames = c.get('font'), c.get('size'), c.get('pos'), c.get('frames')
                 if frames is not None and (self.n < frames[0] or self.n > frames[1]):
                     continue
 
-                self.debug_text(f'Clip {i}: "{text}"', color=WHITE)
+                if self.config.debug:
+                    self.debug_text(f'Clip {i}: "{text}"', color=WHITE)
 
                 # XXX: adjust size in case the aspect ratio is narrower than the original!
-                if (λ := (TARGET_SIZE[0] / TARGET_SIZE[1]) / (ORIGINAL_SIZE[0] / ORIGINAL_SIZE[1])) < 1.0:
+                if (λ := (self.config.target_size[0] / self.config.target_size[1]) / (ORIGINAL_SIZE[0] / ORIGINAL_SIZE[1])) < 1.0:
                     size *= λ
 
                 border = 5
-                data, anchor = render_text(text, font, size * TARGET_SIZE[1] / 100, border=border)
-                tx, ty = pos[0] * TARGET_SIZE[0] / 100, pos[1] * TARGET_SIZE[1] / 100
+                data, anchor = render_text(text, font, size * self.config.target_size[1] / 100, border=border)
+                tx, ty = pos[0] * self.config.target_size[0] / 100, pos[1] * self.config.target_size[1] / 100
 
                 # XXX: debug baseline
-                #tmp_image = np.zeros((TARGET_SIZE[1], TARGET_SIZE[0], 4), float)
-                #cv2.line(tmp_image, (int(tx), 0), (int(tx), TARGET_SIZE[1]), (*RED, 255.0), 1)
-                #cv2.line(tmp_image, (0, int(ty)), (TARGET_SIZE[0], int(ty)), (*RED, 255.0), 1)
-                #clips.append((tmp_image, 0, 0, 1.0))
+                #if self.config.debug:
+                #    tmp_image = np.zeros((self.config.target_size[1], self.config.target_size[0], 4), float)
+                #    cv2.line(tmp_image, (int(tx), 0), (int(tx), self.config.target_size[1]), (*RED, 255.0), 1)
+                #    cv2.line(tmp_image, (0, int(ty)), (self.config.target_size[0], int(ty)), (*RED, 255.0), 1)
+                #    clips.append((tmp_image, 0, 0, 1.0))
 
                 # We do not use the anchor when padding to the right, so we need to manually add
                 # the border value. Not very elegant.
-                if tx == 0:   x = (TARGET_SIZE[0] - data.shape[1]) // 2
+                if tx == 0:   x = (self.config.target_size[0] - data.shape[1]) // 2
                 elif tx >= 0: x = int(tx + anchor[0])
-                else:         x = int(TARGET_SIZE[0] - data.shape[1] + tx - 1 + border)
+                else:         x = int(self.config.target_size[0] - data.shape[1] + tx - 1 + border)
 
-                y = anchor[1] + int(ty if ty >= 0 else TARGET_SIZE[1] - data.shape[0] + ty - 1)
+                y = anchor[1] + int(ty if ty >= 0 else self.config.target_size[1] - data.shape[0] + ty - 1)
 
                 # Pre-apply opacity because opacity is actually some kind of alpha blend
                 # FIXME: we need to merge everything _before_ adding a single clip to the
@@ -437,7 +491,7 @@ class Frame:
                 shadow = data.copy()
                 shadow[...,:3] = INTRO_SHADOW[::-1]
                 shadow[...,:3] += np.random.normal(0, 6, data[...,:3].shape).astype(float)
-                step = 0.4 * TARGET_SIZE[1] / 100
+                step = 0.4 * self.config.target_size[1] / 100
                 for k in range(1, 5):
                     clips.append((shadow, int(x + step * k), int(y + step * k), 1.0))
 
@@ -452,7 +506,7 @@ class Frame:
                 #clips.append((emboss.copy(), int(x - step / 2), int(y - step / 2), 1.0))
 
                 data[...,:3] = INTRO_COLOR[::-1]
-                data = cv2_emboss(data, step * 0.1, 500.0)
+                data = cv2_emboss(data, shift=step * 0.01, strength=0.2)
 
                 data[...,:3] += np.random.normal(0, 10, data[...,:3].shape).astype(float)
                 data[...,:3] = cv2.blur(data[...,:3], (3, 3))
@@ -471,14 +525,16 @@ class Frame:
 
             clip_presets = self.segment.presets.get(clip_movie) or {}
 
-            self.debug_text(f'Clip {i}: {clip_movie}', color=WHITE)
+            if self.config.debug:
+                self.debug_text(f'Clip {i}: {clip_movie}', color=WHITE)
 
             clipinfo = []
             fxinfo = []
             todo = []
 
             if clip_segment is None or clip_offset is None:
-                self.debug_text(f'Todo: missing segment or offset information', dx=20, color=RED)
+                if self.config.debug:
+                    self.debug_text(f'Todo: missing segment or offset information', dx=20, color=RED)
                 continue
 
             # Compute source offset
@@ -584,7 +640,7 @@ class Frame:
             # Compute pick rectangle aspect ratio (might be different from target aspect
             # ratio because we apply stretching, both from anamorphic encoding and from
             # the clip properties)
-            rect_ratio = TARGET_SIZE[0] / TARGET_SIZE[1]
+            rect_ratio = self.config.target_size[0] / self.config.target_size[1]
             rect_ratio *= encoded_w / display_w
             match stretch := c.get('stretch') or clip_presets.get('stretch'):
                 case None: pass
@@ -647,16 +703,16 @@ class Frame:
                 print('  Final pick area:', rect_x, rect_y, rect_w, rect_h)
 
             # Compute the final parameters for scaling. After this step, our frame lies somewhere
-            # in there as a rectangle of size TARGET_SIZE, but we can apply more effects.
-            scale_x, scale_y = TARGET_SIZE[0] / rect_w, TARGET_SIZE[1] / rect_h
+            # in there as a rectangle of size config.target_size, but we can apply more effects.
+            scale_x, scale_y = self.config.target_size[0] / rect_w, self.config.target_size[1] / rect_h
 
             if self.config.verbose:
                 print('  Scale factor:', scale_x, scale_y)
 
             final_x = int(rect_x * scale_x)
             final_y = int(rect_y * scale_y)
-            final_w = TARGET_SIZE[0]
-            final_h = TARGET_SIZE[1]
+            final_w = self.config.target_size[0]
+            final_h = self.config.target_size[1]
             blit_x = 0
             blit_y = 0
 
@@ -686,7 +742,7 @@ class Frame:
                         final_x += int((final_w - bar_x) * 0.37)
                         final_w = bar_x
                     if i == 1:
-                        blit_x = int(TARGET_SIZE[0] * (1 - (1 - bar_left) * dt + bar_right - bar_left))
+                        blit_x = int(self.config.target_size[0] * (1 - (1 - bar_left) * dt + bar_right - bar_left))
                         final_w = final_w // 2
                         final_x += int(final_w * 0.85)
 
@@ -754,31 +810,32 @@ class Frame:
             if self.config.verbose:
                 print('  Scaled pick area:', final_x, final_y, final_w, final_h)
 
-            if opacity != 1.0:
-                fxinfo.append(f'Opacity: {opacity:.2f}')
+            if self.config.debug:
+                if opacity != 1.0:
+                    fxinfo.append(f'Opacity: {opacity:.2f}')
 
-            # "Quality" is the density of source pixels in the target image, a rough
-            # estimate of the number of pixels lost through scaling in both dimensions.
-            quality = min(1, encoded_w / src.shape[1]) * min(1, encoded_h / src.shape[0])
-            clipinfo.append(f'Quality: {100 * quality:.1f}%')
+                # "Quality" is the density of source pixels in the target image, a rough
+                # estimate of the number of pixels lost through scaling in both dimensions.
+                quality = min(1, encoded_w / src.shape[1]) * min(1, encoded_h / src.shape[0])
+                clipinfo.append(f'Quality: {100 * quality:.1f}%')
 
-            # Add debug info etc.
-            xthumb, ythumb = self.debug_x, self.debug_y + 10
-            thumbscale = min(THUMBNAIL_SIZE[0] / display_w, THUMBNAIL_SIZE[1] / display_h)
-            thumb = cv2.resize(src, (int(display_w * thumbscale), int(display_h * thumbscale)), interpolation=cv2.INTER_LANCZOS4)
-            #if transform == 'hflip': thumb = cv2.flip(thumb, 1)
-            cv2_blit(self.debug_image, thumb[...,:3].clip(0, 255).astype(np.uint8), xthumb, ythumb)
-            cv2.rectangle(self.debug_image, (xthumb-1, ythumb-1), (xthumb+thumb.shape[1], ythumb+thumb.shape[0]), YELLOW, 1)
+                # Add debug info etc.
+                xthumb, ythumb = self.debug_x, self.debug_y + 10
+                thumbscale = min(THUMBNAIL_SIZE[0] / display_w, THUMBNAIL_SIZE[1] / display_h)
+                thumb = cv2.resize(src, (int(display_w * thumbscale), int(display_h * thumbscale)), interpolation=cv2.INTER_LANCZOS4)
+                #if transform == 'hflip': thumb = cv2.flip(thumb, 1)
+                cv2_blit(self.debug_image, thumb[...,:3].clip(0, 255).astype(np.uint8), xthumb, ythumb)
+                cv2.rectangle(self.debug_image, (xthumb-1, ythumb-1), (xthumb+thumb.shape[1], ythumb+thumb.shape[0]), YELLOW, 1)
 
-            # FIXME: somewhere on the way we lost rect_ratio and/or the stretch parameters
-            clip_x = xthumb + int(rect_x * thumbscale)
-            clip_y = ythumb + int(rect_y * thumbscale)
-            clip_x2 = xthumb + int((rect_x + rect_w) * thumbscale)
-            clip_y2 = ythumb + int((rect_y + rect_h) * thumbscale)
-            cv2.rectangle(self.debug_image, (clip_x - 1, clip_y - 1), (clip_x2, clip_y2), PURPLE, 2)
+                # FIXME: somewhere on the way we lost rect_ratio and/or the stretch parameters
+                clip_x = xthumb + int(rect_x * thumbscale)
+                clip_y = ythumb + int(rect_y * thumbscale)
+                clip_x2 = xthumb + int((rect_x + rect_w) * thumbscale)
+                clip_y2 = ythumb + int((rect_y + rect_h) * thumbscale)
+                cv2.rectangle(self.debug_image, (clip_x - 1, clip_y - 1), (clip_x2, clip_y2), PURPLE, 2)
 
-            self.debug_text(f'File: {Path(filename).name}', dx=THUMBNAIL_SIZE[0] + 10)
-            self.debug_text(f'Size: {encoded_w}x{encoded_h}', dx=THUMBNAIL_SIZE[0] + 10)
+                self.debug_text(f'File: {Path(filename).name}', dx=THUMBNAIL_SIZE[0] + 10)
+                self.debug_text(f'Size: {encoded_w}x{encoded_h}', dx=THUMBNAIL_SIZE[0] + 10)
 
             # Special effect: wavy deformation + zoom + motion blur
             # Still very WIP; but works rather well on 043887
@@ -817,40 +874,33 @@ class Frame:
                 fxinfo.append(f'Wave: f={freq:.2f} s={shift:.2f} a={amplitude:.2f}')
                 fxinfo.append(f'Blur: {blur:.2f}%')
 
-            for e in clipinfo:
-                self.debug_text(e, dx=THUMBNAIL_SIZE[0] + 10, color=WHITE)
-
-            if e := c.get('todo'):
-                todo.append(e)
-            for e in todo:
-                self.debug_text(f'Todo: {e}', dx=THUMBNAIL_SIZE[0] + 10, color=RED)
-
-            for e in fxinfo:
-                self.debug_text(e, dx=THUMBNAIL_SIZE[0] + 10, color=YELLOW)
-
-            self.debug_y = max(self.debug_y, ythumb + thumb.shape[0] + 20)
+            if self.config.debug:
+                for e in clipinfo:
+                    self.debug_text(e, dx=THUMBNAIL_SIZE[0] + 10, color=WHITE)
+                if e := c.get('todo'):
+                    todo.append(e)
+                for e in todo:
+                    self.debug_text(f'Todo: {e}', dx=THUMBNAIL_SIZE[0] + 10, color=RED)
+                for e in fxinfo:
+                    self.debug_text(e, dx=THUMBNAIL_SIZE[0] + 10, color=YELLOW)
+                self.debug_y = max(self.debug_y, ythumb + thumb.shape[0] + 20)
 
             if 'woodpanel' in transforms:
                 cv2_blit(clips[-1][0], src[final_y:final_y+final_h,final_x:final_x+final_w], 0, 0)
             else:
                 clips.append((src[final_y:final_y+final_h,final_x:final_x+final_w], blit_x, blit_y, opacity))
 
-        if e := self.segment.desc.get('todo'):
-            self.debug_text(f'Todo: {e}', color=RED)
-
         for e in errors:
             print(f'{self.segment.start:06d}: [{self.n}/{self.segment.count}: {e}')
-            self.debug_text(f'Error: {e}', color=RED)
 
         # Perform composition
-        self.target_image = np.zeros((TARGET_SIZE[1], TARGET_SIZE[0], 3), float)
+        self.target_image = np.zeros((self.config.target_size[1], self.config.target_size[0], 3), float)
 
         # If more than one image has opacity != 1.0, it is actually a blend
         # for cross-fade, so we will want to normalise it.
         total_opacity = 1.0
         if sum(1 for e in clips if e[3] not in [0.0, 1.0]) >= 2:
             total_opacity = sum(np.clip(e[3], 0.0, 1.0) for e in clips)
-        self.debug_text(f'Total opacity: {total_opacity}', color=YELLOW)
 
         for image, x, y, opacity in clips:
             if total_opacity > 0.0:
@@ -861,49 +911,67 @@ class Frame:
             if opacity > 0.0:
                 cv2_blit(self.target_image, image, x, y, opacity)
 
-        # Blit final image to canvas
-        x, y = MARGIN, MARGIN
-        cv2_blit(self.debug_image, cv2.resize(self.target_image, SCALED_SIZE, interpolation=cv2.INTER_LANCZOS4).clip(0, 255).astype(np.uint8), x, y)
-        cv2.rectangle(self.debug_image, (x-1, y-1), (x+SCALED_SIZE[0], y+SCALED_SIZE[1]), YELLOW, 1)
+        if self.config.debug:
+            self.debug_text(f'Total opacity: {total_opacity} ({len(clips)} clip(s))', color=YELLOW)
 
-#        x, y = (CANVAS_WIDTH - WIDTH) // 2, (CANVAS_HEIGHT * 3 // 2 - HEIGHT) // 2
-#        x2, y2 = x + WIDTH, y + HEIGHT
+            if e := self.segment.desc.get('todo'):
+                self.debug_text(f'Todo: {e}', color=RED)
+
+            for e in errors:
+               self.debug_text(f'Error: {e}', color=RED)
+
+            # Blit final image to debug canvas
+            x, y = MARGIN, MARGIN
+            cv2_blit(self.debug_image, cv2.resize(self.target_image, SCALED_SIZE, interpolation=cv2.INTER_LANCZOS4).clip(0, 255).astype(np.uint8), x, y)
+            cv2.rectangle(self.debug_image, (x-1, y-1), (x+SCALED_SIZE[0], y+SCALED_SIZE[1]), YELLOW, 1)
+
+#            x, y = (CANVAS_WIDTH - WIDTH) // 2, (CANVAS_HEIGHT * 3 // 2 - HEIGHT) // 2
+#            x2, y2 = x + WIDTH, y + HEIGHT
 #
-#        # Darken clipped area
-#        self.debug_image[0:CANVAS_HEIGHT, 0:x] //= 3
-#        self.debug_image[0:CANVAS_HEIGHT, x2:CANVAS_WIDTH] //= 3
-#        self.debug_image[0:y, 0:CANVAS_WIDTH] //= 3
-#        self.debug_image[y2:CANVAS_HEIGHT, 0:CANVAS_WIDTH] //= 3
+#            # Darken clipped area
+#            self.debug_image[0:CANVAS_HEIGHT, 0:x] //= 3
+#            self.debug_image[0:CANVAS_HEIGHT, x2:CANVAS_WIDTH] //= 3
+#            self.debug_image[0:y, 0:CANVAS_WIDTH] //= 3
+#            self.debug_image[y2:CANVAS_HEIGHT, 0:CANVAS_WIDTH] //= 3
 #
-#        # Draw border for destination frame
-#        cv2.rectangle(self.debug_image, (x-2, y-2), (x2+1, y2+1), RED, 4)
+#            # Draw border for destination frame
+#            cv2.rectangle(self.debug_image, (x-2, y-2), (x2+1, y2+1), RED, 4)
 
 
     def save(self):
         # FIXME: handle gamma, maybe HDR etc.
-        media_image = np.zeros((MEDIA_SIZE[1], MEDIA_SIZE[0], 3), float)
-        cv2_blit(media_image, self.target_image, (MEDIA_SIZE[0] - TARGET_SIZE[0]) // 2, (MEDIA_SIZE[1] - TARGET_SIZE[1]) // 2)
+        media_image = np.zeros((self.config.media_size[1], self.config.media_size[0], 3), float)
+        cv2_blit(media_image, self.target_image, (self.config.media_size[0] - self.config.target_size[0]) // 2, (self.config.media_size[1] - self.config.target_size[1]) // 2)
         # FIXME: blue-noise dithering on separate colour layers
-        dither = cv2_dither_matrix(MEDIA_SIZE[0], MEDIA_SIZE[1])
+        dither = cv2_dither_matrix(self.config.media_size[0], self.config.media_size[1])
         cv2.imwrite(self.output_file, (media_image + dither[...,np.newaxis]).clip(0, 255).astype(np.uint8))
 
-        cv2.imwrite(self.debug_file, self.debug_image)
-        if self.n == self.segment.count // 2:
-            cv2.imwrite(f'{DEBUG_ROOT}/{self.segment.start:06d}.jpeg', self.debug_image)
-
+        if self.config.debug:
+            cv2.imwrite(self.debug_file, self.debug_image)
+            if self.n == self.segment.count // 2:
+                cv2.imwrite(self.config.debug_root / f'{self.segment.start:06d}.jpeg', self.debug_image)
 
 
 @click.command()
 @click.option('-f', '--force',    is_flag=True, default=False)
 @click.option('-n', '--dry-run',  is_flag=True, default=False)
-@click.option('-v', '--verbose',  is_flag=True, default=False, help='Verbose output for debugging purposes.')
+@click.option('-d', '--debug',    is_flag=True, default=False, help='Generate images for debugging.')
+@click.option('-v', '--verbose',  is_flag=True, default=False, help='Verbose output.')
 @click.option(      '--id',       default='', help='Only render frames from this segment (comma-separated).')
 @click.option('-m', '--movie',    default='', help='Only render frames from this movie (comma-separated, partial match OK).')
 @click.option('-p', '--property', default='', help='Only render frames with this clip property (comma-separated).')
-def render(force: bool, dry_run: bool, verbose: bool, id: str, movie: str, property: str):
+@click.option('--format', type=click.Choice(['bluray', 'dcp2k', 'dcp4k']), default='bluray', help='Set the final image format.')
+@click.option('--bluray', 'format', flag_value='bluray', help='Alias for --format=bluray')
+@click.option('--dcp2k',  'format', flag_value='dcp2k',  help='Alias for --format=dcp2k')
+@click.option('--dcp4k',  'format', flag_value='dcp4k',  help='Alias for --format=dcp4k')
+def render(force: bool, dry_run: bool, debug: bool, verbose: bool, id: str, movie: str, property: str, format: str):
 
     """ Render movie frames. """
-    config = RenderConfig(force=force, verbose=verbose, dry_run=dry_run)
+    config = RenderConfig(force=force,
+                          debug=debug,
+                          verbose=verbose,
+                          dry_run=dry_run,
+                          format=format)
     r = Renderer(config)
 
     starts = accumulate((0, *(s['count'] for s in r.segments)))
